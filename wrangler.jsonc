@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "tmualabdev",
+  "compatibility_date": "2026-09-11",
+  // A static site: no Worker code, just files. See .assetsignore for what is excluded.
+  "assets": {
+    "directory": ".",
+    // unknown paths get 404.html instead of a bare error
+    "not_found_handling": "404-page"
+  }
+}

@@ -1,0 +1,16 @@
+# Files Cloudflare must NOT serve publicly (gitignore syntax).
+# Without this, `assets.directory: "."` publishes the entire repo, .git included.
+.git
+.wrangler
+.assetsignore
+.gitignore
+wrangler.jsonc
+node_modules
+package.json
+package-lock.json
+tools
+deploy
+data
+dist
+README.md
+NOTICE

@@ -45,13 +45,23 @@ public servers on the connection.
 ## Path A — Cloudflare Pages (recommended for the site)
 
 Push the repo to GitHub, then in Cloudflare: Workers & Pages → Create → connect
-the repo. Build command: **none**. Output directory: **/** (the repo root).
+the repo, with:
+
+| Setting | Value |
+| --- | --- |
+| Framework preset | None |
+| Build command | `node tools/build-past.js` |
+| Build output directory | `/` |
+
+The build command is required: `assets/js/bank-past.js` is generated from
+`data/past/*.json` and is not committed. It needs only Node's standard library,
+and it fails the build if any answer disagrees with the official key.
 
 Or straight from this machine, no GitHub:
 
 ```bash
 npx wrangler login                              # opens a browser once
-npx wrangler pages deploy . --project-name tmua
+node tools/build-past.js && npx wrangler pages deploy . --project-name tmua
 ```
 
 That gives a live `tmua.pages.dev` immediately. `_headers` in the repo root is

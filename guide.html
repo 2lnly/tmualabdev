@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The TMUA guide — TMUA Lab</title>
+<meta name="description" content="What the TMUA is, who uses it, what each paper tests, and how to prepare for it in the time you have left.">
+<meta name="theme-color" content="#0a0e12">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2354d8f0'/><text y='72' x='50' text-anchor='middle' font-size='62' font-family='monospace' font-weight='bold' fill='%2303151b'>T</text></svg>">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/app.css">
+<style>
+.prose { max-width: 74ch; font-size: 16px; line-height: 1.78; color: var(--text-soft); }
+.prose h2 { font-size: clamp(22px,3vw,30px); margin: 46px 0 14px; color: var(--text); letter-spacing:-.03em; }
+.prose h3 { font-size: 18px; margin: 30px 0 10px; color: var(--text); }
+.prose ul, .prose ol { padding-left: 20px; margin: 0 0 1.1em; }
+.prose li { margin-bottom: .5em; }
+.prose b, .prose strong { color: var(--text); font-weight: 600; }
+.prose table { width: 100%; border-collapse: collapse; margin: 18px 0 24px; font-size: 14.4px; }
+.prose th, .prose td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.prose th { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); font-weight: 400; }
+.prose .lede { font-size: 18px; color: var(--text); }
+.prose blockquote { margin: 20px 0; padding: 14px 18px; border-left: 2px solid var(--accent); background: var(--tint); border-radius: 0 var(--radius) var(--radius) 0; }
+.toc { position: sticky; top: 76px; font-size: 13.6px; }
+.toc a { display: block; padding: 5px 0 5px 12px; border-left: 1px solid var(--border); color: var(--muted); }
+.toc a:hover { color: var(--accent); border-color: var(--accent); }
+.two { display: grid; grid-template-columns: 1fr 210px; gap: 46px; align-items: start; }
+@media (max-width: 900px) { .two { grid-template-columns: 1fr; } .toc { position: static; display:none } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header id="hdr"></header>
+<main id="main">
+  <div class="wrap">
+    <div class="app-head">
+      <div class="eyebrow">06 — guide</div>
+      <h1 style="margin-top:14px">The TMUA, end to end</h1>
+      <p>Everything worth knowing before you sit it, in the order it becomes relevant. Roughly a fifteen-minute read.</p>
+    </div>
+
+    <div class="two">
+      <article class="prose">
+
+        <p class="lede">The Test of Mathematics for University Admission is not a harder syllabus than A-level.
+          It is the same syllabus, examined at roughly three times the speed, with the reasoning half of the paper
+          asking questions your school course never asks. Almost everyone who does badly does badly for one of those
+          two reasons — not because of content they had never met.</p>
+
+        <h2 id="format">1. The format</h2>
+        <table>
+          <tr><th>Item</th><th>Detail</th></tr>
+          <tr><td>Papers</td><td>Two, sat on the same day</td></tr>
+          <tr><td>Paper 1</td><td>Applications of Mathematical Knowledge</td></tr>
+          <tr><td>Paper 2</td><td>Mathematical Reasoning</td></tr>
+          <tr><td>Length</td><td>20 multiple-choice questions per paper</td></tr>
+          <tr><td>Options</td><td>Varies by question — Paper 1 usually 6 or 7, Paper 2 often 8</td></tr>
+          <tr><td>Time</td><td>75 minutes per paper — 3 minutes 45 seconds a question</td></tr>
+          <tr><td>Calculator</td><td>Not permitted, in either paper</td></tr>
+          <tr><td>Marking</td><td>One mark per question, no negative marking</td></tr>
+          <tr><td>Delivery</td><td>On screen at a Pearson VUE test centre</td></tr>
+          <tr><td>Working</td><td>An erasable note board, separate from the screen</td></tr>
+          <tr><td>Score</td><td>1.0 to 9.0, one decimal place, the mean of the two papers</td></tr>
+          <tr><td>Administered by</td><td>UAT-UK</td></tr>
+        </table>
+
+        <p>Two consequences fall straight out of that table, and both are worth internalising now.</p>
+        <p><b>There is no negative marking, so never leave a question blank.</b> The number of options varies by
+          question — Paper 1 usually offers six or seven, Paper 2 often eight — so a blind guess is worth somewhere
+          between an eighth and a sixth of a mark. That is less than people assume, which makes elimination the whole
+          game: knocking out four of eight options doubles a guess from an eighth to a quarter. Leaving four blank at
+          the end of a section still throws away most of a mark, and marks near the middle of the distribution are
+          worth roughly a fifth of a scaled point each.</p>
+        <p><b>Your working lives somewhere else.</b> The note board is physically separate from the screen, so every
+          number you write is a number you had to read off a monitor and copy by hand. Transcription errors are the
+          single most common way good candidates lose marks in the digital format. Practise the discipline of writing
+          the question number next to each block of working.</p>
+
+        <h2 id="who">2. Who asks for it</h2>
+        <p>The heavy users are <b>Imperial College London</b>, the <b>London School of Economics</b>, the
+          <b>University of Warwick</b> and <b>Durham University</b>. Beyond those, a number of departments — Bath,
+          Cardiff, Lancaster, Sheffield and Southampton among them — use it for some courses, and Cambridge uses it
+          for a small number of routes.</p>
+        <p>How it is used varies more than whether it is used:</p>
+        <ul>
+          <li><b>As a requirement</b> — you must sit it, and the score is read alongside everything else.</li>
+          <li><b>As a threshold</b> — a score below some figure effectively ends the application.</li>
+          <li><b>As a discount</b> — a strong score converts a conditional offer into a lower one.</li>
+          <li><b>As a tiebreak</b> — used only to separate candidates who otherwise look identical.</li>
+        </ul>
+        <blockquote>Requirements move year to year, and a course that merely “considers” the TMUA this cycle may
+          require it next. The only source worth trusting is the course page on the university's own website for your
+          year of entry — not a forum, and not this page.</blockquote>
+
+        <h2 id="paper1">3. Paper 1 — Applications of Mathematical Knowledge</h2>
+        <p>Pure AS-level content, examined for speed. The specification covers:</p>
+        <ul>
+          <li><b>Algebra and functions</b> — quadratics, the discriminant, completing the square, surds, indices,
+            polynomial division and the factor and remainder theorems, inverse and composite functions, the modulus.</li>
+          <li><b>Sequences and series</b> — arithmetic and geometric progressions, sums to infinity, sigma notation,
+            recurrence relations, the binomial expansion.</li>
+          <li><b>Coordinate geometry</b> — straight lines, gradients, distances, midpoints, circles and their
+            tangents.</li>
+          <li><b>Trigonometry</b> — the sine and cosine rules, the area formula, exact values, identities, and
+            solving equations over a given interval.</li>
+          <li><b>Exponentials and logarithms</b> — laws of logs, changing base, exponential models, solving index
+            equations.</li>
+          <li><b>Differentiation and integration</b> — from first principles, stationary points, tangents and
+            normals, definite integrals, areas, and connected rates of change.</li>
+          <li><b>Graphs</b> — sketching, transformations, asymptotes, and reading solutions off intersections.</li>
+        </ul>
+        <p>The examiners' favourite trick is a question whose obvious route takes six minutes and whose intended
+          route takes ninety seconds. A question asking for the <em>number</em> of solutions rarely wants you to find
+          them; a question about a tangent rarely wants simultaneous equations when a discriminant will do; a
+          question about a symmetric expression in two roots almost never wants the roots.</p>
+
+        <h2 id="paper2">4. Paper 2 — Mathematical Reasoning</h2>
+        <p>The same knowledge base, but the questions ask you to argue rather than to compute. This is the paper most
+          candidates under-prepare, and it is where the cheap marks are.</p>
+        <ul>
+          <li><b>Logic</b> — implication, converse, inverse and contrapositive; necessary and sufficient conditions;
+            quantifiers and their negation; De Morgan's laws.</li>
+          <li><b>Proof</b> — direct proof, proof by cases, proof by contradiction, and disproof by counterexample.</li>
+          <li><b>Errors in proofs</b> — you are shown an argument and asked which line is unjustified. Division by
+            something that might be zero, and squaring an equation without checking for extraneous roots, are the two
+            usual culprits.</li>
+          <li><b>Number</b> — divisibility, prime factorisation, remainders and modular patterns, rational and
+            irrational numbers.</li>
+          <li><b>Inequalities</b> — solving them, and reasoning about what does and does not follow from them.</li>
+        </ul>
+        <h3>The one distinction to get right</h3>
+        <p>“Necessary” and “sufficient” are worth memorising in the form of a sentence rather than a definition.
+          If <i>P</i> implies <i>Q</i>, then <i>P</i> is <b>sufficient</b> for <i>Q</i> — knowing <i>P</i> is enough.
+          And <i>Q</i> is <b>necessary</b> for <i>P</i> — without <i>Q</i>, <i>P</i> cannot hold. Being a square is
+          sufficient for being a rectangle; being a rectangle is necessary for being a square.</p>
+        <p>Roughly two questions per Paper 2 turn on that alone, and another two on the difference between a converse
+          and a contrapositive. That is a fifth of the paper available to anyone willing to spend an evening on it.</p>
+
+        <h2 id="timing">5. Timing</h2>
+        <p>Three minutes forty-five a question sounds generous and is not, because the distribution is nothing like
+          uniform. A realistic target:</p>
+        <ul>
+          <li><b>First pass, ~50 minutes.</b> Answer everything you can see a route through inside two minutes. Flag
+            and leave anything else — immediately, without negotiating with yourself.</li>
+          <li><b>Second pass, ~20 minutes.</b> Return to the flagged questions with the pressure of the unknown gone.
+            You will usually find that two of them are now obvious.</li>
+          <li><b>Last 5 minutes.</b> Fill in every remaining blank with a guess, best guess where you eliminated
+            something. Check that the navigator shows no empty squares.</li>
+        </ul>
+        <p>The habit that costs the most marks is sinking eight minutes into question 6 because you are nearly there.
+          You are not nearly there — you are spending three questions' worth of time on one mark.</p>
+
+        <h2 id="prep">6. What to actually do</h2>
+        <h3>If you have three months</h3>
+        <ol>
+          <li>Two weeks closing content gaps. Work through the topic list above and be honest about which lines make
+            you uneasy. Fix those with your A-level textbook, not with test practice.</li>
+          <li>Six weeks of volume. Twenty to thirty questions a session, four sessions a week, mixed topics rather
+            than blocked — blocked practice feels better and transfers worse. Everything wrong goes into a review
+            queue and comes back.</li>
+          <li>Three weeks of full mocks. One complete section under a real countdown, twice a week, then a careful
+            hour going through every question you got wrong <em>and</em> every one you got right slowly.</li>
+          <li>The last week: no new material. Re-sit questions you have previously failed and sleep properly.</li>
+        </ol>
+        <h3>If you have three weeks</h3>
+        <p>Skip step 1 entirely. Do Paper 2 first — it has the highest marks-per-hour-of-preparation ratio of
+          anything in the test — then alternate mocks and review until you run out of days.</p>
+
+        <h2 id="traps">7. Ten traps worth knowing</h2>
+        <ol>
+          <li>Dividing an inequality by a variable that might be negative.</li>
+          <li>Dividing an equation by an expression that might be zero, and losing a root.</li>
+          <li>Squaring both sides and keeping the extraneous solution.</li>
+          <li>Forgetting that a logarithm needs a positive argument, so an algebraically valid root is rejected.</li>
+          <li>Solving <i>sin&nbsp;3x</i>-type equations over the interval for <i>x</i> rather than for <i>3x</i>.</li>
+          <li>Taking only the positive square root when both signs are admissible.</li>
+          <li>Reading “necessary” as “sufficient”, or a contrapositive as a converse.</li>
+          <li>Treating a single verified case as a proof.</li>
+          <li>Answering the question you expected instead of the one asked — the number of solutions, not the
+            solutions.</li>
+          <li>Leaving a question blank when there is no negative marking.</li>
+        </ol>
+
+        <h2 id="papers">8. The past papers</h2>
+        <p>UAT-UK publishes the TMUA papers from <b>2016 to 2023</b>, together with worked answers and answer keys,
+          as preparation material. They are the single most valuable resource in existence for this test, and they
+          are free.</p>
+        <p>Every one of them is transcribed into this site, question by question, with each answer checked against
+          the official key before it was allowed in. You can sit any of them in the replica driver under the real
+          countdown, and a question drawn from a real paper is marked with a chip saying which — <span class="chip"
+          style="border-color:color-mix(in srgb,var(--warn) 45%,transparent);color:var(--warn)">TMUA 2019 · P1 Q7</span>
+          — so you always know whether you are looking at the real thing.</p>
+        <h3>How to spend them</h3>
+        <p>There are sixteen papers and you cannot un-sit one. That makes them a budget, not a bottomless well:</p>
+        <ul>
+          <li><b>Do not open them first.</b> Build your speed on practice sets, where a wasted question costs
+            nothing. A past paper sat before you are ready tells you only that you are not ready yet.</li>
+          <li><b>Keep the two most recent for last.</b> 2022 and 2023 are the closest in style to what you will
+            actually sit; save them for the fortnight before, when the score means something.</li>
+          <li><b>Work the older ones hardest.</b> 2016 and 2017 are further from current style, which makes them the
+            right place to be sloppy, run over time, and learn what your failure modes are.</li>
+          <li><b>An hour of review per paper, minimum.</b> Go through every question you got wrong <em>and</em> every
+            one you got right slowly. The second list is the one that catches you out in October.</li>
+        </ul>
+
+        <h2 id="next">9. Where to start here</h2>
+        <p>Build a ten-question set and see where you land. It takes about fifteen minutes and tells you more than
+          another hour of reading this page will.</p>
+        <div class="pill-row" style="margin:22px 0 10px">
+          <a class="btn btn-primary" href="practice.html">Build a set</a>
+          <a class="btn btn-ghost" href="practice.html?paper=2&amp;go=1">Ten Paper 2 questions</a>
+          <a class="btn btn-ghost" href="mock.html">Sit a real past paper</a>
+        </div>
+      </article>
+
+      <nav class="toc" aria-label="Contents">
+        <div class="eyebrow" style="margin-bottom:10px">contents</div>
+        <a href="#format">1 · The format</a>
+        <a href="#who">2 · Who asks for it</a>
+        <a href="#paper1">3 · Paper 1</a>
+        <a href="#paper2">4 · Paper 2</a>
+        <a href="#timing">5 · Timing</a>
+        <a href="#prep">6 · What to do</a>
+        <a href="#traps">7 · Ten traps</a>
+        <a href="#papers">8 · The past papers</a>
+        <a href="#next">9 · Start here</a>
+      </nav>
+    </div>
+  </div>
+</main>
+<footer id="ftr"></footer>
+<script src="assets/js/math.js"></script>
+<script src="assets/js/bank-past.js"></script>
+<script src="assets/js/bank-p1.js"></script>
+<script src="assets/js/bank-p2.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/shell.js"></script>
+</body>
+</html>

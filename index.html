@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TMUA Lab — Free Timed TMUA Practice for Imperial, LSE, Warwick &amp; Durham</title>
+<meta name="description" content="A free question bank, full timed mocks in a replica of the real test driver, a spaced review queue and score tracking on the TMUA 1.0–9.0 scale.">
+<meta name="theme-color" content="#0a0e12">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2354d8f0'/><text y='72' x='50' text-anchor='middle' font-size='62' font-family='monospace' font-weight='bold' fill='%2303151b'>T</text></svg>">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header id="hdr"></header>
+
+<main id="main">
+
+  <!-- ============ hero ============ -->
+  <section class="wrap hero">
+    <div class="eyebrow">free · no account · your data stays in this browser</div>
+    <h1>Get into <span class="rot" id="rot">Imperial</span>.<br>TMUA, sorted.</h1>
+    <p class="sub">Two papers, twenty questions, seventy-five minutes each, no calculator. The whole thing rewards
+      pace and pattern recognition far more than it rewards depth — so the only preparation that moves the needle
+      is a lot of questions, sat under the clock, with everything you get wrong coming back until it sticks.</p>
+    <div class="cta">
+      <a class="btn btn-primary btn-lg" href="practice.html">Start practising</a>
+      <a class="btn btn-ghost btn-lg" href="mock.html">Sit a full mock</a>
+    </div>
+    <div class="note">⌘K anywhere for the command palette</div>
+
+    <div class="tele" id="tele">
+      <div class="cell"><div class="k">questions in the bank</div><div class="v" data-count="0">0</div></div>
+      <div class="cell"><div class="k">you have answered</div><div class="v" data-count="0">0</div></div>
+      <div class="cell"><div class="k">due for review</div><div class="v" data-count="0">0</div></div>
+      <div class="cell"><div class="k">day streak</div><div class="v" data-count="0">0</div></div>
+    </div>
+  </section>
+
+  <!-- ============ predicted papers ============ -->
+  <section class="wrap sec rv" id="predicted">
+    <div class="sec-head">
+      <div>
+        <div class="num">01 — exam</div>
+        <h2>Sit the 2026 predicted papers</h2>
+        <p>Two fixed papers that everybody sits in the same form, so the scores are comparable between candidates.
+          Twenty questions and seventy-five minutes each, in a replica of the driver the real test runs in.</p>
+      </div>
+    </div>
+    <div class="papers" id="predictedCards"></div>
+    <p class="muted" style="font-size:12.5px;margin-top:14px">Free, and you can resit as often as you like — a resit
+      redraws nothing, so the second attempt is a measure of memory rather than of maths.</p>
+
+    <div class="callout" style="margin-top:24px" id="pastCallout">
+      <div>
+        <h3>Or sit a real one</h3>
+        <p id="pastBlurb">The past papers UAT-UK publishes, transcribed in full and sat in the same driver under the
+          same countdown. Every answer is checked against the official key.</p>
+      </div>
+      <div class="right"><a class="btn btn-primary" href="mock.html">Browse past papers</a></div>
+    </div>
+  </section>
+
+  <!-- ============ practice ============ -->
+  <section class="wrap sec rv" id="practice">
+    <div class="sec-head">
+      <div>
+        <div class="num">02 — practice</div>
+        <h2>Pick a paper to practise</h2>
+        <p>Sets of five to thirty questions, relaxed or under exam conditions. Anything you get wrong joins the
+          review queue automatically.</p>
+      </div>
+      <div class="right"><a class="btn btn-ghost btn-sm" href="practice.html">Build a set →</a></div>
+    </div>
+    <div class="papers" id="paperCards"></div>
+
+    <div class="eyebrow" style="margin-top:38px">or go straight at one topic</div>
+    <div class="topics" id="topicList"></div>
+  </section>
+
+  <!-- ============ how it works ============ -->
+  <section class="wrap sec rv" id="how">
+    <div class="sec-head">
+      <div>
+        <div class="num">03 — method</div>
+        <h2>The road to an offer</h2>
+        <p>Where the TMUA sits in an application, and what is worth doing at each stage.</p>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-when">Now → October</div>
+        <h3>Work through the bank</h3>
+        <p>The TMUA is not a hard syllabus — it is AS-level content under an unreasonable clock. Twenty questions in
+          seventy-five minutes is three and three-quarter minutes each, and the questions are written so that the
+          intended route takes about ninety seconds while the obvious route takes six minutes. Practice is how you
+          learn to spot which is which.</p>
+        <div class="tl-note">
+          <div class="lab">◆ tmua lab</div>
+          <b id="bankCount">—</b> questions across both papers, each with a full worked answer. Everything you get
+          wrong returns in your review queue until you have answered it correctly twice, thirty-six hours apart.
+          Accuracy and timing are tracked per specification point, so the dashboard tells you what to work on next
+          rather than leaving you to guess.
+          <div style="margin-top:14px"><a class="btn btn-accent btn-sm" href="practice.html">Start practising →</a></div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-when">October</div>
+        <h3>Sit the TMUA</h3>
+        <p>Two papers on the same day at a Pearson VUE test centre, taken on screen. <b>Paper 1</b> is applications of
+          mathematical knowledge; <b>Paper 2</b> is mathematical reasoning — logic, necessary and sufficient
+          conditions, proof and counterexample. No calculator, and your working goes on an erasable note board that
+          is physically separate from the screen.</p>
+        <div class="tl-note">
+          <div class="lab">◆ tmua lab</div>
+          The mock runs in a replica of that driver: the same navy chrome, the same flag-and-review behaviour, the
+          same <kbd>Alt</kbd>+<kbd>N</kbd> / <kbd>Alt</kbd>+<kbd>P</kbd> navigation, and a countdown that does not
+          pause. Sitting one before October is the cheapest way to find out that transcribing algebra onto a
+          separate board costs you twenty seconds a question.
+          <div style="margin-top:14px"><a class="btn btn-accent btn-sm" href="mock.html">Sit a full mock →</a></div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-when">October → January</div>
+        <h3>Your score does its work</h3>
+        <p>Results are reported on the TMUA scale from 1.0 to 9.0, one decimal place, as the average of the two
+          papers. Roughly 5.0 is the middle of the cohort; a competitive score at Imperial or LSE is around 6.5 and
+          up. Universities use it differently — some as a threshold, some as one factor among many, some to lower a
+          conditional offer — so read your course's page rather than a forum.</p>
+        <div class="tl-note">
+          <div class="lab">◆ tmua lab</div>
+          Every set of ten questions or more is scored against the same 1.0–9.0 scale, with the difficulty of the
+          questions you were actually served taken into account, and each result carries a
+          “How is my score calculated?” panel showing the working.
+          <div style="margin-top:14px"><a class="btn btn-accent btn-sm" href="guide.html">Read the guide →</a></div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-when">December → January</div>
+        <h3>Interviews, where they happen</h3>
+        <p>Most TMUA universities do not interview for mathematics. Cambridge does, and a strong TMUA is one of the
+          things that gets you there. The habit that helps is the same one the test builds: say what you are trying
+          out loud, and be willing to abandon a route quickly when it stops going anywhere.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ about ============ -->
+  <section class="wrap sec rv" id="about">
+    <div class="sec-head">
+      <div>
+        <div class="num">04 — who runs this</div>
+        <h2>About</h2>
+      </div>
+    </div>
+    <div class="about">
+      <!-- EDIT ME: swap in your own name, course and avatar initial. -->
+      <div class="panel about-card">
+        <div class="av">T</div>
+        <h3>The TMUA Lab team</h3>
+        <div class="role">
+          <span>built by people who sat it</span>
+          <span>maths · 2025 entry</span>
+        </div>
+      </div>
+      <div>
+        <p>TMUA Lab exists because the honest answer to “how do I prepare?” is “do a very large number of questions
+          under time pressure”, and until recently the only way to do that was to burn through the handful of real
+          past papers in a fortnight and then run out.</p>
+        <p>So this is a bank of <b id="bankCount2">—</b> questions. The core of it is <b>every TMUA paper UAT-UK
+          has published — 2016 to 2023, both papers, all sixteen</b> — transcribed question by question, with every
+          answer checked against the official answer key before it was allowed in. Around those sit questions written
+          for this site to the published specification; they are marked as such, and they are easier than the real
+          thing, so practice draws from the real papers unless you ask otherwise.</p>
+        <p>Sit them in a relaxed study view or in a replica of the real test driver. Nothing is behind a login and
+          nothing leaves your browser: every answer, streak and score lives in this device's local storage, and the
+          “erase all my local data” command in the palette really does erase it.</p>
+        <p>The bank is still growing, and errors do slip through. If a question looks wrong, it probably is — please
+          say so, and it gets fixed.</p>
+        <div class="socials">
+          <a class="btn btn-ghost btn-sm" href="community.html">Community</a>
+          <a class="btn btn-ghost btn-sm" href="community.html#report">Report a question</a>
+          <a class="btn btn-ghost btn-sm" href="guide.html">The TMUA guide</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ faq ============ -->
+  <section class="wrap sec rv" id="faq">
+    <div class="sec-head">
+      <div>
+        <div class="num">05 — questions</div>
+        <h2>FAQs</h2>
+      </div>
+    </div>
+
+    <div class="faq">
+      <details>
+        <summary><span class="qn">01</span>What actually is the TMUA?<span class="caret">＋</span></summary>
+        <div class="ans">
+          <p>The Test of Mathematics for University Admission, administered by <b>UAT-UK</b> and sat on screen at
+            Pearson VUE centres. Two papers of twenty multiple-choice questions, seventy-five minutes each, no
+            calculator.</p>
+          <p><b>Paper 1 — Applications of Mathematical Knowledge</b> is pure AS content: algebra and functions,
+            sequences and series, coordinate geometry, trigonometry, exponentials and logarithms, differentiation and
+            integration, graphs.</p>
+          <p><b>Paper 2 — Mathematical Reasoning</b> uses the same knowledge but asks you to argue with it: necessary
+            and sufficient conditions, converses and contrapositives, proof by contradiction and by counterexample,
+            divisibility, and inequalities. It is the paper most candidates under-prepare for, and the one where the
+            marks are cheapest to pick up.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="qn">02</span>Which universities use it?<span class="caret">＋</span></summary>
+        <div class="ans">
+          <p>The core users are <b>Imperial College London</b>, the <b>London School of Economics</b>, the
+            <b>University of Warwick</b> and <b>Durham University</b>, with several others — Bath, Cardiff, Lancaster,
+            Sheffield, Southampton among them — taking it for some courses. Cambridge uses it for a small number of
+            routes.</p>
+          <p>Requirements move year to year, and a course that “considers” the TMUA this cycle may require it next.
+            The only source worth trusting is the course page on the university's own site for your year of entry.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="qn">03</span>How is my score out of 9 worked out?<span class="caret">＋</span></summary>
+        <div class="ans">
+          <p>Your answers are measured against the difficulty of the questions you were actually served, and the
+            result is placed on the TMUA 1.0–9.0 scale. If your set happened to be a kind one, the same mark is worth
+            slightly less; if it was a brutal one, it is worth more. That is exactly how boundaries move between real
+            sittings.</p>
+          <p>Every result carries a <b>How is my score calculated?</b> panel showing what the paper was expected to
+            yield, how your mark was adjusted, and where the final figure lands on the published distribution.</p>
+          <p><b>Sets under ten questions get no score at all.</b> Five answers place you somewhere between the bottom
+            and the top of the scale, and any single number drawn from that would be guesswork dressed up as a
+            prediction. Between ten and twenty you get a score, deliberately pulled towards the middle and labelled
+            as an indication. A real section is twenty, and a mock is the thing to trust.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="qn">04</span>How does the review queue decide what comes back?<span class="caret">＋</span></summary>
+        <div class="ans">
+          <p>Get a question wrong and it joins your review queue straight away, due now. A question served but left
+            unanswered counts as wrong.</p>
+          <p>Leaving the queue takes <b>two correct answers in review</b>, and they have to be <b>36 hours apart</b>.
+            Answer correctly and the question goes quiet for thirty-six hours rather than disappearing; when it comes
+            back, a second correct answer clears it for good.</p>
+          <p>A wrong answer at any point sends it back to the start: due immediately, and needing two correct answers
+            again. One right answer followed by a miss counts for nothing, which is the point of asking twice.</p>
+          <p>Only answers given in review count towards those two. Getting a question right first time in practice or
+            a mock keeps it out of the queue altogether, but cannot clear one already in there.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="qn">05</span>What's the difference between practice, a mock and review?<span class="caret">＋</span></summary>
+        <div class="ans">
+          <p><b>Practice</b> is a set of five to thirty questions drawn from one paper, optionally narrowed to a
+            single topic. By default it draws from the real past papers; you can widen it to the whole bank or narrow
+            it to this site's own questions.</p>
+          <p>Two settings control how it feels, and they are independent. <b>When you see the answer</b> is either
+            <em>as soon as I pick</em> (committal, fastest for drilling), <em>after I confirm</em> (you can change
+            your mind first), or <em>only at the end</em>. <b>Conditions</b> is either relaxed — the timer counts up
+            and can be paused — or exam conditions, a countdown at the real pace of about 3 minutes 45 seconds a
+            question, without pausing. Exam conditions fixes the answers to the end, because that is what exam
+            conditions means.</p>
+          <p>A <b>mock</b> is a full twenty-question section with a seventy-five minute countdown, sat in the replica
+            test driver. You can sit one paper or both back to back.</p>
+          <p><b>Review</b> serves only questions you have previously got wrong, and only once they are due. It does
+            not use up unseen questions, and its answers do not count towards the seen-question pool.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="qn">06</span>Why don't I ever see the same question twice?<span class="caret">＋</span></summary>
+        <div class="ans">
+          <p>Every question served in practice or a mock is marked as seen, whether you answered it or left it blank,
+            and will not come round again. The setup screen shows how many questions are <em>left</em> in a paper
+            rather than how many it contains.</p>
+          <p>Abandoning a set is the exception: nothing is recorded and its questions go straight back into the pool.
+            Deleting a sitting from your history does the same.</p>
+          <p><b>Reset and practise again</b> makes a whole paper available from the start. It records a cutoff rather
+            than deleting anything, so your dashboard, streak and review queue stay exactly as they are.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="qn">07</span>Which keyboard shortcuts work where?<span class="caret">＋</span></summary>
+        <div class="ans">
+          <p>It depends on the interface. The <b>test driver</b> is a replica of the player the real TMUA runs in, so
+            it is deliberately sparse. The <b>study view</b> is this site's own layout and is not.</p>
+          <p><b>Test driver (and every mock)</b><br>
+            <kbd>Alt</kbd>+<kbd>N</kbd> — next question<br>
+            <kbd>Alt</kbd>+<kbd>P</kbd> — previous question<br>
+            Answers are selected with the mouse. Nothing else is bound.</p>
+          <p><b>Study view</b><br>
+            <kbd>A</kbd>–<kbd>H</kbd> — select that answer<br>
+            <kbd>↵</kbd> — check the answer, then move on<br>
+            <kbd>→</kbd> or <kbd>N</kbd> — next question &nbsp; <kbd>←</kbd> or <kbd>P</kbd> — previous<br>
+            <kbd>F</kbd> — flag the question<br>
+            <kbd>Alt</kbd>+<kbd>N</kbd> and <kbd>Alt</kbd>+<kbd>P</kbd> work here as well.</p>
+          <p>Everywhere: <kbd>⌘</kbd><kbd>K</kbd> (or <kbd>Ctrl</kbd><kbd>K</kbd>, or just <kbd>/</kbd>) opens the
+            command palette. On a Mac, <kbd>Alt</kbd> is the <kbd>Option</kbd> key.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="qn">08</span>Where does the “% answer correctly” figure come from?<span class="caret">＋</span></summary>
+        <div class="ans">
+          <p>It is the calibrated facility of the question — the proportion of candidates expected to get it right —
+            and it is what the scoring model uses to decide how kind or cruel your particular draw was.</p>
+          <p>The scale is <b>anchored on the real past papers</b>. Their difficulty mix is set so that a real paper
+            comes out at a mean facility of 0.50, which is roughly what the published cohort actually averages: about
+            ten marks out of twenty. Everything else is measured against that line. The questions written for this
+            site sit well above it, which is the honest position — they are easier — and the model discounts a set of
+            them accordingly, so a good score on an easy set does not read as a 9.</p>
+          <p>A question counts as one of the <b>hard questions</b> when the figure is under 25%. The hard-questions
+            toggle filters a set down to them, and only offers ones you have not already sat.</p>
+          <p>Because this site keeps nothing on a server, these figures do not move with live cohort data — the whole
+            point of the design is that your answers never leave the browser.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary><span class="qn">09</span>What happens to my data?<span class="caret">＋</span></summary>
+        <div class="ans">
+          <p>Nothing leaves this device. Answers, timings, sessions, streaks and preferences are written to your
+            browser's local storage under a single key and never transmitted anywhere. There is no account, no
+            analytics and no cookie banner because there is nothing to consent to.</p>
+          <p>The practical consequence is that clearing site data, using a private window or switching browser starts
+            you from scratch, and your progress does not follow you between devices. <b>Erase all my local data</b> in
+            the command palette wipes everything immediately.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="wrap sec rv">
+    <div class="callout">
+      <div>
+        <h3>Enough reading.</h3>
+        <p>Ten questions is about fifteen minutes, and the first set tells you more than an evening of theory.</p>
+      </div>
+      <div class="right">
+        <a class="btn btn-ghost" href="practice.html">Build a set</a>
+        <a class="btn btn-primary" href="mock.html?start=1">Sit Paper 1</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="ftr"></footer>
+
+<script src="assets/js/math.js"></script>
+<script src="assets/js/bank-past.js"></script>
+<script src="assets/js/bank-p1.js"></script>
+<script src="assets/js/bank-p2.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/shell.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>

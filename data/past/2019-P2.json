@@ -1,0 +1,143 @@
+[
+  {
+    "n": 1, "t": "seq", "sp": "Binomial expansion · picking one term", "d": 3, "sol": "lab",
+    "q": "Find the coefficient of the $x^4$ term in the expansion of $$x^2\\left(2x + \\frac{1}{x}\\right)^6$$",
+    "o": ["$15$", "$30$", "$60$", "$120$", "$240$"],
+    "a": 4,
+    "e": "The factor $x^2$ outside means you want the $x^2$ term inside the bracket. A general term of $\\left(2x + \\frac1x\\right)^6$ is $\\binom{6}{k}(2x)^{6-k}\\left(\\frac1x\\right)^k = \\binom{6}{k}2^{6-k}x^{6-2k}$, so $6 - 2k = 2$ gives $k = 2$. That term is $\\binom{6}{2}2^4 = 15 \\times 16 = 240$."
+  },
+  {
+    "n": 2, "t": "alg", "sp": "Factor theorem · a cubic with a missing term", "d": 3, "sol": "lab",
+    "q": "$(2x + 1)$ and $(x - 2)$ are factors of $2x^3 + px^2 + q$.<p>What is the value of $2p + q$?</p>",
+    "o": ["$-10$", "$-\\frac{38}{5}$", "$-\\frac{22}{3}$", "$\\frac{22}{3}$", "$\\frac{38}{5}$", "$10$"],
+    "a": 2,
+    "e": "Write $f(x) = 2x^3 + px^2 + 0x + q$ — the point to notice is that the coefficient of $x$ is zero, so there are only two unknowns. The factor theorem gives $f(2) = 16 + 4p + q = 0$ and $f\\!\\left(-\\frac12\\right) = -\\frac14 + \\frac{p}{4} + q = 0$, the second of which tidies to $p + 4q = 1$. Substituting $p = 1 - 4q$ into $4p + q = -16$ gives $-15q = -20$, so $q = \\frac43$ and $p = -\\frac{13}{3}$. Then $2p + q = -\\frac{26}{3} + \\frac43 = -\\frac{22}{3}$."
+  },
+  {
+    "n": 3, "t": "alg", "sp": "Cancelling a factor that may be zero", "d": 2, "sol": "lab",
+    "q": "$a$, $b$ and $c$ are real numbers.<p>Given that $ab = ac$, which of the following statements <b>must</b> be true?</p><p>I&nbsp;&nbsp;&nbsp; $a = 0$<br>II&nbsp;&nbsp; $b = 0$ or $c = 0$<br>III&nbsp; $b = c$</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 0,
+    "e": "Rearranging, $ab - ac = 0$, so $a(b - c) = 0$ and therefore $a = 0$ <b>or</b> $b = c$. That is a disjunction, so neither branch has to hold on its own. Taking $a = 1$, $b = c = 5$ satisfies $ab = ac$ with $a \\ne 0$ and with $b$, $c$ both non-zero, killing I and II. Taking $a = 0$, $b = 1$, $c = 2$ satisfies it with $b \\ne c$, killing III."
+  },
+  {
+    "n": 4, "t": "prf", "sp": "What counts as a counterexample", "d": 3, "sol": "lab",
+    "q": "Consider the following conjecture:<p><b>If</b> $N$ is a positive integer that consists of the digit 1 followed by an odd number of 0 digits and then a final digit 1, <b>then</b> $N$ is a prime number.</p><p>Here are three numbers:</p><p>I&nbsp;&nbsp;&nbsp; $N = 101$ (which is a prime number)<br>II&nbsp;&nbsp; $N = 1001$ (which equals $7 \\times 11 \\times 13$)<br>III&nbsp; $N = 10001$ (which equals $73 \\times 137$)</p><p>Which of these provide(s) a counterexample to the conjecture?</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 3,
+    "e": "A counterexample has to satisfy the hypothesis and fail the conclusion, so check the number of zeros first. $101$ has one zero (odd) but is prime, so the conclusion holds and it is not a counterexample. $1001$ is composite, but it has two zeros — an even number — so it never satisfied the hypothesis and cannot be a counterexample. $10001$ has three zeros (odd) and equals $73 \\times 137$, so it meets the hypothesis and breaks the conclusion. Only III."
+  },
+  {
+    "n": 5, "t": "num", "sp": "Divisibility · necessary and sufficient", "d": 3, "sol": "lab",
+    "q": "Consider the following statement about the positive integers $a$, $b$ and $n$:<p>$(*)$: &nbsp;$ab$ is divisible by $n$</p><p>The condition 'either $a$ or $b$ is divisible by $n$' is:</p>",
+    "o": ["<b>necessary</b> but <b>not sufficient</b> for $(*)$", "<b>sufficient</b> but <b>not necessary</b> for $(*)$", "<b>necessary</b> and <b>sufficient</b> for $(*)$", "<b>not necessary</b> and <b>not sufficient</b> for $(*)$"],
+    "a": 1,
+    "e": "Sufficiency is immediate: if $n$ divides $a$, then $a = kn$ and $ab = knb$, so $n$ divides $ab$; the same works if $n$ divides $b$. It is not necessary, because $n$ can be built out of factors split between $a$ and $b$. Take $a = 2$, $b = 3$, $n = 6$: then $ab = 6$ is divisible by 6, yet neither 2 nor 3 is. (The condition would be necessary if $n$ were prime, which is exactly what the question does not say.)"
+  },
+  {
+    "n": 6, "t": "prf", "sp": "Finding the error in a trigonometric argument", "d": 4, "sol": "lab",
+    "q": "A student attempts to solve the equation $$\\cos x + \\sin x \\tan x = 2\\sin x - 1$$ in the range $0 \\le x \\le 2\\pi$.<p>The student's attempt is as follows:</p><p>$\\cos x + \\sin x \\tan x = 2 \\sin x - 1$</p><p>So&nbsp; $\\cos x - \\sin x + \\sin x \\tan x - \\sin x = -1$&nbsp;&nbsp; (I)</p><p>So&nbsp; $(\\sin x - \\cos x)(\\tan x - 1) = -1$&nbsp;&nbsp; (II)</p><p>So&nbsp; $\\sin x - \\cos x = -1$&nbsp; or&nbsp; $\\tan x - 1 = -1$&nbsp;&nbsp; (III)</p><p>So&nbsp; $(\\sin x - \\cos x)^2 = 1$&nbsp; or&nbsp; $\\tan x = 0$&nbsp;&nbsp; (IV)</p><p>So&nbsp; $2\\sin x \\cos x = 0$&nbsp; or&nbsp; $\\tan x = 0$&nbsp;&nbsp; (V)</p><p>So&nbsp; $x = 0$, $\\frac{\\pi}{2}$, $\\pi$, $\\frac{3\\pi}{2}$, $2\\pi$&nbsp;&nbsp; (VI)</p><p>Which of the following best describes this attempt?</p>",
+    "o": ["It is completely correct.", "It is incorrect, and the first error occurs on line (I)", "It is incorrect, and the first error occurs on line (II)", "It is incorrect, and the first error occurs on line (III)", "It is incorrect, and the first error is that extra solutions were introduced on line (IV)", "It is incorrect, and the first error is that extra solutions were introduced on line (V)", "It is incorrect, and the first error is not eliminating the values where $\\tan x$ is undefined on line (VI)"],
+    "a": 3,
+    "e": "Check the first two lines by expanding rather than by eye. Line (I) is just $2\\sin x$ taken across as $-\\sin x - \\sin x$, so it is fine. For line (II), $(\\sin x - \\cos x)(\\tan x - 1) = \\sin x\\tan x - \\sin x - \\cos x\\tan x + \\cos x$, and $\\cos x \\tan x = \\sin x$, giving exactly the left-hand side of (I). Line (III) is where it breaks: from a product equal to $-1$ you cannot conclude that one factor is $-1$, because two numbers can multiply to $-1$ without either being $-1$ (the split-into-cases move only works when the product is $0$)."
+  },
+  {
+    "n": 7, "t": "prf", "sp": "Choosing the statement a given example refutes", "d": 4, "sol": "lab",
+    "q": "For which one of the following statements can the fact that $12^2 + 16^2 = 20^2$ be used to produce a <b>counterexample</b>?",
+    "o": ["If $a$, $b$ and $c$ are positive integers which satisfy the equation $a^2 + b^2 = c^2$, and the three numbers have no common divisor, then two of them are odd and the other is even.", "The equation $a^4 + b^2 = c^2$ has no solutions for which $a$, $b$ and $c$ are positive integers.", "The equation $a^4 + b^4 = c^4$ has no solutions for which $a$, $b$ and $c$ are positive integers.", "If $a$, $b$ and $c$ are positive integers which satisfy the equation $a^2 + b^2 = c^2$, then one is the arithmetic mean of the other two."],
+    "a": 1,
+    "e": "Work out what the numbers $12$, $16$, $20$ actually do. They share the common divisor 4, so the first statement's hypothesis is not met and it cannot be refuted by them. For the last statement, $16 = \\frac{12 + 20}{2}$, so the conclusion holds and again there is no counterexample. The one that works is the second: $16^2 = 2^8 = 4^4$, so $4^4 + 12^2 = 256 + 144 = 400 = 20^2$, giving positive integers $a = 4$, $b = 12$, $c = 20$ with $a^4 + b^2 = c^2$. The third fails because $12^2$ and $20^2$ are not fourth powers."
+  },
+  {
+    "n": 8, "t": "ineq", "sp": "Multiplying and dividing by negatives", "d": 3, "sol": "lab",
+    "q": "$a$, $b$ and $c$ are real numbers with $a < b < c < 0$.<p>Which of the following statements <b>must</b> be true?</p><p>I&nbsp;&nbsp;&nbsp; $ac < ab < a^2$<br>II&nbsp;&nbsp; $b(c + a) > 0$<br>III&nbsp; $\\dfrac{c}{b} > \\dfrac{a}{b}$</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 4,
+    "e": "All three numbers are negative, so every multiplication or division by one of them flips the inequality. For I, multiply $a < b < c$ through by the negative number $a$: the order reverses to $a^2 > ab > ac$, which is exactly statement I. For II, $b < 0$ and $c + a < 0$, and a negative times a negative is positive, so II holds. For III, divide $a < c$ by the negative number $b$: the order reverses to $\\frac{a}{b} > \\frac{c}{b}$, which is the opposite of what III claims. So I and II only."
+  },
+  {
+    "n": 9, "t": "num", "sp": "Covering a cycle · a counting argument", "d": 4, "sol": "lab",
+    "q": "A large circular table has 40 chairs round it.<p>What is the smallest number of people who can be sitting at the table already such that the next person to sit down <b>must</b> sit next to someone?</p>",
+    "o": ["$9$", "$10$", "$13$", "$14$", "$19$", "$20$"],
+    "a": 3,
+    "e": "The condition is that every empty chair has an occupied chair beside it. With $k$ people there are $40 - k$ empty chairs, and each person can be beside at most $2$ of them, so $40 - k \\le 2k$, giving $k \\ge \\frac{40}{3}$ and hence $k \\ge 14$. Thirteen is not enough: thirteen people leave thirteen gaps totalling $27$ chairs, so some gap holds at least three empty chairs and its middle chair has two empty neighbours. Fourteen is achievable — seat people with gaps of two empty chairs between them, using one gap of only one chair to make the numbers come out at 40."
+  },
+  {
+    "n": 10, "t": "geo", "sp": "Parallelograms · necessary but not sufficient", "d": 3, "sol": "lab",
+    "q": "$PQRS$ is a quadrilateral, labelled anticlockwise.<p>Which one of the following is a <b>necessary</b> but <u><b>not</b></u> <b>sufficient</b> condition for $PQRS$ to be a parallelogram?</p>",
+    "o": ["$PQ = SR$ and $PS$ is parallel to $QR$", "$PQ = SR$ and $PQ$ is parallel to $SR$", "$PQ = QR = SR = PS$", "$PR = QS$"],
+    "a": 0,
+    "e": "In the parallelogram $PQRS$ the opposite sides are $PQ$ with $SR$, and $QR$ with $PS$; both pairs are equal and parallel. The first option asks for one pair equal and the <em>other</em> pair parallel, which every parallelogram satisfies, so it is necessary — but an isosceles trapezium with $PS$ parallel to $QR$ and equal slanted sides $PQ = SR$ satisfies it too, so it is not sufficient. The second option pairs equality and parallelism on the <em>same</em> side, which is the standard sufficient test, so it is both. The rhombus condition is sufficient but not necessary, and equal diagonals is neither."
+  },
+  {
+    "n": 11, "t": "seq", "sp": "Arithmetic series · what a fixed sum forces", "d": 3, "sol": "lab",
+    "q": "An <b>arithmetic</b> series has $n$ terms, all of which are <b>integers</b>.<p>The sum of the series is 20.</p><p>Which of the following statements <b>must</b> be true?</p><p>I&nbsp;&nbsp;&nbsp; The first term of the series is even.<br>II&nbsp;&nbsp; $n$ is even.<br>III&nbsp; The common difference is even.</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 0,
+    "e": "One well-chosen example can kill all three at once. Take the eight consecutive integers $-1, 0, 1, 2, 3, 4, 5, 6$: they are in arithmetic progression and sum to $20$, yet the first term $-1$ is odd and the common difference $1$ is odd, so I and III both fail. For II, take the five consecutive integers $2, 3, 4, 5, 6$, which also sum to $20$ with $n = 5$ odd. Nothing here is forced, so the answer is none of them."
+  },
+  {
+    "n": 12, "t": "log", "sp": "Ordering probabilities without computing them", "d": 3, "sol": "lab",
+    "q": "Most students in a large college study Mathematics. A teacher chooses three different students at random, one after the other.<p>Consider these three probabilities:</p><p>$R = \\text{P(At least one of the students chosen studies Mathematics)}$<br>$S = \\text{P(The second student chosen studies Mathematics)}$<br>$T = \\text{P(All three of the students chosen study Mathematics)}$</p><p>Which of the following is true?</p>",
+    "o": ["$R < S < T$", "$R < T < S$", "$S < R < T$", "$S < T < R$", "$T < R < S$", "$T < S < R$"],
+    "a": 5,
+    "e": "Compare the events rather than working out any numbers. \"All three study Mathematics\" implies \"the second one does\", which in turn implies \"at least one does\", and each implication is between events that are genuinely different in a large college, so the probabilities strictly increase along that chain. Hence $T < S < R$. The fact that most students study Mathematics is what makes the middle probability sit strictly between the other two rather than collapsing to $0$ or $1$."
+  },
+  {
+    "n": 13, "t": "cal", "sp": "Trapezium rule · symmetry and linearity", "d": 4, "sol": "lab",
+    "q": "A student approximates the integral $\\int_a^b \\sin^2 x\\,\\mathrm{d}x$ using the trapezium rule with 4 strips. The resulting approximation is an overestimate.<p>Which of the following is/are <b>necessarily</b> true?</p><p>I&nbsp;&nbsp; If the student approximates $\\int_{-b}^{-a} \\sin^2 x\\,\\mathrm{d}x$ in the same way, the result will be an overestimate.<br>II&nbsp; If the student approximates $\\int_a^b \\cos^2 x\\,\\mathrm{d}x$ in the same way, the result will be an underestimate.</p>",
+    "o": ["neither of them", "I only", "II only", "I and II"],
+    "a": 3,
+    "e": "For I, use that $\\sin^2 x$ is an even function. The four strips on $[-b, -a]$ have the same width, and their ordinates are the ordinates from $[a, b]$ in reverse order; the trapezium sum $\\frac{h}{2}(y_0 + 2y_1 + 2y_2 + 2y_3 + y_4)$ is unchanged by reversing, and the exact integrals match too, so the overestimate carries over. For II, use $\\cos^2 x = 1 - \\sin^2 x$ and the fact that the trapezium rule is linear and exact on constants: the approximation to $\\int_a^b\\cos^2 x\\,\\mathrm{d}x$ is $(b-a)$ minus the approximation to $\\int_a^b \\sin^2 x\\,\\mathrm{d}x$, and subtracting something too big gives something too small."
+  },
+  {
+    "n": 14, "t": "cal", "sp": "Increasing functions · what is actually forced", "d": 4, "sol": "lab",
+    "q": "Consider the following statements about the polynomial $\\mathrm{p}(x)$, where $a < b$:<p>I&nbsp;&nbsp;&nbsp; $\\mathrm{p}(a) \\le \\mathrm{p}(b)$<br>II&nbsp;&nbsp; $\\mathrm{p}'(a) \\le \\mathrm{p}'(b)$<br>III&nbsp; $\\mathrm{p}''(a) \\le \\mathrm{p}''(b)$</p><p>Which of these statements is a <b>necessary</b> condition for $\\mathrm{p}(x)$ to be increasing for $a \\le x \\le b$?</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 1,
+    "e": "\"Increasing on $[a,b]$\" is a statement about the function's values, so I follows at once: if the graph rises across the interval then $\\mathrm{p}(a) \\le \\mathrm{p}(b)$. The tempting slip is to think the derivative must also rise, but increasing says only that $\\mathrm{p}'$ stays non-negative, not that it grows. Take $\\mathrm{p}(x) = 3x - x^3$ on $\\left[0, \\tfrac12\\right]$: here $\\mathrm{p}' = 3 - 3x^2 > 0$ so $\\mathrm{p}$ is increasing, yet $\\mathrm{p}'(0) = 3$ is bigger than $\\mathrm{p}'\\!\\left(\\tfrac12\\right) = 2.25$, and $\\mathrm{p}'' = -6x$ is also decreasing. So II and III both fail, leaving I only."
+  },
+  {
+    "n": 15, "t": "exp", "sp": "Simultaneous logarithm equations", "d": 3, "sol": "lab",
+    "q": "The numbers $a$, $b$ and $c$ are each greater than 1.<p>The following logarithms are all to the same base:</p>$$\\log(ab^2c) = 7$$ $$\\log(a^2bc^2) = 11$$ $$\\log(a^2b^2c^3) = 15$$<p>What is this base?</p>",
+    "o": ["$a$", "$b$", "$c$", "It is possible to determine the base, but the base is not $a$, $b$ or $c$.", "There is insufficient information given to determine the base."],
+    "a": 1,
+    "e": "Put $A = \\log a$, $B = \\log b$, $C = \\log c$; the log laws turn the three equations into $A + 2B + C = 7$, $2A + B + 2C = 11$ and $2A + 2B + 3C = 15$. Subtracting the second from the third gives $B + C = 4$, and the first then reads $A + B + (B + C) = 7$, so $A + B = 3$. Feeding $C = 4 - B$ into the second gives $2A - B = 3$, and with $A + B = 3$ this gives $A = 2$, $B = 1$, $C = 3$. A logarithm equal to $1$ means the number equals the base, so $\\log b = 1$ makes the base $b$."
+  },
+  {
+    "n": 16, "t": "alg", "sp": "Discriminant · a region in the parameter plane", "d": 4, "sol": "lab",
+    "fig": "Eight labelled grids with $p$ on the horizontal axis and $q$ on the vertical axis, each running from $-1$ to $6$ and $-4$ to $4$, showing different shaded regions bounded by dashed lines through the origin.",
+    "q": "The graph of the quadratic $$y = px^2 + qx + p$$ where $p > 0$, intersects the $x$-axis at two distinct points.<p>In which one of the following graphs does the <b>shaded</b> region show the complete set of possible values that $p$ and $q$ could take?</p><p>Each of the eight graphs plots $p$ on the horizontal axis and $q$ on the vertical axis, with the boundary lines drawn dashed. They are described below.</p>",
+    "o": ["Everything above the dashed line $q = 2p$ together with the whole region below the $p$-axis, for $p > 0$.", "Only the triangle bounded by the $q$-axis, the line $q = 4$ and the dashed line $q = 2p$.", "Everything below and to the right of the dashed line $q = 2p$, for $p > 0$.", "Only the triangle above the dashed line $q = 2p$ with $p > 0$, drawn as far as $q = 4$.", "The single region lying to the right of both dashed lines $q = 2p$ and $q = -2p$, for $p > 0$.", "The two wedges with $p > 0$ lying above the dashed line $q = 2p$ and below the dashed line $q = -2p$.", "Everything except the wedge between the dashed lines $q = 2p$ and $q = -2p$ on the right, so the shading also covers $p < 0$.", "The two wedges lying to the left of the dashed lines $q = 2p$ and $q = -2p$, extending into $p < 0$."],
+    "a": 5,
+    "e": "Two distinct roots means a positive discriminant: $q^2 - 4 \\times p \\times p > 0$, so $q^2 > 4p^2$. Since $p > 0$, taking square roots gives $|q| > 2p$, that is $q > 2p$ or $q < -2p$. On the $(p, q)$ plane that is a pair of open wedges in the right half-plane — one above the line of gradient $2$ through the origin, one below the line of gradient $-2$ — with the lines themselves excluded because the inequality is strict. Graph F is the one showing exactly those two wedges and nothing for $p \\le 0$."
+  },
+  {
+    "n": 17, "t": "log", "sp": "Which option can be the unique correct one", "d": 4, "sol": "lab",
+    "q": "A multiple-choice test question offered the following four options relating to a certain statement:<p>A&nbsp;&nbsp; The statement is true <b>if and only if</b> $x > 1$<br>B&nbsp;&nbsp; The statement is true <b>if</b> $x > 1$<br>C&nbsp;&nbsp; The statement is true <b>if and only if</b> $x > 2$<br>D&nbsp;&nbsp; The statement is true <b>if</b> $x > 2$</p><p>Given that <b>exactly one</b> of these options was correct, which one was it?</p>",
+    "o": ["A", "B", "C", "D"],
+    "a": 3,
+    "e": "Look at which options force others to be true as well. An \"if and only if\" is stronger than the matching \"if\", so if A were correct then B would be correct too, giving two correct options — so A is out, and the same argument rules out C because it would drag D along with it. Option B says $x > 1$ is enough for the statement, and since every $x > 2$ also satisfies $x > 1$, B correct would make D correct as well. That leaves D as the only option that can stand alone."
+  },
+  {
+    "n": 18, "t": "ineq", "sp": "Inequalities with two modulus signs", "d": 5, "sol": "lab",
+    "q": "Consider the following inequality:<p>$(*)$:&nbsp;&nbsp; $a|x| + 1 \\le |x - 2|$</p><p>where $a$ is a real constant.</p><p>Which one of the following describes the complete set of values of $a$ such that $(*)$ is <b>true for all real</b> $x$?</p>",
+    "o": ["$a \\le \\frac{3}{2}$", "$a \\le 1$", "$a \\le \\frac{1}{2}$", "$a \\le 0$", "$a \\le -\\frac{1}{2}$", "$a \\le -1$", "$a \\le -\\frac{3}{2}$", "There are no such values of $a$."],
+    "a": 4,
+    "e": "Test the value that makes the right-hand side smallest before doing the general work: at $x = 2$ the inequality reads $2a + 1 \\le 0$, so $a \\le -\\frac12$ is forced. Now check that $a \\le -\\frac12$ is enough, splitting at $x = 0$ and $x = 2$. For $x < 0$ it becomes $x(1 - a) \\le 1$, and the left side is negative, so it holds. For $0 \\le x \\le 2$ it becomes $(a+1)x \\le 1$, whose worst case is $x = 2$, giving $a \\le -\\frac12$ again. For $x \\ge 2$ it becomes $(a - 1)x \\le -3$, and since $a - 1 < 0$ the worst case is the smallest $x$, namely $x = 2$, giving $2 - 2a \\ge 3$, once more $a \\le -\\frac12$."
+  },
+  {
+    "n": 19, "t": "alg", "sp": "Surds · recognising a perfect square", "d": 4, "sol": "lab",
+    "q": "Find the value of the expression $$\\sqrt{8 - 4\\sqrt{2} + 1} + \\sqrt{9 - 12\\sqrt{2} + 8}$$",
+    "o": ["$\\sqrt{26 - 16\\sqrt{2}}$", "$4\\sqrt{2} - 4$", "$-2$", "$4 - 4\\sqrt{2}$", "$2$", "$\\sqrt{26} - 4\\sqrt{2}$", "$1$"],
+    "a": 4,
+    "e": "The unsimplified way each expression is written is the hint: each is already laid out as $u^2 - 2uv + v^2$. The first is $\\left(2\\sqrt2\\right)^2 - 2\\left(2\\sqrt2\\right)(1) + 1^2 = \\left(2\\sqrt2 - 1\\right)^2$, and the second is $3^2 - 2(3)\\left(2\\sqrt2\\right) + \\left(2\\sqrt2\\right)^2 = \\left(3 - 2\\sqrt2\\right)^2$. A square root is the non-negative value, so watch the signs: $2\\sqrt2 \\approx 2.83$, so the first root is $2\\sqrt2 - 1$ and the second is $3 - 2\\sqrt2$. Adding, the surds cancel and the total is $2$."
+  },
+  {
+    "n": 20, "t": "gra", "sp": "Transformations · when the order does not matter", "d": 4, "sol": "lab",
+    "q": "When the graph of the function $y = \\mathrm{f}(x)$, defined on the real numbers, is reflected in the $y$-axis and then translated by 2 units in the negative $x$-direction, the result is the graph of the function $y = \\mathrm{g}(x)$.<p>When the graph of the same function $y = \\mathrm{f}(x)$ is translated by 2 units in the negative $x$-direction and then reflected in the $y$-axis, the result is the graph of the function $y = \\mathrm{h}(x)$.</p><p>Which one of the following conditions on $y = \\mathrm{f}(x)$ is <b>necessary and sufficient</b> for the functions $\\mathrm{g}(x)$ and $\\mathrm{h}(x)$ to be identical?</p>",
+    "o": ["$\\mathrm{f}(x) = \\mathrm{f}(x + 2)$ for all $x$", "$\\mathrm{f}(x) = \\mathrm{f}(x + 4)$ for all $x$", "$\\mathrm{f}(x) = \\mathrm{f}(x + 8)$ for all $x$", "$\\mathrm{f}(x) = \\mathrm{f}(-x)$ for all $x$", "$\\mathrm{f}(x) = \\mathrm{f}(2 - x)$ for all $x$", "$\\mathrm{f}(x) = \\mathrm{f}(4 - x)$ for all $x$", "$\\mathrm{f}(x) = \\mathrm{f}(8 - x)$ for all $x$"],
+    "a": 1,
+    "e": "Apply the transformations to the argument one at a time. Reflecting in the $y$-axis gives $\\mathrm{f}(-x)$; translating that 2 to the left replaces $x$ by $x + 2$, so $\\mathrm{g}(x) = \\mathrm{f}(-x-2)$. The other order gives $\\mathrm{f}(x+2)$ first, and reflecting replaces $x$ by $-x$, so $\\mathrm{h}(x) = \\mathrm{f}(2 - x)$. Setting them equal, $\\mathrm{f}(-x-2) = \\mathrm{f}(2-x)$ for all $x$; writing $u = -x - 2$ turns the right-hand argument into $u + 4$, so the condition is $\\mathrm{f}(u) = \\mathrm{f}(u+4)$ for all $u$ — periodicity with period 4 (or a factor of it)."
+  }
+]

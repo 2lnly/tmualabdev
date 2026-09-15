@@ -1,0 +1,145 @@
+[
+  {
+    "n": 1, "t": "alg", "sp": "Discriminant · line meeting a parabola", "d": 3, "sol": "lab",
+    "q": "Find the complete set of values of $k$ for which the line $y = x - 2$ crosses or touches the curve $y = x^2 + kx + 2$.",
+    "o": ["$-1 \\le k \\le 3$", "$-3 \\le k \\le 5$", "$-4 \\le k \\le 4$", "$k \\le -1$ or $k \\ge 3$", "$k \\le -3$ or $k \\ge 5$", "$k \\le -4$ or $k \\ge 4$"],
+    "a": 4,
+    "e": "\"Crosses or touches\" means the equation for the intersections has at least one real root. Setting $x^2 + kx + 2 = x - 2$ gives $x^2 + (k-1)x + 4 = 0$, so the condition is that the discriminant is not negative: $(k-1)^2 - 16 \\ge 0$. That factorises as $(k-5)(k+3) \\ge 0$, giving $k \\le -3$ or $k \\ge 5$. The trap is to solve $(k-1)^2 < 16$ instead and pick the interval between the roots."
+  },
+  {
+    "n": 2, "t": "trig", "sp": "Trigonometric ratios · choosing the right quadrant", "d": 3, "sol": "lab",
+    "q": "Given that $\\tan\\theta = 2$ and $180^\\circ < \\theta < 360^\\circ$, find the value of $\\cos\\theta$.",
+    "o": ["$\\sqrt{3}$", "$-\\sqrt{3}$", "$\\frac{\\sqrt{3}}{2}$", "$-\\frac{\\sqrt{3}}{2}$", "$\\frac{\\sqrt{5}}{5}$", "$-\\frac{\\sqrt{5}}{5}$", "$\\frac{2\\sqrt{5}}{5}$", "$-\\frac{2\\sqrt{5}}{5}$"],
+    "a": 5,
+    "e": "A right-angled triangle with opposite $2$ and adjacent $1$ has hypotenuse $\\sqrt{5}$, so $\\cos\\theta = \\pm\\frac{1}{\\sqrt5}$. Now fix the sign: $\\tan\\theta$ is positive, and in the range $180^\\circ < \\theta < 360^\\circ$ that only happens in the third quadrant, where cosine is negative. So $\\cos\\theta = -\\frac{1}{\\sqrt5} = -\\frac{\\sqrt5}{5}$. Taking $\\frac{2}{\\sqrt5}$ instead comes from using the opposite side rather than the adjacent one."
+  },
+  {
+    "n": 3, "t": "prf", "sp": "Finding the first error in an argument", "d": 3, "sol": "lab",
+    "q": "A student makes the following claim:<p>For all integers $n$, the expression $4\\left(\\frac{9n+1}{2} - \\frac{3n-1}{2}\\right)$ is divisible by 3.</p><p>Here is the student's argument:</p><p>$4\\left(\\frac{9n+1}{2} - \\frac{3n-1}{2}\\right) = 2\\left(2\\left(\\frac{9n+1}{2} - \\frac{3n-1}{2}\\right)\\right)$&nbsp;&nbsp;&nbsp;(I)<br>$= 2(9n + 1 - 3n - 1)$&nbsp;&nbsp;&nbsp;(II)<br>$= 2(6n)$&nbsp;&nbsp;&nbsp;(III)<br>$= 12n$&nbsp;&nbsp;&nbsp;(IV)<br>$= 3(4n)$&nbsp;&nbsp;&nbsp;(V)<br>which is always a multiple of 3.&nbsp;&nbsp;&nbsp;(VI)</p><p>So the expression $4\\left(\\frac{9n+1}{2} - \\frac{3n-1}{2}\\right)$ is always divisible by 3.</p><p>Which one of the following is true?</p>",
+    "o": ["The argument is correct.", "The argument is incorrect, and the first error occurs on line (I).", "The argument is incorrect, and the first error occurs on line (II).", "The argument is incorrect, and the first error occurs on line (III).", "The argument is incorrect, and the first error occurs on line (IV).", "The argument is incorrect, and the first error occurs on line (V).", "The argument is incorrect, and the first error occurs on line (VI)."],
+    "a": 2,
+    "e": "Line (I) is fine: writing $4X$ as $2(2X)$ changes nothing. The failure is at line (II), where multiplying the bracket by 2 clears both denominators but the minus sign is not carried through the second fraction. It should read $2\\left((9n+1) - (3n-1)\\right) = 2(9n + 1 - 3n + 1)$, giving $2(6n+2) = 12n + 4$, not $12n$. So the claim itself is also false: $12n + 4$ is never a multiple of 3 when $n$ is a multiple of 3, for instance $n = 0$ gives 4. Lines (III) to (VI) are each valid consequences of the line before them, so (II) is the first error."
+  },
+  {
+    "n": 4, "t": "prf", "sp": "Counterexamples · sums of two non-primes", "d": 3, "sol": "lab",
+    "q": "Consider the following statement:<p>Every positive integer $N$ that is greater than 6 can be written as the sum of two non-prime integers that are greater than 1.</p><p>Which of the following is/are <b>counterexample(s)</b> to this statement?</p><p>I&nbsp;&nbsp;&nbsp; $N = 5$<br>II&nbsp;&nbsp; $N = 7$<br>III&nbsp; $N = 9$</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 6,
+    "e": "A counterexample has to satisfy the hypothesis and fail the conclusion, so $N = 5$ is disqualified at once: it is not greater than 6, and the statement says nothing about it. The non-prime integers greater than 1 start $4, 6, 8, 9, 10, \\ldots$. For $N = 7$ the only candidate pair is $4 + 3$, and 3 is prime, so 7 fails the conclusion. For $N = 9$ the options are $4 + 5$, $6 + 3$ and $8 + 1$, none of which works, so 9 fails too. Hence II and III."
+  },
+  {
+    "n": 5, "t": "gra", "sp": "Recognising a graph from its asymptotes", "d": 3, "sol": "lab",
+    "fig": "Six sketched graphs labelled A to F, each on unlabelled $x$ and $y$ axes, with dotted lines marking horizontal asymptotes.",
+    "q": "Which one of the following shows the graph of $$y = \\frac{2^x}{1 + 2^x}$$<p>(Dotted lines indicate asymptotes.)</p><p>The six sketches are:</p><p>A&nbsp;&nbsp; an increasing curve that runs along the $x$-axis on the far left and flattens out onto a dotted horizontal asymptote at a positive height on the right<br>B&nbsp;&nbsp; an increasing curve rising from near the $x$-axis with no upper asymptote drawn<br>C&nbsp;&nbsp; an increasing curve rising without limit, sitting <em>above</em> a dotted horizontal asymptote at a positive height that it approaches on the far left<br>D&nbsp;&nbsp; a decreasing curve that starts on a dotted horizontal asymptote at a positive height on the left and flattens onto the $x$-axis on the right<br>E&nbsp;&nbsp; a decreasing curve falling towards the $x$-axis, with no asymptote drawn other than the axis<br>F&nbsp;&nbsp; a decreasing curve falling from the top left onto a dotted horizontal asymptote at a positive height</p>",
+    "o": ["A", "B", "C", "D", "E", "F"],
+    "a": 0,
+    "e": "Read off the two ends before anything else. As $x \\to -\\infty$, $2^x \\to 0$, so $y \\to 0$: the curve hugs the $x$-axis on the left. As $x \\to +\\infty$, divide top and bottom by $2^x$ to get $y = \\frac{1}{2^{-x} + 1} \\to 1$, so there is a horizontal asymptote at $y = 1$ on the right. The numerator and denominator are both positive and the denominator is the larger, so $0 < y < 1$ throughout and the curve increases (at $x = 0$ it passes through $\\frac12$). Only sketch A rises from the $x$-axis to a horizontal asymptote above it."
+  },
+  {
+    "n": 6, "t": "cal", "sp": "Definite integrals · necessary conditions", "d": 4, "sol": "lab",
+    "q": "The function $\\mathrm{f}(x)$ is defined for all real values of $x$.<p>Which of the following conditions on $\\mathrm{f}(x)$ is/are <b>necessary</b> to ensure that $$\\int_{-5}^{0}\\mathrm{f}(x)\\,dx = \\int_0^5 \\mathrm{f}(x)\\,dx$$</p><p>Condition I:&nbsp;&nbsp;&nbsp; $\\mathrm{f}(x) = \\mathrm{f}(-x)$ for $-5 \\le x \\le 5$<br>Condition II:&nbsp;&nbsp; $\\mathrm{f}(x) = c$ for $-5 \\le x \\le 5$, where $c$ is a constant<br>Condition III: $\\mathrm{f}(x) = -\\mathrm{f}(-x)$ for $-5 \\le x \\le 5$</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 0,
+    "e": "Read the word <b>necessary</b> carefully: a condition is necessary only if it holds <em>every</em> time the two integrals are equal, so a single function with equal integrals that breaks the condition rules it out. One such function does for all three at once. Take $\\mathrm{f}(x) = x^3 - \\frac{25}{2}x + 1$. Its odd part $x^3 - \\frac{25}{2}x$ integrates to $\\frac{625}{4} - \\frac{625}{4} = 0$ over $0 \\le x \\le 5$, so both of the required integrals are just the contribution of the constant, namely 5, and they are equal. Yet this $\\mathrm{f}$ is not even, not constant and not odd. So none of the conditions is necessary. Conditions I and II are <em>sufficient</em>, which is the answer this question is set up to tempt you into."
+  },
+  {
+    "n": 7, "t": "geo", "sp": "Parallelograms · sufficient conditions for a square", "d": 3, "sol": "lab",
+    "q": "Consider the following conditions on a <b>parallelogram</b> $PQRS$, labelled anticlockwise:<p>I&nbsp;&nbsp;&nbsp; length of $PQ$ = length of $QR$<br>II&nbsp;&nbsp; The diagonal $PR$ intersects the diagonal $QS$ at right angles<br>III&nbsp; $\\angle PQR = \\angle QRS$</p><p>Which of these conditions is/are individually <b>sufficient</b> for the parallelogram $PQRS$ to be a square?</p>",
+    "o": ["I sufficient: yes, II sufficient: yes, III sufficient: yes", "I sufficient: yes, II sufficient: yes, III sufficient: no", "I sufficient: yes, II sufficient: no, III sufficient: yes", "I sufficient: yes, II sufficient: no, III sufficient: no", "I sufficient: no, II sufficient: yes, III sufficient: yes", "I sufficient: no, II sufficient: yes, III sufficient: no", "I sufficient: no, II sufficient: no, III sufficient: yes", "I sufficient: no, II sufficient: no, III sufficient: no"],
+    "a": 7,
+    "e": "Each condition turns the parallelogram into something, but a square needs both equal sides <em>and</em> right angles. Condition I says two adjacent sides are equal, which makes it a rhombus — a non-square rhombus satisfies it. Condition II, diagonals meeting at right angles, is exactly the rhombus condition again, so the same counterexample works. Condition III says two consecutive interior angles are equal, and since consecutive angles of a parallelogram add to $180^\\circ$ each must be $90^\\circ$ — that gives a rectangle, and a non-square rectangle satisfies it. So no condition on its own is sufficient."
+  },
+  {
+    "n": 8, "t": "prf", "sp": "Judging a disproof by counterexample", "d": 3, "sol": "lab",
+    "q": "A student is asked to prove whether the following statement $(*)$ is true or false:<p>$(*)$ For all real numbers $a$ and $b$, $|a + b| < |a| + |b|$</p><p>The student's proof is as follows:</p><p><em>Statement $(*)$ is <b>false</b>. A counterexample is $a = 3$, $b = 4$, as $|3+4| = 7$ and $|3| + |4| = 7$, but $7 < 7$ is false.</em></p><p>Which of the following best describes the student's proof?</p>",
+    "o": ["The statement $(*)$ is true, and the student's proof is not correct.", "The statement $(*)$ is false, but the student's proof is not correct: the counterexample is not valid.", "The statement $(*)$ is false, but the student's proof is not correct: the student needs to give <em>all</em> the values of $a$ and $b$ where $|a+b| < |a| + |b|$ is false.", "The statement $(*)$ is false, but the student's proof is not correct: the student should have instead stated that for all real numbers $a$ and $b$, $|a+b| \\le |a| + |b|$.", "The statement $(*)$ is false, and the student's proof is fully correct."],
+    "a": 4,
+    "e": "To disprove a \"for all\" statement you need exactly one pair of values that makes it fail, and the student has one: with $a = 3$ and $b = 4$ both sides are 7, so the strict inequality $|a+b| < |a| + |b|$ does not hold. That is all a disproof requires. Listing every failing pair is not needed, and stating the correct inequality $|a+b| \\le |a|+|b|$ would be a different (true) claim rather than a repair of this proof. So the statement is false and the proof stands."
+  },
+  {
+    "n": 9, "t": "trig", "sp": "Radians and degrees · converting an argument", "d": 3, "sol": "lab",
+    "q": "A student wishes to evaluate the function $\\mathrm{f}(x) = x\\sin x$, where $x$ is in radians, but has a calculator that only works in degrees.<p>What could the student type into their calculator to correctly evaluate $\\mathrm{f}(4)$?</p>",
+    "o": ["$(\\pi \\times 4 \\div 180) \\times \\sin(4)$", "$(\\pi \\times 4 \\div 180) \\times \\sin(\\pi \\times 4 \\div 180)$", "$4 \\times \\sin(\\pi \\times 4 \\div 180)$", "$(180 \\times 4 \\div \\pi) \\times \\sin(4)$", "$(180 \\times 4 \\div \\pi) \\times \\sin(180 \\times 4 \\div \\pi)$", "$4 \\times \\sin(180 \\times 4 \\div \\pi)$"],
+    "a": 5,
+    "e": "Only the argument of the sine needs converting; the factor of $x$ in front is a plain number and stays as 4. Radians become degrees by multiplying by $\\frac{180}{\\pi}$, so 4 radians is $\\frac{180 \\times 4}{\\pi}$ degrees, which is about $229^\\circ$. Hence the student should type $4 \\times \\sin(180 \\times 4 \\div \\pi)$. The common wrong turns are converting the multiplier as well, or converting the wrong way with $\\frac{\\pi}{180}$."
+  },
+  {
+    "n": 10, "t": "ineq", "sp": "Combining inequalities", "d": 4, "sol": "lab",
+    "q": "The real numbers $a$, $b$, $c$ and $d$ satisfy both $$0 < a + b < c + d$$ and $$0 < a + c < b + d$$ Which of the following inequalities <b>must</b> be true?<p>I&nbsp;&nbsp;&nbsp; $a < d$<br>II&nbsp;&nbsp; $b < c$<br>III&nbsp; $a + b + c + d > 0$</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 5,
+    "e": "Add the right-hand inequalities: $a + b + a + c < c + d + b + d$, so $2a < 2d$ and $a < d$ — statement I holds. For III, the two conditions give $a + b > 0$ and $c + d > a + b > 0$, so $a+b+c+d$ is a sum of two positive numbers and is positive. Statement II fails because the setup is symmetric in $b$ and $c$, so nothing can force one below the other: $a = 1$, $b = 2$, $c = 1$, $d = 5$ satisfies $0 < 3 < 6$ and $0 < 2 < 7$, yet $b > c$."
+  },
+  {
+    "n": 11, "t": "geo", "sp": "Coordinate patterns · a square spiral", "d": 4, "sol": "lab",
+    "fig": "A square spiral drawn on axes running from $-5$ to $5$, winding anticlockwise outwards, with an arrow on the outermost segment showing the direction of travel.",
+    "q": "A spiral line is drawn as shown. Starting from the point $(-2, 0)$ it travels down to $(-2, -2)$, right to $(2, -2)$, up to $(2, 2)$, left to $(-4, 2)$, down to $(-4, -4)$, right to $(4, -4)$, up to $(4, 4)$ and then left along the line $y = 4$.<p>This spiral pattern continues indefinitely.</p><p>Which one of the following points is <b>not</b> on the spiral line?</p>",
+    "o": ["$(99, 100)$", "$(99, -100)$", "$(-99, 100)$", "$(-99, -100)$", "$(100, 99)$", "$(100, -99)$", "$(-100, 99)$", "$(-100, -99)$"],
+    "a": 6,
+    "e": "Describe the four families of segments. For each $n \\ge 1$ the spiral contains the right edge $x = 2n$ with $-2n \\le y \\le 2n$, then the top edge $y = 2n$ with $-(2n+2) \\le x \\le 2n$, then the left edge $x = -(2n+2)$ with $-(2n+2) \\le y \\le 2n$, then the bottom edge $y = -(2n+2)$ with $-(2n+2) \\le x \\le 2n+2$. Notice the asymmetry: each left edge stops at height $2n$, two units short of the top edge that sits at $2n + 2$. Every option has one even coordinate, so check it against the matching segment. The point $(-100, 99)$ needs the left edge $x = -100$, which comes from $n = 49$ and runs only up to $y = 98$, so $99$ is off the end. Every other option lies inside its segment."
+  },
+  {
+    "n": 12, "t": "cal", "sp": "Trapezium rule · overestimates and concavity", "d": 4, "sol": "lab",
+    "q": "Which one of <b>A</b>–<b>F</b> correctly completes the following statement?<p>Given that $a < b$, and $\\mathrm{f}(x) > 0$ for all $x$ with $a < x < b$, the trapezium rule produces an overestimate for $\\int_a^b \\mathrm{f}(x)\\,dx$ &hellip;</p>",
+    "o": ["&hellip; <b>if</b> $\\mathrm{f}'(x) > 0$ <b>and</b> $\\mathrm{f}''(x) < 0$ for all $x$ with $a < x < b$", "&hellip; <b>only if</b> $\\mathrm{f}'(x) > 0$ <b>and</b> $\\mathrm{f}''(x) < 0$ for all $x$ with $a < x < b$", "&hellip; <b>if and only if</b> $\\mathrm{f}'(x) > 0$ <b>and</b> $\\mathrm{f}''(x) < 0$ for all $x$ with $a < x < b$", "&hellip; <b>if</b> $\\mathrm{f}'(x) < 0$ <b>and</b> $\\mathrm{f}''(x) > 0$ for all $x$ with $a < x < b$", "&hellip; <b>only if</b> $\\mathrm{f}'(x) < 0$ <b>and</b> $\\mathrm{f}''(x) > 0$ for all $x$ with $a < x < b$", "&hellip; <b>if and only if</b> $\\mathrm{f}'(x) < 0$ <b>and</b> $\\mathrm{f}''(x) > 0$ for all $x$ with $a < x < b$"],
+    "a": 3,
+    "e": "What controls the trapezium rule is the second derivative alone: each chord lies above a curve that bends upwards, so $\\mathrm{f}''(x) > 0$ throughout gives an overestimate, and $\\mathrm{f}''(x) < 0$ gives an underestimate. Whether the function is increasing or decreasing is irrelevant. So any option with $\\mathrm{f}'' < 0$ is wrong, ruling out A, B and C. Between the remaining three, $\\mathrm{f}' < 0$ and $\\mathrm{f}'' > 0$ is enough to guarantee an overestimate, so \"if\" is correct. It is not \"only if\": $\\mathrm{f}(x) = \\mathrm{e}^x$ on $[0,1]$ is increasing and convex and still overestimated, so the condition is not necessary, and E and F fail."
+  },
+  {
+    "n": 13, "t": "cal", "sp": "Reasoning from an integral equation", "d": 4, "sol": "lab",
+    "q": "$\\mathrm{f}(x)$ is a function for which $$\\int_0^3 \\left(\\mathrm{f}(x)\\right)^2 dx \\ + \\int_0^3 \\mathrm{f}(x)\\,dx \\ = \\ \\int_0^1 \\mathrm{f}(x)\\,dx$$ Which of the following claims about $\\mathrm{f}(x)$ is/are <b>necessarily</b> true?<p>I&nbsp;&nbsp; $\\mathrm{f}(x) \\le 0$ for some $x$ with $1 \\le x \\le 3$<br>II&nbsp; $\\int_0^3 \\mathrm{f}(x)\\,dx \\le \\int_0^1 \\mathrm{f}(x)\\,dx$</p>",
+    "o": ["neither of them", "I only", "II only", "I and II"],
+    "a": 3,
+    "e": "The one fact to lean on is that $\\left(\\mathrm{f}(x)\\right)^2 \\ge 0$, so $\\int_0^3 \\left(\\mathrm{f}(x)\\right)^2 dx \\ge 0$. Rearranging the given equation, $\\int_0^1 \\mathrm{f}(x)\\,dx - \\int_0^3 \\mathrm{f}(x)\\,dx = \\int_0^3 \\left(\\mathrm{f}(x)\\right)^2 dx \\ge 0$, which is exactly statement II. That difference is $-\\int_1^3 \\mathrm{f}(x)\\,dx$, so $\\int_1^3 \\mathrm{f}(x)\\,dx \\le 0$; a function that were strictly positive across the whole of $1 \\le x \\le 3$ would give a strictly positive integral there, so $\\mathrm{f}$ must be zero or negative somewhere in that range, which is statement I. Both are necessarily true."
+  },
+  {
+    "n": 14, "t": "seq", "sp": "Arithmetic series · when two partial sums agree", "d": 5, "sol": "lab",
+    "q": "An arithmetic sequence $T$ has first term $a$ and common difference $d$, where $a$ and $d$ are non-zero integers.<p>Property P is:</p><p><b>For some</b> positive integer $m$, the sum of the first $m$ terms of the sequence is equal to the sum of the first $2m$ terms of the sequence.</p><p>For example, when $a = 11$ and $d = -2$, the sequence $T$ has property P, because $$11 + 9 + 7 + 5 = 11 + 9 + 7 + 5 + 3 + 1 + (-1) + (-3)$$ i.e. the sum of the first 4 terms equals the sum of the first 8 terms.</p><p>Which of the following statements is/are <b>true</b>?</p><p>I&nbsp;&nbsp; For $T$ to have property P, it is <b>sufficient</b> that $ad < 0$.<br>II&nbsp; For $T$ to have property P, it is <b>necessary</b> that $d$ is even.</p>",
+    "o": ["neither of them", "I only", "II only", "I and II"],
+    "a": 0,
+    "e": "Set up the condition once. With $S_m = \\frac{m}{2}\\left(2a + (m-1)d\\right)$, the equation $S_m = S_{2m}$ simplifies (after dividing by $m$, which is non-zero) to $2a + (3m-1)d = 0$. So property P holds exactly when $m = \\frac{1}{3}\\left(1 - \\frac{2a}{d}\\right)$ is a positive integer. For I, take $a = 2$, $d = -1$: here $ad < 0$, but the equation gives $4 - (3m-1) = 0$, so $m = \\frac53$, not an integer, and P fails. For II, take $a = -1$, $d = 1$: the equation gives $-2 + 3m - 1 = 0$, so $m = 1$, and indeed $-1 = -1 + 0$ — property P holds with $d$ odd. Both statements fail."
+  },
+  {
+    "n": 15, "t": "trig", "sp": "Summing a periodic sine series", "d": 4, "sol": "lab",
+    "q": "Which one of the following is a <b>necessary and sufficient</b> condition for $$\\sum_{k=1}^{n}\\sin\\left(\\frac{k\\pi}{3}\\right) = \\frac{\\sqrt3}{2}$$ to be true?",
+    "o": ["$n = 1$", "$n$ is a multiple of 3", "$n$ is a multiple of 6", "$n$ is 1 more than a multiple of 3", "$n$ is 1 more than a multiple of 6", "$n$ is 1 more than a multiple of 6 or $n$ is 2 more than a multiple of 6"],
+    "a": 3,
+    "e": "The terms repeat with period 6: for $k = 1, 2, 3, 4, 5, 6$ they are $\\frac{\\sqrt3}{2}, \\frac{\\sqrt3}{2}, 0, -\\frac{\\sqrt3}{2}, -\\frac{\\sqrt3}{2}, 0$, and each block of six sums to zero. So work out the running totals across one block: $S_1 = \\frac{\\sqrt3}{2}$, $S_2 = \\sqrt3$, $S_3 = \\sqrt3$, $S_4 = \\frac{\\sqrt3}{2}$, $S_5 = 0$, $S_6 = 0$, and then the pattern repeats exactly. The value $\\frac{\\sqrt3}{2}$ occurs at $n \\equiv 1$ and $n \\equiv 4$ modulo 6, and those two residues together are precisely $n \\equiv 1$ modulo 3. Stopping at $n = 1$ or at $n \\equiv 1$ modulo 6 gives a sufficient but not necessary condition."
+  },
+  {
+    "n": 16, "t": "cal", "sp": "Fundamental Theorem of Calculus · the chain rule", "d": 4, "sol": "lab",
+    "q": "The Fundamental Theorem of Calculus (FTC) tells us that for any polynomial $\\mathrm{f}$: $$\\frac{d}{dx}\\left(\\int_0^x \\mathrm{f}(t)\\,dt\\right) = \\mathrm{f}(x)$$ A student calculates $\\frac{d}{dx}\\left(\\int_x^{2x} t^2\\,dt\\right)$ as follows:<p>(I)&nbsp;&nbsp;&nbsp;&nbsp; $\\int_x^{2x} t^2\\,dt = \\int_0^{2x} t^2\\,dt - \\int_0^x t^2\\,dt$<br>(II)&nbsp;&nbsp;&nbsp; By FTC, $\\frac{d}{dx}\\left(\\int_0^x t^2\\,dt\\right) = x^2$<br>(III)&nbsp;&nbsp; By FTC, $\\frac{d}{dx}\\left(\\int_0^{2x} t^2\\,dt\\right) = (2x)^2 = 4x^2$<br>(IV)&nbsp;&nbsp; So $\\frac{d}{dx}\\left(\\int_x^{2x} t^2\\,dt\\right) = 4x^2 - x^2$<br>(V)&nbsp;&nbsp;&nbsp; giving $\\frac{d}{dx}\\left(\\int_x^{2x} t^2\\,dt\\right) = 3x^2$</p><p>Which of the following best describes the student's calculation?</p>",
+    "o": ["The calculation is completely correct.", "The calculation is incorrect, and the first error occurs on line (I).", "The calculation is incorrect, and the first error occurs on line (II).", "The calculation is incorrect, and the first error occurs on line (III).", "The calculation is incorrect, and the first error occurs on line (IV).", "The calculation is incorrect, and the first error occurs on line (V)."],
+    "a": 3,
+    "e": "Lines (I) and (II) are sound: splitting at 0 is legitimate, and the FTC applies directly when the upper limit is $x$ itself. Line (III) is where it breaks — the upper limit is $2x$, not $x$, so the chain rule is needed. Writing $F(u) = \\int_0^u t^2\\,dt$, we get $\\frac{d}{dx}F(2x) = 2F'(2x) = 2(2x)^2 = 8x^2$, not $4x^2$. Checking against a direct calculation confirms it: $\\int_x^{2x} t^2\\,dt = \\frac{8x^3 - x^3}{3} = \\frac{7x^3}{3}$, whose derivative is $7x^2$, and indeed $8x^2 - x^2 = 7x^2$."
+  },
+  {
+    "n": 17, "t": "num", "sp": "Mean and median · minimising a range", "d": 4, "sol": "lab",
+    "q": "A set of six <b>distinct</b> integers is split into two sets of three.<p>The first set of three integers has a mean of 10 and a median of 8.</p><p>The second set of three integers has a mean of 12 and a median of 9.</p><p>What is the smallest possible range of the set of all six integers?</p>",
+    "o": ["$8$", "$10$", "$11$", "$12$", "$14$", "$15$"],
+    "a": 4,
+    "e": "Write the first set as $\\{p, 8, q\\}$ with $p < 8 < q$ and $p + q = 22$, and the second as $\\{r, 9, s\\}$ with $r < 9 < s$ and $r + s = 27$. To make the range small you want the two small values as large as possible and the two large values as small as possible, so push $p$ and $r$ up. The obstruction is distinctness: 8 is already used, so $r \\ne 8$, forcing $r \\le 7$ and $s \\ge 20$; and if $r = 7$ then $p \\le 6$, so $q \\ge 16$. That gives $\\{6, 8, 16\\}$ and $\\{7, 9, 20\\}$, all six distinct, with range $20 - 6 = 14$. Anything smaller is impossible: $s \\ge 19$ always, and the minimum of the six is at most 7 with equality only if $r \\ge 7$ and $p = 7$, which distinctness forbids."
+  },
+  {
+    "n": 18, "t": "alg", "sp": "Cubics · a difference that is always positive", "d": 4, "sol": "lab",
+    "q": "In this question, $\\mathrm{f}(x) = ax^3 + bx^2 + cx + d$ and $\\mathrm{g}(x) = px^3 + qx^2 + rx + s$ are cubic polynomials.<p>If $\\mathrm{f}(x) - \\mathrm{g}(x) > 0$ for every real $x$, which of the following is/are <b>necessarily</b> true?</p><p>I&nbsp;&nbsp;&nbsp; $a > p$<br>II&nbsp;&nbsp; <b>if</b> $b = q$ <b>then</b> $c = r$<br>III&nbsp; $d > s$</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 6,
+    "e": "The difference $\\mathrm{f}(x) - \\mathrm{g}(x) = (a-p)x^3 + (b-q)x^2 + (c-r)x + (d-s)$ has to be positive everywhere. A cubic with non-zero leading coefficient runs to $-\\infty$ at one end, so $a - p$ must be 0, that is $a = p$ — statement I is false rather than true. Statement III follows by putting $x = 0$: the difference there is $d - s > 0$. For II, if also $b = q$ the difference is the linear function $(c-r)x + (d-s)$, and a linear function is positive for all $x$ only if its gradient is zero, so $c = r$. Hence II and III."
+  },
+  {
+    "n": 19, "t": "log", "sp": "Truth-tellers and liars on a grid", "d": 4, "sol": "lab",
+    "fig": "A 3 by 3 grid of squares, each containing a seated figure representing one person.",
+    "q": "Nine people are sitting in the squares of a 3 by 3 grid, one in each square. Two people are called <em>neighbours</em> if they are sitting in squares that share a side. (People in diagonally adjacent squares, which only have a point in common, are not called neighbours.)<p>Each of the nine people in the grid is either a truth-teller who <b>always</b> tells the truth, or a liar who <b>always</b> lies.</p><p>Every person in the grid says: 'My neighbours are all liars'.</p><p>Given only this information, what are the <b>smallest</b> number and the <b>largest</b> number of people who could be telling the truth?</p>",
+    "o": ["smallest 1, largest 4", "smallest 2, largest 4", "smallest 2, largest 5", "smallest 3, largest 4", "smallest 3, largest 5", "smallest 4, largest 4", "smallest 4, largest 5", "smallest 5, largest 5"],
+    "a": 4,
+    "e": "Turn the words into two rules. A truth-teller has no truth-telling neighbour, so no two truth-tellers are adjacent; a liar's sentence must be false, so every liar has at least one truth-telling neighbour. For the largest, take the four corners and the centre: none of these five is adjacent to another, and each of the four edge squares touches at least one of them, so 5 works, and 6 or more would force two truth-tellers to be adjacent. For the smallest, try three, say the top-left corner, the middle of the right-hand column and the bottom-left corner — no two are adjacent and every remaining square touches one of them. Two cannot work: two non-adjacent squares cover at most seven squares between them, and checking the possible pairs always leaves some liar with no truth-telling neighbour, which would make that liar's statement true."
+  },
+  {
+    "n": 20, "t": "log", "sp": "Implications · spotting equivalent statements", "d": 4, "sol": "lab",
+    "q": "$x$ is a real number and $\\mathrm{f}$ is a function.<p>Given that <b>exactly one</b> of the following statements is true, which one is it?</p>",
+    "o": ["$x \\ge 0$ <b>only if</b> $\\mathrm{f}(x) < 0$", "$x < 0$ <b>if</b> $\\mathrm{f}(x) \\ge 0$", "$x \\ge 0$ <b>only if</b> $\\mathrm{f}(x) \\ge 0$", "$\\mathrm{f}(x) < 0$ <b>if</b> $x < 0$", "$\\mathrm{f}(x) \\ge 0$ <b>only if</b> $x \\ge 0$", "$\\mathrm{f}(x) \\ge 0$ <b>if and only if</b> $x < 0$"],
+    "a": 2,
+    "e": "Write $P$ for \"$x \\ge 0$\" and $Q$ for \"$\\mathrm{f}(x) \\ge 0$\", so that $\\neg P$ is \"$x < 0$\" and $\\neg Q$ is \"$\\mathrm{f}(x) < 0$\". The six options become A: $P \\Rightarrow \\neg Q$; B: $Q \\Rightarrow \\neg P$; C: $P \\Rightarrow Q$; D: $\\neg P \\Rightarrow \\neg Q$; E: $Q \\Rightarrow P$; F: $Q \\Leftrightarrow \\neg P$. Now look for contrapositives: B is the contrapositive of A, so A and B are always both true or both false, and neither can be the unique true one; likewise D is the contrapositive of E, ruling out both. That leaves C and F, and F is the conjunction of $Q \\Rightarrow \\neg P$ (which is B) with $\\neg P \\Rightarrow Q$, so F being true would drag B along with it. Only C can stand alone, and it does: taking $\\mathrm{f}(x) = 1$ for every $x$ makes C true and all the others false."
+  }
+]

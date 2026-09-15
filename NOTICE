@@ -1,0 +1,30 @@
+TMUA Lab — third-party material
+===============================
+
+Webfonts (assets/fonts/)
+------------------------
+IBM Plex Sans, IBM Plex Mono and IBM Plex Serif
+  Copyright © 2017 IBM Corp. — SIL Open Font License 1.1
+  https://github.com/IBM/plex
+
+Space Grotesk
+  Copyright © 2020 Florian Karsten — SIL Open Font License 1.1
+  https://github.com/floriankarsten/space-grotesk
+
+Both are redistributed here under the OFL, which permits bundling with a
+website. Regenerate them with deploy/fetch-fonts.sh.
+
+Past paper content (data/past/)
+-------------------------------
+The files under data/past/ are transcriptions of the Test of Mathematics for
+University Admission past papers published by UAT-UK as candidate preparation
+material, together with solutions written for this site.
+
+The questions themselves are the copyright of UAT-UK / Cambridge University
+Press & Assessment. They are reproduced here for the purpose of study and
+practice. This project is not affiliated with, endorsed by or connected to
+UAT-UK, Pearson VUE, or any university.
+
+The original PDFs are published free of charge at
+https://esat-tmua.ac.uk/tmua-preparation-materials/ and are not redistributed
+in this repository.

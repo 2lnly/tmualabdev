@@ -1,0 +1,143 @@
+[
+  {
+    "n": 1, "t": "cal", "sp": "Differentiation · simplify to powers of x first", "d": 3, "sol": "lab",
+    "q": "Which of the following is an expression for the first derivative with respect to $x$ of $$\\frac{x^3 - 5x^2}{2x\\sqrt{x}}$$",
+    "o": ["$-\\frac{\\sqrt{x}}{2}$", "$\\frac{\\sqrt{x}}{4}$", "$\\frac{3x - 5}{4\\sqrt{x}}$", "$\\frac{3\\sqrt{x} - 5}{4\\sqrt{x}}$", "$\\frac{3\\sqrt{x} - 10}{3\\sqrt{x}}$", "$\\frac{3x^2 - 10x}{3\\sqrt{x}}$"],
+    "a": 2,
+    "e": "Do not reach for the quotient rule. The denominator is $2x^{3/2}$, so the expression is $\\frac12\\left(x^{3/2} - 5x^{1/2}\\right)$. Differentiating term by term gives $\\frac12\\left(\\frac32 x^{1/2} - \\frac52 x^{-1/2}\\right) = \\frac34\\sqrt{x} - \\frac{5}{4\\sqrt{x}}$. Putting that over the common denominator $4\\sqrt{x}$ gives $\\frac{3x - 5}{4\\sqrt{x}}$."
+  },
+  {
+    "n": 2, "t": "alg", "sp": "Factor theorem · two factors of a cubic", "d": 3, "sol": "lab",
+    "q": "$(2x + 1)$ and $(x - 2)$ are factors of $2x^3 + px^2 + q$.<p>What is the value of $2p + q$?</p>",
+    "o": ["$-10$", "$-\\frac{38}{5}$", "$-\\frac{22}{3}$", "$\\frac{22}{3}$", "$\\frac{38}{5}$", "$10$"],
+    "a": 2,
+    "e": "Note there is no $x$ term, so the cubic is $2x^3 + px^2 + 0x + q$. The factor theorem gives two equations: $x = 2$ yields $16 + 4p + q = 0$, and $x = -\\frac12$ yields $-\\frac14 + \\frac{p}{4} + q = 0$, that is $-1 + p + 4q = 0$. From the first, $q = -16 - 4p$; substituting gives $-1 + p - 64 - 16p = 0$, so $p = -\\frac{13}{3}$ and $q = \\frac43$. Hence $2p + q = -\\frac{26}{3} + \\frac43 = -\\frac{22}{3}$."
+  },
+  {
+    "n": 3, "t": "alg", "sp": "Simultaneous inequalities · cubic and quadratic", "d": 3, "sol": "lab",
+    "q": "Find the complete set of values of $x$ for which $$(x+4)(x+3)(1-x) > 0 \\quad \\text{and} \\quad (x+2)(x-2) < 0$$",
+    "o": ["$1 < x < 2$", "$-2 < x < 1$", "$-2 < x < 2$", "$x < -2$ or $x > 1$", "$x < -4$ or $x > 2$", "$x < -4$ or $-3 < x < 1$", "$-4 < x < -2$ or $x > 1$"],
+    "a": 1,
+    "e": "The second inequality is the easy one: $(x+2)(x-2) < 0$ gives $-2 < x < 2$. For the first, flip the last bracket to get a positive leading coefficient: the inequality is equivalent to $(x+4)(x+3)(x-1) < 0$. That cubic has roots $-4, -3, 1$ and is negative on $x < -4$ and on $-3 < x < 1$. Intersecting with $-2 < x < 2$ leaves only $-2 < x < 1$. Option F is the first inequality on its own, which is the tempting mistake."
+  },
+  {
+    "n": 4, "t": "seq", "sp": "GP and AP · terms shared between two progressions", "d": 4, "sol": "lab",
+    "q": "The 1<sup>st</sup>, 2<sup>nd</sup> and 3<sup>rd</sup> terms of a geometric progression are also the 1<sup>st</sup>, 4<sup>th</sup> and 6<sup>th</sup> terms, respectively, of an arithmetic progression.<p>The sum to infinity of the geometric progression is $12$.</p><p>Find the 1<sup>st</sup> term of the geometric progression.</p>",
+    "o": ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
+    "a": 3,
+    "e": "Let the GP be $a, ar, ar^2$ and the AP have first term $a$ and common difference $d$. Matching positions, $a + 3d = ar$ and $a + 5d = ar^2$, so $3d = a(r-1)$ and $5d = a(r^2-1) = a(r-1)(r+1)$. Dividing (the sum to infinity exists, so $r \\ne 1$) gives $\\frac53 = r + 1$, hence $r = \\frac23$. Then $\\frac{a}{1 - \\frac23} = 3a = 12$, so $a = 4$."
+  },
+  {
+    "n": 5, "t": "alg", "sp": "Quadratic · axis of symmetry and a repeated root", "d": 3, "sol": "lab",
+    "q": "The curve $S$ has equation $$y = px^2 + 6x - q$$ where $p$ and $q$ are constants.<p>$S$ has a line of symmetry at $x = -\\frac14$ and touches the $x$-axis at exactly one point.</p><p>What is the value of $p + 8q$?</p>",
+    "o": ["$6$", "$18$", "$21$", "$25$", "$38$"],
+    "a": 0,
+    "e": "The axis of symmetry of $px^2 + 6x - q$ sits at $x = -\\frac{6}{2p} = -\\frac{3}{p}$, so $-\\frac3p = -\\frac14$ and $p = 12$. Touching the $x$-axis once means a repeated root, so the discriminant vanishes: $6^2 - 4p(-q) = 36 + 4pq = 0$. With $p = 12$ this gives $48q = -36$, so $q = -\\frac34$. Then $p + 8q = 12 - 6 = 6$."
+  },
+  {
+    "n": 6, "t": "exp", "sp": "Exponentials · maximum of a reciprocal", "d": 3, "sol": "lab",
+    "q": "Find the maximum value of the function $$\\mathrm{f}(x) = \\frac{1}{5^{2x} - 4(5^x) + 7}$$",
+    "o": ["$\\frac{1}{7}$", "$\\frac{1}{4}$", "$\\frac{1}{3}$", "$3$", "$4$", "$7$"],
+    "a": 2,
+    "e": "Substitute $t = 5^x$, which takes every positive value. The denominator becomes $t^2 - 4t + 7 = (t-2)^2 + 3$, always positive, with least value $3$ at $t = 2$ — and $t = 2$ is attainable, at $x = \\log_5 2$. Since the denominator is positive throughout, $\\mathrm{f}$ is largest when the denominator is smallest, giving a maximum of $\\frac13$. Option A comes from setting $t = 1$ (that is $x = 0$) rather than minimising."
+  },
+  {
+    "n": 7, "t": "exp", "sp": "Indices · simultaneous equations in powers of 2", "d": 3, "sol": "lab",
+    "q": "Given that $$2^{3x} = 8^{(y+3)}$$ and $$4^{(x+1)} = \\frac{16^{(y+1)}}{8^{(y+3)}}$$ what is the value of $x + y$?",
+    "o": ["$-23$", "$-22$", "$-15$", "$-14$", "$-11$", "$-10$"],
+    "a": 0,
+    "e": "Write everything as a power of $2$. The first equation gives $2^{3x} = 2^{3(y+3)}$, so $3x = 3y + 9$ and $x = y + 3$. The second gives $2^{2(x+1)} = 2^{4(y+1) - 3(y+3)} = 2^{y-5}$, so $2x + 2 = y - 5$. Substituting $x = y+3$ gives $2y + 8 = y - 5$, so $y = -13$ and $x = -10$. Hence $x + y = -23$."
+  },
+  {
+    "n": 8, "t": "alg", "sp": "Maximum of a quadratic · range of a parameter", "d": 4, "sol": "lab",
+    "q": "The function $\\mathrm{f}$ is defined for all real $x$ as $$\\mathrm{f}(x) = (p - x)(x + 2)$$ Find the complete set of values of $p$ for which the maximum value of $\\mathrm{f}(x)$ is less than $4$.",
+    "o": ["$-2 - 4\\sqrt{2} < p < -2 + 4\\sqrt{2}$", "$-2 - 2\\sqrt{2} < p < -2 + 2\\sqrt{2}$", "$-2\\sqrt{5} < p < 2\\sqrt{5}$", "$-6 < p < 2$", "$-4 < p < 0$", "$-2 < p < 2$"],
+    "a": 3,
+    "e": "The roots are $x = p$ and $x = -2$, and the $x^2$ coefficient is $-1$, so the parabola opens downwards and its maximum sits midway between the roots, at $x = \\frac{p-2}{2}$. The value there is $\\left(p - \\frac{p-2}{2}\\right)\\left(\\frac{p-2}{2} + 2\\right) = \\frac{p+2}{2}\\cdot\\frac{p+2}{2} = \\frac{(p+2)^2}{4}$. Requiring $\\frac{(p+2)^2}{4} < 4$ gives $|p+2| < 4$, so $-6 < p < 2$."
+  },
+  {
+    "n": 9, "t": "alg", "sp": "Roots and surds · rebuilding a quadratic", "d": 4, "sol": "lab",
+    "q": "The quadratic expression $x^2 - 14x + 9$ factorises as $(x - \\alpha)(x - \\beta)$, where $\\alpha$ and $\\beta$ are positive real numbers.<p>Which quadratic expression can be factorised as $(x - \\sqrt{\\alpha})(x - \\sqrt{\\beta})$?</p>",
+    "o": ["$x^2 - \\sqrt{10}\\,x + 3$", "$x^2 - \\sqrt{14}\\,x + 3$", "$x^2 - \\sqrt{20}\\,x + 3$", "$x^2 - 178x + 81$", "$x^2 - 176x + 81$", "$x^2 + 196x + 81$"],
+    "a": 2,
+    "e": "There is no need to find $\\alpha$ and $\\beta$ separately: $\\alpha + \\beta = 14$ and $\\alpha\\beta = 9$. The new quadratic is $x^2 - (\\sqrt\\alpha + \\sqrt\\beta)x + \\sqrt{\\alpha\\beta}$. The constant term is $\\sqrt9 = 3$. For the middle coefficient, square it: $(\\sqrt\\alpha + \\sqrt\\beta)^2 = \\alpha + \\beta + 2\\sqrt{\\alpha\\beta} = 14 + 6 = 20$, so $\\sqrt\\alpha + \\sqrt\\beta = \\sqrt{20}$. The expression is $x^2 - \\sqrt{20}\\,x + 3$; option B is what you get by forgetting the $2\\sqrt{\\alpha\\beta}$ cross term."
+  },
+  {
+    "n": 10, "t": "gra", "sp": "Transformations · applying a sequence in order", "d": 4, "sol": "lab",
+    "q": "The following sequence of transformations is applied to the curve $y = 4x^2$:<p>1.&nbsp; Translation by $\\begin{pmatrix} 3 \\\\ -5 \\end{pmatrix}$<br>2.&nbsp; Reflection in the $x$-axis<br>3.&nbsp; Stretch parallel to the $x$-axis with scale factor $2$</p><p>What is the equation of the resulting curve?</p>",
+    "o": ["$y = -x^2 + 12x - 31$", "$y = -x^2 + 12x - 41$", "$y = x^2 + 12x + 31$", "$y = x^2 + 12x + 41$", "$y = -16x^2 + 48x - 31$", "$y = -16x^2 + 48x - 41$", "$y = 16x^2 - 48x + 31$", "$y = 16x^2 - 48x + 41$"],
+    "a": 0,
+    "e": "Apply them one at a time. The translation gives $y = 4(x-3)^2 - 5$. Reflecting in the $x$-axis negates the whole right-hand side: $y = -4(x-3)^2 + 5$. A stretch parallel to the $x$-axis with scale factor $2$ replaces $x$ by $\\frac{x}{2}$, giving $y = -4\\left(\\frac{x}{2} - 3\\right)^2 + 5 = -(x-6)^2 + 5$. Expanding gives $y = -x^2 + 12x - 31$. Replacing $x$ by $2x$ instead of $\\frac{x}{2}$ leads to the $-16x^2$ options."
+  },
+  {
+    "n": 11, "t": "cal", "sp": "Areas above and below the axis · equal regions", "d": 4, "sol": "lab",
+    "fig": "A upward parabola crossing the x-axis at x = 2 and x = q; region R is between the y-axis, the x-axis and the curve for 0 ≤ x ≤ 2, and region S is the region below the axis between x = 2 and x = q.",
+    "q": "The diagram shows a quadratic function passing through $(2, 0)$ and $(q, 0)$, where $q > 2$. The curve opens upwards. Region $R$ is enclosed by the $y$-axis, the $x$-axis and the curve between $x = 0$ and $x = 2$; region $S$ is enclosed by the curve and the $x$-axis between $x = 2$ and $x = q$.<p>What is the value of $q$ such that the area of region $R$ equals the area of region $S$?</p>",
+    "o": ["$\\sqrt{6}$", "$3$", "$\\frac{18}{5}$", "$4$", "$6$", "$\\frac{33}{5}$"],
+    "a": 4,
+    "e": "The leading coefficient does not matter, since both areas scale by it, so take $\\mathrm{f}(x) = (x-2)(x-q)$. Equal areas means the signed integral over the whole stretch is zero: $\\int_0^q (x-2)(x-q)\\,dx = 0$, because the part above the axis counts positive and the part below counts negative. Expanding gives $\\int_0^q \\left(x^2 - (2+q)x + 2q\\right)dx = \\frac{q^3}{3} - \\frac{(2+q)q^2}{2} + 2q^2 = -\\frac{q^3}{6} + q^2$. Setting this to zero gives $q^2\\left(1 - \\frac{q}{6}\\right) = 0$, so $q = 6$."
+  },
+  {
+    "n": 12, "t": "trig", "sp": "Counting solutions · trigonometric meets algebraic", "d": 4, "sol": "lab",
+    "q": "How many real solutions are there to the equation $$3\\cos x = \\sqrt{x}$$ where $x$ is in radians?",
+    "o": ["$0$", "$1$", "$2$", "$3$", "$4$", "$5$", "infinitely many"],
+    "a": 3,
+    "e": "Sketch both sides. $\\sqrt x$ needs $x \\ge 0$ and rises steadily, while $3\\cos x$ oscillates between $-3$ and $3$; once $\\sqrt x > 3$, that is $x > 9$, they can never meet again, so all solutions lie in $[0, 9]$. On $[0, \\frac{\\pi}{2}]$ the cosine curve falls from $3$ to $0$ while $\\sqrt x$ rises from $0$, so they cross once. On $[\\frac{\\pi}{2}, \\frac{3\\pi}{2}]$ the cosine is negative and $\\sqrt x$ positive, so no crossings. On $[\\frac{3\\pi}{2}, \\frac{5\\pi}{2}]$ the cosine climbs to $3$ at $x = 2\\pi$, which beats $\\sqrt{2\\pi} \\approx 2.51$, then falls back to $0$ — one crossing on the way up and one on the way down. Beyond $\\frac{5\\pi}{2} \\approx 7.85$ the cosine is negative again, so there are $3$ solutions in all."
+  },
+  {
+    "n": 13, "t": "seq", "sp": "Expanding a trinomial · counting arrangements", "d": 4, "sol": "lab",
+    "q": "Find the coefficient of $x^2y^4$ in the expansion of $(1 + x + y^2)^7$.",
+    "o": ["$6$", "$10$", "$21$", "$35$", "$105$", "$210$"],
+    "a": 5,
+    "e": "Think of the expansion as choosing one of the three terms from each of the seven brackets. To end up with $x^2y^4$ you must take $x$ from exactly two brackets, $y^2$ from exactly two, and $1$ from the remaining three. The number of ways to do that is $\\frac{7!}{2!\\,2!\\,3!} = \\frac{5040}{24} = 210$, and each contributes a coefficient of $1$. Choosing only the $y^2$ positions, $\\binom{7}{2} = 21$, or only the $x$ positions is the common slip."
+  },
+  {
+    "n": 14, "t": "cal", "sp": "Area between a line and a cubic", "d": 4, "sol": "lab",
+    "q": "The area enclosed between the line $y = mx$ and the curve $y = x^3$ is $6$.<p>What is the value of $m$?</p>",
+    "o": ["$2$", "$4$", "$\\sqrt{3}$", "$\\sqrt{6}$", "$2\\sqrt{3}$", "$2\\sqrt{6}$"],
+    "a": 4,
+    "e": "They meet where $x^3 = mx$, so $x = 0$ or $x = \\pm\\sqrt{m}$; this needs $m > 0$ for two enclosed loops to exist. By the odd symmetry of both curves the two loops have equal area, so the total is $2\\int_0^{\\sqrt m}(mx - x^3)\\,dx = 2\\left[\\frac{mx^2}{2} - \\frac{x^4}{4}\\right]_0^{\\sqrt m} = 2\\left(\\frac{m^2}{2} - \\frac{m^2}{4}\\right) = \\frac{m^2}{2}$. Setting $\\frac{m^2}{2} = 6$ gives $m^2 = 12$ and $m = 2\\sqrt3$. Forgetting to double for the second loop gives $\\sqrt6$."
+  },
+  {
+    "n": 15, "t": "exp", "sp": "Logarithms · a hidden quadratic in $\\log_2 x$", "d": 3, "sol": "lab",
+    "q": "Find the positive difference between the two real values of $x$ for which $$\\left(\\log_2 x\\right)^4 + 12\\left(\\log_2\\left(\\frac{1}{x}\\right)\\right)^2 - 2^6 = 0$$",
+    "o": ["$4$", "$16$", "$\\frac{15}{4}$", "$\\frac{17}{4}$", "$\\frac{255}{16}$", "$\\frac{257}{16}$"],
+    "a": 2,
+    "e": "Since $\\log_2\\frac1x = -\\log_2 x$, squaring removes the sign. Put $u = \\log_2 x$: the equation becomes $u^4 + 12u^2 - 64 = 0$, which factorises as $(u^2 + 16)(u^2 - 4) = 0$. Only $u^2 = 4$ is possible for real $u$, so $u = \\pm 2$ and $x = 4$ or $x = \\frac14$. The positive difference is $4 - \\frac14 = \\frac{15}{4}$."
+  },
+  {
+    "n": 16, "t": "geo", "sp": "Circles · common tangent to two equal circles", "d": 4, "sol": "lab",
+    "q": "The circle $C_1$ has equation $(x+2)^2 + (y-1)^2 = 3$.<p>The circle $C_2$ has equation $(x-4)^2 + (y-1)^2 = 3$.</p><p>The straight line $l$ is a tangent to both $C_1$ and $C_2$ and has positive gradient.</p><p>The acute angle between $l$ and the $x$-axis is $\\theta$.</p><p>Find the value of $\\tan\\theta$.</p>",
+    "o": ["$\\frac{1}{2}$", "$2$", "$\\frac{\\sqrt{2}}{2}$", "$\\sqrt{2}$", "$\\frac{\\sqrt{6}}{2}$", "$\\frac{\\sqrt{6}}{3}$", "$\\frac{\\sqrt{3}}{3}$", "$\\sqrt{3}$"],
+    "a": 2,
+    "e": "The centres are $(-2,1)$ and $(4,1)$, six apart, and both radii are $\\sqrt3$. Because the radii are equal, the common tangents are either parallel to the line of centres — horizontal, so zero gradient — or pass through the midpoint $(1,1)$. A tangent with positive gradient must be one of the latter, so write it as $y - 1 = m(x-1)$, that is $mx - y + 1 - m = 0$. Its distance from $(-2,1)$ must be $\\sqrt3$: $\\frac{|-2m - 1 + 1 - m|}{\\sqrt{m^2+1}} = \\frac{3|m|}{\\sqrt{m^2+1}} = \\sqrt3$, so $9m^2 = 3m^2 + 3$ and $m^2 = \\frac12$. Taking the positive root, $\\tan\\theta = \\frac{1}{\\sqrt2} = \\frac{\\sqrt2}{2}$."
+  },
+  {
+    "n": 17, "t": "alg", "sp": "Line meeting a square-root curve twice", "d": 5, "sol": "lab",
+    "q": "Find the complete set of values of $m$ in terms of $c$ such that the graphs of $y = mx + c$ and $y = \\sqrt{x}$ have two points of intersection.",
+    "o": ["$0 < m < \\frac{1}{4c}$", "$0 < m < 4c^2$", "$m > \\frac{1}{4c}$", "$m < \\frac{1}{4c}$", "$m > 4c^2$", "$m < 4c^2$"],
+    "a": 0,
+    "e": "Substituting $t = \\sqrt x$, where $t \\ge 0$, turns $\\sqrt x = mx + c$ into $mt^2 - t + c = 0$, and each root $t \\ge 0$ gives exactly one intersection point. Two intersections therefore need two distinct non-negative roots. The discriminant condition is $1 - 4mc > 0$, the sum of roots $\\frac1m$ must be positive, forcing $m > 0$, and the product $\\frac{c}{m}$ must be non-negative, forcing $c \\ge 0$. With $m > 0$ and $c > 0$, $1 - 4mc > 0$ rearranges to $m < \\frac{1}{4c}$, so the answer is $0 < m < \\frac{1}{4c}$. Dropping the requirement $m > 0$ gives the tempting option D, but a line with negative gradient cuts $y = \\sqrt x$ at most once."
+  },
+  {
+    "n": 18, "t": "trig", "sp": "Trigonometric equation with a modulus", "d": 3, "sol": "lab",
+    "q": "Find the number of solutions and the sum of the solutions of the equation $$1 - 2\\cos^2 x = \\left|\\cos x\\right|$$ where $0 \\le x \\le 180^\\circ$.",
+    "o": ["Number of solutions $= 2$, sum of solutions $= 180^\\circ$", "Number of solutions $= 2$, sum of solutions $= 240^\\circ$", "Number of solutions $= 3$, sum of solutions $= 180^\\circ$", "Number of solutions $= 3$, sum of solutions $= 360^\\circ$", "Number of solutions $= 4$, sum of solutions $= 240^\\circ$", "Number of solutions $= 4$, sum of solutions $= 360^\\circ$"],
+    "a": 0,
+    "e": "Set $u = \\left|\\cos x\\right|$, so $u \\ge 0$ and $\\cos^2 x = u^2$. The equation becomes $1 - 2u^2 = u$, that is $2u^2 + u - 1 = 0$, which factorises as $(2u - 1)(u + 1) = 0$. The root $u = -1$ is impossible for a modulus, leaving $\\left|\\cos x\\right| = \\frac12$, so $\\cos x = \\frac12$ or $\\cos x = -\\frac12$. In $0 \\le x \\le 180^\\circ$ that gives $x = 60^\\circ$ and $x = 120^\\circ$: two solutions summing to $180^\\circ$."
+  },
+  {
+    "n": 19, "t": "alg", "sp": "Quadratic inequality · least integer solution", "d": 3, "sol": "lab",
+    "q": "Find the lowest positive integer for which $x^2 - 52x - 52$ is positive.",
+    "o": ["$26$", "$27$", "$51$", "$52$", "$53$", "$54$"],
+    "a": 4,
+    "e": "The parabola opens upwards, so it is positive to the right of its larger root, at $x = \\frac{52 + \\sqrt{52^2 + 4 \\times 52}}{2} = 26 + \\sqrt{26^2 + 52} = 26 + \\sqrt{728}$. Since $\\sqrt{728}$ lies between $26$ and $27$, the root is between $52$ and $53$, so the answer is one of those two. Testing directly settles it: at $x = 52$ the value is $52^2 - 52^2 - 52 = -52$, still negative, while at $x = 53$ it is $2809 - 2756 - 52 = 1$, positive. The answer is $53$."
+  },
+  {
+    "n": 20, "t": "alg", "sp": "Repeated roots · counting parameter values", "d": 5, "sol": "lab",
+    "q": "For how many values of $a$ is the equation $$(x - a)(x^2 - x + a) = 0$$ satisfied by exactly two distinct values of $x$?",
+    "o": ["$0$", "$1$", "$2$", "$3$", "$4$", "more than $4$"],
+    "a": 2,
+    "e": "One root is always $x = a$; the rest come from $x^2 - x + a = 0$, whose discriminant is $1 - 4a$. If $1 - 4a < 0$ there is only the single root $x = a$, so exactly two distinct roots can happen in only two ways. Either the quadratic has a repeated root distinct from $a$: $1 - 4a = 0$ gives $a = \\frac14$, with repeated root $x = \\frac12 \\ne \\frac14$, so the roots are $\\frac14$ and $\\frac12$ — that works. Or the quadratic has two distinct roots, one of which is $a$: substituting $x = a$ gives $a^2 - a + a = a^2 = 0$, so $a = 0$, and then the roots are $0$ and $1$ — that works too. That is $2$ values of $a$."
+  }
+]

@@ -1,0 +1,144 @@
+[
+  {
+    "n": 1, "t": "cal", "sp": "Stationary points of a quartic", "d": 3, "sol": "lab",
+    "q": "Determine the number of stationary points on the curve with equation $$y = 3x^4 + 4x^3 + 6x^2 - 5$$",
+    "o": ["$0$", "$1$", "$2$", "$3$", "$4$"],
+    "a": 1,
+    "e": "Differentiating, $\\frac{dy}{dx} = 12x^3 + 12x^2 + 12x = 12x\\left(x^2 + x + 1\\right)$. The quadratic factor has discriminant $1 - 4 = -3 < 0$, so it never vanishes. Only $x = 0$ makes the derivative zero, giving one stationary point."
+  },
+  {
+    "n": 2, "t": "seq", "sp": "Binomial expansion times a finite series", "d": 3, "sol": "lab",
+    "q": "Find the coefficient of the $x^5$ term in the expansion of $$(1+x)^5 \\times \\sum_{i=0}^{5} x^i$$",
+    "o": ["$1$", "$5$", "$16$", "$25$", "$32$"],
+    "a": 4,
+    "e": "The second factor is $1 + x + x^2 + x^3 + x^4 + x^5$, with every coefficient equal to $1$. So the $x^5$ coefficient of the product is the sum of all the coefficients of $(1+x)^5$ from $x^0$ to $x^5$, that is $\\binom50 + \\binom51 + \\cdots + \\binom55 = 2^5 = 32$."
+  },
+  {
+    "n": 3, "t": "prf", "sp": "Counterexamples", "d": 2, "sol": "lab",
+    "q": "Consider the following statement about the positive integer $n$:<p><b>if</b> $n$ is prime, <b>then</b> $n^2 + 2$ is <b>not</b> prime</p><p>Which of the following is a <b>counterexample</b> to this statement?</p><p>I&nbsp;&nbsp; $n = 2$<br>II&nbsp; $n = 3$<br>III $n = 4$</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 2,
+    "e": "A counterexample needs the hypothesis to hold and the conclusion to fail. For $n = 2$, which is prime, $n^2 + 2 = 6$ is not prime, so the statement holds. For $n = 4$ the hypothesis fails, since $4$ is not prime. But $n = 3$ is prime and $3^2 + 2 = 11$ is also prime, so the conclusion fails — only II."
+  },
+  {
+    "n": 4, "t": "geo", "sp": "Circles · what determines a distance", "d": 3, "sol": "lab",
+    "q": "The point $P$ has coordinates $(p, q)$, and the equation of a circle is $$x^2 + 2fx + y^2 + 2gy + h = 0$$ where $f$, $g$, $h$, $p$ and $q$ are all real constants.<p>Let $L$ be the distance between the centre of the circle and the point $P$.</p><p>Which one of the following is <b>sufficient</b> on its own to be able to calculate $L$?</p>",
+    "o": ["the values of $f$, $g$ and $h$", "the values of $f$, $g$, $p$ and $q$", "the values of $f$, $h$, $p$ and $q$", "the values of $g$, $h$, $p$ and $q$", "none of the options A–D is sufficient on its own"],
+    "a": 1,
+    "e": "Completing the square puts the circle in the form $(x+f)^2 + (y+g)^2 = f^2 + g^2 - h$, so its centre is $(-f, -g)$. The constant $h$ affects only the radius, which the distance does not need. So $L = \\sqrt{(p+f)^2 + (q+g)^2}$ requires exactly $f$, $g$, $p$ and $q$."
+  },
+  {
+    "n": 5, "t": "log", "sp": "Converse and contrapositive of a statement about a line", "d": 4, "sol": "lab",
+    "q": "A straight line $L$ passes through $(1, 2)$.<p>Let P be the statement</p><p><b>if</b> the $y$-intercept of $L$ is negative, <b>then</b> the $x$-intercept of $L$ is positive.</p><p>Which of the following statements <b>must</b> be true?</p><p>I&nbsp;&nbsp; P<br>II&nbsp; the converse of P<br>III the contrapositive of P</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 5,
+    "e": "Write the line as $y = m(x-1) + 2$, so its $y$-intercept is $2 - m$ and its $x$-intercept is $1 - \\frac{2}{m}$. A negative $y$-intercept means $m > 2$, and then $\\frac{2}{m} < 1$, so the $x$-intercept is positive — P is true, and so is its contrapositive. The converse fails: $m = -1$ gives $y = -x + 3$, whose $x$-intercept is $3 > 0$ while its $y$-intercept is also positive."
+  },
+  {
+    "n": 6, "t": "log", "sp": "Necessary and sufficient · medians", "d": 3, "sol": "lab",
+    "q": "A list consists of $n$ integers.<p>Consider the following statements:</p><p>P:&nbsp;&nbsp; $n$ is odd.<br>Q:&nbsp;&nbsp; The median of the list is one of the numbers in the list.</p><p>Which one of the following is true?</p>",
+    "o": ["P is <b>necessary and sufficient</b> for Q.", "P is <b>necessary</b> but <b>not sufficient</b> for Q.", "P is <b>sufficient</b> but <b>not necessary</b> for Q.", "P is <b>not necessary</b> and <b>not sufficient</b> for Q."],
+    "a": 2,
+    "e": "If $n$ is odd the median is the single middle entry, which is certainly a member of the list — so P is sufficient. It is not necessary: the list $1, 2, 2, 3$ has an even length, yet its median is $\\frac{2+2}{2} = 2$, which does appear in the list."
+  },
+  {
+    "n": 7, "t": "prf", "sp": "Finding the error in a proof", "d": 4, "sol": "lab",
+    "q": "Consider the following claim:<p><em>The difference between two consecutive positive cube numbers is always prime.</em></p><p>Here is an attempted proof of this claim:</p><p>I&nbsp;&nbsp;&nbsp;&nbsp; $(x+1)^3 = x^3 + 3x^2 + 3x + 1$<br>II&nbsp;&nbsp;&nbsp; Taking $x$ to be a positive integer, the difference between two consecutive cube numbers can be expressed as $(x+1)^3 - x^3 = 3x^2 + 3x + 1$<br>III&nbsp;&nbsp; It is impossible to factorise $3x^2 + 3x + 1$ into two linear factors with integer coefficients because its discriminant is negative.<br>IV&nbsp;&nbsp; Therefore for every positive integer value of $x$ the integer $3x^2 + 3x + 1$ cannot be factorised.<br>V&nbsp;&nbsp;&nbsp; Hence, the difference between two consecutive cube numbers will always be prime.</p><p>Which of the following best describes this proof?</p>",
+    "o": ["The proof is completely correct, and the claim is true.", "The proof is completely correct, but there are counterexamples to the claim.", "The proof is wrong, and the first error occurs on line I.", "The proof is wrong, and the first error occurs on line II.", "The proof is wrong, and the first error occurs on line III.", "The proof is wrong, and the first error occurs on line IV.", "The proof is wrong, and the first error occurs on line V."],
+    "a": 5,
+    "e": "Lines I to III are sound — the discriminant $9 - 12 = -3$ really is negative, so the quadratic has no linear factors over the integers. Line IV is the error: a polynomial being irreducible says nothing about whether its integer values are composite. Taking $x = 7$ gives $3(49) + 21 + 1 = 169 = 13^2$, which is not prime, so the claim itself fails too."
+  },
+  {
+    "n": 8, "t": "seq", "sp": "Arithmetic sequences · guaranteeing a pair", "d": 5, "sol": "lab",
+    "q": "A selection, $S$, of $n$ terms is taken from the arithmetic sequence $1, 4, 7, 10, \\ldots, 70$.<p>Consider the following statement:</p><p>$(*)$ There are two distinct terms in $S$ whose sum is $74$.</p><p>What is the smallest value of $n$ for which $(*)$ is <b>necessarily</b> true?</p>",
+    "o": ["$12$", "$13$", "$14$", "$21$", "$22$", "$23$"],
+    "a": 2,
+    "e": "The sequence is $1 + 3k$ for $k = 0$ to $23$, so it has $24$ terms. Two terms $1+3k$ and $1+3m$ sum to $74$ exactly when $k + m = 24$, and with $k \\ne m$ that gives the eleven pairs $k = 1, \\ldots, 11$ matched with $m = 23, \\ldots, 13$. The terms with $k = 0$ and $k = 12$ belong to no pair. A selection avoiding every pair can take both loners and one from each of the eleven pairs — thirteen terms. So thirteen is not enough and $n = 14$ forces a pair."
+  },
+  {
+    "n": 9, "t": "log", "sp": "Quantified statements · finding all valid parameters", "d": 4, "sol": "lab",
+    "q": "Consider the following statement:<p>$(*)$ <b>For all</b> real numbers $x$, <b>if</b> $x < k$ <b>then</b> $x^2 < k$</p><p>What is the complete set of values of $k$ for which $(*)$ is true?</p>",
+    "o": ["no real numbers", "$k > 0$", "$k < 1$", "$k \\le 1$", "$0 < k < 1$", "$0 < k \\le 1$", "all real numbers"],
+    "a": 0,
+    "e": "Whatever $k$ is, choose $x$ very large and negative. Then $x < k$ holds, but $x^2$ grows without bound and certainly exceeds $k$. So the implication fails for every $k$, and there is no value that makes $(*)$ true."
+  },
+  {
+    "n": 10, "t": "log", "sp": "Order of quantifiers", "d": 4, "sol": "lab",
+    "q": "Which of the following statements is/are true?<p>I&nbsp;&nbsp; <b>For all</b> real numbers $x$ and <b>for all</b> positive integers $n$, $x < n$<br>II&nbsp; <b>For all</b> real numbers $x$, <b>there exists</b> a positive integer $n$ such that $x < n$<br>III <b>There exists</b> a real number $x$ such that <b>for all</b> positive integers $n$, $x < n$</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 6,
+    "e": "I is false: take $x = 100$ and $n = 1$. II is true — given any real $x$ there is always a positive integer beyond it. III is true as well, and needs only one witness: $x = 0$ is less than every positive integer. The order of the quantifiers is what separates II from III."
+  },
+  {
+    "n": 11, "t": "geo", "sp": "Kites · condition for a right angle", "d": 4, "sol": "lab",
+    "fig": "A kite PQRS with diagonals meeting at O, where OP = OR = x, OS = z above O and OQ = y below O.",
+    "q": "A kite $PQRS$ has diagonals meeting at $O$, with $$OP = x,\\quad OQ = y,\\quad OR = x,\\quad OS = z$$<p>Which of the following is <b>necessary and sufficient</b> for angle $SPQ$ to be a right angle?</p>",
+    "o": ["$x = y = z$", "$2x = y + z$", "$x^2 = yz$", "$y = z$", "$y^2 = x^2 + z^2$"],
+    "a": 2,
+    "e": "The diagonals of a kite cross at right angles, so triangles $POS$ and $POQ$ both have a right angle at $O$. Writing $\\alpha$ for angle $SPO$ and $\\beta$ for angle $OPQ$, we have $\\tan\\alpha = \\frac{z}{x}$ and $\\tan\\beta = \\frac{y}{x}$. Angle $SPQ = \\alpha + \\beta$ is a right angle exactly when $\\tan\\alpha = \\frac{1}{\\tan\\beta}$, that is $\\frac{z}{x} = \\frac{x}{y}$, which rearranges to $x^2 = yz$."
+  },
+  {
+    "n": 12, "t": "cal", "sp": "Comparing integrals without evaluating them", "d": 4, "sol": "lab",
+    "q": "Place the following integrals in order of size, starting with the smallest. $$P = \\int_0^1 2^{\\sqrt{x}}\\,dx \\qquad Q = \\int_0^1 2^{x}\\,dx \\qquad R = \\int_0^1 \\left(\\sqrt{2}\\right)^{x}\\,dx$$",
+    "o": ["$P < Q < R$", "$P < R < Q$", "$Q < P < R$", "$Q < R < P$", "$R < P < Q$", "$R < Q < P$"],
+    "a": 5,
+    "e": "Compare the exponents on $(0,1)$, where $2^t$ is increasing in $t$. There $\\sqrt{x} > x > \\frac{x}{2}$, and $\\left(\\sqrt2\\right)^x = 2^{x/2}$. So $2^{\\sqrt x} > 2^x > 2^{x/2}$ throughout the interval, and integrating preserves the order: $R < Q < P$."
+  },
+  {
+    "n": 13, "t": "log", "sp": "Existential statements · counting valid parameters", "d": 4, "sol": "lab",
+    "q": "Consider the statement $(*)$ about a real number $x$:<p>$(*)$ <b>There exists</b> a real number $y$ such that $x - xy + y$ is negative.</p><p>For how many real values of $x$ is $(*)$ true?</p>",
+    "o": ["no values of $x$", "exactly one value of $x$", "exactly two values of $x$", "all except exactly two values of $x$", "all except exactly one value of $x$", "all values of $x$"],
+    "a": 4,
+    "e": "Group the $y$ terms: $x - xy + y = x + y(1 - x)$. If $x \\ne 1$ the coefficient $1 - x$ is non-zero, so $y$ can be chosen to drive the expression as negative as we like. If $x = 1$ the expression collapses to $1$, which is never negative. So $(*)$ holds for every real $x$ except that one value."
+  },
+  {
+    "n": 14, "t": "ineq", "sp": "Modulus inequalities as distances", "d": 3, "sol": "lab",
+    "q": "Consider the two inequalities: $$|x + 5| < |x + 11|$$ $$|x + 11| < |x + 1|$$ Which one of the following is correct?",
+    "o": ["There is no real number for which both inequalities are true.", "There is exactly one real number for which both inequalities are true.", "The real numbers for which both inequalities are true form an interval of length 1.", "The real numbers for which both inequalities are true form an interval of length 2.", "The real numbers for which both inequalities are true form an interval of length 3.", "The real numbers for which both inequalities are true form an interval of length 4.", "The real numbers for which both inequalities are true form an interval of length 5."],
+    "a": 3,
+    "e": "Read each as a comparison of distances. The first says $x$ is closer to $-5$ than to $-11$, which puts it beyond their midpoint: $x > -8$. The second says $x$ is closer to $-11$ than to $-1$, so $x < -6$. Together they give $-8 < x < -6$, an interval of length $2$."
+  },
+  {
+    "n": 15, "t": "exp", "sp": "Chained logarithm equations", "d": 4, "sol": "lab",
+    "q": "The real numbers $x$, $y$ and $z$ are all greater than 1, and satisfy the equations $$\\log_x y = z \\quad\\text{and}\\quad \\log_y z = x$$ Which one of the following equations for $\\log_z x$ <b>must</b> be true?",
+    "o": ["$\\log_z x = y$", "$\\log_z x = \\frac{1}{y}$", "$\\log_z x = xy$", "$\\log_z x = \\frac{1}{xy}$", "$\\log_z x = xz$", "$\\log_z x = \\frac{1}{xz}$", "$\\log_z x = yz$", "$\\log_z x = \\frac{1}{yz}$"],
+    "a": 5,
+    "e": "The first equation says $y = x^z$. Substituting into the second, $z = y^x = \\left(x^z\\right)^x = x^{zx}$. Taking logarithms to base $x$ gives $\\log_x z = zx$, and since $\\log_z x$ is its reciprocal, $\\log_z x = \\frac{1}{xz}$."
+  },
+  {
+    "n": 16, "t": "ineq", "sp": "Inequalities between sequences", "d": 4, "sol": "lab",
+    "q": "In this question, $a_1, \\ldots, a_{100}$ and $b_1, \\ldots, b_{100}$ and $c_1, \\ldots, c_{100}$ are three sequences of integers such that $$a_n \\le b_n + c_n$$ for each $n$.<p>Which of the following statements <b>must</b> be true?</p><p>I&nbsp;&nbsp; $\\left(\\text{minimum of } a_1,\\ldots,a_{100}\\right) \\le \\left(\\text{minimum of } b_1,\\ldots,b_{100}\\right) + \\left(\\text{minimum of } c_1,\\ldots,c_{100}\\right)$<br>II&nbsp; $\\left(\\text{minimum of } a_1,\\ldots,a_{100}\\right) \\ge \\left(\\text{minimum of } b_1,\\ldots,b_{100}\\right) + \\left(\\text{minimum of } c_1,\\ldots,c_{100}\\right)$<br>III $\\left(\\text{maximum of } a_1,\\ldots,a_{100}\\right) \\le \\left(\\text{maximum of } b_1,\\ldots,b_{100}\\right) + \\left(\\text{maximum of } c_1,\\ldots,c_{100}\\right)$</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 3,
+    "e": "Only III survives. If $a$ attains its maximum at index $i$, then $a_i \\le b_i + c_i \\le \\max b + \\max c$. For I, take $b = (0, 10, \\ldots)$ and $c = (10, 0, \\ldots)$ with $a$ equal to $10$ throughout: both minima are $0$, but $\\min a = 10$. For II, take $b$ and $c$ constantly $5$ and $a$ constantly $0$: then $\\min a = 0$ but the right-hand side is $10$."
+  },
+  {
+    "n": 17, "t": "prf", "sp": "Direction of an implication in a proof", "d": 5, "sol": "lab",
+    "q": "A student answered the following question.<p><em>$a$ and $b$ are non-zero real numbers. Prove that the equation $x^3 + ax^2 + b = 0$ has three distinct real roots if $27b\\left(b + \\frac{4a^3}{27}\\right) < 0$.</em></p><p>Here is the student's solution:</p><p>I&nbsp;&nbsp;&nbsp; We differentiate $y = x^3 + ax^2 + b$ to get $\\frac{dy}{dx} = 3x^2 + 2ax = x(3x + 2a)$. Solving $\\frac{dy}{dx} = 0$ shows that the stationary points are at $(0, b)$ and $\\left(-\\frac{2a}{3},\\ b + \\frac{4a^3}{27}\\right)$.<br>II&nbsp;&nbsp; If $27b\\left(b + \\frac{4a^3}{27}\\right) < 0$, then $b$ and $b + \\frac{4a^3}{27}$ must have opposite signs, and so one of the stationary points is above the $x$-axis and one is below.<br>III&nbsp; If the cubic has three distinct real roots, then one of the stationary points is above the $x$-axis and one is below.<br>IV&nbsp; Hence if $27b\\left(b + \\frac{4a^3}{27}\\right) < 0$, then the equation has three distinct real roots.</p><p>Which one of the following options best describes the student's solution?</p>",
+    "o": ["It is a completely correct solution.", "The student has instead proved the converse of the statement in the question.", "The solution is wrong, because the student should have stated step II after step III.", "The solution is wrong, because the student should have shown the converse of the result in step II.", "The solution is wrong, because the student should have shown the converse of the result in step III."],
+    "a": 4,
+    "e": "Steps I and II are fine, and end with \"one stationary point above the axis and one below\". To reach step IV the student needs that fact to <em>imply</em> three distinct real roots. But step III states the implication the other way round — three roots imply the stationary points straddle the axis. What is needed is the converse of step III."
+  },
+  {
+    "n": 18, "t": "gra", "sp": "Identifying graphs from endpoint behaviour", "d": 5, "sol": "lab",
+    "fig": "Four graphs P, Q, R and S on 0 < x < pi/2: P falls from 1 to 0, Q rises from 0 to 1, and R and S each start and end at 1 with a dip in between.",
+    "q": "Four graphs P, Q, R and S show $$y = (\\cos x)^{\\cos x},\\quad y = (\\sin x)^{\\sin x},\\quad y = (\\cos x)^{\\sin x},\\quad y = (\\sin x)^{\\cos x}$$ for $0 < x < \\frac{\\pi}{2}$ in some order. Graph P falls from $1$ to $0$; graph Q rises from $0$ to $1$; graphs R and S both begin and end at $1$, dipping in between, with R's dip later than S's.<p>Which row correctly identifies the graphs, in the order $(\\cos x)^{\\cos x}$, $(\\sin x)^{\\sin x}$, $(\\cos x)^{\\sin x}$, $(\\sin x)^{\\cos x}$?</p>",
+    "o": ["P, Q, R, S", "P, Q, S, R", "Q, P, R, S", "Q, P, S, R", "R, S, P, Q", "R, S, Q, P", "S, R, P, Q", "S, R, Q, P"],
+    "a": 4,
+    "e": "Check the two ends. As $x \\to 0$, $\\cos x \\to 1$ and $\\sin x \\to 0$, so $(\\cos x)^{\\sin x} \\to 1$ while $(\\sin x)^{\\cos x} \\to 0$; as $x \\to \\frac{\\pi}{2}$ these swap. So the falling graph P is $(\\cos x)^{\\sin x}$ and the rising graph Q is $(\\sin x)^{\\cos x}$. The other two both tend to $1$ at each end, since $t^t \\to 1$ as $t \\to 0^+$ and at $t = 1$. Writing $g(t) = t^t$, its minimum is at $t = \\frac1e$: for $(\\sin x)^{\\sin x}$ that happens at $x \\approx 0.38$, early in the range, and for $(\\cos x)^{\\cos x}$ at $x \\approx 1.19$, late. So R is $(\\cos x)^{\\cos x}$ and S is $(\\sin x)^{\\sin x}$."
+  },
+  {
+    "n": 19, "t": "geo", "sp": "Cyclic polygons · when equal areas force regularity", "d": 5, "sol": "lab",
+    "q": "A polygon has $n$ vertices, where $n \\ge 3$. It has the following properties:<ul><li>Every vertex of the polygon lies on the circumference of a circle $C$.</li><li>The centre of the circle $C$ is inside the polygon.</li><li>The radii from the centre of the circle $C$ to the vertices of the polygon cut the polygon into $n$ triangles of equal area.</li></ul><p>For which values of $n$ are these properties <b>sufficient</b> to deduce that the polygon is regular?</p>",
+    "o": ["no values of $n$", "$n = 3$ only", "$n = 3$ and $n = 4$ only", "$n = 3$ and $n \\ge 5$ only", "all values of $n$"],
+    "a": 1,
+    "e": "Each triangle has two sides equal to the radius $r$ and area $\\frac12 r^2 \\sin\\theta_i$, so equal areas mean all $\\sin\\theta_i$ agree, with $\\sum\\theta_i = 2\\pi$ and every $\\theta_i \\in (0,\\pi)$. Each angle is therefore $\\theta$ or $\\pi - \\theta$. For $n = 3$ neither mixed case can sum to $2\\pi$ without pushing an angle to $0$ or $\\pi$, so all three are equal and the triangle is equilateral. For $n = 4$, taking two angles $\\theta$ and two $\\pi - \\theta$ sums to $2\\pi$ for any $\\theta$ — that is a non-square rectangle. Similar mixtures exist for every larger $n$, so only $n = 3$ works."
+  },
+  {
+    "n": 20, "t": "trig", "sp": "Nested trigonometric functions · maxima", "d": 5, "sol": "lab",
+    "q": "The functions $f_1$ to $f_5$ are defined on the real numbers by $$f_1(x) = \\cos x$$ $$f_2(x) = \\sin(\\cos x)$$ $$f_3(x) = \\cos(\\sin(\\cos x))$$ $$f_4(x) = \\sin(\\cos(\\sin(\\cos x)))$$ $$f_5(x) = \\cos(\\sin(\\cos(\\sin(\\cos x))))$$ where all numbers are taken to be in radians.<p>These functions have maximum values $m_1$, $m_2$, $m_3$, $m_4$ and $m_5$ respectively.</p><p>Which one of the following statements is true?</p>",
+    "o": ["$m_1$, $m_2$, $m_3$, $m_4$ and $m_5$ are all equal to 1", "$0 < m_5 < m_4 < m_3 < m_2 < m_1 = 1$", "$m_1 = m_3 = m_5 = 1$ and $0 < m_2 = m_4 < 1$", "$m_1 = m_3 = m_5 = 1$ and $0 < m_4 < m_2 < 1$", "$m_1 = m_3 = 1$ and $0 < m_2 = m_4 < 1$ and $0 < m_5 < 1$", "$m_1 = m_3 = 1$ and $0 < m_4 < m_2 < 1$ and $0 < m_5 < 1$"],
+    "a": 4,
+    "e": "Work outwards. $m_1 = 1$, attained at $x = 0$. For $f_2$, $\\cos x$ ranges over $[-1,1]$ and $\\sin$ increases there, so $m_2 = \\sin 1 \\approx 0.84$. For $f_3$, the inner value $\\sin(\\cos x)$ can be made exactly $0$ by taking $x = \\frac{\\pi}{2}$, so $m_3 = \\cos 0 = 1$. For $f_4$, the inner $\\cos(\\sin(\\cos x))$ reaches $1$, so $m_4 = \\sin 1 = m_2$. For $f_5$, the innermost value $\\cos(\\sin(\\cos x))$ lies in $[\\cos 1, 1]$, so $\\sin$ of it lies in $[\\sin(\\cos 1), \\sin 1]$, all strictly positive — and $\\cos$ of a strictly positive number is strictly less than $1$, so $0 < m_5 < 1$."
+  }
+]

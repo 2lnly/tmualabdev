@@ -1,0 +1,52 @@
+# TMUA Lab — static site. Caddy gets and renews TLS automatically.
+#
+# Behind a Cloudflare Tunnel, use the :8080 block and let the tunnel
+# terminate TLS. Serving directly on your static IP, use the domain block.
+
+tmua.dev, www.tmua.dev {
+	root * /srv/tmualab/current
+	encode zstd gzip
+	file_server
+
+	# hashed asset names are safe to cache hard; pages are not
+	@immutable path /assets/*
+	header @immutable Cache-Control "public, max-age=31536000, immutable"
+	@pages path *.html /
+	header @pages Cache-Control "public, max-age=0, must-revalidate"
+
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options    "nosniff"
+		Referrer-Policy           "strict-origin-when-cross-origin"
+		X-Frame-Options           "SAMEORIGIN"
+		Permissions-Policy        "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+		# entirely self-contained: no third-party host is reachable from the page
+		Content-Security-Policy   "default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'self'"
+		-Server
+	}
+
+	handle_errors {
+		rewrite * /index.html
+		file_server
+	}
+
+	log {
+		output file /var/log/caddy/tmualab.log {
+			roll_size 20MiB
+			roll_keep 5
+		}
+		# do not keep visitor IPs: the privacy policy promises nothing is collected
+		format filter {
+			request>remote_ip delete
+			request>headers>User-Agent delete
+		}
+	}
+}
+
+# Cloudflare Tunnel target — plain HTTP on localhost, no cert needed.
+:8080 {
+	root * /srv/tmualab/current
+	encode zstd gzip
+	file_server
+	header /assets/* Cache-Control "public, max-age=31536000, immutable"
+}

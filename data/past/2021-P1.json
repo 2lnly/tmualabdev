@@ -1,0 +1,144 @@
+[
+  {
+    "n": 1, "t": "geo", "sp": "Circles · the common chord of two intersecting circles", "d": 3, "sol": "lab",
+    "q": "Two circles have the same radius.<p>The centre of one circle is $(-2, 1)$.</p><p>The centre of the other circle is $(3, -2)$.</p><p>The circles intersect at two distinct points.</p><p>What is the equation of the straight line through the two points at which the circles intersect?</p>",
+    "o": ["$3x - 5y = 4$", "$3x + 5y = -1$", "$5x - 3y = -4$", "$5x - 3y = -1$", "$5x - 3y = 1$", "$5x - 3y = 4$", "$5x + 3y = 1$"],
+    "a": 5,
+    "e": "Call the common radius $r$. The two circles are $(x+2)^2 + (y-1)^2 = r^2$ and $(x-3)^2 + (y+2)^2 = r^2$. A point lies on both exactly when it satisfies the difference of the two equations, and subtracting kills both $x^2$ and $y^2$ along with $r^2$. That leaves $4x + 5 - 2y = -6x + 13 + 4y$, so $10x - 6y = 8$, that is $5x - 3y = 4$. Notice the radius never had to be found: the common chord's line does not depend on it."
+  },
+  {
+    "n": 2, "t": "cal", "sp": "Definite integrals · symmetric limits from turning points", "d": 3, "sol": "lab",
+    "q": "The curve $y = x^3 - 6x + 3$ has turning points at $x = \\alpha$ and $x = \\beta$, where $\\beta > \\alpha$.<p>Find $$\\int_\\alpha^\\beta x^3 - 6x + 3\\,dx$$</p>",
+    "o": ["$-8\\sqrt{2}$", "$-10$", "$-10 + 6\\sqrt{2}$", "$0$", "$12 - 8\\sqrt{2}$", "$6\\sqrt{2}$", "$12$"],
+    "a": 5,
+    "e": "The turning points come from $\\frac{dy}{dx} = 3x^2 - 6 = 0$, so $x = \\pm\\sqrt{2}$ and the limits are $\\alpha = -\\sqrt2$, $\\beta = \\sqrt2$. The limits are symmetric about $0$, so the odd parts of the integrand, $x^3$ and $-6x$, contribute nothing. Only the constant survives: $\\int_{-\\sqrt2}^{\\sqrt2} 3\\,dx = 3\\left(2\\sqrt2\\right) = 6\\sqrt2$."
+  },
+  {
+    "n": 3, "t": "seq", "sp": "Arithmetic and geometric progressions · simultaneous conditions", "d": 4, "sol": "lab",
+    "q": "An arithmetic progression and a convergent geometric progression each have first term $\\frac{1}{2}$<p>The sum of the second terms of the two progressions is $\\frac{1}{2}$</p><p>The sum of the third terms of the two progressions is $\\frac{1}{8}$</p><p>What is the sum to infinity of the geometric progression?</p>",
+    "o": ["$-2$", "$-1$", "$-\\frac{1}{2}$", "$-\\frac{1}{3}$", "$\\frac{1}{3}$", "$\\frac{1}{2}$", "$1$", "$2$"],
+    "a": 6,
+    "e": "Write the arithmetic progression as $\\frac12, \\frac12 + d, \\frac12 + 2d$ and the geometric one as $\\frac12, \\frac12 r, \\frac12 r^2$. The second-term condition is $\\left(\\frac12 + d\\right) + \\frac{r}{2} = \\frac12$, so $d = -\\frac{r}{2}$. The third-term condition gives $\\frac12 + 2d + \\frac{r^2}{2} = \\frac18$; substituting $d$ and multiplying by $8$ gives $4r^2 - 8r + 3 = 0$, so $r = \\frac12$ or $r = \\frac32$. Convergence rules out $\\frac32$, so $r = \\frac12$ and the sum to infinity is $\\frac{1/2}{1 - 1/2} = 1$."
+  },
+  {
+    "n": 4, "t": "exp", "sp": "Exponentials · hidden quadratic and its minimum", "d": 3, "sol": "lab",
+    "q": "Find the minimum value of the function $$2^{2x} - 2^{x+3} + 4$$",
+    "o": ["$-16$", "$-12$", "$-8$", "$0$", "$4$", "$20$"],
+    "a": 1,
+    "e": "Put $t = 2^x$, so $2^{2x} = t^2$ and $2^{x+3} = 8t$. The function becomes $t^2 - 8t + 4 = (t-4)^2 - 12$, a quadratic in $t$ with minimum $-12$ at $t = 4$. The value $t = 4$ is attainable, since $t = 2^x$ ranges over all positive reals and $x = 2$ gives it. So the minimum is $-12$; the restriction $t > 0$ only matters when the vertex sits at a non-positive $t$, which it does not here."
+  },
+  {
+    "n": 5, "t": "alg", "sp": "Functional equations · a piecewise multiplicative rule", "d": 4, "sol": "lab",
+    "q": "The function f is such that, for all positive integers $m$ and $n$:<ul><li>$\\mathrm{f}(mn) = \\mathrm{f}(m)\\mathrm{f}(n)$ if $mn$ is a multiple of $3$</li><li>$\\mathrm{f}(mn) = mn$ if $mn$ is not a multiple of $3$</li></ul><p>Given that $\\mathrm{f}(9) + \\mathrm{f}(16) - \\mathrm{f}(24) = 0$, what is the value of $\\mathrm{f}(3)$?</p>",
+    "o": ["$\\frac{8}{3}$", "$2\\sqrt{2}$", "$3$", "$\\frac{16}{5}$", "$3\\sqrt{2}$", "$4$"],
+    "a": 5,
+    "e": "Split each argument into a product and apply the right branch. $9 = 3 \\times 3$ is a multiple of $3$, so $\\mathrm{f}(9) = \\mathrm{f}(3)^2$. $16 = 2 \\times 8$ is not a multiple of $3$, so $\\mathrm{f}(16) = 16$; the same reasoning gives $\\mathrm{f}(8) = 8$. For $24 = 3 \\times 8$, which is a multiple of $3$, $\\mathrm{f}(24) = \\mathrm{f}(3)\\mathrm{f}(8) = 8\\mathrm{f}(3)$. The condition becomes $\\mathrm{f}(3)^2 - 8\\mathrm{f}(3) + 16 = 0$, that is $\\left(\\mathrm{f}(3) - 4\\right)^2 = 0$, so $\\mathrm{f}(3) = 4$."
+  },
+  {
+    "n": 6, "t": "trig", "sp": "Trigonometric identities · a fraction that cancels", "d": 4, "sol": "lab",
+    "q": "The function f is given by $$\\mathrm{f}(x) = \\frac{\\cos x + 3}{7 + 5\\cos x - \\sin^2 x}$$ Find the positive difference between the maximum and the minimum values of $\\mathrm{f}(x)$.",
+    "o": ["$0$", "$\\frac{1}{3}$", "$\\frac{1}{2}$", "$\\frac{2}{3}$", "$1$", "$2$"],
+    "a": 3,
+    "e": "Turn the denominator into a quadratic in $\\cos x$ using $\\sin^2 x = 1 - \\cos^2 x$: it becomes $\\cos^2 x + 5\\cos x + 6 = (\\cos x + 2)(\\cos x + 3)$. The factor $\\cos x + 3$ is never zero, so it cancels and $\\mathrm{f}(x) = \\frac{1}{\\cos x + 2}$. As $\\cos x$ runs over $[-1, 1]$, the denominator runs over $[1, 3]$ and $\\mathrm{f}$ runs over $\\left[\\frac13, 1\\right]$. The difference is $1 - \\frac13 = \\frac23$."
+  },
+  {
+    "n": 7, "t": "cal", "sp": "Definite integrals · modulus, sign and substitution", "d": 5, "sol": "lab",
+    "q": "The function f is such that $\\mathrm{f}(0) = 0$, and $x\\,\\mathrm{f}(x) > 0$ for all non-zero values of $x$.<p>It is given that $$\\int_{-2}^{2} \\mathrm{f}(x)\\,dx = 4$$ and $$\\int_{-2}^{2} \\left|\\mathrm{f}(x)\\right|\\,dx = 8$$</p><p>Evaluate $$\\int_{-2}^{0} \\mathrm{f}(|x|)\\,dx$$</p>",
+    "o": ["$-8$", "$-6$", "$-4$", "$-2$", "$2$", "$4$", "$6$", "$8$"],
+    "a": 6,
+    "e": "The condition $x\\,\\mathrm{f}(x) > 0$ says $\\mathrm{f}$ has the same sign as $x$: negative on $(-2,0)$ and positive on $(0,2)$. Write $A = \\int_{-2}^0 \\mathrm{f}$ and $B = \\int_0^2 \\mathrm{f}$. Then $A + B = 4$, while the modulus flips the sign on the left half, giving $-A + B = 8$; hence $B = 6$ and $A = -2$. In the required integral $x$ is negative, so $|x| = -x$, and substituting $u = -x$ turns $\\int_{-2}^0 \\mathrm{f}(-x)\\,dx$ into $\\int_0^2 \\mathrm{f}(u)\\,du = B = 6$."
+  },
+  {
+    "n": 8, "t": "alg", "sp": "Discriminant · two tangent lines to one parabola", "d": 4, "sol": "lab",
+    "q": "The line $y = 2x + 3$ meets the curve $y = x^2 + bx + c$ at exactly one point.<p>The line $y = 4x - 2$ also meets the curve $y = x^2 + bx + c$ at exactly one point.</p><p>What is the value of $b - c$?</p>",
+    "o": ["$-9$", "$-5.5$", "$-1$", "$5$", "$6$", "$14$"],
+    "a": 0,
+    "e": "Meeting at exactly one point means the quadratic formed by equating them has a repeated root, so its discriminant is zero. From the first line, $x^2 + (b-2)x + (c-3) = 0$ gives $(b-2)^2 = 4(c-3)$. From the second, $x^2 + (b-4)x + (c+2) = 0$ gives $(b-4)^2 = 4(c+2)$. Subtracting eliminates $c$: $(b-2)^2 - (b-4)^2 = 4b - 12 = -20$, so $b = -2$. Then $(b-2)^2 = 16 = 4(c-3)$ gives $c = 7$, and $b - c = -9$."
+  },
+  {
+    "n": 9, "t": "gra", "sp": "Graphs with modulus · area of the enclosed region", "d": 3, "sol": "lab",
+    "q": "Find the area enclosed by the graph of $$|x| + |y| = 1$$",
+    "o": ["$\\frac{1}{2}$", "$1$", "$2$", "$4$", "$\\frac{1}{2}\\sqrt{2}$", "$\\sqrt{2}$", "$2\\sqrt{2}$"],
+    "a": 2,
+    "e": "Take the four sign cases in turn. In the first quadrant the equation is $x + y = 1$, a straight segment from $(1,0)$ to $(0,1)$; the other three quadrants give the reflections of it. So the graph is a square with vertices $(1,0)$, $(0,1)$, $(-1,0)$, $(0,-1)$, tilted at $45^\\circ$. Its diagonals both have length $2$, so the area is $\\frac12 \\times 2 \\times 2 = 2$. Reading the $1$ as a side length rather than a half-diagonal is the tempting error."
+  },
+  {
+    "n": 10, "t": "cal", "sp": "Trapezium rule · combining logarithms", "d": 4, "sol": "lab",
+    "q": "Use the trapezium rule with 3 strips to estimate $$\\int_{\\frac{1}{2}}^{2} 2\\log_{10} x\\,dx$$",
+    "o": ["$\\log_{10}\\frac{\\sqrt{6}}{2}$", "$\\log_{10}\\frac{3}{2}$", "$\\log_{10}\\frac{9}{4}$", "$\\log_{10} 3$", "$\\log_{10}\\frac{81}{16}$", "$\\log_{10}\\frac{\\sqrt{23}}{2}$"],
+    "a": 1,
+    "e": "Three strips across $\\left[\\frac12, 2\\right]$ have width $h = \\frac{1.5}{3} = \\frac12$, with ordinates at $x = \\frac12, 1, \\frac32, 2$, namely $2\\log_{10}\\frac12$, $0$, $2\\log_{10}\\frac32$ and $2\\log_{10} 2$. The rule gives $\\frac{h}{2}\\left[y_0 + 2(y_1 + y_2) + y_3\\right] = \\frac14\\left[2\\log_{10}\\tfrac12 + 4\\log_{10}\\tfrac32 + 2\\log_{10}2\\right]$. Now use the log laws: $\\frac12\\log_{10}\\frac12 + \\frac12\\log_{10}2 = \\frac12\\log_{10} 1 = 0$, so everything collapses to the middle term, $\\log_{10}\\frac32$."
+  },
+  {
+    "n": 11, "t": "cal", "sp": "Differentiation with fractional powers · where a function decreases", "d": 4, "sol": "lab",
+    "q": "The function f is given by $$\\mathrm{f}(x) = x^{\\frac{1}{7}}\\left(x^2 - x + 1\\right)$$ Find the fraction of the interval $0 < x < 1$ for which $\\mathrm{f}(x)$ is decreasing.",
+    "o": ["$\\frac{2}{15}$", "$\\frac{1}{5}$", "$\\frac{1}{3}$", "$\\frac{1}{2}$", "$\\frac{2}{3}$", "$\\frac{4}{5}$", "$\\frac{13}{15}$"],
+    "a": 0,
+    "e": "Multiply out before differentiating: $\\mathrm{f}(x) = x^{\\frac{15}{7}} - x^{\\frac{8}{7}} + x^{\\frac17}$, so $\\mathrm{f}'(x) = \\frac{15}{7}x^{\\frac87} - \\frac87 x^{\\frac17} + \\frac17 x^{-\\frac67}$. Take out the common factor $\\frac17 x^{-\\frac67}$, which is positive for $x > 0$, leaving $\\mathrm{f}'(x) = \\frac{1}{7}x^{-\\frac{6}{7}}\\left(15x^2 - 8x + 1\\right)$. The sign is therefore the sign of $(5x - 1)(3x - 1)$, which is negative exactly for $\\frac15 < x < \\frac13$. That interval has length $\\frac13 - \\frac15 = \\frac{2}{15}$, and the whole interval has length $1$."
+  },
+  {
+    "n": 12, "t": "alg", "sp": "Minimum of a quartic · substitution to a quadratic", "d": 4, "sol": "lab",
+    "q": "The minimum value of the function $x^4 - p^2x^2$ is $-9$, where $p$ is a real number.<p>Find the minimum value of the function $x^2 - px + 6$.</p>",
+    "o": ["$-3$", "$6 - \\frac{3\\sqrt{2}}{2}$", "$\\frac{3}{2}$", "$3$", "$\\frac{9}{2}$", "$6 + \\frac{3\\sqrt{2}}{2}$"],
+    "a": 4,
+    "e": "Put $u = x^2$, so the quartic becomes $u^2 - p^2 u = \\left(u - \\frac{p^2}{2}\\right)^2 - \\frac{p^4}{4}$, with minimum $-\\frac{p^4}{4}$ attained at $u = \\frac{p^2}{2}$, which is a legitimate value of $x^2$. Hence $\\frac{p^4}{4} = 9$, so $p^4 = 36$ and $p^2 = 6$. The second function completes the square as $\\left(x - \\frac{p}{2}\\right)^2 + 6 - \\frac{p^2}{4}$, with minimum $6 - \\frac{6}{4} = \\frac92$. Only $p^2$ is needed, so the sign ambiguity in $p$ does not matter."
+  },
+  {
+    "n": 13, "t": "cal", "sp": "Definite integrals · building a sum from unit intervals", "d": 4, "sol": "lab",
+    "q": "The function f is such that, for every integer $n$ $$\\int_n^{n+1} \\mathrm{f}(x)\\,dx = n + 1$$ Evaluate $$\\sum_{r=1}^{8}\\left(\\int_0^r \\mathrm{f}(x)\\,dx\\right)$$",
+    "o": ["$36$", "$84$", "$120$", "$165$", "$204$", "$288$"],
+    "a": 2,
+    "e": "Chop each integral into unit pieces: $\\int_0^r \\mathrm{f} = \\sum_{n=0}^{r-1}(n+1) = 1 + 2 + \\cdots + r = \\frac{r(r+1)}{2}$. So the required sum is $\\sum_{r=1}^{8}\\frac{r(r+1)}{2} = \\frac12\\left(\\sum r^2 + \\sum r\\right)$. With $\\sum_{r=1}^{8} r^2 = 204$ and $\\sum_{r=1}^{8} r = 36$, this is $\\frac12(240) = 120$."
+  },
+  {
+    "n": 14, "t": "trig", "sp": "Counting solutions · bounding both sides of an equation", "d": 5, "sol": "lab",
+    "q": "<em>This question uses radians.</em><p>Find the number of distinct values of $x$ that satisfy the equation $$(x+1)(3-x) = 2\\left(1 - \\cos(\\pi x)\\right)$$</p>",
+    "o": ["$2$", "$3$", "$4$", "$5$", "$6$", "$7$"],
+    "a": 1,
+    "e": "Complete the square on the left: $(x+1)(3-x) = 4 - (x-1)^2$, a downward parabola peaking at $4$ when $x = 1$. The right side is $2 - 2\\cos(\\pi x)$, which oscillates between $0$ and $4$ and reaches $4$ exactly at odd integers. Substituting $t = x - 1$ and using $\\cos(\\pi x) = -\\cos(\\pi t)$ turns the equation into $2 - t^2 - 2\\cos(\\pi t) = 0$, which is even in $t$. At $t = 0$ both sides equal $4$, so $x = 1$ is a solution; for small $t$ the expression behaves like $\\left(\\pi^2 - 1\\right)t^2 > 0$, and it stays positive up to $t = 1$ (where it is $3$) before turning negative by $t = 1.5$. So there is exactly one further root with $t > 0$, near $t \\approx 1.43$, and by symmetry one with $t < 0$: three distinct values of $x$ in all."
+  },
+  {
+    "n": 15, "t": "cal", "sp": "Periodic graphs · integrating a sum of stretched copies", "d": 5, "sol": "lab",
+    "fig": "A triangular wave y = f(x) made of straight segments of gradient 1 and -1, taking the value 0 at every even integer and 1 at every odd integer, repeating for all x.",
+    "q": "The diagram shows the graph of $y = \\mathrm{f}(x)$. It consists of alternating straight-line segments of gradient $1$ and $-1$: the graph is $0$ at $x = 0, 2, 4, \\ldots$ and rises to $1$ at $x = 1, 3, 5, \\ldots$, continuing in this way for all values of $x$.<p>The function g is defined as $$\\mathrm{g}(x) = \\sum_{r=1}^{10} \\mathrm{f}\\left(2^{r-1}x\\right)$$</p><p>Find the value of $$\\int_0^1 \\mathrm{g}(x)\\,dx$$</p>",
+    "o": ["$\\frac{1023}{1024}$", "$\\frac{1023}{512}$", "$5$", "$10$", "$\\frac{55}{2}$", "$55$"],
+    "a": 2,
+    "e": "Integration is linear, so work out $\\int_0^1 \\mathrm{f}\\left(kx\\right)dx$ for each $k = 2^{r-1}$ separately. Substituting $u = kx$ gives $\\frac1k\\int_0^k \\mathrm{f}(u)\\,du$. The wave has period $2$ and averages $\\frac12$ over each period, so for $k$ even $\\int_0^k \\mathrm{f} = \\frac{k}{2}$ and the term is $\\frac12$. For $r = 1$, $k = 1$ and $\\int_0^1 \\mathrm{f}(u)\\,du$ is the triangle of base $1$ and height $1$ cut in half, again $\\frac12$. Every one of the ten terms is $\\frac12$, so the total is $5$."
+  },
+  {
+    "n": 16, "t": "seq", "sp": "Binomial expansion · ascending and descending terms", "d": 5, "sol": "lab",
+    "q": "Consider the expansion of $$(a + bx)^n$$ The third term, in <b>ascending</b> powers of $x$, is $105x^2$<p>The fourth term, in <b>ascending</b> powers of $x$, is $210x^3$</p><p>The fourth term, in <b>descending</b> powers of $x$, is $210x^3$</p><p>Find the value of $\\left(\\frac{a}{b}\\right)^2$</p>",
+    "o": ["$\\frac{1}{4}$", "$\\frac{4}{9}$", "$\\frac{25}{36}$", "$\\frac{5}{6}$", "$1$"],
+    "a": 1,
+    "e": "The fourth term in descending powers carries $x^{n-3}$, and it is given as a term in $x^3$, so $n - 3 = 3$ and $n = 6$. Now the ascending conditions read $\\binom{6}{2}a^4b^2 = 15a^4b^2 = 105$ and $\\binom{6}{3}a^3b^3 = 20a^3b^3 = 210$, so $a^4b^2 = 7$ and $a^3b^3 = \\frac{21}{2}$. Dividing one by the other gives $\\frac{a}{b} = \\frac{7}{21/2} = \\frac{2}{3}$, so $\\left(\\frac{a}{b}\\right)^2 = \\frac49$. Note the third condition is what pins down $n$; without it $n$ is unknown."
+  },
+  {
+    "n": 17, "t": "gra", "sp": "Curve sketching · a trigonometric equation in $x^2 + y^2$", "d": 4, "sol": "lab",
+    "fig": "Five sketches, each showing a family of concentric circles centred at the origin, differing in how many circles there are and how their radii are spaced.",
+    "q": "Which of the following sketches shows the graph of $$\\sin\\left(x^2 + y^2\\right) = \\frac{1}{2}$$ where $x^2 + y^2 \\le 8\\pi$?<p>All five options show concentric circles centred on the origin, differing only in how many circles there are and how their radii are spaced.</p>",
+    "o": ["Eight circles: one small inner circle, then a wide gap, with the rest bunching more and more tightly towards the outside", "Eight circles plus a dot at the origin, spaced most widely near the outside", "Eight circles spaced roughly evenly", "Eight circles crowded together in the middle, with a large empty disc at the centre", "Four circles plus a dot at the origin, spreading further apart towards the outside"],
+    "a": 0,
+    "e": "The equation involves only $u = x^2 + y^2$, so the graph is a set of circles about the origin, one for each solution of $\\sin u = \\frac12$ with $0 \\le u \\le 8\\pi$. Those are $u = \\frac{\\pi}{6}, \\frac{5\\pi}{6}, \\frac{13\\pi}{6}, \\frac{17\\pi}{6}, \\frac{25\\pi}{6}, \\frac{29\\pi}{6}, \\frac{37\\pi}{6}, \\frac{41\\pi}{6}$ — eight of them, since the next, $\\frac{49\\pi}{6}$, exceeds $8\\pi$. The radii are $\\sqrt{u}$, giving roughly $0.72, 1.62, 2.61, 2.98, 3.62, 3.90, 4.40, 4.63$: the square root compresses the outer circles together while leaving a wide gap after the innermost one. So the right sketch has eight circles, a lone small one at the centre, and increasingly tight spacing outwards."
+  },
+  {
+    "n": 18, "t": "gra", "sp": "Transformations · rotating a curve about a point", "d": 5, "sol": "lab",
+    "q": "The curve with equation $$x = y^2 - 6y + 11$$ is rotated $90^\\circ$ clockwise about the point $P$ to give the curve $C$.<p>$P$ has $x$-coordinate $-2$ and $y$-coordinate $3$.</p><p>What is the equation of $C$?</p>",
+    "o": ["$y = -x^2 - 4x - 3$", "$y = -x^2 - 4x - 5$", "$y = -x^2 - 6x - 7$", "$y = -x^2 - 6x - 11$", "$y = x^2 - 4x + 5$", "$y = x^2 + 4x + 3$", "$y = x^2 - 6x + 11$", "$y = x^2 + 6x + 7$"],
+    "a": 1,
+    "e": "A clockwise quarter-turn about $P(-2,3)$ sends a point $(x, y)$ to $(-2 + (y-3),\\ 3 - (x+2))$, since the displacement $(a, b)$ from $P$ becomes $(b, -a)$. Writing the image as $(X, Y)$ gives $X = y - 5$ and $Y = 1 - x$, so $y = X + 5$ and $x = 1 - Y$. Substitute into the original, written as $x = (y-3)^2 + 2$: $1 - Y = (X+2)^2 + 2$. Rearranging, $Y = -(X+2)^2 - 1 = -X^2 - 4X - 5$."
+  },
+  {
+    "n": 19, "t": "trig", "sp": "Trigonometric equations · counting solutions to fix a range", "d": 5, "sol": "lab",
+    "q": "The equation $$\\sin^2\\left(4^{\\cos\\theta} \\times 60^\\circ\\right) = \\frac{3}{4}$$ has exactly three solutions in the range $0^\\circ \\le \\theta \\le x^\\circ$<p>What is the range of all possible values of $x$?</p>",
+    "o": ["$90 \\le x < 120$", "$90 \\le x < 270$", "$120 \\le x < 240$", "$270 \\le x < 300$", "$300 \\le x < 360$", "$450 \\le x < 630$"],
+    "a": 1,
+    "e": "Write $t = 4^{\\cos\\theta}$, so the angle is $60t$ degrees and the equation is $\\sin(60t) = \\pm\\frac{\\sqrt3}{2}$, which holds exactly when $60t$ degrees differs from $60^\\circ$ or from $120^\\circ$ by a whole number of $180^\\circ$ — that is, when $t$ is an integer not divisible by $3$. Since $\\cos\\theta \\in [-1,1]$, $t$ lies in $\\left[\\frac14, 4\\right]$, so the usable values are $t = 1, 2, 4$, giving $\\cos\\theta = 0, \\frac12, 1$. Listing the resulting $\\theta$ in order from $0^\\circ$: $0^\\circ, 60^\\circ, 90^\\circ, 270^\\circ, 300^\\circ, 360^\\circ$. Exactly three of them lie in $[0^\\circ, x^\\circ]$ when $x$ has reached $90$ but not yet $270$, so $90 \\le x < 270$."
+  },
+  {
+    "n": 20, "t": "geo", "sp": "Logarithms to a circle · arc length from the domain", "d": 5, "sol": "lab",
+    "q": "Find the length of the curve with equation $$2\\log_{10}(x - y) = \\log_{10}(2 - 2x) + \\log_{10}(y + 5)$$",
+    "o": ["$5$", "$10$", "$15$", "$3\\pi$", "$9\\pi$", "$12\\pi$"],
+    "a": 3,
+    "e": "The logarithms force $x - y > 0$, $x < 1$ and $y > -5$; keep those aside and remove the logs to get $(x-y)^2 = (2-2x)(y+5)$. Expanding, the $-2xy$ terms cancel and it reduces to $x^2 + 10x + y^2 - 2y = 10$, that is $(x+5)^2 + (y-1)^2 = 36$: a circle of radius $6$ about $(-5, 1)$, of total circumference $12\\pi$. Now impose $x > y$. The line $y = x$ cuts the circle where $2x^2 + 8x - 10 = 0$, at $(-5,-5)$ and $(1,1)$, a chord of length $6\\sqrt2$, which in a circle of radius $6$ subtends $90^\\circ$ at the centre. The centre itself has $x < y$, so the arc that survives is the minor one — a quarter of the circle, of length $3\\pi$ — and the other two conditions hold everywhere on it."
+  }
+]

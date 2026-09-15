@@ -1,0 +1,144 @@
+[
+  {
+    "n": 1, "t": "cal", "sp": "Definite integrals · expanding a bracket before integrating", "d": 3, "sol": "lab",
+    "q": "Find the value of $$\\int_1^2 \\left(x^2 - \\frac{4}{x^2}\\right)^2 dx$$",
+    "o": ["$\\frac{43}{15}$", "$3$", "$\\frac{97}{15}$", "$\\frac{103}{15}$", "$\\frac{163}{15}$", "$18$"],
+    "a": 0,
+    "e": "There is no shortcut here: square the bracket first so that every term is a power of $x$. $\\left(x^2 - 4x^{-2}\\right)^2 = x^4 - 8 + 16x^{-4}$, which integrates to $\\frac{x^5}{5} - 8x - \\frac{16}{3x^3}$. At $x=2$ this is $\\frac{32}{5} - 16 - \\frac{2}{3}$ and at $x=1$ it is $\\frac{1}{5} - 8 - \\frac{16}{3}$. Subtracting gives $\\frac{31}{5} - 8 + \\frac{14}{3} = \\frac{93 - 120 + 70}{15} = \\frac{43}{15}$. The tempting error is to integrate the bracket and then square, which is not a valid operation."
+  },
+  {
+    "n": 2, "t": "cal", "sp": "Differentiating after rewriting as powers of $x$", "d": 3, "sol": "lab",
+    "q": "$$f(x) = \\frac{(x^2+5)(2x)}{\\sqrt[4]{x^3}}, \\qquad x > 0$$<p>Which one of the following is equal to $f'(x)$?</p>",
+    "o": ["$8x^{\\frac{9}{4}} + \\frac{40}{3}x^{\\frac{1}{4}}$", "$\\frac{9}{2}x^{\\frac{5}{4}} + \\frac{5}{2}x^{-\\frac{3}{4}}$", "$8x^{\\frac{9}{4}} + \\frac{40}{3}x^{-\\frac{1}{4}}$", "$\\frac{8}{13}x^{\\frac{13}{4}} + 8x^{\\frac{5}{4}}$"],
+    "a": 1,
+    "e": "Do not reach for the quotient rule. Multiply out the top first: $(x^2+5)(2x) = 2x^3 + 10x$, and $\\sqrt[4]{x^3} = x^{\\frac{3}{4}}$, so $f(x) = 2x^{\\frac{9}{4}} + 10x^{\\frac{1}{4}}$. Differentiating term by term, $f'(x) = 2\\cdot\\frac{9}{4}x^{\\frac{5}{4}} + 10\\cdot\\frac{1}{4}x^{-\\frac{3}{4}} = \\frac{9}{2}x^{\\frac{5}{4}} + \\frac{5}{2}x^{-\\frac{3}{4}}$. Options A and C are what you get if you integrate instead of differentiate, or slip a sign in the index."
+  },
+  {
+    "n": 3, "t": "trig", "sp": "Using $\\sin^2 x + \\cos^2 x = 1$ · all solutions in a range", "d": 3, "sol": "lab",
+    "q": "What is the value, in radians, of the largest angle $x$ in the range $0 \\le x \\le 2\\pi$ that satisfies the equation $$8\\sin^2 x + 4\\cos^2 x = 7?$$",
+    "o": ["$\\frac{2\\pi}{3}$", "$\\frac{5\\pi}{6}$", "$\\frac{4\\pi}{3}$", "$\\frac{5\\pi}{3}$", "$\\frac{7\\pi}{4}$", "$\\frac{11\\pi}{6}$"],
+    "a": 3,
+    "e": "Write $4\\cos^2 x = 4 - 4\\sin^2 x$, so the left-hand side collapses to $4\\sin^2 x + 4$. Then $\\sin^2 x = \\frac{3}{4}$, giving $\\sin x = \\pm\\frac{\\sqrt3}{2}$. In $0 \\le x \\le 2\\pi$ that is $x = \\frac{\\pi}{3}, \\frac{2\\pi}{3}, \\frac{4\\pi}{3}, \\frac{5\\pi}{3}$. The largest is $\\frac{5\\pi}{3}$. Losing the negative square root is what makes people stop at $\\frac{2\\pi}{3}$."
+  },
+  {
+    "n": 4, "t": "log", "sp": "Logic puzzle · exactly one true statement", "d": 3, "sol": "lab",
+    "q": "Five sealed urns, labelled P, Q, R, S, and T, each contain the <b>same</b> (non-zero) number of balls. The following statements are attached to the urns.<p>Urn P&nbsp;&nbsp;&nbsp; This urn contains one or four balls.<br>Urn Q&nbsp;&nbsp; This urn contains two or four balls.<br>Urn R&nbsp;&nbsp; This urn contains more than two balls and fewer than five balls.<br>Urn S&nbsp;&nbsp;&nbsp; This urn contains one or two balls.<br>Urn T&nbsp;&nbsp;&nbsp; This urn contains fewer than three balls.</p><p>Exactly one of the urns has a true statement attached to it.</p><p>Which urn is it?</p>",
+    "o": ["Urn P", "Urn Q", "Urn R", "Urn S", "Urn T"],
+    "a": 2,
+    "e": "Every urn holds the same number $n$, so just test each value of $n$ and count how many statements come out true. For $n=1$: P, S and T are true — three. For $n=2$: Q, S and T — three. For $n=3$: only R — exactly one. For $n=4$: P, Q and R — three. For $n \\ge 5$ none is true. So $n=3$ and the single true statement is on urn R."
+  },
+  {
+    "n": 5, "t": "prf", "sp": "Counterexamples · numbers of the form $6k \\pm 1$", "d": 3, "sol": "lab",
+    "q": "Consider the statement:<p>(*) A whole number $n$ is prime if it is 1 less or 5 less than a multiple of 6.</p><p>How many counterexamples to (*) are there in the range $0 < n < 50$?</p>",
+    "o": ["$2$", "$3$", "$4$", "$5$", "$6$"],
+    "a": 2,
+    "e": "A counterexample is a number of the stated form that is <em>not</em> prime. Numbers 1 less than a multiple of 6 are $5, 11, 17, 23, 29, 35, 41, 47$; of these only $35 = 5\\times7$ fails to be prime. Numbers 5 less than a multiple of 6 are $1, 7, 13, 19, 25, 31, 37, 43, 49$; here $1$ is not prime, and neither is $25$ nor $49$. That gives $35, 1, 25, 49$ — four counterexamples. Forgetting that 1 is not a prime is the usual way to get 3."
+  },
+  {
+    "n": 6, "t": "seq", "sp": "Recursively defined functions · summing a geometric series", "d": 4, "sol": "lab",
+    "q": "The sequence of functions $f_1(x)$, $f_2(x)$, $f_3(x)$, … is defined as follows:<p>$$f_1(x) = x^{10}$$ $$f_{n+1}(x) = x f_n'(x) \\quad \\text{for } n \\ge 1$$</p><p>where $f_n'(x) = \\frac{df_n(x)}{dx}$.</p><p>Find the value of $$\\sum_{n=1}^{20} f_n(x)$$</p>",
+    "o": ["$\\frac{x^{10}(x^{20}-1)}{x-1}$", "$\\frac{x^{10}(x^{21}-1)}{x-1}$", "$\\left(\\frac{10^{20}-1}{9}\\right)x^{10}$", "$\\left(\\frac{10^{21}-1}{9}\\right)x^{10}$", "$\\left(\\frac{(10x)^{20}-1}{10x-1}\\right)x^{10}$", "$\\left(\\frac{(10x)^{21}-1}{10x-1}\\right)x^{10}$", "$x^{10} + x^9 + x^8 + \\cdots + x + 1$", "$x^{10} + 10x^9 + (10\\times 9)x^8 + \\cdots + (10\\times 9\\times \\cdots \\times 2)x + (10\\times 9\\times\\cdots\\times 2\\times 1)$"],
+    "a": 2,
+    "e": "Work out the first couple of terms and the pattern is immediate. $f_2(x) = x\\cdot 10x^9 = 10x^{10}$, and $f_3(x) = x\\cdot 100x^9 = 100x^{10}$. In general the power of $x$ never changes: if $f_n(x) = c\\,x^{10}$ then $f_{n+1}(x) = x\\cdot 10c\\,x^{9} = 10c\\,x^{10}$, so $f_n(x) = 10^{n-1}x^{10}$. Summing the geometric series of coefficients, $\\sum_{n=1}^{20} 10^{n-1} = \\frac{10^{20}-1}{9}$, and the answer is $\\left(\\frac{10^{20}-1}{9}\\right)x^{10}$."
+  },
+  {
+    "n": 7, "t": "exp", "sp": "Logarithm laws · assembling the steps of a proof", "d": 4, "sol": "lab",
+    "q": "The four real numbers $a$, $b$, $c$, and $d$ are all greater than 1.<p>Suppose that they satisfy the equation $\\log_c d = (\\log_a b)^2$.</p><p>Use some of the lines given to construct a proof that, in this case, it follows that $$(*) \\quad \\log_b d = (\\log_a b)(\\log_a c)$$</p><p>(1) Let $x = \\log_a b$ and $y = \\log_a c$</p><p>(2)&nbsp; $d = (c^x)^2$<br>(3)&nbsp; $d = c^{(x^2)}$<br>(4)&nbsp; $d = b^{xy}$</p><p>(5)&nbsp; $d = (a^y)^{(x^2)}$<br>(6)&nbsp; $d = ((a^y)^x)^2$<br>(7)&nbsp; $d = (a^x)^{xy}$</p><p>(8)&nbsp; $d = a^{(y^2 x)}$<br>(9)&nbsp; $d = a^{(x^2 y)}$</p>",
+    "o": ["(1). Then (2), so (6), so (8), so (7), and therefore (4), hence (*) as required.", "(1). Then (2), so (7), so (8), so (6), and therefore (4), hence (*) as required.", "(1). Then (3), so (5), so (9), so (7), and therefore (4), hence (*) as required.", "(1). Then (3), so (7), so (9), so (5), and therefore (4), hence (*) as required.", "(1). Then (4), so (5), so (9), so (7), and therefore (3), hence (*) as required.", "(1). Then (4), so (6), so (8), so (7), and therefore (2), hence (*) as required.", "(1). Then (4), so (7), so (8), so (6), and therefore (2), hence (*) as required.", "(1). Then (4), so (7), so (9), so (5), and therefore (3), hence (*) as required."],
+    "a": 2,
+    "e": "Follow the chain forwards from what you are given. With $x = \\log_a b$ and $y = \\log_a c$, the hypothesis $\\log_c d = x^2$ says $d = c^{(x^2)}$, which is line (3). Since $c = a^y$, that becomes $d = (a^y)^{(x^2)}$, line (5), and so $d = a^{(x^2 y)}$, line (9). Regrouping the index as $x\\cdot xy$ gives $d = (a^x)^{xy}$, line (7), and $a^x = b$, so $d = b^{xy}$, line (4). Taking $\\log_b$ of that gives $\\log_b d = xy$, which is (*). The order is (1), (3), (5), (9), (7), (4)."
+  },
+  {
+    "n": 8, "t": "ineq", "sp": "Combining linear inequalities · what does and does not follow", "d": 4, "sol": "lab",
+    "q": "A region is defined by the inequalities $x + y > 6$ and $x - y > -4$.<p>Consider the three statements:</p><p>1&nbsp;&nbsp; $x > 1$<br>2&nbsp;&nbsp; $y > 5$<br>3&nbsp;&nbsp; $(x+y)(x-y) > -24$</p><p>Which of the above statements is/are true for <b>every</b> point in the region?</p>",
+    "o": ["none", "1 only", "2 only", "3 only", "1 and 2 only", "1 and 3 only", "2 and 3 only", "1, 2 and 3"],
+    "a": 1,
+    "e": "Adding the two inequalities gives $2x > 2$, so statement 1 always holds. Statement 2 fails at $(10,0)$: there $x+y = 10 > 6$ and $x - y = 10 > -4$, yet $y$ is not greater than 5. Statement 3 is the trap: multiplying $x+y > 6$ by $x-y > -4$ is not legitimate because $x-y$ can be negative. Take $x + y = 100$ and $x - y = -3.9$ (that is $x = 48.05$, $y = 51.95$), which lies in the region; the product is $-390$, far below $-24$. So only statement 1."
+  },
+  {
+    "n": 9, "t": "geo", "sp": "Congruent triangles · what equal area adds to the standard criteria", "d": 4, "sol": "lab",
+    "q": "Triangles $ABC$ and $XYZ$ have the <b>same area</b>.<p>Which of these extra conditions, taken independently, would <b>imply</b> that they are congruent?</p><p>(1)&nbsp; $AB = XY$ and $BC = YZ$<br>(2)&nbsp; $AB = XY$ and $\\angle ABC = \\angle XYZ$<br>(3)&nbsp; $\\angle ABC = \\angle XYZ$ and $\\angle BCA = \\angle YZX$</p><p>Each option gives a verdict for condition (1), then (2), then (3).</p>",
+    "o": ["(1) does not imply congruent; (2) does not imply congruent; (3) does not imply congruent", "(1) does not imply congruent; (2) does not imply congruent; (3) implies congruent", "(1) does not imply congruent; (2) implies congruent; (3) does not imply congruent", "(1) does not imply congruent; (2) implies congruent; (3) implies congruent", "(1) implies congruent; (2) does not imply congruent; (3) does not imply congruent", "(1) implies congruent; (2) does not imply congruent; (3) implies congruent", "(1) implies congruent; (2) implies congruent; (3) does not imply congruent", "(1) implies congruent; (2) implies congruent; (3) implies congruent"],
+    "a": 3,
+    "e": "Use area $= \\frac12 ab\\sin C$ throughout. For (1), equal areas with $AB = XY$ and $BC = YZ$ force $\\sin B = \\sin Y$, but that leaves $Y = 180^\\circ - B$ open, so the triangles need not be congruent. For (2), $AB = XY$ and $\\angle B = \\angle Y$ make the areas $\\frac12 AB\\cdot BC\\sin B$ and $\\frac12 XY\\cdot YZ \\sin Y$ equal only if $BC = YZ$, and then SAS gives congruence. For (3), two equal angles make the triangles similar, and similar triangles with equal area have scale factor 1, so they are congruent."
+  },
+  {
+    "n": 10, "t": "ineq", "sp": "Sufficient conditions · which powers preserve order", "d": 4, "sol": "lab",
+    "q": "In this question $x$ and $y$ are non-zero real numbers.<p>Which one of the following is <b>sufficient</b> to conclude that $x < y$?</p>",
+    "o": ["$x^4 < y^4$", "$y^4 < x^4$", "$x^{-1} < y^{-1}$", "$y^{-1} < x^{-1}$", "$x^{\\frac{3}{5}} < y^{\\frac{3}{5}}$", "$y^{\\frac{3}{5}} < x^{\\frac{3}{5}}$"],
+    "a": 4,
+    "e": "The question is which map $t \\mapsto t^k$ is strictly increasing on the whole of the non-zero reals, since only then can the inequality be undone. Fourth powers destroy sign information: $x = 1$, $y = -2$ satisfies $x^4 < y^4$ but not $x<y$, and B fails similarly. Reciprocals reverse order on each side of zero but not across it: $y^{-1} < x^{-1}$ holds for $x = 1$, $y = -1$, where $x > y$, and $x^{-1} < y^{-1}$ holds for $x = 2$, $y = 1$. But $t^{\\frac35} = (t^{\\frac15})^3$ is defined and strictly increasing for every real $t$, so $x^{\\frac35} < y^{\\frac35}$ does force $x < y$."
+  },
+  {
+    "n": 11, "t": "cal", "sp": "Polynomials with two real roots · what must follow", "d": 4, "sol": "lab",
+    "q": "$f(x)$ is a polynomial with real coefficients.<p>The equation $f(x) = 0$ has exactly two real roots, $x = -p$ and $x = p$, where $p > 0$.</p><p>Consider the following three statements:</p><p>1&nbsp;&nbsp; $f'(x) = 0$ for exactly one value of $x$ between $-p$ and $p$<br>2&nbsp;&nbsp; The area between the curve $y = f(x)$, the $x$-axis and the lines $x = -p$ and $x = p$ is given by $2\\int_0^p f(x)\\,dx$<br>3&nbsp;&nbsp; The graph of $y = -f(-x)$ intersects the $x$-axis at the points $x = -p$ and $x = p$ only</p><p>Which of the above statements <b>must</b> be true?</p>",
+    "o": ["none", "1 only", "2 only", "3 only", "1 and 2 only", "1 and 3 only", "2 and 3 only", "1, 2 and 3"],
+    "a": 3,
+    "e": "Rolle's theorem guarantees <em>at least</em> one stationary point between the roots, not exactly one. Take $f(x) = (x^2 - p^2)(x^2 + \\varepsilon)$ with $\\varepsilon$ small and positive: it still has only $\\pm p$ as real roots, but $f'(x) = 2x(2x^2 + \\varepsilon - p^2)$ vanishes three times inside, so statement 1 fails. Statement 2 assumes $f$ is even and of constant sign, neither of which is given. Statement 3 is safe: $-f(-x) = 0$ exactly when $f(-x) = 0$, that is when $-x = \\pm p$, so the roots are again $\\pm p$ and nothing else."
+  },
+  {
+    "n": 12, "t": "seq", "sp": "Arithmetic series · deducing signs from an inequality on sums", "d": 3, "sol": "lab",
+    "q": "The first term of an arithmetic sequence is $a$ and the common difference is $d$.<p>The sum of the first $n$ terms is denoted by $S_n$.</p><p>If $S_8 > 3S_6$, what can be deduced about the sign of $a$ and the sign of $d$?</p>",
+    "o": ["both $a$ and $d$ are negative", "$a$ is positive, $d$ is negative", "$a$ is negative, $d$ is positive", "$a$ is negative, but the sign of $d$ cannot be deduced", "$d$ is negative, but the sign of $a$ cannot be deduced", "neither the sign of $a$ nor the sign of $d$ can be deduced"],
+    "a": 5,
+    "e": "Use $S_n = \\frac{n}{2}(2a + (n-1)d)$. Then $S_8 = 8a + 28d$ and $3S_6 = 3(6a + 15d) = 18a + 45d$, so the condition becomes $8a + 28d > 18a + 45d$, that is $10a + 17d < 0$. That single inequality pins down neither sign on its own: $a = 1$, $d = -1$ satisfies it with $a$ positive, and $a = -10$, $d = 1$ satisfies it with $d$ positive. So neither sign can be deduced."
+  },
+  {
+    "n": 13, "t": "prf", "sp": "Finding the error in a divisibility proof", "d": 4, "sol": "lab",
+    "q": "In this question, $a$, $b$, and $c$ are positive integers.<p>The following is an attempted proof of the false statement:</p><p><em>If $a$ divides $bc$, then $a$ divides $b$ or $a$ divides $c$.</em></p><p>['$a$ divides $bc$' means '$a$ is a factor of $bc$']</p><p>Which line contains the error in this proof?</p><p>1.&nbsp; The statement is equivalent to 'if $a$ does not divide $b$ and $a$ does not divide $c$ then $a$ does not divide $bc$'.<br>2.&nbsp; Suppose $a$ does not divide $b$ and $a$ does not divide $c$. Then the remainder when dividing $b$ by $a$ is $r$, where $0 < r < a$, and the remainder when dividing $c$ by $a$ is $s$, where $0 < s < a$.<br>3.&nbsp; So $b = ax + r$ and $c = ay + s$ for some integers $x$ and $y$.<br>4.&nbsp; Thus $bc = a(axy + xs + yr) + rs$.<br>5.&nbsp; So the remainder when dividing $bc$ by $a$ is $rs$.<br>6.&nbsp; Since $r > 0$ and $s > 0$, it follows that $rs > 0$.<br>7.&nbsp; Hence $a$ does not divide $bc$.</p>",
+    "o": ["Line 1", "Line 2", "Line 3", "Line 4", "Line 5", "Line 6"],
+    "a": 4,
+    "e": "Lines 1 to 4 are all sound: the contrapositive is stated correctly, the division algorithm gives the remainders, and the expansion of $bc$ is right. Line 5 is where it breaks. A remainder must lie strictly below $a$, but $rs$ need not: with $a = 6$, $b = 3$, $c = 4$ we get $r = 3$, $s = 4$ and $rs = 12$, which is larger than $a$. In fact $6$ does divide $12$, and this is exactly the counterexample that makes the original statement false."
+  },
+  {
+    "n": 14, "t": "gra", "sp": "Quartic graphs · how the number of solutions of $f(x)=k$ can change", "d": 5, "sol": "lab",
+    "q": "$f(x) = ax^4 + bx^3 + cx^2 + dx + e$, where $a$, $b$, $c$, $d$, and $e$ are real numbers.<p>Suppose $f(x) = 1$ has $p$ distinct real solutions, $f(x) = 2$ has $q$ distinct real solutions, $f(x) = 3$ has $r$ distinct real solutions, and $f(x) = 4$ has $s$ distinct real solutions.</p><p>Which one of the following is <b>not</b> possible?</p>",
+    "o": ["$p=1$, $q=2$, $r=4$ and $s=3$", "$p=1$, $q=3$, $r=2$ and $s=4$", "$p=1$, $q=4$, $r=3$ and $s=2$", "$p=2$, $q=4$, $r=3$ and $s=1$", "$p=4$, $q=3$, $r=2$ and $s=1$"],
+    "a": 1,
+    "e": "Think of counting where the horizontal lines $y=1,2,3,4$ cut the curve. For a quartic with positive leading coefficient the count as $k$ increases runs $0, 1, 2, 3, 4, 3, 2$; with negative leading coefficient it runs $2, 3, 4, 3, 2, 1, 0$. Either way the count rises to a peak and then falls — it never dips and then climbs again. Options A, C, D and E all follow that up-then-down shape, and each can be realised by choosing where the turning-point heights sit. Option B goes $1, 3, 2, 4$, which falls from 3 to 2 and then rises to 4, so no quartic can produce it."
+  },
+  {
+    "n": 15, "t": "alg", "sp": "Quadratics · translating a condition on the gap between the roots", "d": 4, "sol": "lab",
+    "q": "Consider the quadratic $f(x) = x^2 - 2px + q$ and the statement:<p>(*) $f(x) = 0$ has two real roots whose difference is greater than 2 and less than 4.</p><p>Which one of the following statements is true <b>if and only if</b> (*) is true?</p>",
+    "o": ["$q < p^2 < q+4$", "$\\sqrt{q+1} < p < \\sqrt{q+4}$", "$q - 3 \\le p^2 - 4 \\le q$", "$q < p^2 - 1 < q+3$", "$q - 2 < p^2 - 3 < q+2$"],
+    "a": 3,
+    "e": "If the roots are $\\alpha$ and $\\beta$ then $\\alpha + \\beta = 2p$ and $\\alpha\\beta = q$, so $(\\alpha-\\beta)^2 = (\\alpha+\\beta)^2 - 4\\alpha\\beta = 4p^2 - 4q$. The condition $2 < |\\alpha - \\beta| < 4$ squares to $4 < 4p^2 - 4q < 16$, that is $1 < p^2 - q < 4$, or $q + 1 < p^2 < q + 4$. Rearranging, this is $q < p^2 - 1 < q + 3$, which is option D. Option B says the same thing only when $p > 0$, so it is not an equivalence, and A and E have the wrong endpoints."
+  },
+  {
+    "n": 16, "t": "geo", "sp": "Trapezium · the line through the intersection of the diagonals", "d": 4, "sol": "lab",
+    "q": "In the figure, $PQRS$ is a trapezium with $PQ$ parallel to $SR$. The diagonals of the trapezium meet at $X$. $U$ lies on $SP$ and $T$ lies on $RQ$ such that $UT$ is a line segment through $X$ parallel to $PQ$.<p>The length of $PQ$ is 12 cm and the length of $SR$ is 3 cm.</p><p>What, in centimetres, is the length of $UT$?</p>",
+    "fig": "A trapezium PQRS with the long parallel side PQ (12 cm) at the bottom and the short parallel side SR (3 cm) at the top; the diagonals PR and SQ cross at X, and a horizontal segment UT through X joins the two slanted sides.",
+    "o": ["$4.2$", "$4.5$", "$4.8$", "$5.25$", "$6$"],
+    "a": 2,
+    "e": "Start with the diagonals. Triangles $XSR$ and $XQP$ are similar with ratio $SR : PQ = 3 : 12 = 1 : 4$, so $SX : XQ = 1 : 4$ and $X$ lies one fifth of the way along $SQ$. Now look at triangle $SPQ$: $UX$ is parallel to $PQ$ with $SU : SP = SX : SQ = 1 : 5$, so $UX = \\frac{1}{5}\\times 12 = 2.4$, and the same argument on triangle $RPQ$ gives $XT = 2.4$. Hence $UT = 4.8$. Note this is the harmonic mean $\\frac{2\\times 12\\times 3}{12+3}$ of the parallel sides, not their average, which is why $7.5$ is not on offer."
+  },
+  {
+    "n": 17, "t": "trig", "sp": "Intersections of a sine curve with a family of lines", "d": 5, "sol": "lab",
+    "q": "Consider these simultaneous equations, where $c$ is a constant:<p>$$y = 3\\sin x + 2$$ $$y = x + c$$</p><p>Which of the following statements is/are true?</p><p>1&nbsp;&nbsp; For some value of $c$: there is exactly one solution with $0 \\le x \\le \\pi$ <b>and</b> there is at least one solution with $-\\pi < x < 0$.<br>2&nbsp;&nbsp; For some value of $c$: there is exactly one solution with $0 \\le x \\le \\pi$ <b>and</b> there are no solutions with $-\\pi < x < 0$.<br>3&nbsp;&nbsp; For some value of $c$: there is exactly one solution with $0 \\le x \\le \\pi$ <b>and</b> there are no solutions with $x > \\pi$.</p>",
+    "o": ["none", "1 only", "2 only", "3 only", "1 and 2 only", "1 and 3 only", "2 and 3 only", "1, 2 and 3"],
+    "a": 7,
+    "e": "Rearrange to $c = g(x)$ where $g(x) = 3\\sin x + 2 - x$, so each statement is about how many times the horizontal line $y = c$ meets the graph of $g$. Since $g'(x) = 3\\cos x - 1$, the turning points are at $\\cos x = \\frac13$, i.e. $x \\approx \\pm 1.23$. On $[0,\\pi]$, $g$ rises from $2$ to about $3.60$ then falls to $2 - \\pi \\approx -1.14$, so there is exactly one solution there whenever $2 - \\pi \\le c < 2$. On $(-\\pi, 0)$, $g$ dips to a minimum of about $0.40$, so choosing $c = 1$ gives a solution there (statement 1) while $c = 0$ gives none (statement 2). For $x > \\pi$ the values of $g$ stay below $2-\\pi$, so any $c \\ge 2-\\pi$ — $c = 0$ again — gives no solution there (statement 3). All three hold."
+  },
+  {
+    "n": 18, "t": "cal", "sp": "Counterexample to an inequality between integrals", "d": 4, "sol": "lab",
+    "q": "Consider this statement about a function $f(x)$:<p>(*) If $\\left(f(x)\\right)^2 \\le 1$ for all $-1 \\le x \\le 1$ then $\\int_{-1}^{1}\\left(f(x)\\right)^2 dx \\le \\int_{-1}^{1} f(x)\\,dx$</p><p>Which one of the following functions provides a <b>counterexample</b> to (*)?</p>",
+    "o": ["$f(x) = x + \\frac{1}{2}$", "$f(x) = x - \\frac{1}{2}$", "$f(x) = x + x^3$", "$f(x) = x - x^3$", "$f(x) = x^2 + x^4$", "$f(x) = x^2 - x^4$"],
+    "a": 3,
+    "e": "A counterexample has to satisfy the hypothesis and break the conclusion, so first throw out anything with $(f(x))^2 > 1$ somewhere on $[-1,1]$: at $x = 1$, option A gives $f = \\frac32$, option C gives $f = 2$ and option E gives $f = 2$, while option B gives $f(-1) = -\\frac32$. That leaves D and F. For $f(x) = x - x^3$ the largest value of $|f|$ on $[-1,1]$ is $\\frac{2}{3\\sqrt3} \\approx 0.385$, so the hypothesis holds; but $f$ is odd, so $\\int_{-1}^1 f\\,dx = 0$ while $\\int_{-1}^1 f^2\\,dx > 0$. The conclusion fails, so D is the counterexample. For F, $0 \\le f \\le \\frac14$, so $f^2 \\le f$ and the conclusion holds."
+  },
+  {
+    "n": 19, "t": "geo", "sp": "Plans and elevations · reconstructing a solid from three views", "d": 4, "sol": "lab",
+    "q": "Some identical unit cubes are used to construct a three-dimensional object by gluing them together face to face.<p>Sketches of this object are made by looking at it from the right-hand side, from the front and from above. These sketches are called the side elevation, the front elevation, and the plan view respectively. Each sketch is drawn on a 3 by 3 grid of unit squares.</p><p><b>Side elevation:</b> the whole bottom row (3 squares), the left two squares of the middle row, and the middle square of the top row.</p><p><b>Front elevation:</b> the whole bottom row (3 squares), the left and right squares of the middle row (with a gap in the middle), and the right-hand square of the top row.</p><p><b>Plan view:</b> the whole bottom row (3 squares) and the right-hand square of each of the other two rows, forming an L shape.</p><p>How many cubes were used to construct the object?</p>",
+    "fig": "Three 3-by-3 grids of squares: a staircase for the side elevation, an L-shape with a notch for the front elevation, and an L-shaped footprint for the plan view.",
+    "o": ["exactly 6", "either 6 or 7", "exactly 7", "either 7 or 8", "exactly 8", "either 8 or 9", "exactly 9"],
+    "a": 5,
+    "e": "The plan view gives the footprint: five columns of cubes, three in a row across the front and two more running back from the right-hand end. Label the front row of columns $1,2,3$ from left to right. The front elevation shows heights $2$, $1$ and $3$ above positions $1$, $2$, $3$, and since only one column stands at each of positions 1 and 2, those columns have heights $2$ and $1$. The side elevation shows the greatest height at each depth: $2$ at the front, $3$ in the middle, $1$ at the back, so the two back columns have heights $3$ and $1$. That fixes four columns totalling $7$ cubes. The remaining column, at the front right, only has to be no taller than $2$ — both $1$ and $2$ are consistent with all three views — so the total is either 8 or 9."
+  },
+  {
+    "n": 20, "t": "geo", "sp": "Interior angles of regular polygons · integer solutions", "d": 4, "sol": "lab",
+    "q": "Each interior angle of a regular polygon with $n$ sides is $\\frac{3}{4}$ of each interior angle of a second regular polygon with $m$ sides.<p>How many pairs of positive integers $n$ and $m$ are there for which this statement is true?</p>",
+    "o": ["none", "$1$", "$2$", "$3$", "$4$", "$5$", "$6$", "infinitely many"],
+    "a": 4,
+    "e": "The interior angle of a regular $n$-gon is $\\frac{180(n-2)}{n}$, so the condition is $\\frac{n-2}{n} = \\frac34\\cdot\\frac{m-2}{m}$. Clearing denominators, $4m(n-2) = 3n(m-2)$, which tidies to $mn - 8m + 6n = 0$ and hence $m = \\frac{6n}{8-n}$. A polygon needs at least 3 sides, so test $n = 3$ upwards: $n=3$ gives $\\frac{18}{5}$, not an integer; $n=4,5,6,7$ give $m = 6, 10, 18, 42$; and $n \\ge 8$ makes $m$ undefined or negative. That is 4 pairs."
+  }
+]

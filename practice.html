@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Practice — TMUA Lab</title>
+<meta name="description" content="Build a timed TMUA practice set from either paper or any single topic, with worked answers and automatic review.">
+<meta name="theme-color" content="#0a0e12">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2354d8f0'/><text y='72' x='50' text-anchor='middle' font-size='62' font-family='monospace' font-weight='bold' fill='%2303151b'>T</text></svg>">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header id="hdr"></header>
+<main id="main">
+  <div id="stage">
+    <div class="wrap">
+      <div class="app-head">
+        <div class="eyebrow">02 — practice</div>
+        <h1 style="margin-top:14px">Build a set</h1>
+        <p>Five to thirty questions from one paper, optionally narrowed to a single topic. Drawn from the real past
+          papers by default. Choose when answers are revealed and whether the clock runs — they are separate
+          settings, so you can work against a real countdown and still mark as you go, or take all the time you like
+          and see nothing until the end.</p>
+      </div>
+
+      <div class="setup">
+        <div class="panel">
+          <div class="field">
+            <span class="lab">Paper</span>
+            <div class="seg" id="segPaper">
+              <button data-v="1" aria-pressed="true">Paper 1 · Applications</button>
+              <button data-v="2" aria-pressed="false">Paper 2 · Reasoning</button>
+            </div>
+            <div class="hint" id="paperHint"></div>
+          </div>
+
+          <div class="field">
+            <span class="lab">Questions</span>
+            <div class="seg" id="segSource">
+              <button data-v="past" aria-pressed="true">Real past papers</button>
+              <button data-v="" aria-pressed="false">Everything</button>
+              <button data-v="lab" aria-pressed="false">Written for this site</button>
+            </div>
+            <div class="hint" id="sourceHint"></div>
+          </div>
+
+          <div class="field">
+            <span class="lab">Topics</span>
+            <div class="seg" id="segTopics"></div>
+            <div class="hint">Leave everything off to draw from the whole paper.</div>
+          </div>
+
+          <div class="field">
+            <span class="lab">Number of questions</span>
+            <div class="slider-row">
+              <input type="range" id="count" min="5" max="30" step="1" value="10">
+              <output id="countOut">10</output>
+            </div>
+            <div class="hint" id="countHint"></div>
+          </div>
+
+          <div class="field">
+            <span class="lab">When you see the answer</span>
+            <div class="seg" id="segFeedback">
+              <button data-v="instant" aria-pressed="false">As soon as I pick</button>
+              <button data-v="check" aria-pressed="true">After I confirm</button>
+              <button data-v="end" aria-pressed="false">Only at the end</button>
+            </div>
+            <div class="hint" id="feedbackHint"></div>
+          </div>
+
+          <div class="field">
+            <span class="lab">Conditions</span>
+            <div class="seg" id="segMode">
+              <button data-v="relaxed" aria-pressed="true">Relaxed</button>
+              <button data-v="exam" aria-pressed="false">Exam conditions</button>
+            </div>
+            <div class="hint" id="modeHint"></div>
+          </div>
+
+          <div class="field">
+            <label class="check">
+              <input type="checkbox" id="hardOnly">
+              <span><span class="ct">Hard questions only</span>
+                <span class="cd">Only questions fewer than 25% of candidates answer correctly, and only ones you have not already sat.</span></span>
+            </label>
+          </div>
+        </div>
+
+        <aside class="panel side-card">
+          <h3>This set</h3>
+          <ul class="side-list" id="summary"></ul>
+          <button class="btn btn-primary btn-block" id="startBtn" style="margin-top:18px">Start set</button>
+          <div class="hint" style="margin-top:12px" id="poolHint"></div>
+        </aside>
+      </div>
+
+      <div class="sec-head" style="margin-top:52px">
+        <div><h2 style="font-size:22px">Recent sittings</h2></div>
+        <div class="right"><a class="btn btn-quiet btn-sm" href="progress.html">All history →</a></div>
+      </div>
+      <ul class="qlist panel" id="recent" style="overflow:hidden"></ul>
+    </div>
+  </div>
+</main>
+<footer id="ftr"></footer>
+<script src="assets/js/math.js"></script>
+<script src="assets/js/bank-past.js"></script>
+<script src="assets/js/bank-p1.js"></script>
+<script src="assets/js/bank-p2.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/shell.js"></script>
+<script src="assets/js/session.js"></script>
+<script src="assets/js/practice.js"></script>
+</body>
+</html>

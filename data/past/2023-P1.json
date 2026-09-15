@@ -1,0 +1,145 @@
+[
+  {
+    "n": 1, "t": "cal", "sp": "Definite integrals · simultaneous conditions", "d": 3, "sol": "lab",
+    "q": "Given that $$\\int_0^1 (ax + b)\\,dx = 1$$ and $$\\int_0^1 x(ax + b)\\,dx = 1$$ find the value of $a + b$.",
+    "o": ["$-1$", "$0$", "$1$", "$2$", "$3$", "$4$", "$5$"],
+    "a": 5,
+    "e": "The first integral gives $\\left[\\frac{ax^2}{2} + bx\\right]_0^1 = \\frac{a}{2} + b = 1$. The second is $\\int_0^1 (ax^2 + bx)\\,dx = \\frac{a}{3} + \\frac{b}{2} = 1$. Substituting $b = 1 - \\frac{a}{2}$ into the second gives $\\frac{a}{3} + \\frac12 - \\frac{a}{4} = 1$, so $\\frac{a}{12} = \\frac12$ and $a = 6$. Then $b = -2$, and $a + b = 4$."
+  },
+  {
+    "n": 2, "t": "alg", "sp": "Discriminant · graphs that do not meet", "d": 3, "sol": "lab",
+    "q": "The graphs of $y = x^2 + 5x + 6$ and $y = mx - 3$, where $m$ is a constant, are plotted on the same set of axes.<p>Given that the graphs do not meet, what is the complete range of possible values of $m$?</p>",
+    "o": ["$-1 < m < 11$", "$m < -1,\\ m > 11$", "$-\\sqrt{11} < m < \\sqrt{11}$", "$m < -\\sqrt{11},\\ m > \\sqrt{11}$", "$-11 < m < 1$", "$m < -11,\\ m > 1$"],
+    "a": 0,
+    "e": "Setting them equal gives $x^2 + 5x + 6 = mx - 3$, so $x^2 + (5-m)x + 9 = 0$. The graphs miss each other exactly when this has no real root, so the discriminant is negative: $(5-m)^2 - 36 < 0$. Hence $|5-m| < 6$, giving $-6 < 5 - m < 6$ and so $-1 < m < 11$."
+  },
+  {
+    "n": 3, "t": "cal", "sp": "Definite integrals · additivity over intervals", "d": 4, "sol": "lab",
+    "q": "For any integer $n \\ge 0$, $$\\int_n^{n+1} f(x)\\,dx = n + 1$$ Evaluate $$\\int_0^3 f(x)\\,dx + \\int_1^3 f(x)\\,dx + \\int_2^3 f(x)\\,dx + \\int_4^3 f(x)\\,dx + \\int_5^3 f(x)\\,dx$$",
+    "o": ["$-2$", "$0$", "$1$", "$4$", "$18$", "$27$"],
+    "a": 2,
+    "e": "Write $I_n = \\int_n^{n+1} f(x)\\,dx = n+1$, so $I_0 = 1$, $I_1 = 2$, $I_2 = 3$, $I_3 = 4$, $I_4 = 5$. Then $\\int_0^3 = I_0 + I_1 + I_2 = 6$, $\\int_1^3 = I_1 + I_2 = 5$ and $\\int_2^3 = I_2 = 3$. The last two run backwards, so they change sign: $\\int_4^3 = -I_3 = -4$ and $\\int_5^3 = -(I_3 + I_4) = -9$. The total is $6 + 5 + 3 - 4 - 9 = 1$."
+  },
+  {
+    "n": 4, "t": "seq", "sp": "Sum to infinity · trigonometric terms", "d": 4, "sol": "lab",
+    "q": "Evaluate $$\\sum_{n=0}^{\\infty} \\frac{\\sin\\left(n\\pi + \\frac{\\pi}{3}\\right)}{2^n}$$",
+    "o": ["$0$", "$\\frac{1}{3}$", "$\\frac{\\sqrt{3}}{3}$", "$\\sqrt{3}$", "$3$"],
+    "a": 2,
+    "e": "Adding a whole number of half-turns only flips the sign: $\\sin(n\\pi + \\theta) = (-1)^n \\sin\\theta$. With $\\theta = \\frac{\\pi}{3}$ every term carries $\\sin\\frac{\\pi}{3} = \\frac{\\sqrt3}{2}$, so the sum is $\\frac{\\sqrt3}{2}\\sum_{n=0}^{\\infty}\\left(-\\frac12\\right)^n$. That is geometric with ratio $-\\frac12$, summing to $\\frac{1}{1+\\frac12} = \\frac23$. The total is $\\frac{\\sqrt3}{2}\\cdot\\frac23 = \\frac{\\sqrt3}{3}$."
+  },
+  {
+    "n": 5, "t": "geo", "sp": "Inscribed rectangle · quadratic in a length", "d": 4, "sol": "lab",
+    "fig": "A square MNOP with a rectangle RSTU inscribed at an angle, one vertex on each edge of the square.",
+    "q": "The following shape has two lines of reflectional symmetry.<p><em>MNOP</em> is a square of perimeter $40$ cm. The vertices of rectangle <em>RSTU</em> lie on the edges of square <em>MNOP</em>, with <em>R</em> on <em>MN</em>, <em>S</em> on <em>NO</em>, <em>T</em> on <em>OP</em> and <em>U</em> on <em>MP</em>.</p><p><em>MR</em> has length $x$ cm.</p><p>What is the largest possible value of $x$ such that <em>RSTU</em> has area $20$ cm²?</p>",
+    "o": ["$\\sqrt{2}$", "$\\sqrt{10}$", "$2\\sqrt{15}$", "$10\\sqrt{2}$", "$5 + \\sqrt{5}$", "$5 + \\sqrt{15}$"],
+    "a": 5,
+    "e": "The square has side $10$. Put $M$ at the origin with the square in the first quadrant. The symmetry forces $MU = MR = x$, so $R = (0, x)$, $U = (x, 0)$, $T = (10, 10-x)$ and $S = (10-x, 10)$. Then $RU$ has length $x\\sqrt2$ and $UT$ has length $(10-x)\\sqrt2$, so the area is $2x(10-x)$. Setting $2x(10-x) = 20$ gives $x^2 - 10x + 10 = 0$, so $x = 5 \\pm \\sqrt{15}$. The larger is $5 + \\sqrt{15}$."
+  },
+  {
+    "n": 6, "t": "seq", "sp": "Binomial expansion · divisibility of coefficients", "d": 5, "sol": "lab",
+    "q": "In the simplified expansion of $(2 + 3x)^{12}$, how many of the terms have a coefficient that is divisible by $12$?",
+    "o": ["$0$", "$2$", "$5$", "$10$", "$11$", "$12$", "$13$"],
+    "a": 4,
+    "e": "The expansion has $13$ terms, the one in $x^k$ having coefficient $\\binom{12}{k}2^{12-k}3^k$. Divisibility by $12$ needs a factor $4$ and a factor $3$. For $1 \\le k \\le 10$ the $3^k$ supplies the $3$ and $2^{12-k}$ supplies at least $4$, so all ten qualify. For $k = 11$ the coefficient is $12 \\times 2 \\times 3^{11} = 24 \\times 3^{11}$, which also qualifies. But $k = 0$ gives $2^{12}$, with no factor of $3$, and $k = 12$ gives $3^{12}$, which is odd. So $11$ terms qualify."
+  },
+  {
+    "n": 7, "t": "exp", "sp": "Exponential equations · hidden quadratic", "d": 4, "sol": "lab",
+    "q": "$\\mathrm{P}(x)$ and $\\mathrm{Q}(x)$ are defined as follows: $$\\mathrm{P}(x) = 2^x + 4$$ $$\\mathrm{Q}(x) = 2^{(2x-2)} - 2^{(x+2)} + 16$$ Find the largest value of $x$ such that $\\mathrm{P}(x)$ and $\\mathrm{Q}(x)$ are in the ratio $4 : 1$, respectively.",
+    "o": ["$5$", "$12$", "$32$", "$\\log_2 3$", "$\\log_2 5$", "$\\log_2 12$", "$\\log_2 20$"],
+    "a": 5,
+    "e": "Put $t = 2^x$. Then $\\mathrm{P} = t + 4$ and $\\mathrm{Q} = \\frac{t^2}{4} - 4t + 16 = \\frac{(t-8)^2}{4}$. The ratio $4:1$ means $\\mathrm{P} = 4\\mathrm{Q}$, so $t + 4 = (t-8)^2$. Expanding gives $t^2 - 17t + 60 = 0$, so $(t-5)(t-12) = 0$ and $t = 5$ or $t = 12$. Since $x = \\log_2 t$, the largest value is $\\log_2 12$."
+  },
+  {
+    "n": 8, "t": "trig", "sp": "Sine rule · the ambiguous case", "d": 4, "sol": "lab",
+    "q": "A triangle $XYZ$ is called <em>fun</em> if it has the following properties: $$\\text{angle } YXZ = 30^\\circ$$ $$XY = \\sqrt{3}\\,a$$ $$YZ = a$$ where $a$ is a constant.<p>For a given value of $a$, there are two distinct <em>fun</em> triangles $S$ and $T$, where the area of $S$ is greater than the area of $T$.</p><p>Find the ratio $\\text{area of } S : \\text{area of } T$.</p>",
+    "o": ["$1 : 1$", "$2 : 1$", "$2 : \\sqrt{3}$", "$\\sqrt{3} : 1$", "$3 : 1$"],
+    "a": 1,
+    "e": "$YZ$ is opposite the $30^\\circ$ angle, so the sine rule gives $\\frac{a}{\\sin 30^\\circ} = \\frac{\\sqrt3 a}{\\sin Z}$ and $\\sin Z = \\frac{\\sqrt3}{2}$. Hence $Z = 60^\\circ$ or $Z = 120^\\circ$ — the ambiguous case — leaving $Y = 90^\\circ$ or $Y = 30^\\circ$. Using $\\frac{XZ}{\\sin Y} = \\frac{a}{\\sin 30^\\circ}$ gives $XZ = 2a$ in the first case and $XZ = a$ in the second. The areas are $\\frac12(\\sqrt3 a)(2a)\\sin 30^\\circ = \\frac{\\sqrt3}{2}a^2$ and $\\frac12(\\sqrt3 a)(a)\\sin 30^\\circ = \\frac{\\sqrt3}{4}a^2$, a ratio of $2 : 1$."
+  },
+  {
+    "n": 9, "t": "trig", "sp": "Trigonometric equations · counting solutions", "d": 4, "sol": "lab",
+    "q": "How many solutions are there to $$(1 + 3\\cos 3\\theta)^2 = 4$$ in the interval $0^\\circ \\le \\theta \\le 180^\\circ$?",
+    "o": ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
+    "a": 4,
+    "e": "Taking square roots, $1 + 3\\cos 3\\theta = \\pm 2$, so $\\cos 3\\theta = \\frac13$ or $\\cos 3\\theta = -1$. As $\\theta$ runs over $[0^\\circ, 180^\\circ]$, $3\\theta$ runs over $[0^\\circ, 540^\\circ]$. In that range $\\cos u = -1$ at $u = 180^\\circ$ and $540^\\circ$ — two solutions — while $\\cos u = \\frac13$ has one solution in each of $[0^\\circ,180^\\circ]$, $[180^\\circ,360^\\circ]$ and $[360^\\circ,540^\\circ]$ — three more. That is $5$ in total."
+  },
+  {
+    "n": 10, "t": "cal", "sp": "Trapezium rule · comparison with the exact value", "d": 4, "sol": "lab",
+    "q": "The trapezium rule with 4 strips is used to estimate the integral $$\\int_{-2}^{2}\\sqrt{4 - x^2}\\,dx$$ What is the positive difference between the estimate and the exact value of the integral?",
+    "o": ["$2\\left(\\pi - 2 - 2\\sqrt{3}\\right)$", "$2\\left(\\pi - 1 - \\sqrt{3}\\right)$", "$2\\left(2\\pi - 1 - \\sqrt{3}\\right)$", "$4\\left(\\pi - 1 - \\sqrt{3}\\right)$", "$2\\pi - 3\\sqrt{3}$", "$4\\pi - 6\\sqrt{3}$"],
+    "a": 1,
+    "e": "The curve $y = \\sqrt{4-x^2}$ is the upper half of a circle of radius $2$, so the exact integral is $\\frac12\\pi(2)^2 = 2\\pi$. With four strips the width is $1$ and the ordinates at $x = -2, -1, 0, 1, 2$ are $0, \\sqrt3, 2, \\sqrt3, 0$. The trapezium rule gives $\\frac12\\left[0 + 2(\\sqrt3 + 2 + \\sqrt3) + 0\\right] = 2\\sqrt3 + 2$. The difference is $2\\pi - 2 - 2\\sqrt3 = 2(\\pi - 1 - \\sqrt3)$."
+  },
+  {
+    "n": 11, "t": "gra", "sp": "Transformations · matching minimum points", "d": 3, "sol": "lab",
+    "q": "It is given that $f(x) = x^2 - 6x$.<p>The curves $y = f(kx)$ and $y = f(x - c)$ have the same minimum point, where $k > 0$ and $c > 0$.</p><p>Which of the following is a correct expression for $k$ in terms of $c$?</p>",
+    "o": ["$k = \\frac{3-c}{3}$", "$k = \\frac{3}{c+3}$", "$k = \\frac{c-6}{6}$", "$k = \\frac{6}{6-c}$", "$k = \\frac{c+9}{9}$", "$k = \\frac{9}{c-9}$"],
+    "a": 1,
+    "e": "$f(kx) = k^2x^2 - 6kx$ has its minimum where $2k^2x - 6k = 0$, that is at $x = \\frac{3}{k}$, and the value there is $-9$. $f(x-c) = (x-c)^2 - 6(x-c)$ has its minimum at $x = c + 3$, again with value $-9$. The $y$-coordinates already agree, so the points coincide when $\\frac{3}{k} = c + 3$, giving $k = \\frac{3}{c+3}$."
+  },
+  {
+    "n": 12, "t": "trig", "sp": "Trigonometric equations with indices", "d": 4, "sol": "lab",
+    "q": "How many solutions are there to the equation $$\\frac{2^{\\tan^2 x}}{4^{\\sin^2 x}} = 1$$ in the range $0 \\le x \\le 2\\pi$?",
+    "o": ["$2$", "$3$", "$4$", "$5$", "$6$", "$7$", "$8$"],
+    "a": 5,
+    "e": "Writing $4^{\\sin^2 x} = 2^{2\\sin^2 x}$, the equation becomes $2^{\\tan^2 x - 2\\sin^2 x} = 1$, so $\\tan^2 x = 2\\sin^2 x$. Then $\\frac{\\sin^2 x}{\\cos^2 x} - 2\\sin^2 x = 0$, that is $\\sin^2 x\\left(\\frac{1}{\\cos^2 x} - 2\\right) = 0$. So $\\sin x = 0$, giving $x = 0, \\pi, 2\\pi$, or $\\cos^2 x = \\frac12$, giving $x = \\frac{\\pi}{4}, \\frac{3\\pi}{4}, \\frac{5\\pi}{4}, \\frac{7\\pi}{4}$. None makes $\\tan x$ undefined, so there are $7$ solutions."
+  },
+  {
+    "n": 13, "t": "geo", "sp": "Circles · greatest distance between two points", "d": 3, "sol": "lab",
+    "q": "Point $P$ lies on the circle with equation $(x-2)^2 + (y-1)^2 = 16$.<p>Point $Q$ lies on the circle with equation $(x-4)^2 + (y+5)^2 = 16$.</p><p>What is the maximum possible length of $PQ$?</p>",
+    "o": ["$10$", "$14$", "$16$", "$2\\sqrt{34}$", "$10\\sqrt{2}$", "$8 + 2\\sqrt{10}$", "$16 + 2\\sqrt{6}$"],
+    "a": 5,
+    "e": "The centres are $(2,1)$ and $(4,-5)$, a distance $\\sqrt{2^2 + 6^2} = \\sqrt{40} = 2\\sqrt{10}$ apart, and both radii are $4$. The greatest separation puts $P$ and $Q$ at opposite ends of the line through the centres, giving $2\\sqrt{10} + 4 + 4 = 8 + 2\\sqrt{10}$."
+  },
+  {
+    "n": 14, "t": "cal", "sp": "Cubics · condition for three distinct roots", "d": 5, "sol": "lab",
+    "q": "The function $$f(x) = \\frac{2}{3}x^3 + 2mx^2 + n, \\quad m > 0$$ has three distinct real roots.<p>What is the complete range of possible values of $n$, in terms of $m$?</p>",
+    "o": ["$-\\frac{8}{3}m^3 < n < 0$", "$-\\frac{4}{3}m^3 < n < 0$", "$0 < n < \\frac{3}{2}m^2$", "$0 < n < \\frac{40}{3}m^3$", "$n < -\\frac{8}{3}m^3$", "$n < \\frac{3}{2}m^2$", "$n > -\\frac{4}{3}m^3$", "$n > \\frac{40}{3}m^3$"],
+    "a": 0,
+    "e": "$f'(x) = 2x^2 + 4mx = 2x(x + 2m)$, so the stationary points are at $x = 0$ and $x = -2m$, and since $m > 0$ the second lies to the left. The leading coefficient is positive, so $x = -2m$ is the local maximum and $x = 0$ the local minimum. Here $f(0) = n$ and $f(-2m) = -\\frac{16}{3}m^3 + 8m^3 + n = n + \\frac{8}{3}m^3$. Three distinct real roots need the local maximum above the axis and the local minimum below it: $n + \\frac83 m^3 > 0$ and $n < 0$, that is $-\\frac83 m^3 < n < 0$."
+  },
+  {
+    "n": 15, "t": "exp", "sp": "Exponential functions · range and reciprocals", "d": 5, "sol": "lab",
+    "q": "The difference between the maximum and minimum values of the function $f(x) = a^{\\cos x}$, where $a > 0$ and $x$ is real, is $3$.<p>Find the sum of the possible values of $a$.</p>",
+    "o": ["$0$", "$\\frac{3}{2}$", "$\\frac{5}{2}$", "$3$", "$\\sqrt{10}$", "$\\sqrt{13}$"],
+    "a": 5,
+    "e": "As $x$ varies, $\\cos x$ takes every value in $[-1, 1]$, so $a^{\\cos x}$ runs between $a^{-1}$ and $a$. The difference between the extremes is $\\left|a - \\frac1a\\right| = 3$. If $a > 1$ then $a - \\frac1a = 3$, so $a^2 - 3a - 1 = 0$ and $a = \\frac{3+\\sqrt{13}}{2}$. If $a < 1$ then $\\frac1a - a = 3$, so $a^2 + 3a - 1 = 0$ and $a = \\frac{-3+\\sqrt{13}}{2}$. Their sum is $\\sqrt{13}$."
+  },
+  {
+    "n": 16, "t": "geo", "sp": "Coordinate geometry · right angles at each vertex", "d": 4, "sol": "lab",
+    "q": "A right-angled triangle has vertices at $(2, 3)$, $(9, -1)$ and $(5, k)$.<p>Find the sum of all the possible values of $k$.</p>",
+    "o": ["$-8$", "$-6$", "$0.25$", "$2$", "$2.25$", "$8.25$", "$10.25$"],
+    "a": 4,
+    "e": "Call the points $A(2,3)$, $B(9,-1)$ and $C(5,k)$. The right angle may be at any vertex. At $A$: $\\overrightarrow{AB}\\cdot\\overrightarrow{AC} = 7(3) + (-4)(k-3) = 0$ gives $k = \\frac{33}{4} = 8.25$. At $B$: $\\overrightarrow{BA}\\cdot\\overrightarrow{BC} = (-7)(-4) + 4(k+1) = 0$ gives $k = -8$. At $C$: $\\overrightarrow{CA}\\cdot\\overrightarrow{CB} = (-3)(4) + (3-k)(-1-k) = k^2 - 2k - 15 = 0$ gives $k = 5$ or $k = -3$. The sum is $8.25 - 8 + 5 - 3 = 2.25$."
+  },
+  {
+    "n": 17, "t": "seq", "sp": "Circles and series · summing annular areas", "d": 5, "sol": "lab",
+    "fig": "Nested circles C1 to C4 about a common diagonal, with the regions between C1 and C2 and between C3 and C4 shaded.",
+    "q": "A circle $C_n$ is defined by $$x^2 + y^2 = 2n(x + y)$$ where $n$ is a positive integer.<p>$C_1$ and $C_2$ are drawn and the area between them is shaded. Next, $C_3$ and $C_4$ are drawn and the area between them is shaded. This process continues until $100$ circles have been drawn.</p><p>What is the total shaded area?</p>",
+    "o": ["$100\\pi$", "$500\\pi$", "$2500\\pi$", "$5050\\pi$", "$10100\\pi$", "$40400\\pi$"],
+    "a": 4,
+    "e": "Completing the square, $(x-n)^2 + (y-n)^2 = 2n^2$, so $C_n$ has radius $n\\sqrt2$ and area $2\\pi n^2$. The shaded regions are those between $C_{2m-1}$ and $C_{2m}$, of area $2\\pi\\left[(2m)^2 - (2m-1)^2\\right] = 2\\pi(4m-1)$. With $100$ circles there are $50$ such regions, so the total is $2\\pi\\sum_{m=1}^{50}(4m-1) = 2\\pi\\left(4\\cdot\\frac{50\\cdot 51}{2} - 50\\right) = 2\\pi(5050) = 10100\\pi$."
+  },
+  {
+    "n": 18, "t": "seq", "sp": "Geometric series · convergence and probability", "d": 5, "sol": "lab",
+    "q": "You are given that $$S = 4 + \\frac{8k}{7} + \\frac{16k^2}{49} + \\frac{32k^3}{343} + \\cdots + 4\\left(\\frac{2k}{7}\\right)^n + \\cdots$$ The value of $k$ is chosen as an integer in the range $-5 \\le k \\le 5$. All possible values of $k$ are equally likely to be chosen.<p>What is the probability that the value of $S$ is a finite number greater than $3$?</p>",
+    "o": ["$\\frac{1}{11}$", "$\\frac{1}{10}$", "$\\frac{3}{11}$", "$\\frac{3}{10}$", "$\\frac{5}{11}$", "$\\frac{1}{2}$", "$\\frac{7}{11}$", "$\\frac{7}{10}$"],
+    "a": 4,
+    "e": "The series is geometric with first term $4$ and ratio $\\frac{2k}{7}$, so it converges exactly when $\\left|\\frac{2k}{7}\\right| < 1$, that is $|k| < 3.5$, and then $S = \\frac{4}{1 - \\frac{2k}{7}} = \\frac{28}{7 - 2k}$. For the integers $-3 \\le k \\le 3$ the denominator is positive, and $S > 3$ requires $28 > 3(7-2k)$, so $k > -\\frac76$. That leaves $k \\in \\{-1, 0, 1, 2, 3\\}$ — five values out of the eleven available, a probability of $\\frac{5}{11}$."
+  },
+  {
+    "n": 19, "t": "cal", "sp": "Integrating a modulus", "d": 4, "sol": "lab",
+    "q": "The solution to the differential equation $$\\frac{dy}{dx} = \\left|-6x\\right| \\quad \\text{for all } x$$ is $y = f(x) + c$, where $c$ is a constant.<p>Which one of the following is a correct expression for $f(x)$?</p>",
+    "o": ["$-\\frac{6x}{|x|}$", "$\\frac{6x}{|x|}$", "$-3x|x|$", "$3x|x|$", "$-3x^2$", "$3x^2$", "$-x^3$", "$x^3$"],
+    "a": 3,
+    "e": "Note $\\left|-6x\\right| = 6|x|$. For $x \\ge 0$ this is $6x$, integrating to $3x^2$; for $x < 0$ it is $-6x$, integrating to $-3x^2$. A single expression covering both is $3x|x|$, since it equals $3x^2$ when $x \\ge 0$ and $-3x^2$ when $x < 0$. Differentiating $3x|x|$ indeed returns $6|x|$."
+  },
+  {
+    "n": 20, "t": "gra", "sp": "Composite of a quadratic with a bounded function", "d": 5, "sol": "lab",
+    "fig": "The graph of y = f(x), rising to a maximum of 2 at x = 1 and falling to a minimum of -2 at x = -1, tending to zero far from the origin.",
+    "q": "The diagram shows the graph of $y = f(x)$. The function $f$ attains its maximum value of $2$ at $x = 1$, and its minimum value of $-2$ at $x = -1$.<p>Find the difference between the maximum and minimum values of $\\left(f(x)\\right)^2 - f(x)$.</p>",
+    "o": ["$2$", "$\\frac{9}{4}$", "$4$", "$\\frac{17}{4}$", "$6$", "$\\frac{25}{4}$", "$8$", "$\\frac{33}{4}$"],
+    "a": 5,
+    "e": "Put $u = f(x)$. The graph is continuous with maximum $2$ and minimum $-2$, so $u$ takes every value in $[-2, 2]$, and the question becomes: what is the range of $g(u) = u^2 - u$ on that interval? Its vertex is at $u = \\frac12$, where $g = -\\frac14$, and the endpoints give $g(-2) = 6$ and $g(2) = 2$. So the greatest value is $6$ and the least is $-\\frac14$, a difference of $\\frac{25}{4}$."
+  }
+]

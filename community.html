@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Community — TMUA Lab</title>
+<meta name="description" content="Report a broken question, suggest a topic, or find other people sitting the TMUA this cycle.">
+<meta name="theme-color" content="#0a0e12">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2354d8f0'/><text y='72' x='50' text-anchor='middle' font-size='62' font-family='monospace' font-weight='bold' fill='%2303151b'>T</text></svg>">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/app.css">
+<style>
+.prose { max-width: 74ch; font-size: 16px; line-height: 1.78; color: var(--text-soft); }
+.prose h2 { font-size: clamp(22px,3vw,30px); margin: 46px 0 14px; color: var(--text); letter-spacing:-.03em; }
+.prose h3 { font-size: 18px; margin: 30px 0 10px; color: var(--text); }
+.prose ul, .prose ol { padding-left: 20px; margin: 0 0 1.1em; }
+.prose li { margin-bottom: .5em; }
+.prose b, .prose strong { color: var(--text); font-weight: 600; }
+.prose table { width: 100%; border-collapse: collapse; margin: 18px 0 24px; font-size: 14.4px; }
+.prose th, .prose td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.prose th { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); font-weight: 400; }
+.prose .lede { font-size: 18px; color: var(--text); }
+.prose blockquote { margin: 20px 0; padding: 14px 18px; border-left: 2px solid var(--accent); background: var(--tint); border-radius: 0 var(--radius) var(--radius) 0; }
+.toc { position: sticky; top: 76px; font-size: 13.6px; }
+.toc a { display: block; padding: 5px 0 5px 12px; border-left: 1px solid var(--border); color: var(--muted); }
+.toc a:hover { color: var(--accent); border-color: var(--accent); }
+.two { display: grid; grid-template-columns: 1fr 210px; gap: 46px; align-items: start; }
+@media (max-width: 900px) { .two { grid-template-columns: 1fr; } .toc { position: static; display:none } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header id="hdr"></header>
+<main id="main">
+  <div class="wrap">
+    <div class="app-head">
+      <div class="eyebrow">07 — community</div>
+      <h1 style="margin-top:14px">Community</h1>
+      <p>The bank gets better because people say when it is wrong. That is most of what this page is for.</p>
+    </div>
+
+    <div class="grid-3">
+      <section class="panel" style="padding:22px">
+        <h3 style="font-size:17px">Discord</h3>
+        <p class="muted" style="font-size:14px;margin:10px 0 16px">Question chat, timing tactics, and other people
+          panicking on the same schedule as you.</p>
+        <!-- EDIT ME: point at your own invite -->
+        <a class="btn btn-ghost btn-sm" href="#" rel="noopener">Join the server</a>
+      </section>
+      <section class="panel" style="padding:22px">
+        <h3 style="font-size:17px">Leave a review</h3>
+        <p class="muted" style="font-size:14px;margin:10px 0 16px">If the site helped, saying so is what convinces
+          the next person to try a set instead of reading another forum thread.</p>
+        <a class="btn btn-ghost btn-sm" href="#">Write a review</a>
+      </section>
+      <section class="panel" style="padding:22px">
+        <h3 style="font-size:17px">Support</h3>
+        <p class="muted" style="font-size:14px;margin:10px 0 16px">The question bank is free and stays free. Hosting
+          is not expensive, but it is not nothing.</p>
+        <a class="btn btn-ghost btn-sm" href="#">Buy a coffee</a>
+      </section>
+    </div>
+
+    <section class="panel" id="report" style="margin-top:26px;padding:26px 28px">
+      <div class="eyebrow" style="margin-bottom:14px">report</div>
+      <h2 style="font-size:24px">Something is wrong with a question</h2>
+      <p class="muted" style="font-size:14.4px;max-width:64ch;margin-top:10px">
+        Fill this in and it prepares a report you can copy or send. Nothing is transmitted from this page — it builds
+        the text for you, including the question's identifier and your answer, so the fix takes minutes instead of an
+        exchange of emails.</p>
+
+      <div style="display:grid;gap:14px;max-width:640px;margin-top:20px">
+        <label><span class="lab mono muted" style="display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px">Question ID</span>
+          <input id="rid" type="text" placeholder="P1-ALG-03" style="width:100%;padding:10px 13px;border-radius:9px;border:1px solid var(--border-strong);background:var(--tint);outline:none"></label>
+        <label><span class="lab mono muted" style="display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px">What is wrong</span>
+          <select id="rkind" style="width:100%;padding:10px 13px;border-radius:9px;border:1px solid var(--border-strong);background:var(--tint)">
+            <option>The marked answer is wrong</option>
+            <option>The worked answer has an error</option>
+            <option>Two options are equivalent</option>
+            <option>The question is ambiguous</option>
+            <option>A typo or a rendering problem</option>
+            <option>Outside the TMUA specification</option>
+            <option>Something else</option>
+          </select></label>
+        <label><span class="lab mono muted" style="display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px">Detail</span>
+          <textarea id="rtext" rows="4" placeholder="What you got, and why you think the marked answer is wrong." style="width:100%;padding:10px 13px;border-radius:9px;border:1px solid var(--border-strong);background:var(--tint);outline:none;resize:vertical"></textarea></label>
+        <div class="pill-row">
+          <button class="btn btn-accent btn-sm" id="rbuild">Build the report</button>
+          <button class="btn btn-ghost btn-sm" id="rcopy">Copy to clipboard</button>
+        </div>
+        <pre id="rout" class="mono" style="display:none;white-space:pre-wrap;background:var(--tint);border:1px solid var(--border);border-radius:9px;padding:14px 16px;font-size:12.5px;color:var(--text-soft)"></pre>
+      </div>
+    </section>
+
+    <section class="panel" style="margin-top:22px;padding:26px 28px">
+      <h2 style="font-size:22px">House rules</h2>
+      <ul style="margin:12px 0 0;padding-left:18px;color:var(--text-soft);font-size:14.4px;line-height:1.85">
+        <li>Do not post real exam questions from a live sitting. It is a breach of the test regulations, and it puts
+          your own result at risk.</li>
+        <li>Answers to bank questions are already on the site — post reasoning, not just the letter.</li>
+        <li>Nobody's score is anybody else's business unless they offer it.</li>
+      </ul>
+    </section>
+  </div>
+</main>
+<footer id="ftr"></footer>
+<script src="assets/js/math.js"></script>
+<script src="assets/js/bank-past.js"></script>
+<script src="assets/js/bank-p1.js"></script>
+<script src="assets/js/bank-p2.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/shell.js"></script>
+<script src="assets/js/community.js"></script>
+</body>
+</html>

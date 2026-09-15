@@ -1,0 +1,144 @@
+[
+  {
+    "n": 1, "t": "trig", "sp": "Trigonometric equations · hidden quadratic", "d": 3, "sol": "lab",
+    "q": "How many real solutions are there to the equation $$2\\cos^4\\theta - 5\\cos^2\\theta + 3 = 0$$ in the interval $0 \\le \\theta \\le 2\\pi$?",
+    "o": ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$", "$7$", "$8$"],
+    "a": 2,
+    "e": "Put $u = \\cos^2\\theta$, so $2u^2 - 5u + 3 = 0$ and $(2u-3)(u-1) = 0$. The root $u = \\frac32$ is impossible because $\\cos^2\\theta \\le 1$, leaving $\\cos^2\\theta = 1$, that is $\\cos\\theta = \\pm 1$. In $[0, 2\\pi]$ that gives $\\theta = 0$, $\\pi$ and $2\\pi$ — three solutions."
+  },
+  {
+    "n": 2, "t": "geo", "sp": "Circles · when the equation describes one", "d": 3, "sol": "lab",
+    "q": "Find the complete set of values of $p$ for which the equation $$x^2 - 2px + y^2 - 6y - p^2 + 8p + 9 = 0$$ describes a circle in the $xy$-plane.",
+    "o": ["$p < -\\frac{9}{4}$", "$0 < p < 4$", "$-1 < p < 9$", "$p < 0$ or $p > 4$", "$p < -1$ or $p > 9$", "all real values of $p$"],
+    "a": 3,
+    "e": "Completing both squares gives $(x-p)^2 - p^2 + (y-3)^2 - 9 - p^2 + 8p + 9 = 0$, that is $(x-p)^2 + (y-3)^2 = 2p^2 - 8p$. This is a genuine circle only when the right-hand side is strictly positive: $2p(p-4) > 0$, so $p < 0$ or $p > 4$."
+  },
+  {
+    "n": 3, "t": "cal", "sp": "Integration with several conditions", "d": 3, "sol": "lab",
+    "q": "Given the following statements about a function $f$<ul><li>$f''(x) = a$ for all $x$</li><li>$f(0) = 1$, $f(1) = 2$</li><li>$\\int_0^1 f(x)\\,dx = 1$</li></ul>find the value of $a$.",
+    "o": ["$-6$", "$-3$", "$-2$", "$2$", "$3$", "$6$"],
+    "a": 5,
+    "e": "Since $f'' $ is constant, $f(x) = \\frac{a}{2}x^2 + bx + c$. From $f(0) = 1$ we get $c = 1$, and from $f(1) = 2$ we get $\\frac{a}{2} + b = 1$. The integral gives $\\frac{a}{6} + \\frac{b}{2} + 1 = 1$, so $b = -\\frac{a}{3}$. Substituting, $\\frac{a}{2} - \\frac{a}{3} = 1$, so $\\frac{a}{6} = 1$ and $a = 6$."
+  },
+  {
+    "n": 4, "t": "trig", "sp": "Sectors · arc length, area and perimeter", "d": 4, "sol": "lab",
+    "fig": "Two similar circular sectors side by side, the smaller with radius r and arc length 6, the larger with radius r + 3.",
+    "q": "Two sectors of circles are similar. The smaller has radius $r$ and the larger has radius $r + 3$.<p>The arc length of the smaller sector is $6$. The difference between the areas of the sectors is $21$.</p><p>Find the positive difference between the perimeters of the sectors.</p>",
+    "o": ["$4.5$", "$7$", "$8$", "$9$", "$10.5$", "$14$", "$15$"],
+    "a": 2,
+    "e": "Similar sectors share an angle $\\theta$, and the smaller arc gives $r\\theta = 6$. The areas are $\\frac12 r^2\\theta$ and $\\frac12 (r+3)^2\\theta$, so their difference is $\\frac12\\theta(6r + 9) = \\frac{3}{r}(6r+9) = 18 + \\frac{27}{r}$. Setting that equal to $21$ gives $r = 9$, so $\\theta = \\frac23$. The perimeters are $2(9) + 6 = 24$ and $2(12) + 12\\cdot\\frac23 = 32$, differing by $8$."
+  },
+  {
+    "n": 5, "t": "seq", "sp": "Recurrence relations · finding the parameters", "d": 3, "sol": "lab",
+    "q": "The terms $x_n$ of a sequence follow the rule $$x_{n+1} = \\frac{x_n + p}{x_n + q}$$ where $p$ and $q$ are real numbers.<p>Given that $x_1 = 3$, $x_2 = 5$ and $x_3 = 7$, find the value of $x_4$.</p>",
+    "o": ["$-5$", "$5$", "$\\frac{51}{7}$", "$\\frac{15}{2}$", "$\\frac{23}{3}$", "$9$", "$11$", "$13$"],
+    "a": 7,
+    "e": "From $x_2 = 5$: $\\frac{3+p}{3+q} = 5$, so $p = 12 + 5q$. From $x_3 = 7$: $\\frac{5+p}{5+q} = 7$, so $p = 30 + 7q$. Equating, $12 + 5q = 30 + 7q$, giving $q = -9$ and then $p = -33$. So $x_4 = \\frac{7 - 33}{7 - 9} = \\frac{-26}{-2} = 13$."
+  },
+  {
+    "n": 6, "t": "cal", "sp": "Definite integrals with logarithmic limits", "d": 4, "sol": "lab",
+    "q": "Given that $$\\int_{\\log_2 5}^{\\log_2 20} x\\,dx = \\log_2 M$$ what is the value of $M$?",
+    "o": ["$4$", "$15$", "$16$", "$20$", "$25$", "$100$", "$10\\,000$"],
+    "a": 5,
+    "e": "The integral is $\\left[\\frac{x^2}{2}\\right]$, giving $\\frac12\\left[(\\log_2 20)^2 - (\\log_2 5)^2\\right]$. Factorising the difference of two squares, this is $\\frac12(\\log_2 20 - \\log_2 5)(\\log_2 20 + \\log_2 5) = \\frac12(\\log_2 4)(\\log_2 100) = \\log_2 100$. So $M = 100$."
+  },
+  {
+    "n": 7, "t": "cal", "sp": "Area under a curve involving a modulus", "d": 4, "sol": "lab",
+    "q": "Find the finite area enclosed between the line $y = 0$ and the curve $y = x^2 - 4|x| - 12$.",
+    "o": ["$\\frac{128}{3}$", "$\\frac{176}{3}$", "$\\frac{256}{3}$", "$108$", "$144$", "$288$"],
+    "a": 4,
+    "e": "The curve is even, so work on $x \\ge 0$ and double. There $y = x^2 - 4x - 12 = (x-6)(x+2)$, cutting the axis at $x = 6$ and lying below it in between. So the area is $-2\\int_0^6 (x^2 - 4x - 12)\\,dx = -2\\left[\\frac{x^3}{3} - 2x^2 - 12x\\right]_0^6 = -2(72 - 72 - 72) = 144$."
+  },
+  {
+    "n": 8, "t": "seq", "sp": "Geometric series · relating partial sums", "d": 4, "sol": "lab",
+    "q": "A geometric sequence has first term $a$ and common ratio $r$, where $a$ and $r$ are positive integers and $r$ is greater than 1.<p>The sum of the first $n$ terms of this sequence is denoted by $S_n$.</p><p>It is given that the terms of the sequence satisfy $$S_{30} - S_{20} = k\\,S_{10}$$ for some positive integer $k$.</p><p>What is the smallest possible value of $k$?</p>",
+    "o": ["$2^{10}$", "$2^{20}$", "$2^{30}$", "$\\frac{2^{10}}{2^{10}-1}$", "$2^{10}\\left(2^{10}-1\\right)$"],
+    "a": 1,
+    "e": "With $S_n = \\frac{a(r^n - 1)}{r-1}$, the difference $S_{30} - S_{20} = \\frac{a\\left(r^{30} - r^{20}\\right)}{r-1} = r^{20}\\cdot\\frac{a\\left(r^{10}-1\\right)}{r-1} = r^{20}S_{10}$. So $k = r^{20}$ exactly, and since $r$ is an integer greater than 1 the smallest case is $r = 2$, giving $k = 2^{20}$."
+  },
+  {
+    "n": 9, "t": "trig", "sp": "Simultaneous functional equations", "d": 5, "sol": "lab",
+    "q": "This question is about pairs of functions $f$ and $g$ that satisfy $$f(x) - g(x) = 2\\sin x$$ $$f(x)\\,g(x) = \\cos^2 x$$ for all real numbers $x$.<p>Across all solutions for $f(x)$, what is the minimum value that $f(x)$ attains for any $x$?</p>",
+    "o": ["$1 - \\sqrt{2}$", "$-1 - \\sqrt{2}$", "$0$", "$-1$", "$-2$", "$-3$", "$-4$"],
+    "a": 4,
+    "e": "Substituting $g = f - 2\\sin x$ into the product gives $f^2 - 2f\\sin x - \\cos^2 x = 0$. Solving as a quadratic in $f$, $f = \\sin x \\pm \\sqrt{\\sin^2 x + \\cos^2 x} = \\sin x \\pm 1$. The branch $f = \\sin x - 1$ dips lowest, reaching $-2$ when $\\sin x = -1$."
+  },
+  {
+    "n": 10, "t": "gra", "sp": "Translations of a cubic", "d": 4, "sol": "lab",
+    "q": "A sequence of translations is applied to the graph of $y = x^3$.<p>Which of the following graphs could be the result of this sequence of translations?</p><p>I&nbsp;&nbsp; $y = x^3 - 3x^2 + 9x - 27$<br>II&nbsp; $y = x^3 - 9x^2 + 27x - 3$<br>III $y = 27x^3 - 9x^2 + x - 3$</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 2,
+    "e": "A translation of $y = x^3$ has the form $y = (x-h)^3 + k = x^3 - 3hx^2 + 3h^2x - h^3 + k$. The leading coefficient must stay $1$, which rules out III. In I the $x^2$ term gives $h = 1$, so the $x$ term should be $3$, not $9$ — so I fails. In II the $x^2$ term gives $h = 3$ and the $x$ term is indeed $3(9) = 27$, with $k = 24$ fixing the constant. Only II."
+  },
+  {
+    "n": 11, "t": "seq", "sp": "Series of logarithms", "d": 3, "sol": "lab",
+    "q": "Evaluate $$\\sum_{n=1}^{100}\\log_{10}\\left(3^{\\,1-n}\\right)$$",
+    "o": ["$-4950\\log_{10}3$", "$4950\\log_{10}3$", "$-5050\\log_{10}3$", "$5050\\log_{10}3$", "$1 - 4950\\log_{10}3$", "$1 + 4950\\log_{10}3$", "$1 - 5050\\log_{10}3$", "$1 + 5050\\log_{10}3$"],
+    "a": 0,
+    "e": "Bring the exponent down: $\\log_{10}\\left(3^{1-n}\\right) = (1-n)\\log_{10}3$. Summing, $\\sum_{n=1}^{100}(1-n) = 100 - \\frac{100 \\times 101}{2} = 100 - 5050 = -4950$. So the total is $-4950\\log_{10}3$."
+  },
+  {
+    "n": 12, "t": "alg", "sp": "Family of quadratics · optimising over a parameter", "d": 4, "sol": "lab",
+    "q": "A family of quadratic curves is given by $$y_k = 2\\left(x - \\frac{k}{2}\\right)^2 + \\frac{k^2}{2} + 4k + 3$$ where $k$ is any real number and $y_k$ is a function of $x$.<p>All these curves are sketched, and the point with the lowest $y$-coordinate among all the curves $y_k$ is $(a, b)$.</p><p>Find the value of $a + b$.</p>",
+    "o": ["$-1$", "$-3$", "$-5$", "$-7$", "$-9$"],
+    "a": 3,
+    "e": "For a fixed $k$ the curve is least at $x = \\frac{k}{2}$, where $y = \\frac{k^2}{2} + 4k + 3$. Minimising that over $k$: its derivative is $k + 4$, zero at $k = -4$, giving $y = 8 - 16 + 3 = -5$ at $x = -2$. So $(a,b) = (-2,-5)$ and $a + b = -7$."
+  },
+  {
+    "n": 13, "t": "alg", "sp": "Algebraic manipulation · quadratic in a product", "d": 5, "sol": "lab",
+    "q": "Given that $$\\left(a^3 + \\frac{2}{b^3}\\right)\\left(\\frac{2}{a^3} - b^3\\right) = \\sqrt{2}$$ where $a$ and $b$ are real numbers, what is the least value of $ab$?",
+    "o": ["$-\\sqrt{2}$", "$\\sqrt{2}$", "$-2\\sqrt{2}$", "$2\\sqrt{2}$", "$-\\frac{\\sqrt{2}}{2}$", "$\\frac{\\sqrt{2}}{2}$", "$-2^{\\frac{1}{6}}$", "$2^{\\frac{1}{6}}$"],
+    "a": 0,
+    "e": "Expanding, the two middle terms are $2$ and $-2$, which cancel, leaving $-a^3b^3 + \\frac{4}{a^3b^3}$. Writing $t = (ab)^3$, the equation becomes $-t + \\frac4t = \\sqrt2$, that is $t^2 + \\sqrt2\\,t - 4 = 0$. Solving, $t = \\frac{-\\sqrt2 \\pm 3\\sqrt2}{2}$, so $t = \\sqrt2$ or $t = -2\\sqrt2$. Cube-rooting gives $ab = 2^{1/6}$ or $ab = -\\sqrt2$, and the least is $-\\sqrt2$."
+  },
+  {
+    "n": 14, "t": "geo", "sp": "Circles · maximising a triangle on a fixed chord", "d": 5, "sol": "lab",
+    "q": "A circle has centre $O$ and radius $6$.<p>$P$, $Q$ and $R$ are points on the circumference with angle $POQ \\ge \\frac{\\pi}{2}$.</p><p>The area of the triangle $POQ$ is $9\\sqrt{3}$.</p><p>What is the greatest possible area of triangle $PRQ$?</p>",
+    "o": ["$18 + 9\\sqrt{3}$", "$18\\sqrt{3}$", "$27 + 9\\sqrt{3}$", "$27\\sqrt{3}$", "$36 + 9\\sqrt{3}$", "$36\\sqrt{3}$"],
+    "a": 3,
+    "e": "The area of $POQ$ is $\\frac12(6)(6)\\sin(POQ) = 18\\sin(POQ) = 9\\sqrt3$, so $\\sin(POQ) = \\frac{\\sqrt3}{2}$ and, since the angle is at least $\\frac{\\pi}{2}$, it is $\\frac{2\\pi}{3}$. The chord $PQ$ then has length $2(6)\\sin\\frac{\\pi}{3} = 6\\sqrt3$, and $O$ sits $6\\cos\\frac{\\pi}{3} = 3$ from it. Placing $R$ on the far arc puts it at most $6 + 3 = 9$ from $PQ$, giving area $\\frac12(6\\sqrt3)(9) = 27\\sqrt3$."
+  },
+  {
+    "n": 15, "t": "cal", "sp": "Optimisation · rectangle between two curves", "d": 5, "sol": "lab",
+    "q": "A rectangle is drawn in the region enclosed by the curves $p$ and $q$, where $$p(x) = 8 - 2x^2$$ $$q(x) = x^2 - 2$$ such that the sides of the rectangle are parallel to the $x$- and $y$-axes.<p>What is the maximum possible area of the rectangle?</p>",
+    "o": ["$\\frac{26}{9}$", "$\\frac{52}{9}$", "$\\frac{4\\sqrt{6}}{3}$", "$\\frac{8\\sqrt{6}}{3}$", "$4\\sqrt{2}$", "$8\\sqrt{2}$", "$\\frac{20\\sqrt{10}}{9}$", "$\\frac{40\\sqrt{10}}{9}$"],
+    "a": 7,
+    "e": "Both curves are even, so the largest rectangle is symmetric about the $y$-axis, with vertical sides at $x = \\pm w$. Its height is limited at those edges, where the gap between the curves is $(8 - 2w^2) - (w^2 - 2) = 10 - 3w^2$. So the area is $A = 2w(10 - 3w^2) = 20w - 6w^3$. Setting $\\frac{dA}{dw} = 20 - 18w^2 = 0$ gives $w = \\frac{\\sqrt{10}}{3}$, and then $A = \\frac{2\\sqrt{10}}{3}\\cdot\\frac{20}{3} = \\frac{40\\sqrt{10}}{9}$."
+  },
+  {
+    "n": 16, "t": "alg", "sp": "Roots of a quartic · transforming sum and product", "d": 4, "sol": "lab",
+    "q": "The solutions to $7x^4 - 6x^2 + 1 = 0$ are $\\pm\\cos\\theta$ and $\\pm\\cos\\beta$.<p>Which one of the following equations has solutions $\\pm\\sin\\theta$ and $\\pm\\sin\\beta$?</p>",
+    "o": ["$7x^4 - 8x^2 - 5 = 0$", "$7x^4 - 8x^2 + 2 = 0$", "$7x^4 - 6x^2 - 2 = 0$", "$7x^4 - 6x^2 + 1 = 0$", "$7x^4 + 6x^2 - 1 = 0$", "$7x^4 + 6x^2 + 5 = 0$"],
+    "a": 1,
+    "e": "Put $u = x^2$, so $7u^2 - 6u + 1 = 0$ has roots $\\cos^2\\theta$ and $\\cos^2\\beta$, with sum $\\frac67$ and product $\\frac17$. The new roots are $\\sin^2\\theta = 1 - \\cos^2\\theta$ and $\\sin^2\\beta = 1 - \\cos^2\\beta$. Their sum is $2 - \\frac67 = \\frac87$ and their product is $1 - \\frac67 + \\frac17 = \\frac27$. So they satisfy $v^2 - \\frac87 v + \\frac27 = 0$, that is $7x^4 - 8x^2 + 2 = 0$."
+  },
+  {
+    "n": 17, "t": "trig", "sp": "The ambiguous case · range of a parameter", "d": 5, "sol": "lab",
+    "fig": "A triangle with a side of length x - 1 opposite a 30 degree angle, and a side of length -x^2 + 6x - 5 adjacent to that angle.",
+    "q": "A triangle has a side of length $x - 1$ opposite an angle of $30^\\circ$, and a side of length $-x^2 + 6x - 5$ adjacent to that angle.<p>Find the complete set of values of $x$ for which there are two non-congruent triangles with these side lengths and angle.</p>",
+    "o": ["$1 < x < 3$", "$1 < x < 4$", "$1 < x < 5$", "$3 < x < 4$", "$3 < x < 5$", "$4 < x < 5$"],
+    "a": 3,
+    "e": "Write $a = x - 1$ for the side opposite the $30^\\circ$ angle and $b = -x^2 + 6x - 5 = (x-1)(5-x)$ for the adjacent side. Both must be positive, so $1 < x < 5$. The ambiguous case gives two triangles exactly when $b\\sin 30^\\circ < a < b$. The left inequality is $\\frac{(x-1)(5-x)}{2} < x-1$, which reduces to $x > 3$; the right is $x - 1 < (x-1)(5-x)$, which reduces to $x < 4$. Together, $3 < x < 4$."
+  },
+  {
+    "n": 18, "t": "gra", "sp": "Polynomial intersections · counting sign changes", "d": 5, "sol": "lab",
+    "q": "It is given that $$f(x) = x^2(x-1)^2(x-2)$$ $$g(x) = -p(x-q)^2(x-r)^2$$ where $p$, $q$ and $r$ are positive and $q < r$.<p>Find the set of values of $q$ and $r$ that guarantees the greatest number of distinct real solutions of the equation $f(x) = g(x)$ for all $p$.</p>",
+    "o": ["$q < 1$ and $r < 1$", "$q < 1$ and $1 < r < 2$", "$q < 1$ and $r > 2$", "$1 < q < 2$ and $1 < r < 2$", "$1 < q < 2$ and $r > 2$", "$q > 2$ and $r > 2$"],
+    "a": 1,
+    "e": "Let $\\varphi(x) = f(x) - g(x) = x^2(x-1)^2(x-2) + p(x-q)^2(x-r)^2$, a quintic, so at most five roots. Since $x^2(x-1)^2 \\ge 0$, the first term has the sign of $x - 2$; the second is never negative. Evaluating, $\\varphi$ is negative at $x = 0, 1, 2$ (the first term vanishes, the second is positive — wait, note $g \\le 0$ so $-g \\ge 0$): more simply, $\\varphi \\to +\\infty$ as $x \\to -\\infty$ and $\\to -\\infty$ as $x \\to +\\infty$, is negative at $x = 0, 1, 2$ and positive at $x = q$ and $x = r$ whenever those sit strictly between the integers. Five sign changes therefore need $q$ and $r$ interleaved as $0 < q < 1 < r < 2$."
+  },
+  {
+    "n": 19, "t": "geo", "sp": "Circles · probability over a region of centres", "d": 4, "sol": "lab",
+    "q": "Circle $C_1$ is defined as $x^2 + y^2 = 25$.<p>A second circle $C_2$ has radius $4$ and centre $(a, b)$ where $$-2 \\le a \\le 2 \\quad\\text{and}\\quad -3 \\le b \\le 3$$</p><p>If the centre of $C_2$ is equally likely to be located anywhere within the given range, what is the probability that $C_2$ intersects $C_1$?</p>",
+    "o": ["$\\frac{1}{25}$", "$\\frac{9}{25}$", "$\\frac{16}{25}$", "$\\frac{6-\\pi}{6}$", "$\\frac{16-\\pi}{24}$", "$\\frac{24-\\pi}{24}$"],
+    "a": 5,
+    "e": "Two circles of radii $5$ and $4$ meet exactly when the distance $d$ between centres satisfies $1 \\le d \\le 9$. The centre lies in a $4 \\times 6$ rectangle of area $24$, where the largest possible $d$ is $\\sqrt{13} < 9$, so the upper condition never bites. The lower one fails only when $d < 1$, that is inside the unit disc about the origin, which lies wholly within the rectangle and has area $\\pi$. The probability is $\\frac{24-\\pi}{24}$."
+  },
+  {
+    "n": 20, "t": "gra", "sp": "Intersections of two modulus graphs", "d": 5, "sol": "lab",
+    "q": "$n$ is the number of points of intersection of the graphs $$y = \\left|x^2 - a^2\\right| \\quad\\text{and}\\quad y = a^2\\left|x - 1\\right|$$ where $a$ is a real number.<p>What is the smallest value of $n$ that is <b>not</b> possible?</p>",
+    "o": ["$n = 1$", "$n = 2$", "$n = 3$", "$n = 4$", "$n = 5$"],
+    "a": 1,
+    "e": "Taking $a = 0$ collapses both graphs to $y = x^2$ and $y = 0$, meeting only at the origin, so $n = 1$ occurs. Taking $a^2 = 1$ gives $|x^2-1| = |x-1|$, that is $|x-1|\\left(|x+1| - 1\\right) = 0$, with solutions $x = 1, 0, -2$ — so $n = 3$ occurs, and larger counts arise for other $a$. The value that never occurs is $n = 2$."
+  }
+]

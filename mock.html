@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mock test — TMUA Lab</title>
+<meta name="description" content="Sit a full twenty-question TMUA section under a seventy-five minute countdown, in a replica of the real Pearson VUE test driver.">
+<meta name="theme-color" content="#0a0e12">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2354d8f0'/><text y='72' x='50' text-anchor='middle' font-size='62' font-family='monospace' font-weight='bold' fill='%2303151b'>T</text></svg>">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header id="hdr"></header>
+<main id="main">
+  <div id="stage">
+    <div class="wrap">
+      <div class="app-head">
+        <div class="eyebrow">03 — mock test</div>
+        <h1 style="margin-top:14px">Sit a mock</h1>
+        <p>Twenty questions, seventy-five minutes, no calculator, no feedback until the end — in a replica of the
+          driver the real test runs in. Have paper or a whiteboard to hand and keep it off the screen, as you will
+          on the day.</p>
+      </div>
+
+      <div class="papers" id="mockCards"></div>
+
+      <div class="panel" style="margin-top:22px;padding:22px 24px">
+        <h3 style="font-size:16px;margin-bottom:12px">Before you start</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--text-soft);font-size:14.4px;line-height:1.85">
+          <li>The countdown does not pause and the tab warns you before it closes.</li>
+          <li><kbd>Alt</kbd>+<kbd>N</kbd> and <kbd>Alt</kbd>+<kbd>P</kbd> move between questions; answers are
+            selected with the mouse, exactly as in the real driver.</li>
+          <li>Flag anything you want to come back to — the question navigator shows every flag and every blank.</li>
+          <li>Unanswered counts as wrong, and there is no negative marking, so never leave one blank at the end.</li>
+          <li>Abandoning a mock records nothing and returns its questions to the pool.</li>
+        </ul>
+      </div>
+
+      <div class="sec-head" style="margin-top:52px">
+        <div><h2 style="font-size:22px">Sit a real past paper</h2>
+          <p>The papers UAT-UK publishes, transcribed in full and sat in the same driver under the same
+            countdown. These are the real thing — the truest measure available.</p></div>
+      </div>
+      <div id="pastPapers" class="past-grid"></div>
+
+      <div class="sec-head" style="margin-top:52px">
+        <div><h2 style="font-size:22px">Previous mocks</h2></div>
+      </div>
+      <ul class="qlist panel" id="recent" style="overflow:hidden"></ul>
+    </div>
+  </div>
+</main>
+<footer id="ftr"></footer>
+<script src="assets/js/math.js"></script>
+<script src="assets/js/bank-past.js"></script>
+<script src="assets/js/bank-p1.js"></script>
+<script src="assets/js/bank-p2.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/shell.js"></script>
+<script src="assets/js/session.js"></script>
+<script src="assets/js/mock.js"></script>
+</body>
+</html>

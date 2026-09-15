@@ -1,0 +1,142 @@
+[
+  {
+    "n": 1, "t": "alg", "sp": "Surds · equations in a substitution", "d": 3, "sol": "lab",
+    "q": "Given that $$\\frac{1}{\\sqrt{x} - 6} - \\frac{1}{\\sqrt{x} + 6} = \\frac{3}{11}$$ what is the value of $x$?",
+    "o": ["$2\\sqrt{15}$", "$4\\sqrt{5}$", "$5\\sqrt{2}$", "$\\sqrt{58}$", "$50$", "$58$", "$60$", "$80$"],
+    "a": 7,
+    "e": "Put $u = \\sqrt{x}$. Combining over a common denominator, $\\frac{(u+6)-(u-6)}{u^2 - 36} = \\frac{12}{u^2-36}$. Setting this equal to $\\frac{3}{11}$ gives $u^2 - 36 = 44$, so $u^2 = 80$. Since $u^2 = x$, we get $x = 80$."
+  },
+  {
+    "n": 2, "t": "cal", "sp": "Definite integrals · difference of two squares", "d": 3, "sol": "lab",
+    "q": "Evaluate $$\\int_9^{16}\\left(\\frac{1}{\\sqrt{x}} + \\sqrt{x}\\right)^2 dx \\ - \\int_9^{16}\\left(\\frac{1}{\\sqrt{x}} - \\sqrt{x}\\right)^2 dx$$",
+    "o": ["$0$", "$2$", "$4$", "$7$", "$14$", "$28$", "$75$", "$175$"],
+    "a": 5,
+    "e": "Combine the integrals before doing any work. With $a = \\frac{1}{\\sqrt x}$ and $b = \\sqrt x$, the integrand is $(a+b)^2 - (a-b)^2 = 4ab = 4\\cdot\\frac{1}{\\sqrt x}\\cdot\\sqrt x = 4$. So the value is $\\int_9^{16} 4\\,dx = 4(16-9) = 28$."
+  },
+  {
+    "n": 3, "t": "prf", "sp": "Counterexamples to an index law", "d": 3, "sol": "lab",
+    "q": "Consider the claim: <p>For all positive real numbers $x$ and $y$, $$\\sqrt{x^y} = x^{\\sqrt{y}}$$</p><p>Which of the following is/are a <b>counterexample</b> to the claim?</p><p>I&nbsp;&nbsp; $x = 1$, $y = 16$<br>II&nbsp; $x = 2$, $y = 8$<br>III $x = 3$, $y = 4$</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 2,
+    "e": "In I, both sides are $1$, since every power of $1$ is $1$. In III, $\\sqrt{3^4} = \\sqrt{81} = 9$ and $3^{\\sqrt4} = 3^2 = 9$, so they agree. In II, $\\sqrt{2^8} = \\sqrt{256} = 16$ while $2^{\\sqrt8} = 2^{2\\sqrt2} \\approx 7.1$, so they differ. Only II is a counterexample."
+  },
+  {
+    "n": 4, "t": "prf", "sp": "Finding the error in a proof", "d": 4, "sol": "lab",
+    "q": "A student attempts to answer the following question.<p><em>What is the largest number of consecutive odd integers that are all prime?</em></p><p>The student's attempt is as follows:</p><p>I&nbsp;&nbsp;&nbsp;&nbsp; There are two consecutive odd integers that are prime (for example: 17, 19).<br>II&nbsp;&nbsp;&nbsp; Any three consecutive odd integers can be written in the form $n-2$, $n$, $n+2$ for some $n$.<br>III&nbsp;&nbsp; If $n$ is one more than a multiple of 3, then $n+2$ is a multiple of 3.<br>IV&nbsp;&nbsp; If $n$ is two more than a multiple of 3, then $n-2$ is a multiple of 3.<br>V&nbsp;&nbsp;&nbsp; The only other possibility is that $n$ is a multiple of 3.<br>VI&nbsp;&nbsp; In each case, one of the integers is a multiple of 3, so not prime.<br>VII&nbsp; Therefore the largest number of consecutive odd integers that are all prime is two.</p><p>Which of the following best describes this attempt?</p>",
+    "o": ["It is completely correct.", "It is incorrect, and the first error is on line I.", "It is incorrect, and the first error is on line II.", "It is incorrect, and the first error is on line III.", "It is incorrect, and the first error is on line IV.", "It is incorrect, and the first error is on line V.", "It is incorrect, and the first error is on line VI.", "It is incorrect, and the first error is on line VII."],
+    "a": 6,
+    "e": "Lines I to V are all correct: three consecutive odd numbers do take the form $n-2$, $n$, $n+2$, and the case analysis on $n$ modulo 3 is exhaustive and right. Line VI is where it fails — being a multiple of 3 does not stop a number being prime, because 3 itself is prime. The triple $3, 5, 7$ is three consecutive odd integers that are all prime, which also makes the conclusion in line VII wrong."
+  },
+  {
+    "n": 5, "t": "log", "sp": "Necessary and sufficient conditions", "d": 3, "sol": "lab",
+    "q": "Consider the two statements<p>R:&nbsp;&nbsp; $k$ is an integer multiple of $\\pi$</p><p>S:&nbsp;&nbsp; $\\displaystyle\\int_0^k \\sin 2x\\,dx = 0$</p><p>Which of the following statements is true?</p>",
+    "o": ["R is <b>necessary and sufficient</b> for S.", "R is <b>necessary</b> but <b>not sufficient</b> for S.", "R is <b>sufficient</b> but <b>not necessary</b> for S.", "R is <b>not necessary</b> and <b>not sufficient</b> for S."],
+    "a": 0,
+    "e": "Integrating, $\\int_0^k \\sin 2x\\,dx = \\left[-\\frac{\\cos 2x}{2}\\right]_0^k = \\frac{1 - \\cos 2k}{2}$. This is zero exactly when $\\cos 2k = 1$, that is when $2k$ is a multiple of $2\\pi$, which is exactly when $k$ is an integer multiple of $\\pi$. So R and S are equivalent, and R is both necessary and sufficient."
+  },
+  {
+    "n": 6, "t": "exp", "sp": "Equations with the same number of solutions", "d": 4, "sol": "lab",
+    "q": "Consider the following equation where $a$ is a real number and $a > 1$: $$(*)\\qquad a^x = x$$ Which of the following equations must have the same number of real solutions as $(*)$?<p>I&nbsp;&nbsp; $\\log_a x = x$<br>II&nbsp; $a^{2x} = x^2$<br>III $a^{2x} = 2x$</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 5,
+    "e": "For I, the graphs $y = a^x$ and $y = \\log_a x$ are reflections of each other in $y = x$, and a point where either meets $y = x$ is fixed by that reflection — so the two equations have the same solutions. For III, putting $u = 2x$ turns it into $a^u = u$, the same equation in a new letter, so the count is unchanged. For II, taking square roots gives $a^x = |x|$: the positive branch reproduces $(*)$, but the negative branch $a^x = -x$ always contributes exactly one extra solution. So II has one more."
+  },
+  {
+    "n": 7, "t": "geo", "sp": "Straight lines · necessary but not sufficient", "d": 4, "sol": "lab",
+    "q": "The graph of the line $ax + by = c$ is drawn, where $a$, $b$ and $c$ are real non-zero constants.<p>Which one of the following is a <b>necessary</b> but <b>not sufficient</b> condition for the line to have a positive gradient <b>and</b> a positive $y$-intercept?</p>",
+    "o": ["$\\frac{c}{b} > 0$ and $\\frac{a}{b} < 0$", "$\\frac{c}{b} < 0$ and $\\frac{a}{b} > 0$", "$a > b > c$", "$a < b < c$", "$a$ and $c$ have opposite signs", "$a$ and $c$ have the same sign"],
+    "a": 4,
+    "e": "Rearranged, the line is $y = -\\frac{a}{b}x + \\frac{c}{b}$, so a positive gradient means $\\frac{a}{b} < 0$ and a positive intercept means $\\frac{c}{b} > 0$. Together those say $a$ and $b$ have opposite signs while $c$ and $b$ share a sign — so $a$ and $c$ have opposite signs, making that condition necessary. It is not sufficient: $a = 1$, $b = 1$, $c = -1$ has $a$ and $c$ opposite in sign but gives gradient $-1$. (The first option is the full condition, so it is sufficient too.)"
+  },
+  {
+    "n": 8, "t": "geo", "sp": "Dividing a triangle · counting cevians", "d": 5, "sol": "lab",
+    "q": "A student draws a triangle that is acute-angled or obtuse-angled but <b>not</b> right-angled.<p>The student counts the number of straight lines that divide the triangle into two triangles, <b>at least one</b> of which is right-angled.</p><p>Which of the following statements is/are true?</p><p>I&nbsp;&nbsp; The student can draw a triangle for which there is exactly 1 such straight line.<br>II&nbsp; The student can draw a triangle for which there are exactly 2 such straight lines.<br>III The student can draw a triangle for which there are exactly 3 such straight lines.</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 3,
+    "e": "Any line splitting a triangle into two triangles runs from a vertex to the opposite side. The right angle can sit at the foot of that line, or at the vertex it leaves from. If the triangle is acute, all three altitudes have their feet inside the opposite side and no vertex angle exceeds $90^\\circ$, giving exactly 3 lines. If it is obtuse at $A$, the altitudes from the two acute vertices land outside, leaving only the altitude from $A$ — but the angle at $A$ exceeds $90^\\circ$, so two further lines from $A$ meet $AB$ and $AC$ at right angles, again giving 3. The count is always 3."
+  },
+  {
+    "n": 9, "t": "log", "sp": "Converse and contrapositive", "d": 4, "sol": "lab",
+    "q": "Consider the following statement about a pentagon P:<p>$(*)$ <b>If</b> at least one of the interior angles in P is $108^\\circ$, <b>then</b> all the interior angles in P form an arithmetic sequence.</p><p>Which of the following is/are true?</p><p>I&nbsp;&nbsp; The statement $(*)$<br>II&nbsp; The contrapositive of $(*)$<br>III The converse of $(*)$</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 3,
+    "e": "The interior angles of a pentagon total $540^\\circ$. The statement itself is false: the angles $108^\\circ, 100^\\circ, 110^\\circ, 110^\\circ, 112^\\circ$ sum to $540^\\circ$ and include a $108^\\circ$ angle, but form no arithmetic sequence. A contrapositive is equivalent to its statement, so II is false too. The converse is true: five terms in arithmetic progression can be written $a-2d, a-d, a, a+d, a+2d$, summing to $5a = 540$, so the middle term is $108^\\circ$."
+  },
+  {
+    "n": 10, "t": "ineq", "sp": "Checking an argument line by line", "d": 4, "sol": "lab",
+    "q": "Here is an attempt to solve the inequality $x^4 - 2x^2 - 3 < 0$ by completing the square:<p>$x^4 - 2x^2 - 3 < 0$<br>I&nbsp;&nbsp;&nbsp;&nbsp; if and only if $x^4 - 2x^2 + 1 < 4$<br>II&nbsp;&nbsp;&nbsp; if and only if $(x^2 - 1)^2 < 4$<br>III&nbsp;&nbsp; if and only if $-2 < x^2 - 1 < 2$<br>IV&nbsp;&nbsp; if and only if $x^2 - 1 < 2$<br>V&nbsp;&nbsp;&nbsp; if and only if $x^2 < 3$<br>VI&nbsp;&nbsp; if and only if $-\\sqrt{3} < x < \\sqrt{3}$</p><p>Which of the following statements is true?</p>",
+    "o": ["The argument is completely correct.", "The first error occurs in line I.", "The first error occurs in line II.", "The first error occurs in line III.", "The first error occurs in line IV.", "The first error occurs in line V.", "The first error occurs in line VI."],
+    "a": 0,
+    "e": "Every step holds. Adding 4 to both sides gives line I, and the left side factorises as $(x^2-1)^2$ for line II. Line III is the standard unpacking of $|x^2 - 1| < 2$. Line IV looks like it discards information, but it does not: $x^2 \\ge 0$ forces $x^2 - 1 \\ge -1 > -2$, so the left-hand inequality is automatic. Lines V and VI then follow directly."
+  },
+  {
+    "n": 11, "t": "log", "sp": "Statements equivalent to an implication", "d": 4, "sol": "lab",
+    "q": "In this question, $k$ is a positive integer. Consider the following theorem:<p><b>If</b> $2^k + 1$ is a prime, <b>then</b> $k$ is a power of 2.&nbsp;&nbsp; $(*)$</p><p>Which of the following statements, taken individually, is/are equivalent to $(*)$?</p><p>I&nbsp;&nbsp; <b>If</b> $k$ is a power of 2, <b>then</b> $2^k + 1$ is prime.<br>II&nbsp; $2^k + 1$ is <b>not</b> prime <b>only if</b> $k$ is <b>not</b> a power of 2.<br>III A <b>sufficient</b> condition for $k$ to be a power of 2 is that $2^k + 1$ is prime.</p>",
+    "o": ["I yes, II yes, III yes", "I yes, II yes, III no", "I yes, II no, III yes", "I yes, II no, III no", "I no, II yes, III yes", "I no, II yes, III no", "I no, II no, III yes", "I no, II no, III no"],
+    "a": 6,
+    "e": "Write $(*)$ as $P \\Rightarrow Q$, with $P$ = \"$2^k+1$ is prime\" and $Q$ = \"$k$ is a power of 2\". Statement I is the converse $Q \\Rightarrow P$, which is not equivalent. Statement II says \"$\\neg P$ only if $\\neg Q$\", that is $\\neg P \\Rightarrow \\neg Q$ — the inverse, equivalent to the converse and so not to $(*)$. Statement III says $P$ is sufficient for $Q$, which is exactly $P \\Rightarrow Q$. Only III."
+  },
+  {
+    "n": 12, "t": "trig", "sp": "Counting solutions · sufficient and only-if", "d": 5, "sol": "lab",
+    "q": "In this question, $p$ is a real constant.<p>The equation $\\sin x \\cos^2 x = p^2 \\sin x$ has $n$ distinct solutions in the range $0 \\le x \\le 2\\pi$.</p><p>Which of the following statements is/are true?</p><p>I&nbsp;&nbsp; $n = 3$ is <b>sufficient</b> for $p > 1$<br>II&nbsp; $n = 7$ <b>only if</b> $-1 < p < 1$</p>",
+    "o": ["none of them", "I only", "II only", "I and II"],
+    "a": 2,
+    "e": "Factorising, $\\sin x\\left(\\cos^2 x - p^2\\right) = 0$. The factor $\\sin x = 0$ always contributes $x = 0, \\pi, 2\\pi$ — three solutions. If $|p| > 1$ the other factor gives nothing, so $n = 3$; if $|p| = 1$ its solutions coincide with those already counted, so again $n = 3$; if $0 < |p| < 1$ it adds four more, giving $n = 7$; and if $p = 0$ it adds two, giving $n = 5$. So $n = 3$ does not force $p > 1$ — $p = -2$ also gives $n = 3$ — and I is false. But $n = 7$ does require $0 < |p| < 1$, hence $-1 < p < 1$, so II is true."
+  },
+  {
+    "n": 13, "t": "log", "sp": "Sufficiency among several statements", "d": 4, "sol": "lab",
+    "q": "Let $x$ be a real number.<p>Which <b>one</b> of the following statements is a <b>sufficient</b> condition for <b>exactly three</b> of the other four statements?</p>",
+    "o": ["$x \\ge 0$", "$x = 1$", "$x = 0$ or $x = 1$", "$x \\ge 0$ or $x \\le 1$", "$x \\ge 0$ and $x \\le 1$"],
+    "a": 2,
+    "e": "Note first that \"$x \\ge 0$ or $x \\le 1$\" holds for every real number. Take each option in turn. \"$x \\ge 0$\" implies only that one. \"$x = 1$\" implies all four of the others. \"$x \\ge 0$ and $x \\le 1$\" implies two. And the always-true statement implies none of the restrictive ones. But \"$x = 0$ or $x = 1$\" implies $x \\ge 0$, the always-true statement, and $0 \\le x \\le 1$ — exactly three — while leaving $x = 1$ open."
+  },
+  {
+    "n": 14, "t": "geo", "sp": "Three lines · perpendicularity and gradient", "d": 5, "sol": "lab",
+    "q": "Three lines are given by the equations: $$ax + by + c = 0$$ $$bx + cy + a = 0$$ $$cx + ay + b = 0$$ where $a$, $b$ and $c$ are non-zero real numbers.<p>Which one of the following is correct?</p>",
+    "o": ["If two of the lines are parallel, <b>then</b> all three are parallel.", "If two of the lines are parallel, <b>then</b> the third is perpendicular to the other two.", "If two of the lines are parallel, <b>then</b> the third is parallel to $y = x$.", "If two of the lines are parallel, <b>then</b> the third is perpendicular to $y = x$.", "If two of the lines are perpendicular, <b>then</b> all three meet at a point.", "If two of the lines are perpendicular, <b>then</b> the third is parallel to $y = x$.", "If two of the lines are perpendicular, <b>then</b> the third is perpendicular to $y = x$."],
+    "a": 5,
+    "e": "The gradients are $-\\frac{a}{b}$, $-\\frac{b}{c}$ and $-\\frac{c}{a}$. Suppose the first two are perpendicular: $\\left(-\\frac{a}{b}\\right)\\left(-\\frac{b}{c}\\right) = \\frac{a}{c} = -1$, so $a = -c$. The remaining line has gradient $-\\frac{c}{a} = -\\frac{c}{-c} = 1$, which is parallel to $y = x$. The same works for either other pairing by symmetry, since each product of two gradients cancels a letter and leaves a ratio equal to $-1$."
+  },
+  {
+    "n": 15, "t": "num", "sp": "Recurring numbers in base 2", "d": 4, "sol": "lab",
+    "q": "The base 10 number $0.03841$ has the value $$0\\times 10^{-1} + 3\\times 10^{-2} + 8\\times 10^{-3} + 4\\times 10^{-4} + 1\\times 10^{-5} = 0.03841$$ Similarly, the base 2 number $0.01101$ has the value $$0\\times 2^{-1} + 1\\times 2^{-2} + 1\\times 2^{-3} + 0\\times 2^{-4} + 1\\times 2^{-5} = \\frac{13}{32}$$ What is the value of the recurring base 2 number $0.\\dot{0}01\\dot{1} = 0.001100110011\\ldots$?",
+    "o": ["$\\frac{1}{3}$", "$\\frac{1}{5}$", "$\\frac{1}{15}$", "$\\frac{2}{15}$", "$\\frac{4}{15}$", "$\\frac{3}{16}$", "$\\frac{5}{16}$", "$\\frac{6}{31}$"],
+    "a": 1,
+    "e": "The block $0011$ repeats with period 4. One block contributes $0\\cdot 2^{-1} + 0\\cdot 2^{-2} + 1\\cdot 2^{-3} + 1\\cdot 2^{-4} = \\frac{1}{8} + \\frac{1}{16} = \\frac{3}{16}$, and each later block is $2^{-4} = \\frac{1}{16}$ times the one before. Summing the geometric series, $\\frac{3/16}{1 - 1/16} = \\frac{3/16}{15/16} = \\frac{3}{15} = \\frac{1}{5}$."
+  },
+  {
+    "n": 16, "t": "num", "sp": "Recurrences and common factors", "d": 5, "sol": "lab",
+    "q": "A sequence is defined by $$u_1 = a$$ $$u_2 = b$$ $$u_{n+2} = u_n + u_{n+1} \\quad \\text{for } n \\ge 1$$ where $a$ and $b$ are positive integers. The highest common factor of $a$ and $b$ is 7.<p>Which of the following statements <b>must</b> be true?</p><p>I&nbsp;&nbsp; $u_{2023}$ is a multiple of 7<br>II&nbsp; If $u_1$ is not a factor of $u_2$, then $u_1$ is not a factor of $u_n$ for any $n > 1$<br>III The highest common factor of $u_1$ and $u_5$ is 7</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 1,
+    "e": "Since 7 divides both $a$ and $b$, and every later term is a sum of two earlier ones, 7 divides every term — so I is true. For II, take $a = 14$ and $b = 7$: their highest common factor is 7 and $14$ does not divide $7$, yet $u_3 = 21$ and $u_4 = 28$, and $14$ does divide $28$. So II fails. For III, $u_5 = 2a + 3b$; taking $a = 21$ and $b = 7$ gives $u_5 = 63$, whose highest common factor with $21$ is $21$, not 7. So III fails too."
+  },
+  {
+    "n": 17, "t": "cal", "sp": "Integrating a step function", "d": 4, "sol": "lab",
+    "q": "The ceiling of $x$, written $\\lceil x \\rceil$, is defined to be the value of $x$ rounded up to the nearest integer.<p>For example: $\\lceil \\pi \\rceil = 4$, $\\lceil 2.1 \\rceil = 3$, $\\lceil 8 \\rceil = 8$.</p><p>What is the value of the following integral? $$\\int_0^{99} 2^{\\lceil x \\rceil}\\,dx$$</p>",
+    "o": ["$2^{99}$", "$2^{99} - 1$", "$2^{99} - 2$", "$2^{100}$", "$2^{100} - 1$", "$2^{100} - 2$"],
+    "a": 5,
+    "e": "On the interval from $n-1$ to $n$ the ceiling is constant at $n$, so that strip contributes $2^n \\times 1 = 2^n$. Adding the strips for $n = 1$ to $99$ gives a geometric series $2 + 2^2 + \\cdots + 2^{99} = 2^{100} - 2$. (The single points where the ceiling jumps contribute nothing to an integral.)"
+  },
+  {
+    "n": 18, "t": "alg", "sp": "Quartics · four distinct real roots", "d": 4, "sol": "lab",
+    "q": "The equation $x^4 + bx^2 + c = 0$ has four distinct real roots <b>if and only if</b> which of the following conditions is satisfied?",
+    "o": ["$b^2 > 4c$", "$b^2 < 4c$", "$c > 0$ and $b > 2\\sqrt{c}$", "$c > 0$ and $b < -2\\sqrt{c}$", "$c < 0$ and $b < 0$", "$c < 0$ and $b > 0$"],
+    "a": 3,
+    "e": "Put $u = x^2$, so $u^2 + bu + c = 0$. Each strictly positive root $u$ gives two real values $x = \\pm\\sqrt u$, so four distinct real roots need two distinct positive roots in $u$. That needs a positive discriminant, $b^2 > 4c$; a positive sum of roots, $-b > 0$, so $b < 0$; and a positive product, $c > 0$. With $c > 0$ and $b < 0$, the discriminant condition reads $b < -2\\sqrt{c}$."
+  },
+  {
+    "n": 19, "t": "prf", "sp": "Polynomials · comparing root counts", "d": 4, "sol": "lab",
+    "q": "In this question, $f(x)$ is a non-constant polynomial, and $g(x) = x\\,f'(x)$.<p>$f(x) = 0$ for exactly $M$ real values of $x$.<br>$g(x) = 0$ for exactly $N$ real values of $x$.</p><p>Which of the following statements is/are true?</p><p>I&nbsp;&nbsp; It is possible that $M < N$<br>II&nbsp; It is possible that $M = N$<br>III It is possible that $M > N$</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 7,
+    "e": "Each case needs only one example. Take $f(x) = x^2 + 1$: it has no real roots, so $M = 0$, while $g(x) = 2x^2$ vanishes only at $x = 0$, so $N = 1$ and $M < N$. Take $f(x) = x^2$: then $M = 1$ and $g(x) = 2x^2$ gives $N = 1$, so $M = N$. Take $f(x) = x^2 - 1$: then $M = 2$ while $g(x) = 2x^2$ gives $N = 1$, so $M > N$. All three are possible."
+  },
+  {
+    "n": 20, "t": "cal", "sp": "Integrals · reasoning about what must be true", "d": 5, "sol": "lab",
+    "q": "Let $f$ be a polynomial with real coefficients.<p>The integral $I_{p,q}$ where $p < q$ is defined by $$I_{p,q} = \\int_p^q \\left(f(x)\\right)^2 - \\left(f(|x|)\\right)^2 dx$$</p><p>Which of the following statements must be true?</p><p>1&nbsp;&nbsp; $I_{p,q} = 0$ <b>only if</b> $0 < p$<br>2&nbsp;&nbsp; $f'(x) < 0$ for all $x$ <b>only if</b> $I_{p,q} < 0$ for all $p < q < 0$<br>3&nbsp;&nbsp; $I_{p,q} > 0$ <b>only if</b> $p < 0$</p>",
+    "o": ["none of them", "1 only", "2 only", "3 only", "1 and 2 only", "1 and 3 only", "2 and 3 only", "1, 2 and 3"],
+    "a": 3,
+    "e": "For $x \\ge 0$ we have $|x| = x$, so the integrand vanishes there and only the negative part of the range can contribute. Statement 3 follows at once: if $p \\ge 0$ the whole integral is over non-negative $x$ and equals zero, so $I_{p,q} > 0$ forces $p < 0$. Statement 1 fails for $f(x) = x$, where the integrand is $x^2 - x^2 = 0$ everywhere and $I_{p,q} = 0$ for every $p$. Statement 2 fails for the same $f(x) = -x$, which is strictly decreasing yet gives $I_{p,q} = 0$ rather than a negative value."
+  }
+]

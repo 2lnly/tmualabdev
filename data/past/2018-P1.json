@@ -1,0 +1,143 @@
+[
+  {
+    "n": 1, "t": "cal", "sp": "Definite integrals · fractional powers", "d": 3, "sol": "lab",
+    "q": "Find the value of $$\\int_1^4 \\frac{3 - 2x}{x\\sqrt{x}}\\,dx$$",
+    "o": ["$-\\frac{13}{2}$", "$-\\frac{85}{16}$", "$-\\frac{13}{8}$", "$-1$", "$-\\frac{1}{4}$", "$\\frac{7}{4}$", "$7$"],
+    "a": 3,
+    "e": "Do not try to integrate the quotient as it stands: split it first. Since $x\\sqrt{x} = x^{3/2}$, the integrand is $3x^{-3/2} - 2x^{-1/2}$. Integrating gives $-6x^{-1/2} - 4x^{1/2}$, that is $-\\frac{6}{\\sqrt{x}} - 4\\sqrt{x}$. At $x = 4$ this is $-3 - 8 = -11$ and at $x = 1$ it is $-6 - 4 = -10$, so the integral is $-11 - (-10) = -1$."
+  },
+  {
+    "n": 2, "t": "seq", "sp": "Arithmetic series · equal partial sums", "d": 3, "sol": "lab",
+    "q": "An arithmetic progression has first term $a$ and common difference $d$.<p>The sum of the first 5 terms is equal to the sum of the first 8 terms.</p><p>Which one of the following expresses the relationship between $a$ and $d$?</p>",
+    "o": ["$a = -\\frac{38}{3}d$", "$a = -7d$", "$a = -6d$", "$a = 6d$", "$a = 7d$", "$a = \\frac{38}{3}d$"],
+    "a": 2,
+    "e": "If $S_5 = S_8$ then the terms in between contribute nothing: $u_6 + u_7 + u_8 = 0$. Those terms are $a + 5d$, $a + 6d$ and $a + 7d$, so $3a + 18d = 0$ and $a = -6d$. Using the sum formula directly gives the same thing: $\\frac52(2a + 4d) = \\frac82(2a + 7d)$ reduces to $6a + 36d = 0$."
+  },
+  {
+    "n": 3, "t": "geo", "sp": "Circles · shortest distance between two circles", "d": 3, "sol": "lab",
+    "q": "Find the shortest distance between the two circles with equations: $$(x + 2)^2 + (y - 3)^2 = 18$$ $$(x - 7)^2 + (y + 6)^2 = 2$$",
+    "o": ["$0$", "$4$", "$16$", "$2\\sqrt{2}$", "$5\\sqrt{2}$"],
+    "a": 4,
+    "e": "The centres are $(-2, 3)$ and $(7, -6)$, with radii $\\sqrt{18} = 3\\sqrt2$ and $\\sqrt2$. The centres are $\\sqrt{9^2 + 9^2} = \\sqrt{162} = 9\\sqrt2$ apart, which is more than the sum of the radii, so the circles are separate. The nearest points lie on the line joining the centres, so the gap is $9\\sqrt2 - 3\\sqrt2 - \\sqrt2 = 5\\sqrt2$."
+  },
+  {
+    "n": 4, "t": "alg", "sp": "Simultaneous equations · discriminant condition", "d": 3, "sol": "lab",
+    "q": "Consider the simultaneous equations $$3x^2 + 2xy = 4$$ $$x + y = a$$ where $a$ is a real constant.<p>Find the complete set of values of $a$ for which the equations have two distinct real solutions for $x$.</p>",
+    "o": ["There are no values of $a$.", "$-2 < a < 2$", "$-1 < a < 1$", "$a = 0$", "$a < -1$ or $a > 1$", "$a < -2$ or $a > 2$", "All real values of $a$"],
+    "a": 6,
+    "e": "Substitute $y = a - x$ into the first equation: $3x^2 + 2x(a - x) = 4$, which tidies to $x^2 + 2ax - 4 = 0$. The discriminant is $4a^2 + 16$, and this is positive for every real $a$ because $4a^2 \\ge 0$. So there are always two distinct real values of $x$, and the answer is all real values of $a$."
+  },
+  {
+    "n": 5, "t": "alg", "sp": "Remainder theorem · optimising over an assignment", "d": 4, "sol": "lab",
+    "q": "The function $\\mathrm{f}$ is defined by $\\mathrm{f}(x) = x^3 + ax^2 + bx + c$.<p>$a$, $b$ and $c$ take the values 1, 2 and 3 with no two of them being equal and not necessarily in this order.</p><p>The remainder when $\\mathrm{f}(x)$ is divided by $(x + 2)$ is $R$.</p><p>The remainder when $\\mathrm{f}(x)$ is divided by $(x + 3)$ is $S$.</p><p>What is the largest possible value of $R - S$?</p>",
+    "o": ["$-26$", "$5$", "$7$", "$17$", "$29$"],
+    "a": 3,
+    "e": "By the remainder theorem $R = \\mathrm{f}(-2) = -8 + 4a - 2b + c$ and $S = \\mathrm{f}(-3) = -27 + 9a - 3b + c$. Subtracting, the $c$ cancels and $R - S = 19 - 5a + b$. To make this as large as possible take $a$ smallest and $b$ largest, so $a = 1$ and $b = 3$ (leaving $c = 2$), giving $R - S = 19 - 5 + 3 = 17$."
+  },
+  {
+    "n": 6, "t": "trig", "sp": "Counting solutions · line meeting a tangent curve", "d": 5, "sol": "lab",
+    "q": "Find the number of solutions of the equation $$x\\sin 2x = \\cos 2x$$ with $0 \\le x \\le 2\\pi$.",
+    "o": ["$0$", "$1$", "$2$", "$3$", "$4$"],
+    "a": 4,
+    "e": "Where $\\cos 2x = 0$ the left side would have to be zero too, but there $\\sin 2x = \\pm1$ and $x \\ne 0$, so no solution is lost by dividing: the equation is $\\tan 2x = \\frac{1}{x}$, and $x = 0$ fails as well. Sketch $y = \\tan 2x$, which has asymptotes at $x = \\frac{\\pi}{4}, \\frac{3\\pi}{4}, \\frac{5\\pi}{4}, \\frac{7\\pi}{4}$, against the decreasing positive curve $y = \\frac1x$. On $(0, \\frac{\\pi}{4})$ the tangent curve climbs from $0$ to $+\\infty$ while $\\frac1x$ falls from $+\\infty$, so they cross once; on each of the three full branches $(\\frac{\\pi}{4},\\frac{3\\pi}{4})$, $(\\frac{3\\pi}{4},\\frac{5\\pi}{4})$ and $(\\frac{5\\pi}{4},\\frac{7\\pi}{4})$ the tangent curve runs from $-\\infty$ to $+\\infty$ and crosses once more. On the last piece $(\\frac{7\\pi}{4}, 2\\pi]$ it only reaches $0$ at $x = 2\\pi$, still below $\\frac1x > 0$, so there is no crossing there. That is $4$ solutions."
+  },
+  {
+    "n": 7, "t": "seq", "sp": "Binomial expansion · matching coefficients", "d": 3, "sol": "lab",
+    "q": "The non-zero constant $k$ is chosen so that the coefficients of $x^6$ in the expansions of $(1 + kx^2)^7$ and $(k + x)^{10}$ are equal.<p>What is the value of $k$?</p>",
+    "o": ["$\\frac{1}{6}$", "$6$", "$\\frac{\\sqrt{6}}{6}$", "$\\sqrt{6}$", "$\\frac{\\sqrt{30}}{30}$", "$\\sqrt{30}$"],
+    "a": 0,
+    "e": "In $(1 + kx^2)^7$ the general term is $\\binom{7}{r}(kx^2)^r$, so $x^6$ comes from $r = 3$ and its coefficient is $\\binom{7}{3}k^3 = 35k^3$. In $(k + x)^{10}$ the $x^6$ term is $\\binom{10}{6}k^4x^6$, with coefficient $210k^4$. Setting $35k^3 = 210k^4$ and cancelling $k^3$ (legitimate since $k \\ne 0$) gives $1 = 6k$, so $k = \\frac16$."
+  },
+  {
+    "n": 8, "t": "seq", "sp": "Geometric series · sums of squares and cubes", "d": 4, "sol": "lab",
+    "q": "The sum to infinity of a geometric progression is 6.<p>The sum to infinity of the squares of each term in the progression is 12.</p><p>Find the sum to infinity of the cubes of each term in the progression.</p>",
+    "o": ["$8$", "$18$", "$24$", "$\\frac{216}{7}$", "$72$", "$216$"],
+    "a": 3,
+    "e": "Squaring the terms of a geometric progression with first term $a$ and ratio $r$ gives another geometric progression, with first term $a^2$ and ratio $r^2$. So $\\frac{a}{1-r} = 6$ and $\\frac{a^2}{1-r^2} = 12$. Dividing the second by the square of the first, $\\frac{1-r}{1+r} = \\frac{12}{36} = \\frac13$, so $3 - 3r = 1 + r$ and $r = \\frac12$, giving $a = 3$. The cubes form a geometric progression with first term $27$ and ratio $\\frac18$, summing to $\\frac{27}{1 - \\frac18} = \\frac{216}{7}$."
+  },
+  {
+    "n": 9, "t": "cal", "sp": "Cubics · condition for three distinct roots", "d": 4, "sol": "lab",
+    "q": "Find the complete set of values of the constant $c$ for which the cubic equation $$2x^3 - 3x^2 - 12x + c = 0$$ has three distinct real solutions.",
+    "o": ["$-20 < c < 7$", "$-7 < c < 20$", "$c > 7$", "$c > -7$", "$c < 20$", "$c < -20$"],
+    "a": 1,
+    "e": "Write $\\mathrm{f}(x) = 2x^3 - 3x^2 - 12x + c$. Then $\\mathrm{f}'(x) = 6x^2 - 6x - 12 = 6(x - 2)(x + 1)$, so the turning points are at $x = -1$ and $x = 2$; the positive leading coefficient makes $x = -1$ the local maximum and $x = 2$ the local minimum. Three distinct roots need the curve to cross the axis on both sides of each turning point, that is $\\mathrm{f}(-1) > 0$ and $\\mathrm{f}(2) < 0$. Since $\\mathrm{f}(-1) = 7 + c$ and $\\mathrm{f}(2) = -20 + c$, this gives $-7 < c < 20$."
+  },
+  {
+    "n": 10, "t": "alg", "sp": "Modulus inequalities · maximising a product", "d": 3, "sol": "lab",
+    "q": "$x$ and $y$ satisfy $|2 - x| \\le 6$ and $|y + 2| \\le 4$.<p>What is the greatest possible value of $|xy|$?</p>",
+    "o": ["$16$", "$24$", "$32$", "$40$", "$48$", "There is no greatest possible value."],
+    "a": 4,
+    "e": "Unpack each modulus into an interval: $|2 - x| \\le 6$ gives $-6 \\le 2 - x \\le 6$, so $-4 \\le x \\le 8$, and $|y + 2| \\le 4$ gives $-6 \\le y \\le 2$. The largest $|xy|$ comes from taking each variable at whichever endpoint has the bigger size, so $|x| \\le 8$ and $|y| \\le 6$, giving $|xy| \\le 48$. This is attained at $x = 8$, $y = -6$; the tempting pairing $x = -4$ with $y = -6$ only gives $24$."
+  },
+  {
+    "n": 11, "t": "cal", "sp": "Normals to a curve", "d": 4, "sol": "lab",
+    "q": "The line $y = mx + 5$, where $m > 0$, is normal to the curve $y = 10 - x^2$ at the point $(p, q)$.<p>What is the value of $p$?</p>",
+    "o": ["$\\frac{\\sqrt{2}}{6}$", "$-\\frac{\\sqrt{2}}{6}$", "$\\frac{3\\sqrt{2}}{2}$", "$-\\frac{3\\sqrt{2}}{2}$", "$\\sqrt{5}$", "$-\\sqrt{5}$"],
+    "a": 2,
+    "e": "Since $\\frac{dy}{dx} = -2x$, the tangent at $(p, q)$ has gradient $-2p$, so the normal has gradient $m = \\frac{1}{2p}$. The point lies on the line, so $q = mp + 5 = \\frac{1}{2p}\\cdot p + 5 = \\frac12 + 5 = \\frac{11}{2}$, and this holds whatever $p$ is. It also lies on the curve, so $10 - p^2 = \\frac{11}{2}$, giving $p^2 = \\frac92$ and $p = \\pm\\frac{3}{\\sqrt2}$. The condition $m > 0$ forces $p > 0$, so $p = \\frac{3\\sqrt2}{2}$."
+  },
+  {
+    "n": 12, "t": "cal", "sp": "Areas versus signed integrals", "d": 4, "sol": "lab",
+    "q": "A curve has equation $y = \\mathrm{f}(x)$, where $$\\mathrm{f}(x) = x(x - p)(x - q)(r - x)$$ with $0 < p < q < r$.<p>You are given that:</p>$$\\int_0^r \\mathrm{f}(x)\\,dx = 0$$ $$\\int_0^q \\mathrm{f}(x)\\,dx = -2$$ $$\\int_p^r \\mathrm{f}(x)\\,dx = -3$$<p>What is the total area enclosed by the curve and the $x$-axis for $0 \\le x \\le r$?</p>",
+    "o": ["$0$", "$1$", "$4$", "$5$", "$6$", "$10$"],
+    "a": 5,
+    "e": "The roots are $0$, $p$, $q$, $r$, and checking signs shows the curve is above the axis on $(0, p)$, below on $(p, q)$ and above again on $(q, r)$. Write the three areas as $A$, $B$, $C$, so the signed integrals over those intervals are $A$, $-B$, $C$. The given data become $A - B + C = 0$, $A - B = -2$ and $-B + C = -3$. The first two give $C = 2$, then the third gives $B = 5$ and hence $A = 3$. Total area is $A + B + C = 3 + 5 + 2 = 10$; the value $0$ is the trap of adding the signed pieces instead."
+  },
+  {
+    "n": 13, "t": "cal", "sp": "Reading a derivative graph", "d": 3, "sol": "lab",
+    "fig": "The graph of y = f'(x): it falls from top left crossing the axis at A, turns at a minimum B below the axis, rises through C on the axis and through D on the positive y-axis, peaks at E, then falls to touch the x-axis at F before rising again.",
+    "q": "The function $\\mathrm{f}(x)$ has derivative $\\mathrm{f}'(x)$.<p>The diagram shows the graph of $y = \\mathrm{f}'(x)$. Coming in from the top left, the curve crosses the $x$-axis at $A$, reaches a minimum at $B$ below the axis, rises through $C$ on the $x$-axis and through $D$ on the positive $y$-axis, reaches a maximum at $E$ above the axis, then falls to touch the $x$-axis at $F$ before rising again.</p><p>Which point corresponds to a local minimum of $\\mathrm{f}(x)$?</p>",
+    "o": ["$A$", "$B$", "$C$", "$D$", "$E$", "$F$"],
+    "a": 2,
+    "e": "A local minimum of $\\mathrm{f}$ needs $\\mathrm{f}'$ to be zero there and to change from negative to positive. On the graph $\\mathrm{f}'$ is zero at $A$, $C$ and $F$. At $A$ it goes from positive to negative, which is a local maximum of $\\mathrm{f}$; at $F$ the curve only touches the axis and stays non-negative, so $\\mathrm{f}'$ does not change sign and $\\mathrm{f}$ has no turning point there. Only at $C$ does $\\mathrm{f}'$ pass from negative to positive, so $C$ is the local minimum."
+  },
+  {
+    "n": 14, "t": "exp", "sp": "Logarithms · a line through two related points", "d": 4, "sol": "lab",
+    "q": "The line $y = mx + 4$ passes through the points $(3, \\log_2 p)$ and $(\\log_2 p, 4)$.<p>What are the possible values of $p$?</p>",
+    "o": ["$p = 1$ and $p = 4$", "$p = 1$ and $p = 16$", "$p = \\frac{1}{4}$ and $p = 4$", "$p = \\frac{1}{4}$ and $p = 64$", "$p = \\frac{1}{64}$ and $p = 4$", "$p = \\frac{1}{64}$ and $p = 16$"],
+    "a": 1,
+    "e": "Put $t = \\log_2 p$. The second point gives $4 = mt + 4$, so $mt = 0$: either $t = 0$ or $m = 0$. If $t = 0$ then $p = 1$, and the first point $(3, 0)$ forces $0 = 3m + 4$, so $m = -\\frac43$, which is consistent. If instead $m = 0$ the line is $y = 4$, so the first point gives $t = 4$ and $p = 16$. The possible values are $p = 1$ and $p = 16$."
+  },
+  {
+    "n": 15, "t": "exp", "sp": "Exponential equations · hidden quadratic", "d": 4, "sol": "lab",
+    "q": "Find the sum of the real solutions of the equation: $$3^x - (\\sqrt{3})^{x+4} + 20 = 0$$",
+    "o": ["$1$", "$4$", "$9$", "$\\log_3 20$", "$2\\log_3 20$", "$4\\log_3 20$"],
+    "a": 4,
+    "e": "Write everything in terms of $u = 3^{x/2}$. Then $3^x = u^2$ and $(\\sqrt3)^{x+4} = 3^{\\frac{x+4}{2}} = 9\\cdot3^{x/2} = 9u$, so the equation becomes $u^2 - 9u + 20 = 0$, giving $u = 4$ or $u = 5$. Both are positive, so both are attainable: $\\frac{x}{2} = \\log_3 4$ or $\\frac{x}{2} = \\log_3 5$. The sum is $2\\log_3 4 + 2\\log_3 5 = 2\\log_3 20$."
+  },
+  {
+    "n": 16, "t": "geo", "sp": "Minimising a distance · quadratic in $b^2$", "d": 4, "sol": "lab",
+    "q": "The curve $C$ has equation $y = x^2 + bx + 2$, where $b \\ge 0$.<p>Find the value of $b$ that minimises the distance between the origin and the stationary point of the curve $C$.</p>",
+    "o": ["$b = 0$", "$b = 1$", "$b = 2$", "$b = \\frac{\\sqrt{6}}{2}$", "$b = \\sqrt{2}$", "$b = \\sqrt{6}$"],
+    "a": 5,
+    "e": "Completing the square, the stationary point is at $x = -\\frac{b}{2}$ with $y = 2 - \\frac{b^2}{4}$. Minimise the squared distance rather than the distance itself: $D^2 = \\frac{b^2}{4} + \\left(2 - \\frac{b^2}{4}\\right)^2$. Substituting $u = \\frac{b^2}{4} \\ge 0$ turns this into $u + (2-u)^2 = u^2 - 3u + 4$, a quadratic in $u$ minimised at $u = \\frac32$. So $\\frac{b^2}{4} = \\frac32$, giving $b^2 = 6$ and, since $b \\ge 0$, $b = \\sqrt6$."
+  },
+  {
+    "n": 17, "t": "alg", "sp": "Means · deducing the sizes of two data sets", "d": 4, "sol": "lab",
+    "q": "There are two sets of data: the mean of the first set is 15, and the mean of the second set is 20.<p>One of the pieces of data from the first set is exchanged with one of the pieces of data from the second set.</p><p>As a result, the mean of the first set of data increases from 15 to 16, and the mean of the second set of data decreases from 20 to 17.</p><p>What is the mean of the set made by combining all the data?</p>",
+    "o": ["$16\\frac{1}{4}$", "$16\\frac{1}{3}$", "$16\\frac{1}{2}$", "$16\\frac{2}{3}$", "$16\\frac{3}{4}$"],
+    "a": 0,
+    "e": "The exchange does not change the sizes of the sets, so let them be $n_1$ and $n_2$, and let the swapped values be $x$ from the first set and $y$ from the second. The first set's total rises by $y - x$, raising its mean by $1$, so $y - x = n_1$; the second set's total falls by $y - x$, lowering its mean by $3$, so $y - x = 3n_2$. Hence $n_1 = 3n_2$. The combined mean is unaffected by the swap, so it equals $\\frac{15n_1 + 20n_2}{n_1 + n_2} = \\frac{45n_2 + 20n_2}{4n_2} = \\frac{65}{4} = 16\\frac14$."
+  },
+  {
+    "n": 18, "t": "trig", "sp": "Lines of symmetry of a sine curve", "d": 3, "sol": "lab",
+    "q": "What is the smallest positive value of $a$ for which the line $x = a$ is a line of symmetry of the graph of $y = \\sin\\left(2x - \\frac{4\\pi}{3}\\right)$?",
+    "o": ["$\\frac{\\pi}{12}$", "$\\frac{5\\pi}{12}$", "$\\frac{7\\pi}{12}$", "$\\frac{11\\pi}{12}$", "$\\frac{19\\pi}{12}$"],
+    "a": 1,
+    "e": "A sine curve is symmetric about each of its peaks and troughs, and nowhere else, so the lines of symmetry are the vertical lines through the turning points. These occur when $2x - \\frac{4\\pi}{3} = \\frac{\\pi}{2} + k\\pi$, so $2x = \\frac{11\\pi}{6} + k\\pi$ and $x = \\frac{11\\pi}{12} + \\frac{k\\pi}{2}$. Taking $k = -1$ gives $\\frac{11\\pi}{12} - \\frac{6\\pi}{12} = \\frac{5\\pi}{12}$, and $k = -2$ would give a negative value, so the smallest positive one is $\\frac{5\\pi}{12}$."
+  },
+  {
+    "n": 19, "t": "trig", "sp": "Cosine rule · the ambiguous case as a quadratic", "d": 5, "sol": "lab",
+    "q": "A triangle $ABC$ is to be drawn with $AB = 10$ cm, $BC = 7$ cm and the angle at $A$ equal to $\\theta$, where $\\theta$ is a certain specified angle.<p>Of the two possible triangles that could be drawn, the larger triangle has three times the area of the smaller one.</p><p>What is the value of $\\cos\\theta$?</p>",
+    "o": ["$\\frac{5}{7}$", "$\\frac{151}{200}$", "$\\frac{2\\sqrt{2}}{5}$", "$\\frac{\\sqrt{17}}{5}$", "$\\frac{\\sqrt{51}}{8}$", "$\\frac{\\sqrt{34}}{8}$"],
+    "a": 3,
+    "e": "The two possible triangles differ only in the third side $AC = b$, so treat the cosine rule as a quadratic in $b$: $7^2 = b^2 + 10^2 - 20b\\cos\\theta$, that is $b^2 - (20\\cos\\theta)b + 51 = 0$. Its two roots are the two possible values of $b$, with product $51$ and sum $20\\cos\\theta$. Each area is $\\frac12 \\cdot 10 \\cdot b\\sin\\theta$, proportional to $b$, so the areas being in ratio $3:1$ means $b_1 = 3b_2$. Then $3b_2^2 = 51$ gives $b_2 = \\sqrt{17}$ and $b_1 = 3\\sqrt{17}$, so $20\\cos\\theta = 4\\sqrt{17}$ and $\\cos\\theta = \\frac{\\sqrt{17}}{5}$."
+  },
+  {
+    "n": 20, "t": "trig", "sp": "Pairing terms with the complementary angle", "d": 3, "sol": "lab",
+    "q": "Find the value of $$\\sin^2 0^\\circ + \\sin^2 1^\\circ + \\sin^2 2^\\circ + \\sin^2 3^\\circ + \\cdots + \\sin^2 87^\\circ + \\sin^2 88^\\circ + \\sin^2 89^\\circ + \\sin^2 90^\\circ$$",
+    "o": ["$0.5$", "$1$", "$1.5$", "$45$", "$45.5$", "$46$"],
+    "a": 4,
+    "e": "Pair each term with the one for the complementary angle: $\\sin(90^\\circ - k^\\circ) = \\cos k^\\circ$, so $\\sin^2 k^\\circ + \\sin^2(90^\\circ - k^\\circ) = \\sin^2 k^\\circ + \\cos^2 k^\\circ = 1$. There are $91$ terms, from $k = 0$ to $k = 90$, which pair up as $(0, 90), (1, 89), \\ldots, (44, 46)$ — that is $45$ pairs each contributing $1$ — leaving the middle term $\\sin^2 45^\\circ = \\frac12$ unpaired. The total is $45.5$."
+  }
+]

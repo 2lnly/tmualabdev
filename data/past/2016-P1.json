@@ -1,0 +1,144 @@
+[
+  {
+    "n": 1, "t": "alg", "sp": "Binomial expansion of a cube · matching surd coefficients", "d": 3, "sol": "lab",
+    "q": "It is given that the expansion of $(ax + b)^3$ is $8x^3 - px^2 + 18x - 3\\sqrt{3}$, where $a$, $b$ and $p$ are real constants.<p>What is the value of $p$?</p>",
+    "o": ["$-12\\sqrt{3}$", "$-6\\sqrt{3}$", "$-4\\sqrt{3}$", "$-\\sqrt{3}$", "$\\sqrt{3}$", "$4\\sqrt{3}$", "$6\\sqrt{3}$", "$12\\sqrt{3}$"],
+    "a": 7,
+    "e": "Expand: $(ax+b)^3 = a^3x^3 + 3a^2b\\,x^2 + 3ab^2 x + b^3$. The two end terms pin down $a$ and $b$ on their own: $a^3 = 8$ gives $a = 2$, and $b^3 = -3\\sqrt3$ gives $b = -\\sqrt3$, since $(-\\sqrt3)^3 = -3\\sqrt3$. Check against the $x$ term: $3ab^2 = 3\\cdot 2\\cdot 3 = 18$, as required. The $x^2$ coefficient is $3a^2b = 3\\cdot 4\\cdot(-\\sqrt3) = -12\\sqrt3$, and the expansion writes that coefficient as $-p$, so $p = 12\\sqrt3$. The sign trap is dropping the minus in $-px^2$ and answering $-12\\sqrt3$."
+  },
+  {
+    "n": 2, "t": "alg", "sp": "Factor theorem · complete factorisation of a cubic", "d": 2, "sol": "lab",
+    "q": "The expression $3x^3 + 13x^2 + 8x + a$, where $a$ is a constant, has $(x + 2)$ as a factor.<p>Which one of the following is a complete factorisation of the expression?</p>",
+    "o": ["$(x+2)(x-1)(3x-2)$", "$(x+2)(x+1)(3x-2)$", "$(x+2)(x+1)(3x+2)$", "$(x+2)(x-3)(3x+2)$", "$(x+2)(x+3)(3x-2)$", "$(x+2)(x+3)(3x+2)$"],
+    "a": 4,
+    "e": "The factor theorem gives $f(-2) = 0$: $3(-8) + 13(4) + 8(-2) + a = -24 + 52 - 16 + a = 0$, so $a = -12$. Dividing $3x^3 + 13x^2 + 8x - 12$ by $x + 2$ leaves $3x^2 + 7x - 6$, which factorises as $(3x - 2)(x + 3)$. Hence the complete factorisation is $(x+2)(x+3)(3x-2)$. You can also settle it without division by checking which option has constant term $-12$ and $x^2$ coefficient matching $13$."
+  },
+  {
+    "n": 3, "t": "cal", "sp": "Normal to a curve · intercepts and distance", "d": 3, "sol": "lab",
+    "q": "A line is drawn normal to the curve $y = \\frac{2}{x^2}$ at the point on the curve where $x = 1$.<p>This line cuts the $x$-axis at $P$ and the $y$-axis at $Q$.</p><p>The length of $PQ$ is</p>",
+    "o": ["$\\frac{3\\sqrt{5}}{2}$", "$\\frac{3\\sqrt{17}}{4}$", "$\\frac{7\\sqrt{17}}{4}$", "$\\frac{35}{4}$", "$\\frac{35\\sqrt{5}}{2}$", "$\\frac{3\\sqrt{17}}{2}$"],
+    "a": 2,
+    "e": "Write $y = 2x^{-2}$, so $\\frac{dy}{dx} = -4x^{-3}$, which is $-4$ at $x = 1$. The normal therefore has gradient $\\frac14$ and passes through $(1, 2)$, giving $y = \\frac{x}{4} + \\frac74$. Setting $y = 0$ gives $P = (-7, 0)$ and setting $x = 0$ gives $Q = \\left(0, \\frac74\\right)$. Then $PQ = \\sqrt{49 + \\frac{49}{16}} = 7\\sqrt{\\frac{17}{16}} = \\frac{7\\sqrt{17}}{4}$."
+  },
+  {
+    "n": 4, "t": "seq", "sp": "Alternating sequence · simplifying before summing", "d": 3, "sol": "lab",
+    "q": "The sequence $a_n$ is defined by the rule $$a_n = (-1)^n - (-1)^{n-1} + (-1)^{n+2}$$ for $n \\ge 1$.<p>Find the value of $$\\sum_{n=1}^{39} a_n$$</p>",
+    "o": ["$-39$", "$-3$", "$-1$", "$0$", "$1$", "$3$", "$39$"],
+    "a": 1,
+    "e": "Do not list terms; simplify the rule first. Since $(-1)^{n-1} = -(-1)^n$ and $(-1)^{n+2} = (-1)^n$, the three pieces become $(-1)^n + (-1)^n + (-1)^n$, so $a_n = 3(-1)^n$. The sequence is therefore $-3, 3, -3, 3, \\dots$, and over $39$ terms the pairs cancel leaving one extra $-3$ from the odd $n$. Formally $\\sum_{n=1}^{39}(-1)^n = -1$, so the sum is $3 \\times (-1) = -3$."
+  },
+  {
+    "n": 5, "t": "cal", "sp": "Area between curve and axis · splitting at the roots", "d": 3, "sol": "lab",
+    "q": "What is the total area enclosed between the curve $y = x^2 - 1$, the $x$-axis and the lines $x = -2$ and $x = 2$?",
+    "o": ["$\\frac{4}{3}$", "$\\frac{8}{3}$", "$4$", "$\\frac{16}{3}$", "$12$", "$16$"],
+    "a": 2,
+    "e": "The curve crosses the axis at $x = \\pm 1$, so integrating straight through from $-2$ to $2$ would let the negative middle piece cancel part of the outer pieces. Split at the roots and take each piece positively. With $F(x) = \\frac{x^3}{3} - x$, the middle region gives $|F(1) - F(-1)| = \\left|-\\frac23 - \\frac23\\right| = \\frac43$, and each outer region gives $\\frac43$ as well by the same calculation. The total area is $3 \\times \\frac43 = 4$."
+  },
+  {
+    "n": 6, "t": "alg", "sp": "Weighted mixture · solving for an unknown concentration", "d": 2, "sol": "lab",
+    "q": "P, Q, and R are each mixtures of red and white paint.<p>The percentage by volume of red paint in P is 30%.</p><p>The percentage by volume of red paint in Q is 20%.</p><p>The mixtures P, Q, and R are combined in the proportion $12 : 5 : 3$ respectively.</p><p>If the resulting mixture contains 25% by volume of red paint, what percentage by volume of mixture R is red paint?</p>",
+    "o": ["$25\\%$", "$23\\%$", "$13\\frac{1}{3}\\%$", "$19\\frac{1}{2}\\%$", "$9\\frac{3}{4}\\%$", "It is impossible to achieve this result."],
+    "a": 2,
+    "e": "Take volumes of $12$, $5$ and $3$, so $20$ in total. Counting red paint by volume, $12 \\times 30 + 5 \\times 20 + 3r = 20 \\times 25$ where $r$ is the percentage of red in R. That is $360 + 100 + 3r = 500$, so $3r = 40$ and $r = 13\\frac13$. The percentages must be weighted by the volumes, not simply averaged: an unweighted average would wrongly give $25\\%$."
+  },
+  {
+    "n": 7, "t": "alg", "sp": "Two-way classification · working back from a conditional proportion", "d": 3, "sol": "lab",
+    "q": "60% of a sports club's members are women and the remainder are men.<p>This sports club offers the opportunity to play tennis or cricket. Every member plays exactly one of the two sports.</p><p>$\\frac{2}{5}$ of the male members of the club play cricket;</p><p>$\\frac{2}{3}$ of the cricketing members of the club are women.</p><p>What is the probability that a member of the club, chosen at random, is a woman who plays tennis?</p>",
+    "o": ["$\\frac{1}{5}$", "$\\frac{7}{25}$", "$\\frac{1}{3}$", "$\\frac{11}{25}$", "$\\frac{3}{5}$"],
+    "a": 1,
+    "e": "Take $100$ members: $60$ women and $40$ men. Male cricketers number $\\frac25 \\times 40 = 16$. Since $\\frac23$ of all cricketers are women, men make up $\\frac13$ of the cricketers, so there are $48$ cricketers in all and $32$ of them are women. That leaves $60 - 32 = 28$ women playing tennis, a probability of $\\frac{28}{100} = \\frac{7}{25}$. The step people miss is that $16$ is one third of the cricket total, not a fraction of the women."
+  },
+  {
+    "n": 8, "t": "trig", "sp": "Quadratic in $\\sin$ · repeated root and a double angle", "d": 4, "sol": "lab",
+    "q": "Find the maximum angle $x$ in the range $0^\\circ \\le x \\le 360^\\circ$ which satisfies the equation $$\\cos^2(2x) + \\sqrt{3}\\sin(2x) - \\frac{7}{4} = 0$$",
+    "o": ["$30^\\circ$", "$60^\\circ$", "$120^\\circ$", "$150^\\circ$", "$210^\\circ$", "$240^\\circ$", "$300^\\circ$", "$330^\\circ$"],
+    "a": 5,
+    "e": "Replace $\\cos^2(2x)$ by $1 - \\sin^2(2x)$ to get everything in terms of $s = \\sin(2x)$: $1 - s^2 + \\sqrt3 s - \\frac74 = 0$, so $s^2 - \\sqrt3 s + \\frac34 = 0$, which is $\\left(s - \\frac{\\sqrt3}{2}\\right)^2 = 0$. So $\\sin(2x) = \\frac{\\sqrt3}{2}$ is the only possibility. As $x$ runs over $0^\\circ$ to $360^\\circ$, $2x$ runs over $0^\\circ$ to $720^\\circ$, giving $2x = 60^\\circ, 120^\\circ, 420^\\circ, 480^\\circ$ and hence $x = 30^\\circ, 60^\\circ, 210^\\circ, 240^\\circ$. The largest is $240^\\circ$; forgetting to double the range for $2x$ loses the two answers above $180^\\circ$."
+  },
+  {
+    "n": 9, "t": "geo", "sp": "Circle from a diameter · translation, reflection, enlargement", "d": 3, "sol": "lab",
+    "q": "The line segment joining the points $(3, 3)$ and $(7, 5)$ is a diameter of a circle.<p>This circle is translated by 3 units in the negative $x$-direction, then reflected in the $x$-axis, and then enlarged by a scale factor of 4 about the centre of the resulting circle.</p><p>The equation of the final circle is</p>",
+    "o": ["$(x-2)^2 + (y-4)^2 = 320$", "$(x-2)^2 + (y+4)^2 = 320$", "$(x-2)^2 + (y-4)^2 = 80$", "$(x-2)^2 + (y+4)^2 = 80$", "$(x-2)^2 + (y-4)^2 = 20$", "$(x-2)^2 + (y+4)^2 = 20$"],
+    "a": 3,
+    "e": "The centre is the midpoint $(5, 4)$ and the radius is half the diameter: the diameter has length $\\sqrt{4^2 + 2^2} = \\sqrt{20}$, so $r = \\frac{\\sqrt{20}}{2}$ and $r^2 = 5$. Translating $3$ to the left moves the centre to $(2, 4)$; reflecting in the $x$-axis moves it to $(2, -4)$ and leaves the radius alone. The enlargement is about the circle's own centre, so the centre does not move and only the radius scales, by $4$: $r^2$ becomes $16 \\times 5 = 80$. The equation is $(x-2)^2 + (y+4)^2 = 80$; scaling $r^2$ by $4$ instead of $16$ gives the tempting wrong answer $20$."
+  },
+  {
+    "n": 10, "t": "trig", "sp": "Counting solutions · intersecting $\\tan x$ with a reciprocal", "d": 4, "sol": "lab",
+    "q": "How many solutions does the equation $x\\tan x = 1$ have in the interval $-2\\pi \\le x \\le 2\\pi$?",
+    "o": ["$0$", "$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
+    "a": 4,
+    "e": "Rewrite it as $\\tan x = \\frac{1}{x}$ (note $x = 0$ is not a solution) and count crossings of $y = \\tan x$ with the hyperbola $y = \\frac1x$. The function $x\\tan x$ is even, so it is enough to count on $(0, 2\\pi]$ and double. On $\\left(0, \\frac{\\pi}{2}\\right)$, $\\tan x$ climbs from $0$ past the falling $\\frac1x$, giving one crossing; on $\\left(\\frac{\\pi}{2}, \\frac{3\\pi}{2}\\right)$ it climbs from $-\\infty$ to $+\\infty$ while $\\frac1x$ stays small and positive, giving one more; on $\\left(\\frac{3\\pi}{2}, 2\\pi\\right]$ $\\tan x$ is negative while $\\frac1x$ is positive, so there are none. That is $2$ on the positive side and $2$ on the negative side, so $4$ in total."
+  },
+  {
+    "n": 11, "t": "exp", "sp": "Disguised quadratic in $2^{2x}$ · change of base", "d": 4, "sol": "lab",
+    "q": "The real roots of the equation $4^{2x} + 12 = 2^{2x+3}$ are $p$ and $q$, where $p > q$.<p>The value of $p - q$ can be expressed as</p>",
+    "o": ["$\\frac{3}{4}$", "$1$", "$4$", "$-\\frac{1}{2} + \\log_{10}\\frac{3}{2}$", "$\\frac{\\log_{10} 3}{\\log_{10} 4}$", "$\\frac{\\log_{10} 3}{\\log_{10} 2}$"],
+    "a": 4,
+    "e": "Everything is a power of $2$: $4^{2x} = 2^{4x} = \\left(2^{2x}\\right)^2$ and $2^{2x+3} = 8\\cdot 2^{2x}$. With $u = 2^{2x}$ the equation is $u^2 - 8u + 12 = 0$, so $u = 2$ or $u = 6$. Then $2^{2x} = 2$ gives $x = \\frac12$, and $2^{2x} = 6$ gives $x = \\frac12\\log_2 6$, which is the larger root. So $p - q = \\frac12\\left(\\log_2 6 - 1\\right) = \\frac12\\log_2 3 = \\frac{\\log_{10} 3}{2\\log_{10} 2} = \\frac{\\log_{10} 3}{\\log_{10} 4}$."
+  },
+  {
+    "n": 12, "t": "cal", "sp": "Optimisation · largest cylinder inscribed in a sphere", "d": 4, "sol": "lab",
+    "fig": "A circle of radius 5 cm with its centre marked, and a rectangle inscribed in it with all four vertices on the circle: the cross section of the sphere and cylinder through their common centre.",
+    "q": "A right circular cylinder is contained within a sphere of radius $5$ cm in such a way that the whole of the circumferences of both ends of the cylinder are in contact with the sphere.<p>The diagram shows a planar cross section through the centre of the sphere and cylinder: a circle of radius $5$ cm with an inscribed rectangle whose four corners lie on the circle.</p><p>Find, in cubic centimetres, the maximum possible volume of the cylinder.</p>",
+    "o": ["$250\\pi$", "$500\\pi$", "$1000\\pi$", "$\\frac{250\\sqrt{3}}{3}\\pi$", "$\\frac{500\\sqrt{3}}{9}\\pi$", "$\\frac{1000\\sqrt{3}}{9}\\pi$"],
+    "a": 4,
+    "e": "Let the cylinder have radius $r$ and half-height $h$, so its axis, the radius and a sphere radius form a right-angled triangle: $r^2 + h^2 = 25$. The volume is $V = \\pi r^2 (2h) = 2\\pi h(25 - h^2)$, a function of the single variable $h$. Then $\\frac{dV}{dh} = 2\\pi(25 - 3h^2) = 0$ gives $h = \\frac{5}{\\sqrt3}$, which is a maximum since $V$ vanishes at $h = 0$ and $h = 5$. Substituting back, $V = 2\\pi\\cdot\\frac{5}{\\sqrt3}\\cdot\\frac{50}{3} = \\frac{500\\pi}{3\\sqrt3} = \\frac{500\\sqrt3}{9}\\pi$."
+  },
+  {
+    "n": 13, "t": "cal", "sp": "Counting real roots · turning points and sign changes", "d": 4, "sol": "lab",
+    "q": "How many real roots does the equation $3x^5 - 10x^3 - 120x + 30 = 0$ have?",
+    "o": ["$1$", "$2$", "$3$", "$4$", "$5$"],
+    "a": 2,
+    "e": "A quintic has at most five roots, and the count is fixed by where the turning points sit relative to the axis. Here $f'(x) = 15x^4 - 30x^2 - 120 = 15(x^2 - 4)(x^2 + 2)$, so the only stationary points are $x = -2$ and $x = 2$. Evaluating, $f(-2) = 254 > 0$ is a local maximum and $f(2) = -194 < 0$ is a local minimum. Since $f \\to -\\infty$ as $x \\to -\\infty$ and $f \\to +\\infty$ as $x \\to +\\infty$, the graph crosses the axis once before $x = -2$, once between the turning points and once after $x = 2$: $3$ real roots."
+  },
+  {
+    "n": 14, "t": "seq", "sp": "Sum of two geometric series · symmetric functions of the ratios", "d": 5, "sol": "lab",
+    "q": "The terms of an infinite series S are formed by adding together the corresponding terms in two infinite geometric series, T and U.<p>The first term of T and the first term of U are each 4.</p><p>In order, the first three terms of the combined series S are $8$, $3$, and $\\frac{5}{4}$.</p><p>What is the sum to infinity of S?</p>",
+    "o": ["$\\frac{32}{5}$", "$\\frac{20}{3}$", "$\\frac{64}{5}$", "$\\frac{40}{3}$", "$16$", "$32$"],
+    "a": 3,
+    "e": "Let the ratios be $t$ and $u$. The second and third terms of S give $4t + 4u = 3$ and $4t^2 + 4u^2 = \\frac54$, so $t + u = \\frac34$ and $t^2 + u^2 = \\frac{5}{16}$. From $(t+u)^2 = t^2 + u^2 + 2tu$ we get $\\frac{9}{16} = \\frac{5}{16} + 2tu$, so $tu = \\frac18$. There is no need to find $t$ and $u$ separately: $$S_\\infty = \\frac{4}{1-t} + \\frac{4}{1-u} = \\frac{4\\left(2 - (t+u)\\right)}{1 - (t+u) + tu} = \\frac{4 \\cdot \\frac54}{\\frac38} = \\frac{40}{3}$$ (The ratios are in fact $\\frac12$ and $\\frac14$, so both series do converge.)"
+  },
+  {
+    "n": 15, "t": "cal", "sp": "Gradient as a quadratic in a parameter · completing the square", "d": 4, "sol": "lab",
+    "q": "The least possible value of the gradient of the curve $y = (2x + a)(x - 2a)^2$ at the point where $x = 1$, as $a$ varies, is",
+    "o": ["$-\\frac{49}{4}$", "$-8$", "$-\\frac{25}{4}$", "$\\frac{7}{4}$", "$\\frac{47}{16}$"],
+    "a": 2,
+    "e": "Differentiate with the product rule, treating $a$ as a constant: $\\frac{dy}{dx} = 2(x-2a)^2 + (2x+a)\\cdot 2(x-2a) = 2(x-2a)\\left[(x-2a) + (2x+a)\\right] = 2(x-2a)(3x-a)$. At $x = 1$ this is $2(1-2a)(3-a) = 4a^2 - 14a + 6$. That is now a quadratic in $a$, minimised at $a = \\frac74$, where its value is $4\\cdot\\frac{49}{16} - \\frac{49}{2} + 6 = -\\frac{49}{4} + 6 = -\\frac{25}{4}$."
+  },
+  {
+    "n": 16, "t": "exp", "sp": "Simultaneous logarithmic equations", "d": 3, "sol": "lab",
+    "q": "Given the simultaneous equations $$\\log_{10} 2 + \\log_{10}(y-1) = 2\\log_{10} x$$ $$\\log_{10}(y + 3 - 3x) = 0$$ the values of $y$ are",
+    "o": ["$\\frac{5}{2} \\pm \\frac{3\\sqrt{5}}{2}$", "$3 \\pm \\sqrt{3}$", "$7 \\pm 3\\sqrt{3}$", "$3,\\ 9$", "$1,\\ 13$"],
+    "a": 2,
+    "e": "Strip the logs. The first equation is $\\log_{10}\\left(2(y-1)\\right) = \\log_{10} x^2$, so $2(y-1) = x^2$. The second says the argument equals $10^0 = 1$, so $y + 3 - 3x = 1$, that is $y = 3x - 2$. Substituting, $2(3x - 3) = x^2$ gives $x^2 - 6x + 6 = 0$ and $x = 3 \\pm \\sqrt3$, both positive so both are legitimate. Then $y = 3x - 2 = 7 \\pm 3\\sqrt3$, and both make $y - 1 > 0$, so neither is rejected."
+  },
+  {
+    "n": 17, "t": "trig", "sp": "Sign of a product · double angle over an interval", "d": 4, "sol": "lab",
+    "q": "It is given that $$y = (1 + 2\\cos x)\\cos 2x$$ for $0 < x < \\pi$.<p>The complete set of values of $x$ for which $y$ is negative is</p>",
+    "o": ["$0 < x < \\frac{\\pi}{4}$, $\\frac{2\\pi}{3} < x < \\frac{3\\pi}{4}$", "$0 < x < \\frac{\\pi}{4}$, $\\frac{3\\pi}{4} < x < \\pi$", "$0 < x < \\frac{2\\pi}{3}$, $\\frac{3\\pi}{4} < x < \\pi$", "$\\frac{\\pi}{4} < x < \\frac{2\\pi}{3}$, $\\frac{3\\pi}{4} < x < \\pi$", "$\\frac{\\pi}{4} < x < \\frac{2\\pi}{3}$", "$\\frac{\\pi}{4} < x < \\frac{3\\pi}{4}$"],
+    "a": 3,
+    "e": "It is a product, so track the sign of each factor separately. $1 + 2\\cos x$ vanishes at $\\cos x = -\\frac12$, that is $x = \\frac{2\\pi}{3}$: it is positive to the left of that and negative to the right. For $\\cos 2x$, the angle $2x$ runs over $(0, 2\\pi)$, so $\\cos 2x$ is positive on $\\left(0, \\frac{\\pi}{4}\\right)$ and $\\left(\\frac{3\\pi}{4}, \\pi\\right)$ and negative on $\\left(\\frac{\\pi}{4}, \\frac{3\\pi}{4}\\right)$. The product is negative exactly where the signs differ: on $\\frac{\\pi}{4} < x < \\frac{2\\pi}{3}$ (positive times negative) and on $\\frac{3\\pi}{4} < x < \\pi$ (negative times positive)."
+  },
+  {
+    "n": 18, "t": "cal", "sp": "Differentiating a fractional power · where a function decreases", "d": 4, "sol": "lab",
+    "q": "The function $\\dfrac{1-x}{\\sqrt[3]{x^2}}$ is defined for all $x \\ne 0$.<p>The complete set of values of $x$ for which the function is decreasing is</p>",
+    "o": ["$x \\le -2$, $x > 0$", "$-2 \\le x < 0$", "$x \\le 1$, $x \\ne 0$", "$x \\ge 1$", "$-2 \\le x \\le 1$, $x \\ne 0$", "$x \\le -2$, $x \\ge 1$"],
+    "a": 0,
+    "e": "Split the fraction into powers before differentiating: $f(x) = x^{-2/3} - x^{1/3}$, so $f'(x) = -\\frac23 x^{-5/3} - \\frac13 x^{-2/3} = -\\frac{x+2}{3x^{5/3}}$. The sign of $x^{5/3}$ follows the sign of $x$, so consider three regions. For $x > 0$ both $x + 2$ and $x^{5/3}$ are positive, so $f' < 0$ and the function decreases. For $-2 < x < 0$ the numerator is positive but $x^{5/3}$ is negative, making $f' > 0$. For $x < -2$ both are negative, so $f' < 0$ again. The complete set is $x \\le -2$ together with $x > 0$."
+  },
+  {
+    "n": 19, "t": "seq", "sp": "Coefficients from a trinomial power and a binomial expansion", "d": 5, "sol": "lab",
+    "q": "The coefficient of $x^3$ in the expansion of $(1 + 2x + 3x^2)^6$ is equal to twice the coefficient of $x^4$ in the expansion of $(1 - ax^2)^5$.<p>Find all possible values of the constant $a$.</p>",
+    "o": ["$\\pm 2\\sqrt{2}$", "$\\pm\\sqrt{17}$", "$\\pm\\sqrt{34}$", "$\\pm 2\\sqrt{17}$", "There are no possible values of $a$."],
+    "a": 1,
+    "e": "For the trinomial, ask which choices of $2x$ and $3x^2$ from the six brackets give $x^3$. Taking three $2x$ terms: $\\binom{6}{3}(2x)^3 = 20 \\cdot 8x^3 = 160x^3$. Taking one $2x$ and one $3x^2$: there are $6 \\times 5 = 30$ ordered ways to pick the two distinct brackets, contributing $30 \\cdot 2 \\cdot 3 = 180$. So the coefficient of $x^3$ is $340$. For $(1 - ax^2)^5$, an $x^4$ term needs $(-ax^2)^2$, giving $\\binom{5}{2}a^2 = 10a^2$. Then $340 = 2 \\times 10a^2$, so $a^2 = 17$ and $a = \\pm\\sqrt{17}$."
+  },
+  {
+    "n": 20, "t": "geo", "sp": "Shortest path over a solid · unfolding the net", "d": 5, "sol": "lab",
+    "fig": "A square-based pyramid with base PQRS and apex O drawn in perspective, with the hidden edges from P shown dashed; all edges are 20 m.",
+    "q": "The diagram shows a square-based pyramid with base $PQRS$ and vertex $O$. All the edges of the pyramid are of length 20 metres.<p>Find the shortest distance, in metres, along the outer surface of the pyramid from $P$ to the midpoint of $OR$.</p>",
+    "o": ["$10\\sqrt{5 - 2\\sqrt{3}}$", "$10\\sqrt{3}$", "$10\\sqrt{5}$", "$10\\sqrt{7}$", "$10\\sqrt{5 + 2\\sqrt{3}}$"],
+    "a": 3,
+    "e": "A shortest surface path becomes a straight line once you unfold the faces it crosses into a plane. $P$ and $R$ are opposite corners of the square, so the route runs across two triangular faces, either $OPQ$ then $OQR$ or $OSP$ then $OSR$; the two are mirror images, so take the first. Every face is equilateral, so unfolding about $OQ$ places $P$ and $R$ at $20$ from $O$ with angle $POR = 60^\\circ + 60^\\circ = 120^\\circ$ in the flattened picture. With $M$ the midpoint of $OR$, $OM = 10$, and the cosine rule gives $PM^2 = 20^2 + 10^2 - 2(20)(10)\\cos 120^\\circ = 500 + 200 = 700$, so $PM = 10\\sqrt7$. Any route using the base is longer, since crossing the base alone already costs $20\\sqrt2$."
+  }
+]

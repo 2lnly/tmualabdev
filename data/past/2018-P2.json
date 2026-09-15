@@ -1,0 +1,143 @@
+[
+  {
+    "n": 1, "t": "cal", "sp": "Differentiating after splitting a quotient into powers", "d": 2, "sol": "lab",
+    "q": "The function f is given, for $x > 0$, by $$\\mathrm{f}(x) = \\frac{x^3 - 4x}{2\\sqrt{x}}$$ Find the value of $\\mathrm{f}'(4)$.",
+    "o": ["$3$", "$9$", "$9.5$", "$12$", "$39.5$", "$88$"],
+    "a": 2,
+    "e": "Do not reach for the quotient rule. Split the fraction first and write everything as a power of $x$: $\\mathrm{f}(x) = \\frac{1}{2}x^{3}x^{-1/2} - 2x\\,x^{-1/2} = \\frac{1}{2}x^{5/2} - 2x^{1/2}$. Differentiating, $\\mathrm{f}'(x) = \\frac{5}{4}x^{3/2} - x^{-1/2}$. At $x = 4$ this is $\\frac{5}{4}\\times 8 - \\frac{1}{2} = 10 - 0.5 = 9.5$."
+  },
+  {
+    "n": 2, "t": "seq", "sp": "Binomial expansion · picking out the constant term", "d": 3, "sol": "lab",
+    "q": "Find the value of the constant term in the expansion of $$\\left(x^6 - \\frac{1}{x^2}\\right)^{12}$$",
+    "o": ["$-495$", "$-220$", "$-66$", "$66$", "$220$", "$495$"],
+    "a": 1,
+    "e": "The general term is $\\binom{12}{k}\\left(x^6\\right)^{12-k}\\left(-x^{-2}\\right)^{k} = \\binom{12}{k}(-1)^k x^{72 - 6k - 2k}$. The power of $x$ is $72 - 8k$, which is zero when $k = 9$. That term is $\\binom{12}{9}(-1)^9 = -220$. The sign matters: the negative in the bracket is raised to an odd power, so the answer is negative."
+  },
+  {
+    "n": 3, "t": "prf", "sp": "Counterexamples · average speed is not the mean of two speeds", "d": 3, "sol": "lab",
+    "q": "Consider the following statement:<p>A car journey consists of two parts. In the first part, the average speed is $u$ km/h. In the second part, the average speed is $v$ km/h. Hence the average speed for the whole journey is $\\frac{1}{2}(u+v)$ km/h.</p><p>Which of the following examples of car journeys provide(s) a <b>counterexample</b> to the statement?</p><p>I&nbsp;&nbsp;&nbsp; In the first part of the journey, the car travels at a constant speed of 50 km/h for 100 km. In the second part of the journey, the car travels at a constant speed of 40 km/h for 100 km.<br>II&nbsp;&nbsp; In the first part of the journey, the car travels at a constant speed of 50 km/h for one hour. In the second part of the journey, the car travels at a constant speed of 40 km/h for one hour.<br>III&nbsp; In the first part of the journey, the car travels at a constant speed of 50 km/h for 80 km. In the second part of the journey, the car travels at a constant speed of 40 km/h for 100 km.</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 5,
+    "e": "Average speed is total distance over total time, so the claim only holds when the two parts take equal times. In II the times are equal by construction, so the average really is $45$ km/h and it is not a counterexample. In I the distances are equal instead: the times are $2$ h and $2.5$ h, giving $200 \\div 4.5 \\approx 44.4$ km/h, which is not $45$. In III the times are $1.6$ h and $2.5$ h, giving $180 \\div 4.1 \\approx 43.9$ km/h, again not $45$. So I and III only."
+  },
+  {
+    "n": 4, "t": "trig", "sp": "Counting solutions of a trigonometric equation", "d": 4, "sol": "lab",
+    "q": "The non-zero real number $c$ is such that the equation $\\cos x = c$ has two solutions for $0 < x < \\frac{3}{2}\\pi$.<p>How many solutions of the equation $\\cos^2 2x = c^2$ are there in the range $0 < x < \\frac{3}{2}\\pi$?</p>",
+    "o": ["$2$", "$3$", "$4$", "$6$", "$7$", "$8$"],
+    "a": 3,
+    "e": "First pin down $c$. On $0 < x < \\frac{3}{2}\\pi$ the cosine falls from $1$ to $-1$ over $(0,\\pi)$ and rises from $-1$ back to $0$ over $(\\pi, \\frac{3}{2}\\pi)$, so $\\cos x = c$ has two solutions exactly when $-1 < c < 0$. Now $\\cos^2 2x = c^2$ means $\\cos 2x = |c|$ or $\\cos 2x = -|c|$, with $0 < |c| < 1$. Putting $t = 2x$ turns the range into $0 < t < 3\\pi$, which covers one full period plus a half. Each of the two values gives $2$ solutions in $(0,2\\pi)$ and $1$ more in $(2\\pi, 3\\pi)$, so $3$ each, and the two sets are disjoint because $|c| \\ne -|c|$. That is $6$ solutions."
+  },
+  {
+    "n": 5, "t": "geo", "sp": "Quadrilaterals with perpendicular diagonals", "d": 3, "sol": "lab",
+    "q": "The two diagonals of the quadrilateral $Q$ are perpendicular.<p>Consider the following statements:</p><p>I&nbsp;&nbsp; One of the diagonals of $Q$ is a line of symmetry of $Q$.<br>II&nbsp; The midpoints of the sides of $Q$ are the vertices of a square.</p><p>Which of these statements is/are <b>necessarily</b> true for the quadrilateral $Q$?</p>",
+    "o": ["neither of them", "I only", "II only", "I and II"],
+    "a": 0,
+    "e": "Build a quadrilateral with perpendicular diagonals that is as lopsided as possible: take the vertices $(0,3)$, $(-1,0)$, $(0,-2)$, $(4,0)$, so one diagonal is vertical and the other horizontal. Neither diagonal is a line of symmetry, because neither cuts the other in half, so I fails. For II, the midpoints of the sides always form a parallelogram whose sides are parallel to the diagonals and half their lengths, so perpendicular diagonals make it a rectangle — but it is a square only when the diagonals are also equal in length, which they are not here. Neither statement is forced."
+  },
+  {
+    "n": 6, "t": "prf", "sp": "Counterexample to a claim about increasing functions", "d": 2, "sol": "lab",
+    "q": "Which one of the following functions provides a <b>counterexample</b> to the statement:<p><b>if</b> $\\mathrm{f}'(x) > 0$ for all real $x$, <b>then</b> $\\mathrm{f}(x) > 0$ for all real $x$.</p>",
+    "o": ["$\\mathrm{f}(x) = x^2 + 1$", "$\\mathrm{f}(x) = x^2 - 1$", "$\\mathrm{f}(x) = x^3 + x + 1$", "$\\mathrm{f}(x) = 1 - x$", "$\\mathrm{f}(x) = 2^x$"],
+    "a": 2,
+    "e": "A counterexample has to satisfy the hypothesis and fail the conclusion, so it must have $\\mathrm{f}'(x) > 0$ everywhere while dipping to zero or below somewhere. The two quadratics have $\\mathrm{f}'(x) = 2x$, which is negative for $x < 0$, and $1 - x$ has $\\mathrm{f}'(x) = -1$, so none of them meets the hypothesis at all. For $\\mathrm{f}(x) = x^3 + x + 1$, $\\mathrm{f}'(x) = 3x^2 + 1 > 0$ for every $x$, yet $\\mathrm{f}(-1) = -1$. The exponential does satisfy the hypothesis but is always positive, so it confirms rather than refutes the claim."
+  },
+  {
+    "n": 7, "t": "num", "sp": "Overlap of two arithmetic progressions · remainders", "d": 3, "sol": "lab",
+    "q": "Sequence 1 is an arithmetic progression with first term 11 and common difference 3.<p>Sequence 2 is an arithmetic progression with first term 2 and common difference 5.</p><p>Some numbers that appear in Sequence 1 also appear in Sequence 2. Let $N$ be the 20th such number.</p><p>What is the remainder when $N$ is divided by 7?</p>",
+    "o": ["$0$", "$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
+    "a": 1,
+    "e": "Sequence 1 consists of the numbers that are $2$ more than a multiple of $3$ and at least $11$; Sequence 2 consists of the numbers that are $2$ more than a multiple of $5$ and at least $2$. A number in both is $2$ more than a multiple of $15$, so the shared numbers are $17, 32, 47, \\ldots$ — note that $2$ itself is too small for Sequence 1. The $k$th is $15k + 2$, so $N = 15\\times 20 + 2 = 302$. Since $302 = 7\\times 43 + 1$, the remainder is $1$."
+  },
+  {
+    "n": 8, "t": "prf", "sp": "Reasoning about codes for mountain profiles", "d": 4, "sol": "lab",
+    "fig": "A zig-zag path of six upstrokes and six downstrokes rising from and returning to a dashed horizontal 'sea level' line, never dipping below it; a key shows an upstroke as a line rising left to right and a downstroke as one falling left to right.",
+    "q": "The diagram shows an example of a <em>mountain profile</em>: a zig-zag path made of strokes above a dashed horizontal line.<p>This consists of <em>upstrokes</em> which go upwards from left to right, and <em>downstrokes</em> which go downwards from left to right. The example shown has six upstrokes and six downstrokes. The horizontal line at the bottom is known as <em>sea level</em>.</p><p>A <em>mountain profile of order</em> $n$ consists of $n$ upstrokes and $n$ downstrokes, with the condition that the profile begins and ends at sea level and <b>never</b> goes <b>below</b> sea level (although it might reach sea level at any point). So the example shown is a mountain profile of order 6.</p><p>Mountain profiles can be coded by using U to indicate an upstroke and D to indicate a downstroke. The example shown has the code UDUUUDUDDUDD. A sequence of U's and D's obtained from a mountain profile in this way is known as a <em>valid code</em>.</p><p>Which of the following statements is/are true?</p><p>I&nbsp;&nbsp;&nbsp; If a valid code is written in reverse order, the result is always a valid code.<br>II&nbsp;&nbsp; If each U in a valid code is replaced by D and each D by U, the result is always a valid code.<br>III&nbsp; If U is added at the beginning of a valid code and D is added at the end of the code, the result is always a valid code.</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only"],
+    "a": 3,
+    "e": "The single code UUDD settles the first two. Reversed it reads DDUU, which starts by going below sea level, so I fails; swapping every letter turns it into the same DDUU, so II fails as well. (Reversing <em>and</em> swapping would work — that is the mirror image — but neither operation alone does.) For III, the opening U lifts the whole path one unit; the inner code never falls below its own starting level, so the new path never falls below sea level, and the closing D brings it back down to sea level with $n+1$ of each stroke. Only III."
+  },
+  {
+    "n": 9, "t": "prf", "sp": "Finding the error · dividing by something that can be zero", "d": 4, "sol": "lab",
+    "q": "Consider the following attempt to solve the equation $4x\\sqrt{2x-1} = 10x - 5$:<p>$4x\\sqrt{2x-1} = 10x - 5$<br>(I)&nbsp;&nbsp;&nbsp; $4x\\sqrt{2x-1} = 5(2x-1)$<br>(II)&nbsp;&nbsp; $16x^2(2x-1) = 25(2x-1)^2$<br>(III)&nbsp; $16x^2 = 25(2x-1)$<br>(IV)&nbsp;&nbsp; $16x^2 - 50x + 25 = 0$<br>(V)&nbsp;&nbsp;&nbsp; $(8x-5)(2x-5) = 0$<br>(VI)&nbsp;&nbsp; The solutions of the original equation are $x = \\frac{5}{8}$ and $x = \\frac{5}{2}$.</p><p>Which one of the following is true?</p>",
+    "o": ["The solution is correct.", "Only one of $x = \\frac{5}{8}$ and $x = \\frac{5}{2}$ is correct and the error arises as a result of step (II).", "Only one of $x = \\frac{5}{8}$ and $x = \\frac{5}{2}$ is correct and the error arises as a result of step (III).", "Only one of $x = \\frac{5}{8}$ and $x = \\frac{5}{2}$ is correct and the error arises as a result of step (IV).", "There is another value of $x$ that satisfies the original equation and the error arises as a result of step (II).", "There is another value of $x$ that satisfies the original equation and the error arises as a result of step (III).", "There is another value of $x$ that satisfies the original equation and the error arises as a result of step (IV)."],
+    "a": 5,
+    "e": "Check the two answers first: at $x = \\frac{5}{8}$ both sides equal $\\frac{5}{4}$, and at $x = \\frac{5}{2}$ both sides equal $20$, so neither is spurious. Squaring at step (II) is therefore harmless here. The damage is at step (III), which cancels a factor of $2x - 1$ from both sides — legitimate only if $2x - 1 \\ne 0$. At $x = \\frac{1}{2}$ both sides of the original equation are zero, so a third solution has been thrown away."
+  },
+  {
+    "n": 10, "t": "log", "sp": "Necessary and sufficient conditions for reflection symmetry", "d": 3, "sol": "lab",
+    "q": "The function $\\mathrm{f}(x)$ is defined for all real numbers.<p>Consider the following three conditions, where $a$ is a real constant:</p><p>I&nbsp;&nbsp;&nbsp; $\\mathrm{f}(a-x) = \\mathrm{f}(a+x)$ for all real $x$.<br>II&nbsp;&nbsp; $\\mathrm{f}(2a-x) = \\mathrm{f}(x)$ for all real $x$.<br>III&nbsp; $\\mathrm{f}(a-x) = \\mathrm{f}(x)$ for all real $x$.</p><p>Which of these conditions is/are <b>necessary and sufficient</b> for the graph of $y = \\mathrm{f}(x)$ to have reflection symmetry in the line $x = a$?</p><p>Each option below gives an answer of yes or no for each of the three conditions, in the order I, II, III.</p>",
+    "o": ["I yes, II yes, III yes", "I yes, II yes, III no", "I yes, II no, III yes", "I yes, II no, III no", "I no, II yes, III yes", "I no, II yes, III no", "I no, II no, III yes", "I no, II no, III no"],
+    "a": 1,
+    "e": "Reflection in $x = a$ sends the point at $a + x$ to the point at $a - x$, so the symmetry says exactly $\\mathrm{f}(a+x) = \\mathrm{f}(a-x)$: condition I is a restatement of it, hence both necessary and sufficient. Condition II is the same thing in different letters — replace $x$ by $a + t$ and it becomes $\\mathrm{f}(a - t) = \\mathrm{f}(a+t)$ — so it works too. Condition III pairs $x$ with $a - x$, whose midpoint is $\\frac{a}{2}$, so it describes symmetry in $x = \\frac{a}{2}$ instead; take $a = 2$ and $\\mathrm{f}(x) = x^2$ to see the two come apart."
+  },
+  {
+    "n": 11, "t": "log", "sp": "Exponential meets a line · if, only if, if and only if", "d": 4, "sol": "lab",
+    "q": "Consider the equation $2^x = mx + c$, where $m$ and $c$ are real constants.<p>Which of the following statements is/are true?</p><p>I&nbsp;&nbsp;&nbsp; The equation has a negative real solution <b>only if</b> $c > 1$.<br>II&nbsp;&nbsp; The equation has two distinct real solutions <b>if</b> $c > 1$.<br>III&nbsp; The equation has two distinct positive real solutions <b>if and only if</b> $c \\le 1$.</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 0,
+    "e": "All three can be knocked down by taking $m = 0$, which makes the right-hand side a horizontal line. With $m = 0$ and $c = \\frac{1}{2}$ the equation $2^x = \\frac{1}{2}$ has the negative solution $x = -1$ even though $c \\le 1$, so I fails. With $m = 0$ and $c = 2$ the equation $2^x = 2$ has the single solution $x = 1$, so $c > 1$ does not force two solutions and II fails. With $m = 0$ and $c = 0$ the equation $2^x = 0$ has no solutions at all, yet $c \\le 1$, so the \"if\" half of III fails. None of them."
+  },
+  {
+    "n": 12, "t": "log", "sp": "Negating a statement with nested quantifiers", "d": 4, "sol": "lab",
+    "q": "Consider the following statement:<p>For any positive integer $N$ there is a positive integer $K$ such that $N(Km+1) - 1$ is not prime for any positive integer $m$.</p><p>Which one of the following is the negation of this statement?</p>",
+    "o": ["For any positive integer $N$ there is a positive integer $K$ such that there is a positive integer $m$ for which $N(Km+1)-1$ is prime.", "For any positive integer $N$ there is a positive integer $K$ such that there is a positive integer $m$ for which $N(Km+1)-1$ is not prime.", "For any positive integer $N$ there is a positive integer $K$ such that for any positive integer $m$, $N(Km+1)-1$ is not prime.", "For any positive integer $N$, any positive integer $K$ and any positive integer $m$, $N(Km+1)-1$ is not prime.", "There is a positive integer $N$ such that for any positive integer $K$ there is a positive integer $m$ for which $N(Km+1)-1$ is not prime.", "There is a positive integer $N$ such that for any positive integer $K$ there is a positive integer $m$ for which $N(Km+1)-1$ is prime.", "There is a positive integer $N$ such that for any positive integer $K$ and any positive integer $m$, $N(Km+1)-1$ is prime.", "There is a positive integer $N$ and a positive integer $K$ for which there is no positive integer $m$ for which $N(Km+1)-1$ is prime."],
+    "a": 5,
+    "e": "Strip the statement to its quantifiers: $\\forall N\\ \\exists K\\ \\forall m$, $N(Km+1)-1$ is not prime. Negating flips each quantifier in turn and finally the property, giving $\\exists N\\ \\forall K\\ \\exists m$, $N(Km+1)-1$ <em>is</em> prime. Read back into words that is \"there is an $N$ such that for any $K$ there is an $m$ for which $N(Km+1)-1$ is prime\". The tempting near-misses keep \"not prime\" or flip only some of the quantifiers."
+  },
+  {
+    "n": 13, "t": "prf", "sp": "Finding the error · taking a square root loses a sign", "d": 4, "sol": "lab",
+    "q": "The following is an attempted proof of the conjecture:<p><b>if</b> $\\tan\\theta > 0$, <b>then</b> $\\sin\\theta + \\cos\\theta > 1$.</p><p>Suppose $\\tan\\theta > 0$, so in particular $\\cos\\theta \\ne 0$.</p><p>(I)&nbsp;&nbsp;&nbsp; Since $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$, then $\\sin\\theta\\cos\\theta = \\tan\\theta\\cos^2\\theta > 0$.<br>(II)&nbsp;&nbsp; It follows that $1 + 2\\sin\\theta\\cos\\theta > 1$.<br>(III)&nbsp; Therefore $\\sin^2\\theta + 2\\sin\\theta\\cos\\theta + \\cos^2\\theta > 1$.<br>(IV)&nbsp;&nbsp; which factorises to give $(\\sin\\theta + \\cos\\theta)^2 > 1$.<br>(V)&nbsp;&nbsp;&nbsp; Therefore $\\sin\\theta + \\cos\\theta > 1$.</p><p>Which one of the following is the case?</p>",
+    "o": ["The proof is correct.", "The proof is incorrect, and the first error occurs in line (I).", "The proof is incorrect, and the first error occurs in line (II).", "The proof is incorrect, and the first error occurs in line (III).", "The proof is incorrect, and the first error occurs in line (IV).", "The proof is incorrect, and the first error occurs in line (V)."],
+    "a": 5,
+    "e": "Lines (I) to (IV) are all sound: $\\cos^2\\theta > 0$ so the product $\\sin\\theta\\cos\\theta$ is positive, doubling and adding $1$ is legitimate, and $\\sin^2\\theta + \\cos^2\\theta = 1$ turns that into the perfect square. Line (V) is where it breaks: $u^2 > 1$ gives $u > 1$ <em>or</em> $u < -1$, not $u > 1$ alone. The negative branch really occurs — in the third quadrant $\\tan\\theta > 0$ while $\\sin\\theta$ and $\\cos\\theta$ are both negative, so at $\\theta = \\frac{5\\pi}{4}$ the sum is $-\\sqrt{2}$, and the conjecture itself is false."
+  },
+  {
+    "n": 14, "t": "trig", "sp": "The ambiguous case · when SSA fixes the third side", "d": 5, "sol": "lab",
+    "q": "In the triangle $PQR$, $PR = 2$, $QR = p$ and $\\angle RPQ = 30^\\circ$.<p>What is the set of <b>all</b> the values of $p$ for which this information uniquely determines the length of $PQ$?</p>",
+    "o": ["$p = 1$", "$p = \\sqrt{3}$", "$1 \\le p < 2$", "$\\sqrt{3} \\le p < 2$", "$p = 1$ or $p \\ge 2$", "$p = \\sqrt{3}$ or $p \\ge 2$", "$p < 2$", "$p \\ge 2$"],
+    "a": 4,
+    "e": "This is the ambiguous SSA configuration, so work with the cosine rule and count roots. Writing $c = PQ$, the rule at $P$ gives $p^2 = c^2 + 4 - 4c\\cos 30^\\circ$, that is $c^2 - 2\\sqrt{3}\\,c + (4 - p^2) = 0$, so $c = \\sqrt{3} \\pm \\sqrt{p^2 - 1}$. For a triangle we need a real, strictly positive $c$. If $p < 1$ there is none; if $p = 1$ the two roots coincide at $c = \\sqrt{3}$, giving exactly one triangle. For $1 < p < 2$ both roots are positive, so two triangles fit and $PQ$ is not determined. At $p = 2$ the smaller root is $0$ and for $p > 2$ it is negative, leaving one valid triangle. So the answer is $p = 1$ or $p \\ge 2$."
+  },
+  {
+    "n": 15, "t": "gra", "sp": "Cubic graphs · shifting a curve and counting roots", "d": 5, "sol": "lab",
+    "q": "It is given that $\\mathrm{f}(x) = x^3 + 3qx^2 + 2$, where $q$ is a real constant.<p>The equation $\\mathrm{f}(x) = 0$ has 3 distinct real roots.</p><p>Which of the following statements is/are <b>necessarily</b> true?</p><p>I&nbsp;&nbsp;&nbsp; The equation $\\mathrm{f}(x) + 1 = 0$ has 3 distinct real roots.<br>II&nbsp;&nbsp; The equation $\\mathrm{f}(x+1) = 0$ has 3 distinct real roots.<br>III&nbsp; The equation $\\mathrm{f}(-x) - 1 = 0$ has 3 distinct real roots.</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 6,
+    "e": "Statement II is free: replacing $x$ by $x+1$ slides the graph sideways, which moves the roots but never changes how many there are. For the other two, locate the turning points. $\\mathrm{f}'(x) = 3x(x + 2q)$, so the stationary values are $\\mathrm{f}(0) = 2$ and $\\mathrm{f}(-2q) = 4q^3 + 2$. Three distinct roots requires these to straddle zero, so $4q^3 + 2 < 0$, and then the local maximum is $2$ and the local minimum is negative. Statement III asks for $\\mathrm{f} = 1$ three times, and $1$ always lies strictly between a negative minimum and the maximum $2$, so III holds. Statement I asks for $\\mathrm{f} = -1$ three times, which needs $4q^3 + 2 < -1$; taking $q = -0.85$ satisfies the original condition but gives a minimum of about $-0.46$, so I can fail."
+  },
+  {
+    "n": 16, "t": "seq", "sp": "Medians of an arithmetic progression · parity of the common difference", "d": 4, "sol": "lab",
+    "q": "In this question, $x_1$, $x_2$, $x_3$, $\\ldots$ is an <b>arithmetic progression</b>, all of whose terms are integers.<p>Let $n$ be a positive integer. If the median of the first $n$ terms of the sequence is an integer, which of the following three statements <b>must</b> be true?</p><p>I&nbsp;&nbsp;&nbsp; The median of the first $n+2$ terms is an integer.<br>II&nbsp;&nbsp; The median of the first $2n$ terms is an integer.<br>III&nbsp; The median of $x_2$, $x_4$, $x_6$, $\\ldots$, $x_{2n}$ is an integer.</p>",
+    "o": ["none of them", "I only", "II only", "III only", "I and II only", "I and III only", "II and III only", "I, II and III"],
+    "a": 5,
+    "e": "For an arithmetic progression with first term $a$ and common difference $d$, the median of the first $n$ terms is $a + \\frac{(n-1)d}{2}$ whether $n$ is odd or even. So when $n$ is odd it is automatically an integer, and when $n$ is even the hypothesis is telling us that $d$ is even. Statement I is safe because $n+2$ has the same parity as $n$: either the median is automatic, or $d$ is already known to be even. Statement III is also safe — those terms form an arithmetic progression with $n$ terms, first term $a+d$ and common difference $2d$, whose median is $a + nd$. Statement II fails: take $a = 0$, $d = 1$, $n = 1$, where the median of the first term is $0$ but the median of the first two is $\\frac{1}{2}$."
+  },
+  {
+    "n": 17, "t": "num", "sp": "Sums of two squares · using a stated theorem", "d": 4, "sol": "lab",
+    "q": "A positive integer is called a <em>squaresum</em> <b>if and only if</b> it can be written as the sum of the squares of two integers. For example, 61 and 9 are both squaresums since $61 = 5^2 + 6^2$ and $9 = 3^2 + 0^2$.<p>A prime number is called <em>awkward</em> <b>if and only if</b> it has a remainder of 3 when divided by 4. For example, 23 is awkward since $23 = 5\\times 4 + 3$.</p><p>A (true) theorem due to Fermat states that:</p><p>A positive integer is a squaresum <b>if and only if</b> each of its awkward prime factors occurs to an even power in its prime factorisation.</p><p>It follows that $5\\times 23^2$ is a squaresum, since 23 occurs to the power 2, but $5\\times 23^3$ is not, since 23 occurs to the power 3.</p><p>Which one of the following statements is <b>not</b> true?</p>",
+    "o": ["Every square number is a squaresum.", "If $N$ and $M$ are squaresums, then so is $NM$.", "If $NM$ is a squaresum, then $N$ and $M$ are squaresums.", "If $N$ is not a squaresum, then $kN$ is a squaresum for some number $k$ which is a product of awkward primes."],
+    "a": 2,
+    "e": "Read every option through the theorem, as a statement about the parity of the exponents of the awkward primes. A square number has every exponent even, so the first is true. Multiplying adds exponents, so even plus even stays even and the second is true. For the last, take the awkward primes appearing to an odd power in $N$ and let $k$ be their product: each of those exponents goes up by one and becomes even, so $kN$ is a squaresum. The third fails: $3\\times 3 = 9$ is a squaresum, but $3$ on its own is not."
+  },
+  {
+    "n": 18, "t": "cal", "sp": "Convexity · what the second derivative controls", "d": 4, "sol": "lab",
+    "q": "$\\mathrm{f}(x)$ is a polynomial function defined for all real $x$.<p>Which of the following is a <b>necessary</b> condition for the inequality $$\\frac{\\mathrm{f}(a) + \\mathrm{f}(b)}{2} \\ge \\mathrm{f}\\left(\\frac{a+b}{2}\\right)$$ to be true for all real numbers $a$ and $b$ with $a < b$?</p>",
+    "o": ["$\\mathrm{f}(x) \\ge 0$ for all real $x$", "$\\mathrm{f}'(x) \\ge 0$ for all real $x$", "$\\mathrm{f}''(x) \\ge 0$ for all real $x$", "$\\mathrm{f}(x) \\le 0$ for all real $x$", "$\\mathrm{f}'(x) \\le 0$ for all real $x$", "$\\mathrm{f}''(x) \\le 0$ for all real $x$"],
+    "a": 2,
+    "e": "The inequality says the midpoint of the chord from $(a,\\mathrm{f}(a))$ to $(b,\\mathrm{f}(b))$ sits on or above the curve, for every chord — that is exactly what it means for the graph to be convex. For a polynomial, convexity is controlled by the second derivative: $\\mathrm{f}''(x) \\ge 0$ everywhere. The conditions on $\\mathrm{f}$ itself and on $\\mathrm{f}'$ are neither needed nor enough, as $\\mathrm{f}(x) = x^2 - 5$ shows: it fails all four of them yet satisfies the inequality."
+  },
+  {
+    "n": 19, "t": "ineq", "sp": "Inequalities with exponentials of ordered variables", "d": 5, "sol": "lab",
+    "q": "Three <b>real</b> numbers $x$, $y$ and $z$ satisfy $x > y > z > 1$.<p>Which one of the following statements <b>must</b> be true?</p>",
+    "o": ["$\\frac{2^{z+1}}{2^x} > \\frac{2^x + 2^z}{2^y}$", "$2 > \\frac{3^x + 3^z}{3^y}$", "$\\frac{2\\times 5^x}{5^z} > \\frac{5^x + 5^z}{5^y}$", "$2 < \\frac{7^x + 7^z}{7^y}$"],
+    "a": 2,
+    "e": "Divide everything through so each side is a power of the base, and write $u = x - y > 0$ and $v = y - z > 0$. The right-hand side of every option is $b^{u} + b^{-v}$, which can be made close to $1$ (take $u$ tiny and $v$ huge) or arbitrarily large (take $u$ huge). That kills the three options that compare it with a fixed number $2$ or with something bounded above by $2$: A has left side $2\\cdot 2^{z-x} < 2$, which fails when $u$ is large; B fails when $u$ is large; D fails when $u$ is tiny and $v$ is large. Option C reads $2\\cdot 5^{u+v} > 5^{u} + 5^{-v}$, and it always holds because $5^{u+v} > 5^{u}$ and $5^{u+v} > 1 > 5^{-v}$, so adding the two gives the result."
+  },
+  {
+    "n": 20, "t": "alg", "sp": "Surd equation · when a solution exists", "d": 4, "sol": "lab",
+    "q": "It is given that the equation $\\sqrt{x+p} + \\sqrt{x} = p$ has at least one real solution for $x$, where $p$ is a real constant.<p>What is the complete set of possible values for $p$?</p>",
+    "o": ["$p = 0$ or $p = 1$", "$p = 0$ or $p \\ge 1$", "$p \\ge -x$", "$p \\ge \\sqrt{x}$", "$p \\ge 0$", "$p \\ge 1$"],
+    "a": 1,
+    "e": "The answer must be a condition on $p$ alone, which rules out the two options that still mention $x$. Both square roots are non-negative, so $p \\ge 0$ at once, and $p = 0$ forces $\\sqrt{x} = 0$, so $x = 0$ works. For $p > 0$, isolate one root: $\\sqrt{x+p} = p - \\sqrt{x}$, and squaring gives $x + p = p^2 - 2p\\sqrt{x} + x$. Dividing by $p$ leaves $1 = p - 2\\sqrt{x}$, so $\\sqrt{x} = \\frac{p-1}{2}$, which needs $p \\ge 1$; and that value automatically satisfies $\\sqrt{x} \\le p$, so the squaring introduced nothing false. Hence $p = 0$ or $p \\ge 1$."
+  }
+]

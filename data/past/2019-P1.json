@@ -1,0 +1,142 @@
+[
+  {
+    "n": 1, "t": "alg", "sp": "Quadratics · completed square from a turning point", "d": 2, "sol": "lab",
+    "q": "$f(x)$ is a quadratic function in $x$.<p>The graph of $y = f(x)$ passes through the point $(1, -1)$ and has a turning point at $(-1, 3)$.</p><p>Find an expression for $f(x)$.</p>",
+    "o": ["$-x^2 - 2x + 2$", "$-x^2 + 2x + 3$", "$x^2 - 2x$", "$x^2 + 2x - 4$", "$2x^2 + 4x + 1$", "$-2x^2 - 4x + 5$"],
+    "a": 0,
+    "e": "A turning point at $(-1, 3)$ fixes the completed-square form straight away: $f(x) = a(x+1)^2 + 3$. Now use the other point: $f(1) = 4a + 3 = -1$, so $a = -1$. Expanding, $f(x) = -(x+1)^2 + 3 = -x^2 - 2x + 2$. Checking against the options is quicker than expanding all six: only one has a turning point at $x = -1$ with value $3$."
+  },
+  {
+    "n": 2, "t": "alg", "sp": "Discriminant · quadratic positive for all $x$", "d": 3, "sol": "lab",
+    "q": "Find the complete set of values of the real constant $k$ for which the expression $$x^2 + kx + 2x + 1 - 2k$$ is positive for all real values of $x$.",
+    "o": ["$-12 < k < 0$", "$k < -12$ or $k > 0$", "$-\\sqrt{6} - 3 < k < \\sqrt{6} - 3$", "$k < -\\sqrt{6} - 3$ or $k > \\sqrt{6} - 3$", "$-2 < k < \\frac12$", "$k < -2$ or $k > \\frac12$", "$0 < k < 4$", "$k < 0$ or $k > 4$"],
+    "a": 0,
+    "e": "Collect the $x$ terms first: the expression is $x^2 + (k+2)x + (1 - 2k)$. The coefficient of $x^2$ is positive, so the quadratic is positive everywhere exactly when it has no real root, that is when the discriminant is negative. That gives $(k+2)^2 - 4(1 - 2k) < 0$, so $k^2 + 4k + 4 - 4 + 8k < 0$, i.e. $k^2 + 12k < 0$. Factorising, $k(k + 12) < 0$, so $-12 < k < 0$."
+  },
+  {
+    "n": 3, "t": "seq", "sp": "Binomial coefficients · summing a column of Pascal's triangle", "d": 3, "sol": "lab",
+    "q": "Find the coefficient of $x$ in the expression $$(1+x)^0 + (1+x)^1 + (1+x)^2 + (1+x)^3 + \\cdots + (1+x)^{79} + (1+x)^{80}$$",
+    "o": ["$80$", "$81$", "$324$", "$628$", "$3240$", "$3321$", "$6480$", "$6642$"],
+    "a": 4,
+    "e": "There is no need to expand anything: the coefficient of $x$ in $(1+x)^n$ is $\\binom{n}{1} = n$. So the total coefficient of $x$ is $0 + 1 + 2 + \\cdots + 80 = \\frac{80 \\times 81}{2} = 3240$. The tempting slip is to count $81$ brackets and reach for $\\frac{81 \\times 82}{2}$; the first bracket contributes nothing, so the sum stops at $80$."
+  },
+  {
+    "n": 4, "t": "seq", "sp": "Recurrence with square roots · repeated halving of an index", "d": 4, "sol": "lab",
+    "q": "The sequence $x_n$ is given by $$x_1 = 10$$ $$x_{n+1} = \\sqrt{x_n} \\quad \\text{for } n \\ge 1$$ What is the value of $x_{100}$?<p>[Note that $a^{b^c}$ means $a^{\\left(b^c\\right)}$.]</p>",
+    "o": ["$10^{2^{99}}$", "$10^{2^{100}}$", "$10^{2^{-99}}$", "$10^{2^{-100}}$", "$10^{-2^{99}}$", "$10^{-2^{100}}$", "$10^{-2^{-99}}$", "$10^{-2^{-100}}$"],
+    "a": 2,
+    "e": "Write every term as a power of $10$. Taking a square root halves the exponent, so $x_1 = 10^1$, $x_2 = 10^{1/2}$, $x_3 = 10^{1/4}$, and in general $x_n = 10^{(1/2)^{n-1}}$. Hence $x_{100} = 10^{(1/2)^{99}} = 10^{2^{-99}}$. Note the terms are all bigger than $1$ and shrinking towards $10^0 = 1$, which rules out every negative-base option immediately."
+  },
+  {
+    "n": 5, "t": "seq", "sp": "Geometric series · finding the ratio from two sums", "d": 4, "sol": "lab",
+    "q": "$S$ is a geometric sequence.<p>The sum of the first $6$ terms of $S$ is equal to $9$ times the sum of the first $3$ terms of $S$.</p><p>The $7$th term of $S$ is $360$.</p><p>Find the $1$st term of $S$.</p>",
+    "o": ["$\\frac{40}{27}$", "$\\frac{40}{9}$", "$\\frac{40}{3}$", "$\\frac{45}{16}$", "$\\frac{45}{8}$", "$\\frac{45}{4}$"],
+    "a": 4,
+    "e": "Split the first six terms into the first three plus the next three: the second block is the first block multiplied by $r^3$, so $S_6 = S_3(1 + r^3)$. The condition $S_6 = 9S_3$ then gives $1 + r^3 = 9$, so $r^3 = 8$ and $r = 2$. (The alternative $r = 1$ from the algebraic route fails, since it gives $S_6 = 2S_3$.) The seventh term is $ar^6 = 64a = 360$, so $a = \\frac{360}{64} = \\frac{45}{8}$."
+  },
+  {
+    "n": 6, "t": "geo", "sp": "Circles · internal and external tangency", "d": 4, "sol": "lab",
+    "q": "The circles with equations $$(x+4)^2 + (y+1)^2 = 64$$ and $$(x-8)^2 + (y-4)^2 = r^2, \\quad \\text{where } r > 0$$ have exactly one point in common.<p>Find the difference between the two possible values of $r$.</p>",
+    "o": ["$4$", "$10$", "$16$", "$26$", "$50$"],
+    "a": 2,
+    "e": "The centres are $(-4,-1)$ and $(8,4)$, a distance $\\sqrt{12^2 + 5^2} = 13$ apart, and the first radius is $8$. Two circles touch at exactly one point either externally, when the centre distance equals the sum of the radii, or internally, when it equals the difference. Externally: $8 + r = 13$, so $r = 5$. Internally: $|r - 8| = 13$, and since $r > 0$ this gives $r = 21$ (the small circle would have to swallow the large one). The difference is $21 - 5 = 16$."
+  },
+  {
+    "n": 7, "t": "cal", "sp": "Differentiation · minimising a gradient over a parameter", "d": 4, "sol": "lab",
+    "q": "A curve has equation $$y = (2q - x^2)(2qx + 3)$$ The gradient of the curve at $x = -1$ is a function of $q$.<p>Find the value of $q$ which minimises the gradient of the curve at $x = -1$.</p>",
+    "o": ["$-1$", "$-\\frac34$", "$-\\frac12$", "$0$", "$\\frac12$", "$\\frac34$", "$1$"],
+    "a": 5,
+    "e": "Differentiate with the product rule, treating $q$ as a constant: $\\frac{dy}{dx} = -2x(2qx + 3) + 2q(2q - x^2)$. Substituting $x = -1$ gives $2(-2q + 3) + 2q(2q - 1) = 4q^2 - 6q + 6$. This is a quadratic in $q$ opening upwards, so its least value is at the vertex $q = \\frac{6}{8} = \\frac34$. Expanding the brackets before differentiating also works, but is more error-prone."
+  },
+  {
+    "n": 8, "t": "cal", "sp": "Trapezium rule · concavity decides over- or underestimate", "d": 4, "sol": "lab",
+    "q": "The function $f$ is such that $0 < f(x) < 1$ for $0 \\le x \\le 1$.<p>The trapezium rule with $n$ equal intervals is used to estimate $\\int_0^1 f(x)\\,dx$ and produces an underestimate.</p><p>Using the same number of equal intervals, for which one of the following does the trapezium rule produce an overestimate?</p>",
+    "o": ["$\\int_0^1 \\left(f(x) + 1\\right)dx$", "$\\int_0^1 2f(x)\\,dx$", "$\\int_{-1}^{0} f(x+1)\\,dx$", "$\\int_{-1}^{0} f(-x)\\,dx$", "$\\int_0^1 \\left(1 - f(x)\\right)dx$"],
+    "a": 4,
+    "e": "The trapezium rule replaces the curve by chords, so an underestimate means the chords lie below the curve: $f$ curves downwards. To get an overestimate you need an integrand that curves upwards. Adding $1$, doubling, translating (option C is $\\int_1^2 f(u)\\,du$ after $u = x+1$) and reflecting in the $y$-axis all leave the direction of curvature alone, so those four stay underestimates. Only $1 - f(x)$ turns the graph upside down, so its chords lie above it and the rule overestimates."
+  },
+  {
+    "n": 9, "t": "cal", "sp": "Area between a curve and its reflection in $y = x$", "d": 4, "sol": "lab",
+    "q": "$p$ is a positive constant.<p>Find the area enclosed between the curves $y = p\\sqrt{x}$ and $x = p\\sqrt{y}$.</p>",
+    "o": ["$\\frac23 p^{\\frac52} - \\frac12 p^2$", "$\\frac43 p^{\\frac52} - p^2$", "$\\frac{p^4}{6}$", "$\\frac{p^4}{3}$", "$\\frac23 p^3 - \\frac12 p^4$", "$\\frac43 p^3 - p^4$", "$2p^4$"],
+    "a": 3,
+    "e": "The two curves are reflections of each other in $y = x$. Squaring, they are $y^2 = p^2 x$ and $x^2 = p^2 y$; substituting $y = \\frac{x^2}{p^2}$ into the first gives $\\frac{x^4}{p^4} = p^2 x$, so $x = 0$ or $x = p^2$. Between those, $y = p\\sqrt{x}$ is the upper curve, so the area is $\\int_0^{p^2}\\left(p x^{1/2} - \\frac{x^2}{p^2}\\right)dx = \\left[\\frac{2p}{3}x^{3/2} - \\frac{x^3}{3p^2}\\right]_0^{p^2} = \\frac23 p^4 - \\frac13 p^4 = \\frac{p^4}{3}$."
+  },
+  {
+    "n": 10, "t": "cal", "sp": "Definite integral of a modulus · splitting the range", "d": 3, "sol": "lab",
+    "q": "Evaluate $$\\int_{-1}^{3} |x|(1-x)\\,dx$$",
+    "o": ["$\\frac{17}{3}$", "$-\\frac{17}{3}$", "$\\frac{16}{3}$", "$-\\frac{16}{3}$", "$\\frac{11}{3}$", "$-\\frac{11}{3}$"],
+    "a": 5,
+    "e": "The modulus changes definition at $x = 0$, so split there. On $[-1, 0]$, $|x| = -x$ and the integrand is $x^2 - x$, giving $\\left[\\frac{x^3}{3} - \\frac{x^2}{2}\\right]_{-1}^{0} = 0 - \\left(-\\frac13 - \\frac12\\right) = \\frac56$. On $[0, 3]$, $|x| = x$ and the integrand is $x - x^2$, giving $\\left[\\frac{x^2}{2} - \\frac{x^3}{3}\\right]_0^3 = \\frac92 - 9 = -\\frac92$. The total is $\\frac56 - \\frac92 = -\\frac{11}{3}$."
+  },
+  {
+    "n": 11, "t": "exp", "sp": "Simultaneous equations in logarithms", "d": 4, "sol": "lab",
+    "q": "Find the sum of the real values of $x$ that satisfy the simultaneous equations $$\\log_3(xy^2) = 1$$ $$(\\log_3 x)(\\log_3 y) = -3$$",
+    "o": ["$\\frac13$", "$1$", "$3$", "$3\\frac19$", "$9\\frac{1}{27}$", "$9\\frac13$", "$27$", "$27\\frac19$"],
+    "a": 7,
+    "e": "Put $a = \\log_3 x$ and $b = \\log_3 y$, which turns the pair into $a + 2b = 1$ and $ab = -3$. Substituting $a = 1 - 2b$ gives $b - 2b^2 = -3$, so $2b^2 - b - 3 = 0$ and $(2b-3)(b+1) = 0$. If $b = \\frac32$ then $a = -2$ and $x = 3^{-2} = \\frac19$; if $b = -1$ then $a = 3$ and $x = 27$. The sum of the $x$ values is $27\\frac19$."
+  },
+  {
+    "n": 12, "t": "cal", "sp": "Integration · simplifying before integrating", "d": 4, "sol": "lab",
+    "q": "It is given that $$\\frac{dV}{dt} = \\frac{24\\pi(t-1)}{1 + \\sqrt{t}} \\quad \\text{for } t \\ge 1$$ and $V = 7$ when $t = 1$.<p>Find the value of $V$ when $t = 9$.</p>",
+    "o": ["$208\\pi + 7$", "$216\\pi + 7$", "$224\\pi + 7$", "$416\\pi + 7$", "$608\\pi + 7$", "$744\\pi + 7$"],
+    "a": 2,
+    "e": "The quotient looks unpleasant until you notice $t - 1 = \\left(\\sqrt{t}-1\\right)\\left(\\sqrt{t}+1\\right)$, so the $1 + \\sqrt{t}$ cancels and $\\frac{dV}{dt} = 24\\pi\\left(\\sqrt{t} - 1\\right)$. Integrating, $V = 24\\pi\\left(\\frac23 t^{3/2} - t\\right) + C = 16\\pi t^{3/2} - 24\\pi t + C$. At $t = 1$, $16\\pi - 24\\pi + C = 7$, so $C = 7 + 8\\pi$. At $t = 9$, $V = 16\\pi(27) - 24\\pi(9) + 8\\pi + 7 = 432\\pi - 216\\pi + 8\\pi + 7 = 224\\pi + 7$."
+  },
+  {
+    "n": 13, "t": "exp", "sp": "Hidden quadratic in $2^{\\sin x}$ · range of the substitution", "d": 4, "sol": "lab",
+    "q": "Find the maximum value of $$4^{\\sin x} - 4 \\times 2^{\\sin x} + \\frac{17}{4}$$ for real $x$.",
+    "o": ["$\\frac14$", "$\\frac52$", "$\\frac{13}{2}$", "$\\frac{21}{2}$", "$\\frac{65}{4}$", "There is no maximum value."],
+    "a": 1,
+    "e": "Substitute $u = 2^{\\sin x}$, so that $4^{\\sin x} = u^2$ and the expression becomes $g(u) = u^2 - 4u + \\frac{17}{4}$. The crucial step is the range of $u$: since $\\sin x \\in [-1, 1]$, $u$ runs over $\\left[\\frac12, 2\\right]$, not all of $\\mathbb{R}$. The parabola $g$ has its vertex at $u = 2$, so on this interval it is decreasing and the maximum is at the left end: $g\\!\\left(\\frac12\\right) = \\frac14 - 2 + \\frac{17}{4} = \\frac52$."
+  },
+  {
+    "n": 14, "t": "trig", "sp": "Simultaneous trigonometric equations · solving for $\\sin$ and $\\cos$", "d": 4, "sol": "lab",
+    "q": "$x$ satisfies the simultaneous equations $$\\sin 2x + \\sqrt{3}\\cos 2x = -1$$ and $$\\sqrt{3}\\sin 2x - \\cos 2x = \\sqrt{3}$$ where $0^\\circ \\le x \\le 360^\\circ$.<p>Find the sum of the possible values of $x$.</p>",
+    "o": ["$210^\\circ$", "$330^\\circ$", "$390^\\circ$", "$660^\\circ$", "$780^\\circ$", "$930^\\circ$"],
+    "a": 1,
+    "e": "Treat $s = \\sin 2x$ and $c = \\cos 2x$ as two unknowns in a pair of linear equations. From the second, $c = \\sqrt3 s - \\sqrt3$; substituting into the first gives $s + 3s - 3 = -1$, so $s = \\frac12$ and then $c = -\\frac{\\sqrt3}{2}$. A sine of $\\frac12$ with a negative cosine puts $2x$ in the second quadrant: $2x = 150^\\circ$. Since $0^\\circ \\le x \\le 360^\\circ$ means $0^\\circ \\le 2x \\le 720^\\circ$, also $2x = 510^\\circ$. So $x = 75^\\circ$ or $255^\\circ$, summing to $330^\\circ$."
+  },
+  {
+    "n": 15, "t": "exp", "sp": "Exponential equation · quadratic in $3^x$", "d": 3, "sol": "lab",
+    "q": "Find the real non-zero solution to the equation $$\\frac{2^{\\left(9^x\\right)}}{8^{\\left(3^x\\right)}} = \\frac14$$",
+    "o": ["$\\log_3 2$", "$2\\log_3 2$", "$1$", "$2$", "$\\log_2 3$", "$2\\log_2 3$"],
+    "a": 0,
+    "e": "Write everything as a power of $2$: $8^{\\left(3^x\\right)} = 2^{3 \\cdot 3^x}$, so the left side is $2^{9^x - 3\\cdot 3^x}$ and the equation becomes $9^x - 3\\cdot 3^x = -2$. Now put $u = 3^x$, noting $9^x = u^2$, to get $u^2 - 3u + 2 = 0$, so $u = 1$ or $u = 2$. The root $u = 1$ gives $x = 0$, which is excluded, so $3^x = 2$ and $x = \\log_3 2$."
+  },
+  {
+    "n": 16, "t": "cal", "sp": "Definite integrals · substitution and additivity", "d": 3, "sol": "lab",
+    "q": "Given that $$2\\int_0^1 f(x)\\,dx + 5\\int_1^2 f(x)\\,dx = 14$$ and $$\\int_0^1 f(x+1)\\,dx = 6$$ find the value of $$\\int_0^2 f(x)\\,dx$$",
+    "o": ["$-8$", "$-4$", "$-2$", "$2$", "$4$", "$\\frac{29}{5}$", "$\\frac{32}{5}$", "$14$"],
+    "a": 2,
+    "e": "The second condition is the key: substituting $u = x + 1$ shifts the limits, so $\\int_0^1 f(x+1)\\,dx = \\int_1^2 f(u)\\,du = 6$. Writing $A = \\int_0^1 f$ and $B = \\int_1^2 f = 6$, the first condition gives $2A + 30 = 14$, so $A = -8$. Then $\\int_0^2 f = A + B = -8 + 6 = -2$."
+  },
+  {
+    "n": 17, "t": "trig", "sp": "Product of trigonometric factors · sign analysis on an interval", "d": 5, "sol": "lab",
+    "q": "Find the fraction of the interval $0 \\le \\theta \\le \\pi$ for which the inequality $$\\left(\\sin 2\\theta - \\tfrac12\\right)\\left(\\sin\\theta - \\cos\\theta\\right) \\ge 0$$ is satisfied.",
+    "o": ["$\\frac{1}{12}$", "$\\frac16$", "$\\frac14$", "$\\frac{5}{12}$", "$\\frac{7}{12}$", "$\\frac34$", "$\\frac56$", "$\\frac{11}{12}$"],
+    "a": 2,
+    "e": "Find where each factor is non-negative, then take the two cases where the signs agree. Working in degrees, $\\sin 2\\theta \\ge \\frac12$ needs $2\\theta \\in [30^\\circ, 150^\\circ]$, i.e. $\\theta \\in [15^\\circ, 75^\\circ]$ (the next band, $\\theta \\in [195^\\circ, 255^\\circ]$, is outside the interval). For the second factor, $\\sin\\theta - \\cos\\theta = \\sqrt2\\sin(\\theta - 45^\\circ) \\ge 0$ needs $\\theta \\ge 45^\\circ$. Both non-negative on $[45^\\circ, 75^\\circ]$, length $30^\\circ$; both non-positive on $[0^\\circ, 15^\\circ]$, length $15^\\circ$ (beyond $75^\\circ$ the second factor is positive while the first is negative). That is $45^\\circ$ out of $180^\\circ$, a fraction of $\\frac14$."
+  },
+  {
+    "n": 18, "t": "geo", "sp": "Shortest distance from a curve to a line · parallel tangent", "d": 4, "sol": "lab",
+    "q": "Find the shortest distance between the curve $y = x^2 + 4$ and the line $y = 2x - 2$.",
+    "o": ["$2$", "$\\sqrt5$", "$\\frac{6\\sqrt5}{5}$", "$3$", "$\\frac{5\\sqrt5}{3}$", "$5$", "$6$"],
+    "a": 1,
+    "e": "The closest point of the curve is the one whose tangent is parallel to the line. Since $\\frac{dy}{dx} = 2x = 2$ gives $x = 1$, that point is $(1, 5)$. Writing the line as $2x - y - 2 = 0$, the perpendicular distance is $\\frac{|2(1) - 5 - 2|}{\\sqrt{2^2 + (-1)^2}} = \\frac{5}{\\sqrt5} = \\sqrt5$. Measuring the vertical gap instead gives $5$, which is option F and is the trap here."
+  },
+  {
+    "n": 19, "t": "trig", "sp": "Summing a periodic trigonometric series", "d": 4, "sol": "lab",
+    "q": "Find the value of $$\\sum_{k=0}^{90} \\sin(10 + 90k)^\\circ$$",
+    "o": ["$0$", "$\\sin 10^\\circ$", "$\\sin 100^\\circ$", "$\\sin 190^\\circ$", "$\\sin 280^\\circ$", "$1$"],
+    "a": 2,
+    "e": "The terms repeat with period $4$ in $k$: $\\sin 10^\\circ$, $\\sin 100^\\circ$, $\\sin 190^\\circ = -\\sin 10^\\circ$, $\\sin 280^\\circ = -\\sin 100^\\circ$, and each block of four sums to zero. There are $91$ terms, and $91 = 4 \\times 22 + 3$, so the $88$ terms with $k = 0$ to $87$ cancel completely and only $k = 88, 89, 90$ survive. Those are $\\sin 10^\\circ + \\sin 100^\\circ + \\sin 190^\\circ = \\sin 10^\\circ + \\sin 100^\\circ - \\sin 10^\\circ = \\sin 100^\\circ$."
+  },
+  {
+    "n": 20, "t": "gra", "sp": "Intersections of two curves · sign of the roots", "d": 5, "sol": "lab",
+    "q": "What is the complete range of values of $k$ for which the curves with equations $$y = x^3 - 12x$$ and $$y = k - (x-2)^2$$ intersect at <b>three</b> distinct points, of which exactly <b>two</b> have positive $x$-coordinates?",
+    "o": ["$-4 < k < 0$", "$-4 < k < 4$", "$-4 < k < 16$", "$-16 < k < 0$", "$-16 < k < 4$", "$-16 < k < 16$"],
+    "a": 4,
+    "e": "Set the two expressions equal: $x^3 - 12x = k - (x-2)^2$ rearranges to $k = x^3 + x^2 - 16x + 4 = g(x)$, so intersections are where the horizontal line $y = k$ meets the cubic $g$. Since $g'(x) = 3x^2 + 2x - 16 = (3x+8)(x-2)$, the local maximum is at $x = -\\frac83$ with $g = \\frac{940}{27}$ and the local minimum is at $x = 2$ with $g = -16$; three distinct roots therefore need $-16 < k < \\frac{940}{27}$. For the sign condition, the largest root always exceeds $2$ and the smallest is always below $-\\frac83$, so everything hinges on the middle root, which lies on the decreasing branch through $g(0) = 4$: it is positive exactly when $k < 4$. Combining gives $-16 < k < 4$."
+  }
+]

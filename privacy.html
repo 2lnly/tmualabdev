@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy — TMUA Lab</title>
+<meta name="description" content="Nothing you do on TMUA Lab leaves your browser. Here is exactly what is stored and where.">
+<meta name="theme-color" content="#0a0e12">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2354d8f0'/><text y='72' x='50' text-anchor='middle' font-size='62' font-family='monospace' font-weight='bold' fill='%2303151b'>T</text></svg>">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/app.css">
+<style>
+.prose { max-width: 74ch; font-size: 16px; line-height: 1.78; color: var(--text-soft); }
+.prose h2 { font-size: clamp(22px,3vw,30px); margin: 46px 0 14px; color: var(--text); letter-spacing:-.03em; }
+.prose h3 { font-size: 18px; margin: 30px 0 10px; color: var(--text); }
+.prose ul, .prose ol { padding-left: 20px; margin: 0 0 1.1em; }
+.prose li { margin-bottom: .5em; }
+.prose b, .prose strong { color: var(--text); font-weight: 600; }
+.prose table { width: 100%; border-collapse: collapse; margin: 18px 0 24px; font-size: 14.4px; }
+.prose th, .prose td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.prose th { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); font-weight: 400; }
+.prose .lede { font-size: 18px; color: var(--text); }
+.prose blockquote { margin: 20px 0; padding: 14px 18px; border-left: 2px solid var(--accent); background: var(--tint); border-radius: 0 var(--radius) var(--radius) 0; }
+.toc { position: sticky; top: 76px; font-size: 13.6px; }
+.toc a { display: block; padding: 5px 0 5px 12px; border-left: 1px solid var(--border); color: var(--muted); }
+.toc a:hover { color: var(--accent); border-color: var(--accent); }
+.two { display: grid; grid-template-columns: 1fr 210px; gap: 46px; align-items: start; }
+@media (max-width: 900px) { .two { grid-template-columns: 1fr; } .toc { position: static; display:none } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header id="hdr"></header>
+<main id="main">
+  <div class="wrap">
+    <div class="app-head">
+      <div class="eyebrow">privacy</div>
+      <h1 style="margin-top:14px">Privacy</h1>
+      <p>The short version: nothing you do here is sent anywhere.</p>
+    </div>
+    <article class="prose">
+      <h2>What is stored</h2>
+      <p>TMUA Lab keeps a single entry in your browser's <b>local storage</b>, under the key
+        <code class="mono">tmualab.v1</code>, plus one for your theme preference. That entry holds:</p>
+      <ul>
+        <li>which questions you have been served;</li>
+        <li>every answer, with whether it was right and how long it took;</li>
+        <li>your completed sittings and their scores;</li>
+        <li>your review queue and when each question is next due.</li>
+      </ul>
+
+      <h2>Where it goes</h2>
+      <p>Nowhere. There is no account, no server that receives your answers, no analytics script, no advertising
+        pixel and no third-party embed that could observe you.</p>
+      <p>The pages make <b>no third-party request of any kind</b>. Everything — including the fonts — is served
+        from this site, so no other company learns that you visited, what you looked at, or what your IP address
+        is. Open your browser's network panel and check: every request goes to one domain.</p>
+      <p>Because there is no cookie set for tracking and no personal data leaves the device, there is nothing for a
+        consent banner to ask you about.</p>
+
+      <h2>What that costs you</h2>
+      <p>Local-only storage cuts both ways. Clearing site data, using a private window, or switching browser or
+        device starts you from scratch, and your progress does not follow you. The dashboard has an
+        <b>Export JSON</b> button for exactly this reason, and an import to put it back.</p>
+
+      <h2>Deleting everything</h2>
+      <p>Open the command palette with <kbd>⌘</kbd><kbd>K</kbd> and run <b>Erase all my local data</b>, or use
+        <b>Erase everything</b> on the dashboard. Both remove the storage entry immediately and irreversibly. Clearing
+        site data in your browser settings has the same effect.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about any of this belong on the <a href="community.html" style="color:var(--accent)">community
+        page</a>.</p>
+    </article>
+  </div>
+</main>
+<footer id="ftr"></footer>
+<script src="assets/js/math.js"></script>
+<script src="assets/js/bank-past.js"></script>
+<script src="assets/js/bank-p1.js"></script>
+<script src="assets/js/bank-p2.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/shell.js"></script>
+</body>
+</html>

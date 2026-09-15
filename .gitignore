@@ -1,0 +1,14 @@
+# dependencies (only needed to run the test suite)
+node_modules/
+package-lock.json
+
+# generated — rebuild with `node tools/bundle.js`
+dist/
+
+# generated — rebuild with `node tools/build-past.js`
+assets/js/bank-past.js
+
+# local noise
+.DS_Store
+*.log
+.wrangler/

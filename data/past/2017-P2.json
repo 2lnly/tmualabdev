@@ -1,0 +1,197 @@
+[
+  {
+    "n": 1, "t": "cal", "sp": "Differentiating after expanding a quotient", "d": 2, "sol": "lab",
+    "q": "Given that $$y = \\frac{(1-3x)^2}{2x^{\\frac{3}{2}}}$$ which one of the following is a correct expression for $\\frac{dy}{dx}$?",
+    "o": [
+      "$\\frac{9}{4}x^{-\\frac{1}{2}} + \\frac{3}{2}x^{-\\frac{3}{2}} - \\frac{3}{4}x^{-\\frac{5}{2}}$",
+      "$\\frac{9}{4}x^{-\\frac{1}{2}} - \\frac{3}{2}x^{-\\frac{3}{2}} + \\frac{3}{4}x^{-\\frac{5}{2}}$",
+      "$\\frac{9}{4}x^{-\\frac{1}{2}} - \\frac{3}{2}x^{-\\frac{3}{2}} - \\frac{3}{4}x^{-\\frac{5}{2}}$",
+      "$-\\frac{9}{4}x^{-\\frac{1}{2}} + \\frac{3}{2}x^{-\\frac{3}{2}} + \\frac{3}{4}x^{-\\frac{5}{2}}$",
+      "$-\\frac{9}{4}x^{-\\frac{1}{2}} + \\frac{3}{2}x^{-\\frac{3}{2}} - \\frac{3}{4}x^{-\\frac{5}{2}}$",
+      "$-\\frac{9}{4}x^{-\\frac{1}{2}} - \\frac{3}{2}x^{-\\frac{3}{2}} - \\frac{3}{4}x^{-\\frac{5}{2}}$"
+    ],
+    "a": 0,
+    "e": "There is no need for the quotient rule: expand the top first and split the fraction into separate powers of $x$. Since $(1-3x)^2 = 1 - 6x + 9x^2$, we get $y = \\frac{1}{2}x^{-\\frac{3}{2}} - 3x^{-\\frac{1}{2}} + \\frac{9}{2}x^{\\frac{1}{2}}$. Differentiating term by term gives $-\\frac{3}{4}x^{-\\frac{5}{2}} + \\frac{3}{2}x^{-\\frac{3}{2}} + \\frac{9}{4}x^{-\\frac{1}{2}}$. Watch the sign on the middle term: it comes from $-3 \\times \\left(-\\frac{1}{2}\\right) = +\\frac{3}{2}$."
+  },
+  {
+    "n": 2, "t": "geo", "sp": "Coordinate geometry · area of a rectangle", "d": 3, "sol": "lab",
+    "q": "$PQRS$ is a rectangle.<p>The coordinates of $P$ and $Q$ are $(0,6)$ and $(1,8)$ respectively.</p><p>The perpendicular to $PQ$ at $Q$ meets the $x$-axis at $R$.</p><p>What is the area of $PQRS$?</p>",
+    "o": ["$\\frac{5}{2}$", "$4\\sqrt{10}$", "$20$", "$8\\sqrt{10}$", "$40$"],
+    "a": 4,
+    "e": "The side $PQ$ has gradient $\\frac{8-6}{1-0} = 2$ and length $\\sqrt{1^2 + 2^2} = \\sqrt5$. The perpendicular at $Q$ has gradient $-\\frac{1}{2}$, so its equation is $y - 8 = -\\frac{1}{2}(x-1)$; setting $y = 0$ gives $x = 17$, so $R = (17,0)$. Then $QR = \\sqrt{16^2 + 8^2} = \\sqrt{320} = 8\\sqrt5$, and the area is $\\sqrt5 \\times 8\\sqrt5 = 40$."
+  },
+  {
+    "n": 3, "t": "seq", "sp": "Geometric series · sum to infinity with surds", "d": 3, "sol": "lab",
+    "q": "The first term of a geometric progression is $2\\sqrt3$ and the fourth term is $\\frac{9}{4}$.<p>What is the sum to infinity of this geometric progression?</p>",
+    "o": ["$-2(2-\\sqrt3)$", "$4(2\\sqrt3 - 3)$", "$\\frac{16(8\\sqrt3 + 9)}{37}$", "$\\frac{4(2\\sqrt3-3)}{7}$", "$\\frac{4(2\\sqrt3+3)}{7}$", "$2(2+\\sqrt3)$", "$4(2\\sqrt3+3)$"],
+    "a": 6,
+    "e": "The fourth term is $ar^3$, so $r^3 = \\frac{9/4}{2\\sqrt3} = \\frac{9}{8\\sqrt3} = \\frac{3\\sqrt3}{8}$. Recognise $3\\sqrt3 = (\\sqrt3)^3$, so $r^3 = \\left(\\frac{\\sqrt3}{2}\\right)^3$ and $r = \\frac{\\sqrt3}{2}$, which is less than 1 so the series converges. Then $S_\\infty = \\frac{2\\sqrt3}{1 - \\frac{\\sqrt3}{2}} = \\frac{4\\sqrt3}{2-\\sqrt3}$, and multiplying top and bottom by $2+\\sqrt3$ gives $4\\sqrt3(2+\\sqrt3) = 8\\sqrt3 + 12 = 4(2\\sqrt3+3)$."
+  },
+  {
+    "n": 4, "t": "trig", "sp": "Judging a student's trigonometric reasoning", "d": 3, "sol": "lab",
+    "q": "The following question appeared in an examination:<p><em>Given that $\\tan x = \\sqrt3$, find the possible values of $\\sin 2x$.</em></p><p>A student gave the following answer:</p><p><em>$\\tan x = \\sqrt3$ so $x = 60^\\circ$ and $2x = 120^\\circ$,<br>therefore $\\sin 2x = \\frac{\\sqrt3}{2}$.</em></p><p>Which one of the following statements is correct?</p>",
+    "o": [
+      "$\\frac{\\sqrt3}{2}$ is the only possible value, and this is fully supported by the reasoning given in the student's answer.",
+      "$\\frac{\\sqrt3}{2}$ is the only possible value, but the reasoning given should consider other possible values of $x$ for which $\\tan x = \\sqrt3$.",
+      "$\\frac{\\sqrt3}{2}$ is the only possible value, but the reasoning given should consider other possible values of $x$ for which $\\sin 2x = \\frac{\\sqrt3}{2}$.",
+      "$\\frac{\\sqrt3}{2}$ is <b>not</b> the only possible value because the reasoning given should have considered other possible values of $x$ for which $\\tan x = \\sqrt3$.",
+      "$\\frac{\\sqrt3}{2}$ is <b>not</b> the only possible value because the reasoning given should have considered other possible values of $x$ for which $\\sin 2x = \\frac{\\sqrt3}{2}$."
+    ],
+    "a": 1,
+    "e": "The student picked one solution of $\\tan x = \\sqrt3$ without saying why the others do not matter, so the reasoning is incomplete. Checking them: $\\tan$ has period $180^\\circ$, so $x = 60^\\circ + 180^\\circ n$, and doubling gives $2x = 120^\\circ + 360^\\circ n$, which is the same angle every time. So $\\sin 2x = \\frac{\\sqrt3}{2}$ really is the only value — the answer is right but the argument needs the extra step of ruling the other values of $x$ out."
+  },
+  {
+    "n": 5, "t": "prf", "sp": "What a single counterexample can refute", "d": 3, "sol": "lab",
+    "q": "Consider the following three statements:<p>1&nbsp;&nbsp; $10p^2 + 1$ and $10p^2 - 1$ are both prime when $p$ is an odd prime.<br>2&nbsp;&nbsp; Every prime greater than 5 is of the form $6n+1$ for some integer $n$.<br>3&nbsp;&nbsp; No multiple of 7 greater than 7 is prime.</p><p>The result $91 = 7 \\times 13$ can be used to provide a counterexample to which of the above statements?</p>",
+    "o": ["none of them", "1 only", "2 only", "3 only", "1 and 2 only", "1 and 3 only", "2 and 3 only", "1, 2 and 3"],
+    "a": 1,
+    "e": "Look for a place where 91 has to appear. Taking $p = 3$ in statement 1 gives $10p^2 - 1 = 89$ and $10p^2 + 1 = 91 = 7\\times13$, which is not prime, so 1 falls. Statement 2 needs a prime greater than 5 that is not of the form $6n+1$ — 91 is not even prime, so it cannot serve (and in any case $91 = 6\\times15+1$). Statement 3 is true, and $91$ is an example of it rather than against it, since 91 is a multiple of 7 and is not prime. Only 1."
+  },
+  {
+    "n": 6, "t": "cal", "sp": "A sequence defined by a definite integral", "d": 3, "sol": "lab",
+    "q": "A sequence $u_0$, $u_1$, $u_2$, $\\ldots$ is defined as follows: $$u_0 = 1$$ $$u_n = \\int_0^1 4x\\,u_{n-1}\\,dx \\quad \\text{for } n \\ge 1$$ What is the value of $u_{1000}$?",
+    "o": ["$2^{1000}$", "$4^{1000}$", "$\\frac{4}{1000!}$", "$\\frac{4}{1001!}$", "$\\frac{2^{1000}}{1000!}$", "$\\frac{4^{1000}}{1000!}$", "$\\frac{2^{1000}}{1001!}$", "$\\frac{4^{1000}}{1001!}$"],
+    "a": 0,
+    "e": "The point to notice is that $u_{n-1}$ is a number, not a function of $x$, so it comes straight out of the integral. That leaves $u_n = u_{n-1}\\int_0^1 4x\\,dx = u_{n-1}\\left[2x^2\\right]_0^1 = 2u_{n-1}$. Starting from $u_0 = 1$, each step doubles, so $u_n = 2^n$ and $u_{1000} = 2^{1000}$. The factorials in the other options are what you would get if you wrongly treated the integral as building up a new power of $x$ each time."
+  },
+  {
+    "n": 7, "t": "exp", "sp": "Exponential graphs · which forms are possible", "d": 3, "sol": "lab",
+    "q": "The graphs of two functions are shown here:<ul><li>$y = a^x$ is shown with a solid line, where $a$ is a positive real number</li><li>$y = f(x)$ is shown with a dashed line</li></ul><p>Both curves are increasing and both tend to zero as $x$ becomes large and negative. They cross close to the $y$-axis, and for $x > 0$ the dashed curve lies <b>above</b> the solid one, so $f$ grows faster than $a^x$.</p><p>Which of the following statements (1, 2, 3, 4) could be true?</p><p>1&nbsp;&nbsp; $f(x) = b^x$ for some $b > a$<br>2&nbsp;&nbsp; $f(x) = b^x$ for some $b < a$<br>3&nbsp;&nbsp; $f(x) = a^{kx}$ for some $k > 1$<br>4&nbsp;&nbsp; $f(x) = a^{kx}$ for some $k < 1$</p>",
+    "fig": "Two increasing exponential-shaped curves through the same point on the positive $y$-axis; the dashed one ($y=f(x)$) rises more steeply than the solid one ($y=a^x$) for $x>0$ and lies below it for $x<0$.",
+    "o": ["1 only", "2 only", "3 only", "4 only", "1 and 3 only", "1 and 4 only", "2 and 3 only", "2 and 4 only"],
+    "a": 4,
+    "e": "The solid curve is increasing, so $a > 1$. The dashed curve is steeper, so if $f(x) = b^x$ then $b > a$, making 1 possible and 2 impossible. For the other two, rewrite $a^{kx} = \\left(a^k\\right)^x$: this is an exponential with base $a^k$, and since $a > 1$, $a^k > a$ exactly when $k > 1$. So 3 gives the steeper curve and is possible, while 4 gives a shallower one and is not."
+  },
+  {
+    "n": 8, "t": "exp", "sp": "Comparing logs, powers and trigonometric values", "d": 3, "sol": "lab",
+    "q": "Which one of the following numbers is smallest in value?",
+    "o": ["$\\log_2 7$", "$\\left(2^{-3} + 2^{-2}\\right)^{-1}$", "$2^{(\\pi/3)}$", "$\\frac{1}{4\\left(\\sqrt2 - 1\\right)^3}$", "$4\\sin^2\\left(\\frac{\\pi}{4}\\right)$"],
+    "a": 4,
+    "e": "Get each into a form you can compare with 2 and 3. $\\log_2 7$ sits between $\\log_2 4 = 2$ and $\\log_2 8 = 3$, and is close to 2.8. The second is $\\left(\\frac18 + \\frac14\\right)^{-1} = \\frac{8}{3} \\approx 2.67$. Since $\\frac{\\pi}{3} \\approx 1.05$, the third is a little above 2. The fourth has $\\sqrt2 - 1 \\approx 0.414$, so its cube is about $0.071$ and the whole thing is about $3.5$. The last is $4\\left(\\frac{1}{\\sqrt2}\\right)^2 = 2$ exactly, which is the smallest."
+  },
+  {
+    "n": 9, "t": "prf", "sp": "Finding the first mistake in a proof", "d": 4, "sol": "lab",
+    "q": "Consider the following attempt to prove this true theorem:<p><em>Theorem:</em> $a^3 + b^3 = c^3$ has no solutions with $a$, $b$ and $c$ positive integers.</p><p><em>Attempted proof:</em><br>Suppose that there are positive integers $a$, $b$ and $c$ such that $a^3 + b^3 = c^3$.</p><p>I&nbsp;&nbsp;&nbsp;&nbsp; We have $a^3 = c^3 - b^3$.<br>II&nbsp;&nbsp;&nbsp; Hence $a^3 = (c-b)(c^2 + cb + b^2)$.<br>III&nbsp;&nbsp; It follows that $a = c - b$ and $a^2 = c^2 + cb + b^2$, since $a \\le a^2$ and $c - b \\le c^2 + cb + b^2$.<br>IV&nbsp;&nbsp; Eliminating $a$, we have $(c-b)^2 = c^2 + cb + b^2$.<br>V&nbsp;&nbsp;&nbsp; Multiplying out, we have $c^2 - 2cb + b^2 = c^2 + cb + b^2$.<br>VI&nbsp;&nbsp; Hence $3cb = 0$ so one of $b$ and $c$ is zero.</p><p>But this is a contradiction to the original assumption that all of $a$, $b$ and $c$ are positive. It follows that the equation has no solutions.</p><p>Comment on this proof by choosing one of the following options:</p>",
+    "o": [
+      "The proof is correct",
+      "The proof is incorrect and the first mistake occurs on line I.",
+      "The proof is incorrect and the first mistake occurs on line II.",
+      "The proof is incorrect and the first mistake occurs on line III.",
+      "The proof is incorrect and the first mistake occurs on line IV.",
+      "The proof is incorrect and the first mistake occurs on line V.",
+      "The proof is incorrect and the first mistake occurs on line VI."
+    ],
+    "a": 3,
+    "e": "Lines I and II are just rearranging and using the difference of two cubes, which is fine. Line III is the leap: knowing that $a^3$ equals the product of two positive integers does not tell you that those two factors are $a$ and $a^2$. The factorisation of $a^3$ could split in many other ways — for instance $a = 6$ gives $216 = 4 \\times 54$ — and the size comparison quoted proves nothing about which factor is which. Everything after line III is correct algebra applied to a false statement."
+  },
+  {
+    "n": 10, "t": "cal", "sp": "Sufficient conditions for a definite integral to vanish", "d": 4, "sol": "lab",
+    "q": "$f(x)$ is a function defined for all real values of $x$.<p>Which one of the following is a <b>sufficient</b> condition for $\\int_1^3 f(x)\\,dx = 0$?</p>",
+    "o": ["$f(2) = 0$", "$f(1) = f(3) = 0$", "$f(-x) = -f(x)$ for all $x$", "$f(x+2) = -f(2-x)$ for all $x$", "$f(x-2) = -f(2-x)$ for all $x$"],
+    "a": 3,
+    "e": "An integral from 1 to 3 vanishes if the graph is antisymmetric about the midpoint $x = 2$, so look for the condition that says exactly that. Put $u = x+2$ in option D: then $2 - x = 4 - u$, and the condition becomes $f(u) = -f(4-u)$, which pairs each point with its mirror image in $x = 2$ and gives opposite values, so the two halves of the integral cancel. Options A and B fix the function at isolated points, which controls nothing. Options C and E both reduce to $f$ being odd about the origin, which says nothing about the interval from 1 to 3."
+  },
+  {
+    "n": 11, "t": "cal", "sp": "Area under a translated curve", "d": 3, "sol": "lab",
+    "q": "The function $f(x)$ is increasing and $f(0) = 0$.<p>The positive constants $a$ and $b$ are such that $a < b$.</p><p>The area of the region enclosed by the curve $y = f(x)$, the $x$-axis and the lines $x = a$ and $x = b$ is denoted by $R$.</p><p>The function $g(x)$ is defined by $g(x) = f(x) + 2f(b)$.</p><p>Which of the following is an expression for the area enclosed by the curve $y = g(x)$, the $x$-axis and the lines $x = a$ and $x = b$?</p>",
+    "o": ["$R + (b-a)f(b)$", "$R + 2(b-a)f(b)$", "$R + 2f(b) - f(a)$", "$R + 2f(b)$", "$R + (f(b))^2$", "$R + (f(b))^2 - (f(a))^2$", "$R + 2(f(b) - f(a))f(b)$"],
+    "a": 1,
+    "e": "Because $f$ is increasing with $f(0) = 0$ and $a$, $b$ are positive, $f$ is non-negative on the interval, so $R = \\int_a^b f(x)\\,dx$ with no sign complications. The number $2f(b)$ is a constant, so $g$ is the graph of $f$ raised by that fixed amount and the new area is $\\int_a^b \\left(f(x) + 2f(b)\\right)dx = R + 2f(b)(b-a)$. The extra piece is a rectangle of height $2f(b)$ and width $b-a$; forgetting the width is the tempting slip that gives option D."
+  },
+  {
+    "n": 12, "t": "trig", "sp": "Orderings of three trigonometric functions", "d": 5, "sol": "lab",
+    "q": "The diagram shows the graphs of $y = \\sin 2x$ and $y = \\cos 2x$ for $-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}$, each a full wave of amplitude 1 with the cosine curve peaking at $x = 0$ and the sine curve peaking at $x = \\frac{\\pi}{4}$.<p>Which one of the following is <b>not</b> true?</p>",
+    "o": [
+      "$\\cos 2x < \\sin 2x < \\tan x$ for some real number $x$ with $-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}$",
+      "$\\cos 2x < \\tan x < \\sin 2x$ for some real number $x$ with $-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}$",
+      "$\\sin 2x < \\cos 2x < \\tan x$ for some real number $x$ with $-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}$",
+      "$\\sin 2x < \\tan x < \\cos 2x$ for some real number $x$ with $-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}$",
+      "$\\tan x < \\sin 2x < \\cos 2x$ for some real number $x$ with $-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}$",
+      "$\\tan x < \\cos 2x < \\sin 2x$ for some real number $x$ with $-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}$"
+    ],
+    "a": 2,
+    "e": "The six options are the six possible orderings, so exactly one is impossible. Write everything in terms of $t = \\tan x$, which sweeps all of $\\mathbb{R}$ on this interval: $\\sin 2x = \\frac{2t}{1+t^2}$ and $\\cos 2x = \\frac{1-t^2}{1+t^2}$. Option C asks for $\\cos 2x < \\tan x$ and $\\sin 2x < \\cos 2x$ at once. The first needs $t^3 + t^2 + t - 1 > 0$, so $t > 0.54$ roughly; the second needs $t^2 + 2t - 1 < 0$, so $t < \\sqrt2 - 1 \\approx 0.41$. Those cannot both hold, and every other ordering does occur (try $t = -3, -2, -\\frac12, \\frac12, 0.8, 2$)."
+  },
+  {
+    "n": 13, "t": "ineq", "sp": "Standard form · what must follow", "d": 4, "sol": "lab",
+    "q": "The positive real numbers $a \\times 10^{-3}$, $b \\times 10^{-2}$ and $c \\times 10^{-1}$ are each in standard form, and $$\\left(a \\times 10^{-3}\\right) + \\left(b \\times 10^{-2}\\right) = \\left(c \\times 10^{-1}\\right).$$ Which of the following statements (I, II, III, IV) <b>must</b> be true?<p>I&nbsp;&nbsp;&nbsp; $a > 9$<br>II&nbsp;&nbsp; $b > 9$<br>III&nbsp; $a < c$<br>IV&nbsp; $b < c$</p>",
+    "o": ["I only", "II only", "I and II only", "I and III only", "I and IV only", "II and III only", "II and IV only", "I, II, III and IV"],
+    "a": 1,
+    "e": "Standard form means $1 \\le a, b, c < 10$. Multiplying the equation by $10^3$ gives $a + 10b = 100c$. Since $c \\ge 1$, the left side is at least 100, and since $a < 10$ this forces $10b > 90$, so $b > 9$: statement II must hold. Nothing similar pins down $a$ — take $c = 1$, $b = 9.5$, $a = 5$, which satisfies everything while $a > 9$ and $a < c$ both fail. And IV is never true, since $b > 9$ while $c < 10$ forces $c < 1.1$."
+  },
+  {
+    "n": 14, "t": "gra", "sp": "Quadratics · how the vertex moves", "d": 4, "sol": "lab",
+    "q": "The diagram shows the graph of $y = x^2 - 2bx + c$, an upward parabola whose vertex $P$ lies in the first quadrant: $P$ is to the right of the $y$-axis and above the $x$-axis, with dashed lines drawn from $P$ to each axis.<p>Which one of the following could be the graph of $y = x^2 - 2Bx + c$, where $B > b$?</p><p>Each option shows an upward parabola drawn on the same axes, with the position of the original vertex $P$ still marked by its dashed lines. The options differ only in where the new vertex sits relative to $P$.</p>",
+    "fig": "An upward parabola with vertex $P$ above the $x$-axis and right of the $y$-axis, dashed lines joining $P$ to both axes; the eight answer options repeat this picture with the new vertex placed in eight different positions relative to $P$.",
+    "o": [
+      "The new vertex is to the right of $P$ and at the same height as $P$.",
+      "The new vertex is to the left of $P$ and at the same height as $P$.",
+      "The new vertex is directly above $P$.",
+      "The new vertex is directly below $P$.",
+      "The new vertex is above $P$ and to the right of it.",
+      "The new vertex is below $P$ and to the right of it.",
+      "The new vertex is above $P$ and to the left of it.",
+      "The new vertex is below $P$ and to the left of it."
+    ],
+    "a": 5,
+    "e": "Complete the square: $y = (x-b)^2 + c - b^2$, so $P = \\left(b,\\ c-b^2\\right)$, and the new curve has vertex $\\left(B,\\ c-B^2\\right)$. Since $P$ is to the right of the $y$-axis, $b > 0$, and $B > b > 0$ moves the vertex to the right. The same inequality gives $B^2 > b^2$, so $c - B^2 < c - b^2$ and the vertex also moves down. Both changes happen together, which rules out every option that keeps the vertex level with $P$, directly above or below it, or to the left."
+  },
+  {
+    "n": 15, "t": "seq", "sp": "Iterated rules · finding the cycle", "d": 4, "sol": "lab",
+    "q": "The function $f$ is defined on the positive integers as follows: $f(1) = 5$, and for $n \\ge 1$, $$f(n+1) = 3f(n) + 1 \\quad \\text{if } f(n) \\text{ is odd}$$ $$f(n+1) = \\tfrac{1}{2}f(n) \\quad \\text{if } f(n) \\text{ is even}$$ The function $g$ is defined on the positive integers as follows: $g(1) = 3$, and for $n \\ge 1$, $$g(n+1) = g(n) + 5 \\quad \\text{if } g(n) \\text{ is odd}$$ $$g(n+1) = \\tfrac{1}{2}g(n) \\quad \\text{if } g(n) \\text{ is even}$$ What is the value of $f(1000) - g(1000)$?",
+    "o": ["$-6$", "$-5$", "$1$", "$2$", "$4$", "$8$"],
+    "a": 3,
+    "e": "Generate terms until each sequence repeats. For $f$: $5, 16, 8, 4, 2, 1, 4, 2, 1, \\ldots$, so from $n = 4$ onwards it cycles through $4, 2, 1$ with period 3, taking the value 4 whenever $n$ leaves remainder 1 on division by 3. As $1000 = 3\\times333 + 1$, $f(1000) = 4$. For $g$: $3, 8, 4, 2, 1, 6, 3, \\ldots$, a cycle of length 6 starting at $n = 1$; as $1000 = 6\\times166 + 4$, $g(1000) = g(4) = 2$. The difference is $4 - 2 = 2$."
+  },
+  {
+    "n": 16, "t": "cal", "sp": "Counterexample · integer values of a derivative", "d": 4, "sol": "lab",
+    "q": "Consider the following statement:<p>$(*)$ <b>If</b> $f(x)$ is an integer for every integer $x$, <b>then</b> $f'(x)$ is an integer for every integer $x$.</p><p>Which one of the following is a <b>counterexample</b> to $(*)$?</p>",
+    "o": ["$f(x) = \\frac{x^3 + x + 1}{4}$", "$f(x) = \\frac{x^4 + x^2 + x}{2}$", "$f(x) = \\frac{x^4 + x^3 + x^2 + x}{2}$", "$f(x) = \\frac{x^4 + 2x^3 + x^2}{4}$"],
+    "a": 2,
+    "e": "A counterexample has to satisfy the hypothesis first, so start by testing small integers. Option A fails at $x = 0$, giving $\\frac14$, and option B fails at $x = 1$, giving $\\frac32$. In option C the numerator factorises as $x(x+1)(x^2+1)$, and $x(x+1)$ is always even, so $f(x)$ is always an integer; but $f'(x) = \\frac{4x^3+3x^2+2x+1}{2}$, and at $x = 2$ this is $\\frac{49}{2}$, which is not. Option D is $\\left(\\frac{x(x+1)}{2}\\right)^2$, always an integer, and its derivative $\\frac{x(x+1)(2x+1)}{2}$ is an integer too, so it satisfies the statement rather than breaking it."
+  },
+  {
+    "n": 17, "t": "log", "sp": "Negating a nested quantified statement", "d": 4, "sol": "lab",
+    "q": "A set $S$ of whole numbers is called <em>stapled</em> <b>if and only if</b> for every whole number $a$ which is in $S$ there exists a prime factor of $a$ which divides at least one other number in $S$.<p>Let $T$ be a set of whole numbers. Which of the following is true <b>if and only if</b> $T$ is <b>not</b> stapled?</p>",
+    "o": [
+      "For every number $a$ which is in $T$, there is no prime factor of $a$ which divides every other number in $T$.",
+      "For every number $a$ which is in $T$, there is no prime factor of $a$ which divides at least one other number in $T$.",
+      "For every number $a$ which is in $T$, there is a prime factor of $a$ which does not divide any other number in $T$.",
+      "For every number $a$ which is in $T$, there is a prime factor of $a$ which does not divide at least one other number in $T$.",
+      "There exists a number $a$ which is in $T$ such that there is no prime factor of $a$ which divides every other number in $T$.",
+      "There exists a number $a$ which is in $T$ such that there is no prime factor of $a$ which divides at least one other number in $T$.",
+      "There exists a number $a$ which is in $T$ such that there is a prime factor of $a$ which does not divide any other number in $T$.",
+      "There exists a number $a$ which is in $T$ such that there is a prime factor of $a$ which does not divide at least one other number in $T$."
+    ],
+    "a": 5,
+    "e": "The definition has the shape \"for every $a$ in $T$, there exists a prime factor of $a$ with property $Q$\", where $Q$ is \"divides at least one other number in $T$\". Negating swaps the quantifiers in order: \"there exists $a$ in $T$ such that no prime factor of $a$ has property $Q$\". Keep $Q$ itself intact — the phrase \"at least one\" belongs inside $Q$ and must not be changed to \"every\", and \"there is no prime factor which divides some other number\" is not the same as \"there is a prime factor which divides no other number\", since $a$ may have several prime factors."
+  },
+  {
+    "n": 18, "t": "ineq", "sp": "Taking logarithms to a base less than 1", "d": 3, "sol": "lab",
+    "q": "Consider the following problem:<p><em>Solve the inequality $\\left(\\frac14\\right)^n < \\left(\\frac{1}{32}\\right)^{10}$, where $n$ is a positive integer.</em></p><p>A student produces the following argument:</p><p>$\\left(\\frac14\\right)^n < \\left(\\frac{1}{32}\\right)^{10}$<br>(I)&nbsp;&nbsp; $\\log_{\\frac12}\\left(\\frac14\\right)^n < \\log_{\\frac12}\\left(\\frac{1}{32}\\right)^{10}$<br>(II)&nbsp; $n\\log_{\\frac12}\\left(\\frac14\\right) < 10\\log_{\\frac12}\\left(\\frac{1}{32}\\right)$<br>(III) $n < \\dfrac{10\\log_{\\frac12}\\left(\\frac{1}{32}\\right)}{\\log_{\\frac12}\\left(\\frac14\\right)}$<br>(IV)&nbsp; $n < \\dfrac{10\\times5}{2} = 25$<br>(V)&nbsp;&nbsp; $1 \\le n \\le 24$</p><p>Which step (if any) in the argument is invalid?</p>",
+    "o": [
+      "There are no invalid steps; the argument is correct",
+      "Only step (I) is invalid; the rest are correct",
+      "Only step (II) is invalid; the rest are correct",
+      "Only step (III) is invalid; the rest are correct",
+      "Only step (IV) is invalid; the rest are correct",
+      "Only step (V) is invalid; the rest are correct"
+    ],
+    "a": 1,
+    "e": "The base of the logarithm is $\\frac12$, which is less than 1, so $\\log_{\\frac12}$ is a <b>decreasing</b> function and applying it to both sides must reverse the inequality. Step (I) keeps the direction, so that is where it goes wrong. Everything after it is sound: the power rule in (II), dividing by $\\log_{\\frac12}\\frac14 = 2$ (a positive number) in (III), the arithmetic in (IV), and reading off the integers in (V). Writing the original as $2^{-2n} < 2^{-50}$ confirms the true answer is $n > 25$, not $n < 25$."
+  },
+  {
+    "n": 19, "t": "cal", "sp": "Cubics · stationary values and the number of roots", "d": 4, "sol": "lab",
+    "q": "Which one of the following is a <b>sufficient</b> condition for the equation $x^3 - 3x^2 + a = 0$, where $a$ is a constant, to have exactly one real root?",
+    "o": ["$a > 0$", "$a \\le 0$", "$a \\ge 4$", "$a < 4$", "$|a| > 4$", "$|a| \\le 4$", "$a = \\frac94$", "$|a| = \\frac32$"],
+    "a": 4,
+    "e": "Let $y = x^3 - 3x^2 + a$. Then $\\frac{dy}{dx} = 3x^2 - 6x = 3x(x-2)$, giving a local maximum at $x = 0$ with value $a$ and a local minimum at $x = 2$ with value $a - 4$. A cubic has exactly one real root precisely when those two stationary values have the same sign, that is $a(a-4) > 0$, so $a < 0$ or $a > 4$. Now check the options: $|a| > 4$ means $a > 4$ or $a < -4$, and both lie inside that region, so it is sufficient. The near misses fail at their endpoints — $a = 0$ gives $x^2(x-3)$ and $a = 4$ gives $(x+1)(x-2)^2$, each with two distinct real roots."
+  },
+  {
+    "n": 20, "t": "log", "sp": "Deduction from feedback · counting candidates", "d": 5, "sol": "lab",
+    "q": "I have forgotten my 5-character computer password, but I know that it consists of the letters a, b, c, d, e in some order. When I enter a potential password into the computer, it tells me exactly how many of the letters are in the correct position.<p>When I enter <b>abcde</b>, it tells me that none of the letters are in the correct position. The same happens when I enter <b>cdbea</b> and <b>eadbc</b>.</p><p>Using the best strategy, how many <b>further</b> attempts must I make in order to <b>guarantee</b> that I can <b>deduce</b> the correct password?</p>",
+    "o": ["None: I can deduce it immediately", "One", "Two", "Three", "More than three"],
+    "a": 1,
+    "e": "Work position by position. Each position must avoid the letter the three failed guesses put there, which leaves position 1 as b or d, position 2 as c or e, position 3 as a or e, position 4 as a or c, and position 5 as b or d. Positions 1 and 5 must take b and d in some order, and the middle three must be either c, e, a or e, a, c, so exactly four candidates survive: bcead, beacd, dceab and deacb. One more attempt is therefore needed, and one is enough: entering <b>bcead</b> returns 5, 2, 3 and 0 for those four in turn, so whatever number comes back identifies the password."
+  }
+]

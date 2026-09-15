@@ -1,0 +1,199 @@
+/* ============================================================
+   TMUA Lab — design tokens
+   Dark is the default scheme; [data-theme="light"] overrides.
+   ============================================================ */
+
+:root {
+  /* surfaces */
+  --bg:            #0a0e12;
+  --bg-deep:       #070a0d;
+  --panel:         #10161c;
+  --panel-2:       #161e26;
+  --panel-3:       #1c262f;
+
+  /* ink */
+  --text:          #e8eef3;
+  --text-soft:     #c4cfd8;
+  --muted:         #8b98a5;
+  --faint:         #64717d;
+
+  /* accents */
+  --accent:        #54d8f0;
+  --accent-dim:    #1f9fbd;
+  --accent-ink:    #03151b;
+  --accent-soft:   color-mix(in srgb, var(--accent) 10%, transparent);
+  --accent-2:      #a78bfa;
+  --accent-2-dim:  #7c5cf0;
+  --accent-2-soft: color-mix(in srgb, var(--accent-2) 12%, transparent);
+
+  /* per-paper identity */
+  --p1:            var(--accent);
+  --p1-soft:       var(--accent-soft);
+  --p2:            var(--accent-2);
+  --p2-soft:       var(--accent-2-soft);
+
+  /* semantic */
+  --good:          #3fdd9b;
+  --bad:           #ff7a6e;
+  --warn:          #eec26a;
+  --info:          #74b7ce;
+
+  /* cta */
+  --cta-bg:        #eaf2f5;
+  --cta-ink:       #0a0e12;
+  --cta-hover:     #ffffff;
+
+  /* lines & tints */
+  --border:        rgba(232, 238, 243, 0.09);
+  --border-strong: rgba(232, 238, 243, 0.18);
+  --grid-line:     rgba(84, 216, 240, 0.055);
+  --tint:          rgba(255, 255, 255, 0.028);
+  --tint-strong:   rgba(255, 255, 255, 0.058);
+  --track:         rgba(255, 255, 255, 0.07);
+
+  /* chrome */
+  --header-bg:     rgba(10, 14, 18, 0.86);
+  --header-solid:  #0c1116;
+  --header-shadow: 0 1px 0 rgba(255,255,255,0.05), 0 16px 36px -28px rgba(0,0,0,1);
+  --shadow-soft:   0 14px 40px -24px rgba(0, 0, 0, 0.85);
+  --shadow-lift:   0 24px 60px -32px rgba(0, 0, 0, 0.9);
+  --glow-accent:   0 0 0 1px color-mix(in srgb, var(--accent) 30%, transparent),
+                   0 10px 30px -18px color-mix(in srgb, var(--accent) 45%, transparent);
+
+  /* geometry */
+  --radius:        9px;
+  --radius-sm:     6px;
+  --radius-lg:     14px;
+  --gutter:        clamp(18px, 4vw, 64px);
+  --maxw:          1160px;
+
+  /* type */
+  --font-display: "Space Grotesk", "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-sans:    "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono:    "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-math:    "IBM Plex Serif", "Iowan Old Style", Georgia, "Times New Roman", serif;
+
+  /* motion */
+  --ease-out:     cubic-bezier(0.2, 0.9, 0.25, 1);
+  --ease-in-out:  cubic-bezier(0.6, 0, 0.3, 1);
+  --ease-spring:  cubic-bezier(0.3, 1.25, 0.4, 1);
+  --t-fast:       120ms;
+  --t-mid:        240ms;
+  --t-slow:       420ms;
+
+  /* exam driver (Pearson-VUE-alike) */
+  --exam-navy:    #1b3a57;
+  --exam-blue:    #2d5f8f;
+  --exam-btn:     #1e5a8e;
+  --exam-line:    #c9d2dc;
+  --exam-flag:    #e8a33d;
+
+  color-scheme: dark;
+}
+
+/* The viewer has three theme states. Bare :root above carries the complete
+   DARK palette (this design is dark-first); the two blocks below redefine
+   only the tokens, so an explicit choice wins in either direction and the
+   un-stamped "system" default still resolves. Never style a component
+   inside these blocks — tokens only. */
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg:            #f5f8fa;
+    --bg-deep:       #eaf0f4;
+    --panel:         #ffffff;
+    --panel-2:       #f2f6f9;
+    --panel-3:       #e8eef3;
+
+    --text:          #0d1519;
+    --text-soft:     #2b3a44;
+    --muted:         #5b6b77;
+    --faint:         #7c8b96;
+
+    --accent:        #0b7f9a;
+    --accent-dim:    #0a6d85;
+    --accent-ink:    #ffffff;
+    --accent-soft:   color-mix(in srgb, var(--accent) 9%, transparent);
+    --accent-2:      #6d43d6;
+    --accent-2-dim:  #5a34bb;
+    --accent-2-soft: color-mix(in srgb, var(--accent-2) 9%, transparent);
+
+    --good:          #12804d;
+    --bad:           #c33a2c;
+    --warn:          #8a6100;
+    --info:          #2b6d86;
+
+    --cta-bg:        #101820;
+    --cta-ink:       #f5f8fa;
+    --cta-hover:     #1d2932;
+
+    --border:        rgba(13, 21, 25, 0.12);
+    --border-strong: rgba(13, 21, 25, 0.22);
+    --grid-line:     rgba(11, 127, 154, 0.06);
+    --tint:          rgba(13, 21, 25, 0.022);
+    --tint-strong:   rgba(13, 21, 25, 0.05);
+    --track:         rgba(13, 21, 25, 0.09);
+
+    --header-bg:     rgba(255, 255, 255, 0.9);
+    --header-solid:  #ffffff;
+    --header-shadow: 0 0 0 1px rgba(13,21,25,0.07), 0 14px 34px -26px rgba(13,40,60,0.5);
+    --shadow-soft:   0 14px 40px -28px rgba(13, 40, 60, 0.28);
+    --shadow-lift:   0 24px 60px -34px rgba(13, 40, 60, 0.35);
+
+    color-scheme: light;
+  }
+}
+
+:root[data-theme="light"] {
+  --bg:            #f5f8fa;
+  --bg-deep:       #eaf0f4;
+  --panel:         #ffffff;
+  --panel-2:       #f2f6f9;
+  --panel-3:       #e8eef3;
+
+  --text:          #0d1519;
+  --text-soft:     #2b3a44;
+  --muted:         #5b6b77;
+  --faint:         #7c8b96;
+
+  --accent:        #0b7f9a;
+  --accent-dim:    #0a6d85;
+  --accent-ink:    #ffffff;
+  --accent-soft:   color-mix(in srgb, var(--accent) 9%, transparent);
+  --accent-2:      #6d43d6;
+  --accent-2-dim:  #5a34bb;
+  --accent-2-soft: color-mix(in srgb, var(--accent-2) 9%, transparent);
+
+  --good:          #12804d;
+  --bad:           #c33a2c;
+  --warn:          #8a6100;
+  --info:          #2b6d86;
+
+  --cta-bg:        #101820;
+  --cta-ink:       #f5f8fa;
+  --cta-hover:     #1d2932;
+
+  --border:        rgba(13, 21, 25, 0.12);
+  --border-strong: rgba(13, 21, 25, 0.22);
+  --grid-line:     rgba(11, 127, 154, 0.06);
+  --tint:          rgba(13, 21, 25, 0.022);
+  --tint-strong:   rgba(13, 21, 25, 0.05);
+  --track:         rgba(13, 21, 25, 0.09);
+
+  --header-bg:     rgba(255, 255, 255, 0.9);
+  --header-solid:  #ffffff;
+  --header-shadow: 0 0 0 1px rgba(13,21,25,0.07), 0 14px 34px -26px rgba(13,40,60,0.5);
+  --shadow-soft:   0 14px 40px -28px rgba(13, 40, 60, 0.28);
+  --shadow-lift:   0 24px 60px -34px rgba(13, 40, 60, 0.35);
+
+  color-scheme: light;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -71,6 +71,9 @@ function shared(name) {
       "    var h = (root.location.hash || '').replace(/^#\\/?/, '').split('?')[0];\n    return '#/' + h;"
     );
     src = src.replace(/root\.location\.href = it\.href;/g, 'TL.go(it.href);');
+    // the generated /papers/ pages exist on the website, not inside the artifact
+    src = src.replace(/\n\s*\{ n: '03', label: 'Past papers',\s*href: 'papers\/' \},/, '');
+    src = src.replace(/\s*'<a href="papers\/">Past papers<\/a>' \+/, '');
     src = src.replace(
       /  if \(D\.readyState === 'loading'\) D\.addEventListener\('DOMContentLoaded', boot\);\n  else boot\(\);/,
       '  TL.bootShell = boot;   // the router calls the pieces it needs'

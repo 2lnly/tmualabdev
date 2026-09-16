@@ -87,3 +87,6 @@ const done = new Set(files.map(f => f.replace('.json', '')));
 const todo = Object.keys(KEYS).filter(k => !done.has(k)).sort();
 console.log(`  remaining: ${todo.length ? todo.join(' ') : 'none — all papers transcribed'}`);
 if (errors) { console.error(`\n${errors} answer(s) disagree with the official key`); process.exit(1); }
+
+// Only once the bank is known good: the crawlable per-question pages and sitemap.
+require('./build-pages.js').run();

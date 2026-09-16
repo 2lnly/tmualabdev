@@ -7,6 +7,9 @@ dist/
 
 # generated — rebuild with `node tools/build-past.js`
 assets/js/bank-past.js
+papers/
+topics/
+sitemap.xml
 
 # local noise
 .DS_Store

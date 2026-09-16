@@ -555,7 +555,10 @@
     }).join('');
     host.innerHTML =
       '<section class="panel q-card" style="margin-top:22px">' +
-        '<div class="q-meta">' + chipsFor(q) + '<span class="chip">' + TL.esc(q.id) + '</span></div>' +
+        '<div class="q-meta">' + chipsFor(q) + '<span class="chip">' + TL.esc(q.id) + '</span>' +
+          (q.src && !TL.VIEWS
+            ? '<a class="chip" href="/papers/' + q.src.year + '-paper-' + q.src.paper +
+              '/question-' + q.src.number + '/">permanent page ↗</a>' : '') + '</div>' +
         '<div class="q-stem">' + TL.tex(q.q) + '</div>' +
         '<ul class="opts">' + opts + '</ul>' +
         '<div class="explain"><div class="lab">worked answer · ' + LET[q.a] + '</div>' +

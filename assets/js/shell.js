@@ -10,11 +10,11 @@
   TL.NAV = [
     { n: '01', label: 'Practice',      href: 'practice.html' },
     { n: '02', label: 'Mock test',     href: 'mock.html' },
-    { n: '03', label: 'Review',        href: 'review.html' },
-    { n: '04', label: 'Progress',      href: 'progress.html' },
-    { n: '05', label: 'Question bank', href: 'questions.html' },
-    { n: '06', label: 'Guide',         href: 'guide.html' },
-    { n: '07', label: 'Community',     href: 'community.html' }
+    { n: '03', label: 'Past papers',   href: 'papers/' },
+    { n: '04', label: 'Review',        href: 'review.html' },
+    { n: '05', label: 'Progress',      href: 'progress.html' },
+    { n: '06', label: 'Question bank', href: 'questions.html' },
+    { n: '07', label: 'Guide',         href: 'guide.html' }
   ];
 
   /* ---------------- helpers ---------------- */
@@ -120,6 +120,7 @@
           'the University of Warwick, Durham University or the University of Cambridge. ' +
           'TMUA is a registered test administered by UAT-UK.</div>' +
         '<div class="links">' +
+          '<a href="papers/">Past papers</a>' +
           '<a href="guide.html">Guide</a>' +
           '<a href="community.html">Community</a>' +
           '<a href="privacy.html">Privacy</a>' +

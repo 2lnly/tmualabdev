@@ -200,6 +200,13 @@
     pastSection();
     recent();
     var q = TL.qs();
+    var m = /^(\d{4})-([12])$/.exec(q.past || '');
+    if (m && TL.buildPastPaper(+m[1], +m[2]).length) {
+      pastPick = { year: +m[1], paper: +m[2] };
+      queue = [pastPick.paper]; results = [];
+      runNext(false);
+      return;
+    }
     if (q.start === 'both') begin([1, 2], q.predicted);
     else if (q.start === '1' || q.start === '2') begin([+q.start], q.predicted);
   };
